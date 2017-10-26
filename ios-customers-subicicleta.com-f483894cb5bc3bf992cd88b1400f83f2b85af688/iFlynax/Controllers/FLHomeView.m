@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.nearbyAdsBanner setHidden:(YES)]; //New
+    [self.nearbyAdsBanner setHidden:(YES)]; //New change by Lindsay
 
     // switch to RTL if necessary
     self.frostedViewController.direction = IS_RTL
