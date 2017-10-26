@@ -1,0 +1,349 @@
+/* 
+  Localizable.strings
+  iFlynax
+
+  Created by Exe on 5/4/12.
+  Copyright (c) 2012 Flynax. All rights reserved.
+*/
+
+/* Flynax packages */
+"required_to_update_plugin" = "Please update the iFlynax Connect Plugin to ensure correct performance of the Application.";
+"required_to_update_app" = "Please update the Application to ensure correct performance.";
+"host_unavailable" = "The website you're trying to connect is unavailable, please try again later.";
+"successfully_pointed" = "You have successfully pointed to the domain";
+"select_demo_package" = "Select type classifieds";
+"enter_domain_name" = "Exp: www.example.com";
+"package_classifieds" = "Classifieds Ads";
+"package_auto" = "Auto Classifieds";
+"package_realty" = "Real Estate Classifieds";
+"package_boats" = "Boat Classifieds";
+"package_pets" = "Pet Classifieds";
+"settings_connect_to_another_website_title" = "Connect to anoter website";
+"settings_connect_to_another_website_subtitle" = "Terminate the session and start over";
+"pointed_to" = "The app pointed to: %@";
+"marker_drive_route" = "Tap to build a route to this ad";
+"notification_new_message_by" = "A new message by {name}";
+
+/* Common */
+"loading" = "Loading...";
+"processing" = "Processing...\nPlease wait.";
+"uploading" = "Uploading...";
+"logged_as" = "Logged in as %@";
+"alphabet_characters" = "ALL,0-9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+"seller_ads_count" = "%d Ad(s)";
+"aboutApp_version" = "Version %@";
+"aboutApp_description" = "Description of this App";
+"selected_count" = "%d selected";
+"progress_adding" = "Adding...";
+"free" = "Free";
+"facebook_display_name" = "iFlynax";
+"messaging_must_logged_in" = "You should have an account and be logged in for messaging.";
+"keyword_search_no_results" = "No Results";
+"sort_listings_by" = "Sort ads by";
+"ad_section_comments" = "Comments";
+"listing_category" = "Category";
+"listing_sub_category" = "Subcategory";
+
+/* Settings */
+"settings_language" = "Language";
+"settings_content_preload_type" = "Preloading type";
+"settings_content_preload_type_button" = "Button";
+"settings_content_preload_type_scroll" = "Scroll";
+"settings_privacy_policy" = "Privacy Policy";
+"settings_terms_of_use" = "Terms Of Use";
+"settings_legal_information" = "Legal Information";
+"settings_clear_cache" = "Clear Cache";
+"settings_clear_cache_subtitle" = "Clear cache stored in the App";
+"settings_clear_cache_updated" = "System cache has been cleared.";
+
+/* Screen's title's */
+"screen_home" = "iFlynax";
+"screen_search" = "Search";
+"screen_nearby_ads" = "Nearby Ads";
+"screen_listing_details" = "Details";
+"screen_seller_info" = "Seller Info";
+"screen_ad_on_map" = "Map";
+"screen_comments" = "Comments";
+"screen_favorite_ads_view" = "Favorites";
+"screen_recently_view" = "Recently Added";
+"screen_login_form" = "Login";
+"screen_my_profile" = "Profile";
+"screen_myListings_view" = "My Listings";
+"screen_change_password" = "Password";
+"screen_al_select_category" = "Select a Category";
+"screen_al_fillout_form" = "Fill Out Form";
+"screen_legal_information" = "Legal Information";
+"screen_accounts_alphabetic_search" = "Alphabetic Search";
+"screen_accounts_advanced_search" = "Advanced Search";
+"screen_remind_password" = "Remind Password";
+"screen_registration" = "Registration";
+"screen_settings" = "Settings";
+"screen_aboutUs"  = "About Us";
+"screen_feedback" = "Feedback";
+"screen_feedback_select_subject" = "Select Subject";
+"screen_account_details" = "Account Details";
+"screen_seller_ads" = "Seller Ads";
+"screen_my_messages" = "My Messages";
+"screen_listing_videos" = "Video";
+"screen_add_comment" = "Add Comment";
+"screen_ad_statistics" = "Stat";
+"screen_purchase" = "Your Order";
+"screen_select_plan" = "Available Plans";
+"screen_search_listings" = "Ads found: {number}";
+"screen_search_sellers" = "Search Results";
+"screen_edit_profile" = "Edit Profile";
+
+/* Swipe menu */
+"menu_section_account" = "Account";
+"menu_section_browse" = "Browse";
+"menu_section_account_types" = "Account Types";
+"menu_section_more" = "More";
+"menu_home" = "Home";
+"menu_add_listing" = "Add Listing";
+"menu_my_listings" = "My Listings";
+"menu_my_messages" = "My Messages";
+"menu_favorites" = "Favorites";
+"my_profile" = "My Profile";
+"menu_login" = "Login";
+"menu_recently_added" = "Recently Added";
+"menu_search_around_me" = "Search Around Me";
+"menu_search" = "Search";
+"menu_settings" = "Settings";
+"menu_about_app" = "About App";
+"menu_feedback" = "Send Feedback";
+
+/* placeholders */
+"placeholder_search" = "Search";
+"placeholder_keyword_search" = "Keyword Search";
+"placeholder_username" = "Username";
+"placeholder_email" = "E-mail";
+"placeholder_password" = "Password";
+"placeholder_current_password" = "Current Password";
+"placeholder_new_password" = "New password";
+"placeholder_confirm_password" = "Confirm new password";
+"placeholder_title" = "Title";
+"placeholder_author" = "Author";
+"placeholder_message" = "Message";
+"placeholder_yt_url_or_id" = "Enter a YouTube video URL or ID";
+"placeholder_fieldPhone_code" = "Code";
+"placeholder_fieldPhone_area" = "Area";
+"placeholder_fieldPhone_number" = "Number";
+"placeholder_type_message" = "Type message...";
+"placeholder_from" = "From";
+"placeholder_to" = "To";
+"placeholder_any_field" = "Any {field}";
+
+/* labels */
+"label_or" = "Or";
+"label_loginForm_reset_password" = "Forgot password? [Reset here]";
+"label_email" = "E-Mail";
+"label_awating_approval" = "Awaiting Approval";
+"label_chars_limit_left" = "%d Characters left";
+"label_primary" = "Primary";
+"label_choose_photo" = "Choose a photo";
+
+/* buttons */
+"button_seller_ads_count" = "Other Listings (%d)";
+"button_search_cancel" = "Cancel";
+"button_settings" = "Settings";
+"button_ok" = "Ok";
+"button_cancel" = "Cancel";
+"button_edit" = "Edit";
+"button_done" = "Done";
+"button_yes" = "Yes";
+"button_no" = "No";
+"button_add" = "Add";
+"button_login" = "Log In";
+"button_facebook_login" = "Log in with Facebook";
+"button_logout" = "Log Out";
+"button_edit_profile" = "Edit Profile";
+"button_nearby_ads_viewmode_0" = "Show Map";
+"button_nearby_ads_viewmode_1" = "Show List";
+"button_add_comment" = "Add Comment";
+"button_loginForm_registration" = "Create a new account";
+"button_submit" = "Submit";
+"button_see_more" = "See More";
+"button_alert_ok" = "OK, let's go!";
+"button_remove" = "Remove";
+"button_accept_agreement_checkbox" = "I Accept";
+"button_accept_agreement_button" = "Terms of Use";
+"button_pay_now" = "Pay Now";
+"button_pay_later" = "Pay Later";
+"button_agree" = "Agree";
+"button_disagree" = "Disagree";
+"button_search" = "Search";
+"button_search_reset" = "Reset";
+"button_message_send" = "Send";
+"button_save_password" = "Save";
+"button_select_plan" = "Select a Plan";
+"button_mail" = "Mail";
+"button_filter" = "Filter";
+
+// my ads
+"button_myads_edit" = "Edit";
+"button_myads_view_statistics" = "View Stats";
+"button_myads_upgrade_to_featured" = "Upgrade to Featured";
+"button_myads_upgrade_renew" = "Upgrade/Renew Plan";
+"button_myads_make_payment" = "Make a Payment";
+"button_myads_continue_posting" = "Continue Posting";
+
+// photos gallery
+"button_gallery_close" = "Close";
+"button_gallery_prev" = "Prev";
+"button_gallery_next" = "Next";
+
+// actions
+"button_action_make_primary" = "Make Primary";
+"button_action_edit_description" = "Edit Description";
+
+/* dropdown titles */
+"dropdown_title_account_types" = "Account type";
+
+/* confirmations */
+"confirm_open_in_safary" = "Do you want to open the URL in Safari?";
+"confirm_call_number" = "Do you want to call to the number?";
+"confirm_send_email" = "Do you want to send an email?";
+
+/* alerts */
+"alert_account_type_not_allow_to_submit_ads" = "Your account type doesn't allow you to post ads, please contact the Administrator";
+"alert_title_location_service_off" = "Location services are off";
+"alert_message_location_service_off" = "To use location you must turn on 'While Using' in the Location Services Settings";
+"alert_login_success" = "You have succesefully logged in.";
+"alert_password_weak" = "The password must be 5 - 20 characters long and contain at least one digit.";
+"alert_password_does_not_match" = "The password doesn't match.";
+"alert_password_lenght_fail" = "Your password is either too short or empty.";
+"alert_incorrect_auth" = "Please make sure you entered correct login details.";
+"alert_facebook_user_cancelled_login" = "User cancelled login";
+"alert_title_congratulations" = "Congratulations!";
+"alert_registration_complete_auto_login" = "You have logged in to the account area automatically; now you can add listings and use other features through the app.";
+"alert_title_edit_description" = "Edit Description";
+"alert_no_plan_selected" = "Please select a plan.";
+"alert_search_forms_arent_configured" = "Search forms aren't configured, please contact the Administrator.";
+"alert_accept_agreement_required" = "Accept the 'Agreement Field' is required.";
+
+/* validers hints */
+"fill_required_fields" = "Please fill in the fields marked in red";
+"valider_fillin_the_field" = "Fill in the field";
+"valider_select_an_option" = "Select an option";
+"valider_proper_email_address" = "Please enter a proper email address";
+"valider_password_weak" = "The password must be 5 - 20 characters long and contain at least one digit.";
+"valider_yt_valid_url_or_id" = "Please enter a proper YouTube video URL or ID";
+"valider_incorrect_url" = "Please enter a valid URL";
+
+/* infinity scroll control */
+"inf_scroll_load" = "Load";
+"inf_scroll_loading" = "Loading";
+"inf_scroll_next" = "next";
+"inf_scroll_last" = "last";
+
+/* infinity scroll targets */
+"inf_scroll_target_ads" = "ads";
+"inf_scroll_target_comments" = "comments";
+"inf_scroll_target_accounts" = "accounts";
+
+/* blank slate */
+"blankSlate_home_title" = "There are no ads.";
+"blankSlate_conversations_title" = "No Messages";
+"blankSlate_conversations_message" = "Your conversations will be here when you share with friends.";
+"blankSlate_favorites_title" = "You have no Favorited Ads";
+"blankSlate_favorites_message" = "Add new favorites by tapping heart on any Ads.";
+"blankSlate_myListings_title" = "";
+"blankSlate_myListings_message" = "You haven't yet posted any ads.";
+"blankSlate_recentlyAds_title" = "";
+"blankSlate_recentlyAds_message" = "There are no new listings added.";
+"blankSlate_sellerAds_title" = "";
+"blankSlate_sellerAds_message" = "The account doesn't have any specific fields.";
+"blankSlate_messages_title" = "title";
+"blankSlate_messages_message" = "message";
+"blankSlate_browse_title" = "";
+"blankSlate_browse_message" = "There are no ads in the category.";
+"blankSlate_accountType_title" = "";
+"blankSlate_accountType_message" = "No accounts by the type were found.";
+"blankSlate_accountTypeChar_title" = "";
+"blankSlate_accountTypeChar_message" = "No accounts were found by \"%@\" query.";
+"blankSlate_there_no_accounts_found" = "No accounts were found, please try different search criteria.";
+"blankSlate_no_comments" = "There are no comments";
+"blankSlate_searchResults_title" = "No ads were found";
+"blankSlate_searchResults_message" = "Please try different search criteria";
+"blankSlate_editProfile_title" = "";
+"blankSlate_editProfile_message" = "There are no fields specific to your account type.";
+"blankSlate_nearbyAds_title" = "";
+"blankSlate_nearbyAds_message" = "There are no nearby listings found.";
+
+/* dialogs */
+"dialog_title_warning" = "Warning";
+"dialog_confirm_action" = "Please make sure you're ready to proceed";
+"dialog_change_category_notice" = "You may lose the data entered if you change a category, are you sure you want to proceed?";
+"dialog_discard_listing" = "You'll lose the data entered if you click the Cancel button, are you sure you want to proceed?";
+"dialog_confirm_listing_removal" = "The ad will be removed irretrievably, are you sure you want to proceed?";
+"dialog_email_changing" = "Enter the new email and click OK.";
+"dialog_confirm_email_changing" = "A confirmation link will be sent to your new email; please enter the new email and click OK.";
+"dialog_email_saved_as_tmp" = "The confirmation link has been sent to the new email; please check it to confirm the new email address.";
+"dialog_unable_save_data_on_server" = "Failed to save data on the server, please contact the Administrator.";
+
+/* sheet */
+"sheet_drive_route_title" = "Select an App from the list to build the drive route";
+"sheet_drive_route_item_apple" = "Apple Maps";
+"sheet_drive_route_item_google" = "Google Maps";
+"sheet_drive_route_item_waze" = "Waze";
+"sheet_drive_route_item_yandex" = "Yandex Maps";
+
+/* YouTube */
+"yt_controller_title" = "YouTube Video Add";
+"yt_preview" = "YouTube preview";
+"yt_preview_loading" = "Loading preview...";
+"yt_video_is_available" = "The video is available";
+"yt_video_is_not_avilable" = "The video is not available";
+"yt_video_is_not_found" = "The video is not found";
+"yt_video_is_not_embedded" = "Embedding disabled by request";
+
+/* error codes */
+"error_code_1009" = "The Internet connection appears to be offline. Double check your connection.";
+"error_code_3840" = "The app content received is corrupt; please contact the Administrator.";
+"error_code_unknown" = "Ooops!";
+
+/* manage listings process */
+"add_listing_save_data_fail" = "Failed to save the ad, please contact the Administrator.";
+"edit_listing_save_data_fail" = "Failed to edit the ad, please contact the Administrator.";
+"remove_listing_fail" = "Failed to remove the ad, please contact the Administrator.";
+"dialog_saving_picture" = "Saving pics: %d of %d\nPlease wait.";
+"dialog_listing_removed" = "The ad has been successfully removed.";
+"dialog_deleting" = "Removing...\nPlease wait";
+"plans_synchronization" = "Synchronization...";
+"no_plans_category" = "Unfortunately, there are no plans connected to the category; please select another category or contact the Administrator.";
+"order_pay_by_paypal" = "Pay with PayPal";
+"order_pay_by_apple" = "Pay with In-App Purchase";
+"payment_canceledByUser" = "The payment has been succesefully canceled.";
+"payment_receipt_server_failed" = "Failed to verify the receipt on the server, please contact the Administrator.";
+
+/* edit profile */
+"edit_profile_save_data_fail" = "Failed to edit the account, please contact the Administrator.";
+"profile_updated" = "Your profile has been updated.";
+
+/* feedback */
+"feedback_topic" = "Topic";
+"feedback_subject" = "Subject";
+"feedback_message" = "Message";
+"feedback_feedback" = "Feedback";
+"feedback_bug_report" = "Bug Report";
+"feedback_feature_request" = "Request for a feature";
+"feedback_contact_us" = "Contact Us";
+"feedback_completed" = "Thanks! Your request has been sent; our managers will get back to you soon.";
+
+"inAppPurchase_invalid_product_identifier" = "Invalid product identifier, please contact the Administrator";
+
+/* API error codes */
+"api_error_synch_code" = "";
+"api_error_session_expired" = "Ooops, your session expire. Please login again.";
+
+/* customization - Report Abuse */
+"ad_details_sheetActions_contactSeller" = "Contact Seller";
+"ad_details_sheetActions_share" = "Share";
+"ad_details_sheetActions_addToFavorites" = "Add to Favorites";
+"ad_details_sheetActions_removeFromFavorites" = "Remove from Favorites";
+"reportAbuse_sheet_item" = "Report Abuse";
+"reportAbuse_button_cancel" = "Cancel";
+"reportAbuse_button_report" = "Report";
+"reportAbuse_empty_message_error" = "Please enter your report";
+"reportAbuse_successfully_sent" = "Your report has been successfully sent to the Administrator";
+"reportAbuse_failed_to_send" = "Failed to send the report, please contact the Administrator";

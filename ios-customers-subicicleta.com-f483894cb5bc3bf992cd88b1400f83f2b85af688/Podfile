@@ -1,0 +1,28 @@
+
+#use_frameworks!
+platform :ios, "8.0"
+source "https://github.com/CocoaPods/Specs.git"
+
+target "iFlynax" do
+    pod "AFNetworking", "3.1.0"
+    pod "FSImageViewer", :git => "https://github.com/discepolo/FSImageViewer"
+    pod "SVProgressHUD", "1.1.3"
+    pod "GoogleMaps", "2.1.1"
+    pod "REFrostedViewController", :git => "https://github.com/fwcode/REFrostedViewController"
+    pod "RETableViewManager", :git => "https://github.com/fwcode/RETableViewManager"
+    pod "PayPal-iOS-SDK", "2.16.1"
+    pod "GoogleAnalytics", "3.17.0"
+    pod "TTTAttributedLabel", :git => "https://github.com/fwcode/TTTAttributedLabel"
+    pod "Lambda-Alert", "1.0.1"
+    pod "HMSegmentedControl", "1.5.3"
+    pod "FBSDKCoreKit", "4.15.0"
+    pod "FBSDKLoginKit", "4.15.0"
+    pod "DLRadioButton", :git => "https://github.com/fwcode/DLRadioButton"
+    pod "UzysAssetsPickerController", "0.9.9"
+    pod "CTFeedback", :git => "https://github.com/fwcode/CTFeedback"
+    pod "SOMessaging", :git => "https://github.com/fwcode/SOMessaging"
+    pod "DZNEmptyDataSet", "1.7.3"
+    pod "GoogleMobileAds", "7.8.0"
+    pod "iRate", "~> 1.11"
+end
+

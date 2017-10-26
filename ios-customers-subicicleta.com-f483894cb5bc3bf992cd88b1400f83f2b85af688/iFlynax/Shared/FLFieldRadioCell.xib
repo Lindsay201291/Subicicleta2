@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FLFieldRadio" rowHeight="60" id="ZEP-di-b6N" customClass="FLFieldRadioCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEP-di-b6N" id="vSd-Fz-JMR">
+                <frame key="frameInset" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="line1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="136" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-Mv-Ux3">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="129" id="mEQ-mu-anx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfM-BE-s9b">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="XfM-BE-s9b" firstAttribute="bottom" secondItem="vSd-Fz-JMR" secondAttribute="bottomMargin" id="G0p-yp-XlF"/>
+                    <constraint firstAttribute="topMargin" secondItem="XfM-BE-s9b" secondAttribute="top" id="LQI-B3-ghB"/>
+                    <constraint firstItem="vLS-Mv-Ux3" firstAttribute="top" secondItem="vSd-Fz-JMR" secondAttribute="top" constant="8" id="R7O-9b-RcO"/>
+                    <constraint firstItem="vLS-Mv-Ux3" firstAttribute="leading" secondItem="vSd-Fz-JMR" secondAttribute="leadingMargin" constant="7" id="RKT-iA-gFq"/>
+                    <constraint firstItem="XfM-BE-s9b" firstAttribute="leading" secondItem="vLS-Mv-Ux3" secondAttribute="trailing" constant="15" id="bLN-bF-ubm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XfM-BE-s9b" secondAttribute="trailing" constant="7" id="ms0-GQ-G0x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="leftMarginConstraint" destination="bLN-bF-ubm" id="FS2-pL-tCR"/>
+                <outlet property="radioBox" destination="XfM-BE-s9b" id="RQp-yK-gS3"/>
+                <outlet property="titleLabel" destination="vLS-Mv-Ux3" id="xM5-GB-yz8"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="435"/>
+        </tableViewCell>
+    </objects>
+</document>

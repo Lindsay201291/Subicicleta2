@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLInfiniteScrollControl">
+            <connections>
+                <outlet property="loadMoreButton" destination="5Rc-3S-5ii" id="2t9-T4-ww3"/>
+                <outlet property="spinnerAIView" destination="flV-yj-GN7" id="5KM-8V-RrN"/>
+                <outlet property="spinnerControlView" destination="NnZ-Yq-kGU" id="IX5-Yx-aTa"/>
+                <outlet property="spinnerTextLabel" destination="SzE-XQ-f6p" id="sKQ-vn-Sel"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nZz-cS-V4j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="152"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnZ-Yq-kGU">
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="flV-yj-GN7">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="5WT-Pf-YWL"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzE-XQ-f6p">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="SzE-XQ-f6p" firstAttribute="leading" secondItem="flV-yj-GN7" secondAttribute="trailing" constant="8" id="6LT-ak-geB"/>
+                        <constraint firstItem="flV-yj-GN7" firstAttribute="leading" secondItem="NnZ-Yq-kGU" secondAttribute="leading" constant="8" id="Qk0-jE-6HQ"/>
+                        <constraint firstAttribute="trailing" secondItem="SzE-XQ-f6p" secondAttribute="trailing" constant="8" id="hJa-5p-eVa"/>
+                        <constraint firstAttribute="centerY" secondItem="SzE-XQ-f6p" secondAttribute="centerY" id="q9R-Gt-r3c"/>
+                        <constraint firstAttribute="centerY" secondItem="flV-yj-GN7" secondAttribute="centerY" id="t6o-ru-RhA"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-3S-5ii">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="h1v-y8-Kkz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="r5Y-Dd-kDj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Load Next Stack" backgroundImage="button1">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loadMoreButtonTaped:" destination="-1" eventType="touchUpInside" id="mby-k0-6gU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NnZ-Yq-kGU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AmK-Ok-7af"/>
+                <constraint firstAttribute="bottom" secondItem="NnZ-Yq-kGU" secondAttribute="bottom" id="YZu-tz-MJ6"/>
+                <constraint firstAttribute="centerX" secondItem="5Rc-3S-5ii" secondAttribute="centerX" id="cWP-Bt-W95"/>
+                <constraint firstAttribute="centerX" secondItem="NnZ-Yq-kGU" secondAttribute="centerX" id="eSe-zw-ltZ"/>
+                <constraint firstAttribute="centerY" secondItem="5Rc-3S-5ii" secondAttribute="centerY" id="gQ7-6d-kgM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="465.5" y="383"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button1" width="1" height="33"/>
+    </resources>
+</document>

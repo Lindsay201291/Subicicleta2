@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FLFieldDate" id="z7a-9K-lp3" customClass="FLFieldDateCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z7a-9K-lp3" id="cZX-5X-I8q">
+                <frame key="frameInset" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9e-OO-6VM" userLabel="to" customClass="FLTextField">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVu-AA-bq1" userLabel="from" customClass="FLTextField">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WVu-AA-bq1" firstAttribute="leading" secondItem="cZX-5X-I8q" secondAttribute="leading" constant="15" id="Blv-an-8Oi"/>
+                    <constraint firstItem="e9e-OO-6VM" firstAttribute="width" secondItem="WVu-AA-bq1" secondAttribute="width" id="MTb-M2-CjK"/>
+                    <constraint firstItem="e9e-OO-6VM" firstAttribute="top" secondItem="cZX-5X-I8q" secondAttribute="top" constant="8" id="YOT-6O-3bY"/>
+                    <constraint firstItem="e9e-OO-6VM" firstAttribute="leading" secondItem="WVu-AA-bq1" secondAttribute="trailing" constant="8" id="ghK-kf-BXM"/>
+                    <constraint firstAttribute="trailing" secondItem="WVu-AA-bq1" secondAttribute="trailing" priority="750" constant="15" id="jC7-bL-EwJ"/>
+                    <constraint firstAttribute="trailing" secondItem="e9e-OO-6VM" secondAttribute="trailing" constant="15" id="mx9-x6-ovL"/>
+                    <constraint firstAttribute="bottom" secondItem="WVu-AA-bq1" secondAttribute="bottom" constant="7" id="rkI-fs-6Rp"/>
+                    <constraint firstAttribute="bottom" secondItem="e9e-OO-6VM" secondAttribute="bottom" constant="7" id="xy5-c8-Mlu"/>
+                    <constraint firstItem="WVu-AA-bq1" firstAttribute="top" secondItem="cZX-5X-I8q" secondAttribute="top" constant="8" id="y4c-CR-c5n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="betweenSpacingConstraint" destination="ghK-kf-BXM" id="0Fy-3K-k32"/>
+                <outlet property="fieldFrom" destination="WVu-AA-bq1" id="Mzf-oF-LcK"/>
+                <outlet property="fieldTo" destination="e9e-OO-6VM" id="Euy-mS-T1o"/>
+                <outlet property="singleFieldTrailingConstraint" destination="jC7-bL-EwJ" id="i4i-Cj-YXd"/>
+                <outlet property="widthConstraint" destination="MTb-M2-CjK" id="JIi-D9-vdm"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="248"/>
+        </tableViewCell>
+    </objects>
+</document>

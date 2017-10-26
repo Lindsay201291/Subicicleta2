@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FLFieldPhone" id="VTc-ng-Unx" customClass="FLFieldPhoneCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VTc-ng-Unx" id="V0J-Id-d8I">
+                <frame key="frameInset" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-xQ-dPZ" userLabel="cont1">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xra-ON-x4Q">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="NJd-b2-3Xo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-cA-L2P">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="4bZ-sP-Jk2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-WE-9MV" userLabel="input" customClass="FLTextField">
+                                <color key="backgroundColor" red="0.98559441140000004" green="0.30772128180000002" blue="0.23999464149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r6x-qm-clF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="93" id="1dG-3w-MgR"/>
+                            <constraint firstItem="xra-ON-x4Q" firstAttribute="leading" secondItem="dq3-xQ-dPZ" secondAttribute="leading" id="GCJ-fn-tak"/>
+                            <constraint firstItem="xra-ON-x4Q" firstAttribute="baseline" secondItem="mQy-cA-L2P" secondAttribute="baseline" id="Ny0-33-j2C"/>
+                            <constraint firstAttribute="trailing" secondItem="mQy-cA-L2P" secondAttribute="trailing" constant="6" id="TXd-MT-vVR"/>
+                            <constraint firstItem="mQy-cA-L2P" firstAttribute="leading" secondItem="vMO-WE-9MV" secondAttribute="trailing" constant="8" symbolic="YES" id="bij-aK-6Pw"/>
+                            <constraint firstItem="vMO-WE-9MV" firstAttribute="leading" secondItem="xra-ON-x4Q" secondAttribute="trailing" constant="8" symbolic="YES" id="hyW-bu-Hdx"/>
+                            <constraint firstItem="xra-ON-x4Q" firstAttribute="centerY" secondItem="dq3-xQ-dPZ" secondAttribute="centerY" id="lZm-16-2wE"/>
+                            <constraint firstItem="xra-ON-x4Q" firstAttribute="centerY" secondItem="vMO-WE-9MV" secondAttribute="centerY" id="olF-9X-5x4"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-3A-aWy" userLabel="cont2">
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Area" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptu-Ny-Jat" customClass="FLTextField">
+                                <color key="backgroundColor" red="0.98559441140000004" green="0.88582932469999998" blue="0.46682490859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="RJy-sS-t9T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-sL-joA">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCk-Yw-bpy" customClass="FLTextField">
+                                <color key="backgroundColor" red="0.89102363586425781" green="0.60174274444580078" blue="0.56021988391876221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ptu-Ny-Jat" firstAttribute="leading" secondItem="ReF-3A-aWy" secondAttribute="leading" id="0xG-ne-nMX"/>
+                            <constraint firstAttribute="bottom" secondItem="ptu-Ny-Jat" secondAttribute="bottom" id="1lr-j9-udV"/>
+                            <constraint firstAttribute="trailing" secondItem="PCk-Yw-bpy" secondAttribute="trailing" constant="7" id="KK9-I6-hJU"/>
+                            <constraint firstAttribute="bottom" secondItem="PCk-Yw-bpy" secondAttribute="bottom" id="TJe-4Y-xoD"/>
+                            <constraint firstAttribute="height" constant="44" id="Vea-O6-2ke"/>
+                            <constraint firstItem="PCk-Yw-bpy" firstAttribute="top" secondItem="ReF-3A-aWy" secondAttribute="top" id="Xwv-S5-tEX"/>
+                            <constraint firstItem="Dc4-sL-joA" firstAttribute="leading" secondItem="ptu-Ny-Jat" secondAttribute="trailing" constant="8" id="ZaE-DQ-zBX"/>
+                            <constraint firstItem="ptu-Ny-Jat" firstAttribute="top" secondItem="ReF-3A-aWy" secondAttribute="top" id="fa1-rD-1X4"/>
+                            <constraint firstItem="PCk-Yw-bpy" firstAttribute="leading" secondItem="Dc4-sL-joA" secondAttribute="trailing" constant="8" id="rNw-YC-ahK"/>
+                            <constraint firstItem="Dc4-sL-joA" firstAttribute="centerY" secondItem="ReF-3A-aWy" secondAttribute="centerY" id="wF3-Xb-Jk9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ReF-3A-aWy" firstAttribute="leading" secondItem="V0J-Id-d8I" secondAttribute="leading" constant="106" id="AFx-fU-ZdU"/>
+                    <constraint firstItem="dq3-xQ-dPZ" firstAttribute="leading" secondItem="V0J-Id-d8I" secondAttribute="leading" constant="15" id="ANa-4O-KC0"/>
+                    <constraint firstItem="dq3-xQ-dPZ" firstAttribute="top" secondItem="V0J-Id-d8I" secondAttribute="top" constant="8" id="dUk-wv-rok"/>
+                    <constraint firstAttribute="bottom" secondItem="ReF-3A-aWy" secondAttribute="bottom" constant="8" id="daF-4p-IGY"/>
+                    <constraint firstItem="dq3-xQ-dPZ" firstAttribute="height" secondItem="ReF-3A-aWy" secondAttribute="height" id="fZ1-Wy-j2b"/>
+                    <constraint firstItem="ReF-3A-aWy" firstAttribute="top" secondItem="V0J-Id-d8I" secondAttribute="top" constant="8" id="lIs-8g-DwQ"/>
+                    <constraint firstAttribute="trailing" secondItem="ReF-3A-aWy" secondAttribute="trailing" constant="8" id="okl-Ps-36h"/>
+                    <constraint firstAttribute="bottom" secondItem="dq3-xQ-dPZ" secondAttribute="bottom" constant="8" id="ure-OM-7or"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="areaField" destination="ptu-Ny-Jat" id="3hI-Cd-HvA"/>
+                <outlet property="codeField" destination="vMO-WE-9MV" id="b2K-0f-u0E"/>
+                <outlet property="codeFieldContent" destination="dq3-xQ-dPZ" id="vJS-zN-VIa"/>
+                <outlet property="nsAreaNumberConstraint" destination="AFx-fU-ZdU" id="hj2-Nw-UfV"/>
+                <outlet property="numberField" destination="PCk-Yw-bpy" id="MFD-Il-a3o"/>
+            </connections>
+            <point key="canvasLocation" x="-123" y="-31"/>
+        </tableViewCell>
+    </objects>
+</document>

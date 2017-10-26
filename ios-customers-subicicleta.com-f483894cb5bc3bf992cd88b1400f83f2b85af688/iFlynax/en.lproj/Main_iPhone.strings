@@ -1,0 +1,45 @@
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "0U2-dt-EJv"; */
+"0U2-dt-EJv.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "17f-U9-Fcb"; */
+"17f-U9-Fcb.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Nearby Ads"; ObjectID = "19n-dN-IQV"; */
+"19n-dN-IQV.text" = "Nearby Ads";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "7mb-ij-8mo"; */
+"7mb-ij-8mo.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "Search"; ObjectID = "IlA-6G-awp"; */
+"IlA-6G-awp.title" = "Search";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "PdN-PQ-MJT"; */
+"PdN-PQ-MJT.text" = "Title";
+
+/* Class = "IBUIBarButtonItem"; title = "Item"; ObjectID = "SuS-8e-96T"; */
+"SuS-8e-96T.title" = "Item";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "WbW-GY-2bF"; */
+"WbW-GY-2bF.text" = "Detail";
+
+/* Class = "IBUINavigationItem"; title = "Nearby Ads"; ObjectID = "aGB-JE-nlB"; */
+"aGB-JE-nlB.title" = "Nearby Ads";
+
+/* Class = "IBUILabel"; text = "Price"; ObjectID = "bKY-LS-32s"; */
+"bKY-LS-32s.text" = "Price";
+
+/* Class = "IBUIView"; accessibilityLabel = "ff"; ObjectID = "cr0-yh-bWy"; */
+"cr0-yh-bWy.accessibilityLabel" = "ff";
+
+/* Class = "IBUIViewController"; title = "Window"; ObjectID = "iOt-OQ-suf"; */
+"iOt-OQ-suf.title" = "Window";
+
+/* Class = "IBUINavigationItem"; title = "Details"; ObjectID = "lBV-Of-I5X"; */
+"lBV-Of-I5X.title" = "Details";
+
+/* Class = "IBUISearchBar"; placeholder = "Search"; ObjectID = "r1F-nG-GEQ"; */
+"r1F-nG-GEQ.placeholder" = "Search";
+
+/* Class = "IBUINavigationItem"; title = "Home"; ObjectID = "riP-F0-V3p"; */
+"riP-F0-V3p.title" = "Home";

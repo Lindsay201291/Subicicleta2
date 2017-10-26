@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLDemoVC">
+            <connections>
+                <outlet property="domainTextField" destination="10" id="79o-kq-nPW"/>
+                <outlet property="scrollView" destination="Xvb-cl-GEx" id="rZy-py-Ksi"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvb-cl-GEx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-Ta-5ms">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter domain name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="10" customClass="FLTextField">
+                                    <rect key="frame" x="15" y="311.5" width="270" height="44"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="O7n-eL-h31"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="bottom" image="flynax_about_logo" translatesAutoresizingMaskIntoConstraints="NO" id="101">
+                                    <rect key="frame" x="90.5" y="211.5" width="195" height="70"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                                    <rect key="frame" x="300" y="311.5" width="60" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="MBy-zi-I7S"/>
+                                        <constraint firstAttribute="width" constant="60" id="cIT-KG-7Iq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                    <state key="normal" title="Go!" backgroundImage="button1">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goBtnDidTap:" destination="-1" eventType="touchUpInside" id="9wi-TI-xuy"/>
+                                    </connections>
+                                </button>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                                    <rect key="frame" x="117.5" y="370.5" width="140" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Hqg-kB-tDw"/>
+                                        <constraint firstAttribute="width" constant="140" id="bQD-Vk-NaB"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Or Try Demo" backgroundImage="button3">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tryDemoDidTap:" destination="-1" eventType="touchUpInside" id="TIJ-tA-k9w"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Powered by Flynax Classifieds Software" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="561" translatesAutoresizingMaskIntoConstraints="NO" id="119">
+                                    <rect key="frame" x="15" y="616" width="345" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="ors-em-vag"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.46446120769999999" green="0.46186645230000001" blue="0.46705596300000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1137254902" green="0.15686274510000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="119" secondAttribute="trailing" constant="15" id="LXo-1z-8Ag"/>
+                                <constraint firstItem="7" firstAttribute="centerX" secondItem="dsV-Ta-5ms" secondAttribute="centerX" id="Lgv-HL-XSd"/>
+                                <constraint firstItem="10" firstAttribute="leading" secondItem="dsV-Ta-5ms" secondAttribute="leading" constant="15" id="QA6-av-mqf">
+                                    <variation key="widthClass=regular" constant="200"/>
+                                </constraint>
+                                <constraint firstItem="119" firstAttribute="leading" secondItem="dsV-Ta-5ms" secondAttribute="leading" constant="15" id="Wyg-Z2-ya4"/>
+                                <constraint firstAttribute="bottom" secondItem="119" secondAttribute="bottom" constant="30" id="XCk-oj-mBA"/>
+                                <constraint firstItem="10" firstAttribute="centerY" secondItem="dsV-Ta-5ms" secondAttribute="centerY" id="XoV-bw-DzM"/>
+                                <constraint firstItem="101" firstAttribute="centerX" secondItem="dsV-Ta-5ms" secondAttribute="centerX" id="YyU-xO-eog"/>
+                                <constraint firstItem="4" firstAttribute="centerY" secondItem="10" secondAttribute="centerY" id="dUa-JK-7lX"/>
+                                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="15" id="tNV-cz-skL">
+                                    <variation key="widthClass=regular" constant="200"/>
+                                </constraint>
+                                <constraint firstItem="4" firstAttribute="leading" secondItem="10" secondAttribute="trailing" constant="15" id="vLc-gk-SWf"/>
+                                <constraint firstItem="7" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="15" id="vpf-9f-lOh"/>
+                                <constraint firstItem="10" firstAttribute="top" secondItem="101" secondAttribute="bottom" constant="30" id="ygZ-Hb-2k9"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1137254902" green="0.15686274510000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="dsV-Ta-5ms" firstAttribute="centerX" secondItem="Xvb-cl-GEx" secondAttribute="centerX" id="IOg-pL-9Kg"/>
+                        <constraint firstAttribute="bottom" secondItem="dsV-Ta-5ms" secondAttribute="bottom" id="MVw-SO-V7f"/>
+                        <constraint firstAttribute="trailing" secondItem="dsV-Ta-5ms" secondAttribute="trailing" id="O3g-f1-unO"/>
+                        <constraint firstItem="dsV-Ta-5ms" firstAttribute="leading" secondItem="Xvb-cl-GEx" secondAttribute="leading" id="WBv-9C-CB6"/>
+                        <constraint firstItem="dsV-Ta-5ms" firstAttribute="centerY" secondItem="Xvb-cl-GEx" secondAttribute="centerY" id="WEZ-jb-3MQ"/>
+                        <constraint firstItem="dsV-Ta-5ms" firstAttribute="top" secondItem="Xvb-cl-GEx" secondAttribute="top" id="Y2O-qC-My0"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.1137254902" green="0.15686274510000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Xvb-cl-GEx" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="LjG-mj-7xt"/>
+                <constraint firstItem="Xvb-cl-GEx" firstAttribute="top" secondItem="1" secondAttribute="top" id="X2B-n8-V39"/>
+                <constraint firstAttribute="bottom" secondItem="Xvb-cl-GEx" secondAttribute="bottom" id="lG5-fy-IKb"/>
+                <constraint firstAttribute="trailing" secondItem="Xvb-cl-GEx" secondAttribute="trailing" id="qEL-r5-or1"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="490" y="372"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button1" width="1" height="33"/>
+        <image name="button3" width="1" height="33"/>
+        <image name="flynax_about_logo" width="195" height="70"/>
+    </resources>
+</document>

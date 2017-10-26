@@ -1,0 +1,27 @@
+# Mac OS X
+._*
+*.DS_Store
+
+# Xcode
+*.xcuserstate
+*.xccheckout
+*.xcsettings
+*.xcworkspacedata
+iFlynax.xcworkspace/
+iFlynax.xcodeproj/xcuserdata/*
+DerivedData/
+
+# Generated files
+*.dSYM.zip
+*.ipa
+
+# Cocoa pods
+Pods
+Podfile.lock
+
+# fastlane
+fastlane/*
+!fastlane/Appfile
+!fastlane/Deliverfile
+!fastlane/Fastfile
+

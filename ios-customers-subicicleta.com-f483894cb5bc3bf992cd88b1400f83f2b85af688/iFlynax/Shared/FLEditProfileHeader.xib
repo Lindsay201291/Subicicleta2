@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLEditProfileHeader">
+            <connections>
+                <outlet property="emailBox" destination="5hj-ye-g1l" id="iaZ-w9-RH7"/>
+                <outlet property="emailLabel" destination="Qjv-mZ-8Ka" id="313-Rw-2Si"/>
+                <outlet property="titleLabel" destination="jvi-FH-OZ1" id="vXr-Ad-FXg"/>
+                <outlet property="usernameLabel" destination="Cbs-uy-7sm" id="feZ-U6-gjk"/>
+                <outlet property="view" destination="7Mg-yc-hrv" id="WsZ-7c-SeP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7Mg-yc-hrv">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-uy-7sm">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="HOZ-lL-dia"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hj-ye-g1l" userLabel="EmailBox" customClass="FLView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dealer@demoflynax.com" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-mZ-8Ka" userLabel="Breadcrumb">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC1-fY-Hca" userLabel="EditButton">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="egO-Yb-8po"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="pencil30x30">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="editMailBtnTapped:" destination="-1" eventType="touchUpInside" id="r0r-rx-Ush"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-FH-OZ1" userLabel="Title">
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91898148150000003" green="0.91778434170000001" blue="0.91887904239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Qjv-mZ-8Ka" firstAttribute="top" secondItem="jvi-FH-OZ1" secondAttribute="bottom" constant="25" id="4j2-hX-iCR"/>
+                        <constraint firstItem="NC1-fY-Hca" firstAttribute="trailing" secondItem="Qjv-mZ-8Ka" secondAttribute="trailing" id="7dB-Nu-9os"/>
+                        <constraint firstItem="jvi-FH-OZ1" firstAttribute="bottom" secondItem="NC1-fY-Hca" secondAttribute="bottom" id="RdV-RF-sDU"/>
+                        <constraint firstItem="Qjv-mZ-8Ka" firstAttribute="leading" secondItem="jvi-FH-OZ1" secondAttribute="leading" id="aN9-5V-exY"/>
+                        <constraint firstItem="NC1-fY-Hca" firstAttribute="leading" secondItem="jvi-FH-OZ1" secondAttribute="trailing" constant="8" symbolic="YES" id="css-fI-CNz"/>
+                        <constraint firstAttribute="bottom" secondItem="Qjv-mZ-8Ka" secondAttribute="bottom" constant="10" id="lX7-Ef-kBs"/>
+                        <constraint firstItem="jvi-FH-OZ1" firstAttribute="leading" secondItem="5hj-ye-g1l" secondAttribute="leading" constant="15" id="mrh-Jj-0Zs"/>
+                        <constraint firstItem="jvi-FH-OZ1" firstAttribute="top" secondItem="5hj-ye-g1l" secondAttribute="top" constant="9" id="r19-CH-S8M"/>
+                        <constraint firstItem="NC1-fY-Hca" firstAttribute="top" secondItem="5hj-ye-g1l" secondAttribute="topMargin" id="vuZ-lu-XXZ"/>
+                        <constraint firstItem="NC1-fY-Hca" firstAttribute="trailing" secondItem="5hj-ye-g1l" secondAttribute="trailingMargin" id="wrl-E1-BWD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="centerLine" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Cbs-uy-7sm" firstAttribute="trailing" secondItem="5hj-ye-g1l" secondAttribute="trailing" id="HoJ-fw-AhN"/>
+                <constraint firstItem="Cbs-uy-7sm" firstAttribute="leading" secondItem="7Mg-yc-hrv" secondAttribute="leading" constant="15" id="ade-pw-LoC"/>
+                <constraint firstItem="Cbs-uy-7sm" firstAttribute="top" secondItem="7Mg-yc-hrv" secondAttribute="top" constant="15" id="dPn-XG-4go"/>
+                <constraint firstItem="5hj-ye-g1l" firstAttribute="centerX" secondItem="7Mg-yc-hrv" secondAttribute="centerX" id="sVP-nE-BSX"/>
+                <constraint firstItem="5hj-ye-g1l" firstAttribute="leading" secondItem="Cbs-uy-7sm" secondAttribute="leading" id="vLI-Hm-dG4"/>
+                <constraint firstItem="5hj-ye-g1l" firstAttribute="top" secondItem="Cbs-uy-7sm" secondAttribute="bottom" constant="15" id="wVy-aA-cIX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="257" y="305"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pencil30x30" width="25" height="25"/>
+    </resources>
+</document>

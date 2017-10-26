@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FLFieldSelect" id="apJ-5v-xtB" customClass="FLFieldSelectCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apJ-5v-xtB" id="7sy-S6-vqA">
+                <frame key="frameInset" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUO-Ky-GAc" customClass="FLDropDown">
+                        <color key="backgroundColor" red="0.98559441140000004" green="0.88582932469999998" blue="0.46682490859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jl-wU-FOC" customClass="FLDropDown">
+                        <color key="backgroundColor" red="1" green="0.32609661179999999" blue="0.091990718469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="topMargin" secondItem="3jl-wU-FOC" secondAttribute="top" id="H4n-Qc-MTb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3jl-wU-FOC" secondAttribute="bottom" constant="-1" id="Pqd-fy-swd"/>
+                    <constraint firstItem="pUO-Ky-GAc" firstAttribute="leading" secondItem="3jl-wU-FOC" secondAttribute="trailing" constant="8" id="XUV-Lh-c6d"/>
+                    <constraint firstItem="3jl-wU-FOC" firstAttribute="leading" secondItem="7sy-S6-vqA" secondAttribute="leadingMargin" constant="7" id="Xfq-Im-rPs"/>
+                    <constraint firstItem="3jl-wU-FOC" firstAttribute="width" secondItem="pUO-Ky-GAc" secondAttribute="width" id="eNp-RP-gzh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pUO-Ky-GAc" secondAttribute="bottom" constant="-1" id="lpE-zY-crO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pUO-Ky-GAc" secondAttribute="trailing" constant="7" id="o5U-vM-o0q"/>
+                    <constraint firstItem="pUO-Ky-GAc" firstAttribute="top" secondItem="7sy-S6-vqA" secondAttribute="topMargin" id="pnB-rR-VYL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3jl-wU-FOC" secondAttribute="trailing" priority="750" constant="7" id="ufN-Me-uMZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="dropDownFrom" destination="3jl-wU-FOC" id="LYb-Mr-IyK"/>
+                <outlet property="dropDownTo" destination="pUO-Ky-GAc" id="aSJ-mw-zlY"/>
+                <outlet property="equaWidthConstraint" destination="eNp-RP-gzh" id="muN-gs-Eho"/>
+                <outlet property="horConstraint" destination="XUV-Lh-c6d" id="Ph0-vM-xAT"/>
+            </connections>
+            <point key="canvasLocation" x="-315" y="-7"/>
+        </tableViewCell>
+    </objects>
+</document>

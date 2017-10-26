@@ -1,0 +1,7 @@
+app_identifier "com.flynax.iFlynax" # The bundle identifier of your app
+apple_id "apple@flynax.com" # Your Apple email address
+team_id "UWKJ3VM6YF"  # Developer Portal Team ID
+itc_team_id "496608"  # iTunes Connect Team ID
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md

@@ -1,0 +1,65 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 2
+        },
+        "cap-insets" : {
+          "bottom" : 2,
+          "top" : 37,
+          "right" : 1,
+          "left" : 42
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "facebook_button_bg.png",
+      "scale" : "1x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 5
+        },
+        "cap-insets" : {
+          "bottom" : 3,
+          "top" : 73,
+          "right" : 2,
+          "left" : 84
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "facebook_button_bg@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 11
+        },
+        "cap-insets" : {
+          "bottom" : 4,
+          "top" : 106,
+          "right" : 2,
+          "left" : 128
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "facebook_button_bg@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

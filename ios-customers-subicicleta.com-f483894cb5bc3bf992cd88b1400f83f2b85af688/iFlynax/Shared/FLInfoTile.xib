@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLInfoTileView">
+            <connections>
+                <outlet property="infoLabel" destination="lFZ-B6-vCb" id="k0e-Cq-ZyL"/>
+                <outlet property="titleLabel" destination="Ivs-im-8Jl" id="skk-V8-27d"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xvt-xd-03g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivs-im-8Jl">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Lb2-6h-Xlp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="highlightedColor" red="0.29756887339999999" green="0.50670744239999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFZ-B6-vCb">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Ivs-im-8Jl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GYP-FM-5nl"/>
+                <constraint firstItem="lFZ-B6-vCb" firstAttribute="top" secondItem="Ivs-im-8Jl" secondAttribute="bottom" constant="13" id="YFf-1G-FUa"/>
+                <constraint firstAttribute="trailing" secondItem="Ivs-im-8Jl" secondAttribute="trailing" id="aDN-6B-wYx"/>
+                <constraint firstItem="Ivs-im-8Jl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hvV-yA-EZ2"/>
+                <constraint firstAttribute="centerX" secondItem="lFZ-B6-vCb" secondAttribute="centerX" id="sii-dr-VbF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-407" y="-2007"/>
+        </view>
+    </objects>
+</document>
