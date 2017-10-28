@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iOt-OQ-suf">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iOt-OQ-suf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -120,7 +120,7 @@
         <scene sceneID="lbN-C7-wpg">
             <objects>
                 <navigationController storyboardIdentifier="sid_paymentNC" id="PYm-8T-Cf8" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="20x-nC-0KD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="20x-nC-0KD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -136,7 +136,7 @@
         <scene sceneID="UWd-gQ-hiX">
             <objects>
                 <navigationController storyboardIdentifier="sid_policyVC" id="H0x-Yf-Spz" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLo-FC-max">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tLo-FC-max">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -426,7 +426,7 @@
             <objects>
                 <navigationController storyboardIdentifier="addListingSelectPlan" id="CtM-4y-yyx" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uNw-aN-lzm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8n-CK-O2J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="i8n-CK-O2J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -650,7 +650,7 @@
             <objects>
                 <navigationController storyboardIdentifier="contentController" definesPresentationContext="YES" id="NMk-hw-eGf" customClass="FLMainNavigation" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="D4N-RD-Qyn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y7r-53-XzT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Y7r-53-XzT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -986,7 +986,7 @@
         <scene sceneID="XqA-8K-aJ2">
             <objects>
                 <navigationController storyboardIdentifier="remindPasswordVC" id="UwX-7b-7tv" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dmt-Eo-EJ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Dmt-Eo-EJ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1399,7 +1399,7 @@
             <objects>
                 <navigationController storyboardIdentifier="registrationNC" id="vwb-3Q-MST" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ou7-KA-xdd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POc-Sm-fyl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="POc-Sm-fyl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1415,7 +1415,7 @@
         <scene sceneID="rjR-SZ-SBJ">
             <objects>
                 <navigationController storyboardIdentifier="registrationExtendedNC" id="748-3N-pDi" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r44-fZ-JsI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r44-fZ-JsI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1555,7 +1555,7 @@
             <objects>
                 <navigationController storyboardIdentifier="editProfileNC" id="mgJ-df-BnF" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HRT-6F-s2A"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9b-BW-nrp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p9b-BW-nrp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2383,7 +2383,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_placeholder_logo" translatesAutoresizingMaskIntoConstraints="NO" id="C5w-Qv-3q6">
-                                                    <rect key="frame" x="146" y="15" width="85" height="100"/>
+                                                    <rect key="frame" x="145" y="15" width="85" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="YCL-nn-wtw"/>
                                                         <constraint firstAttribute="width" constant="85" id="gyn-en-wtI"/>
@@ -2417,7 +2417,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-a8-EDo">
-                                            <rect key="frame" x="109" y="178" width="160" height="44"/>
+                                            <rect key="frame" x="108" y="178" width="160" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="2Hq-ZA-PuN"/>
                                                 <constraint firstAttribute="width" constant="160" id="Ug4-Qv-WZC"/>
@@ -2783,7 +2783,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flynax Dealer Flynax Dealer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blr-Mi-iyC">
-                                            <rect key="frame" x="132" y="11" width="197" height="39"/>
+                                            <rect key="frame" x="132" y="11" width="197" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -3397,7 +3397,7 @@
             <objects>
                 <navigationController storyboardIdentifier="listingStatisticsNC" id="n74-fy-l1q" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Vep-Ui-cdH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGc-dA-30j">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MGc-dA-30j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3590,7 +3590,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" translatesAutoresizingMaskIntoConstraints="NO" id="GFU-WF-FP2">
-                                                            <rect key="frame" x="-1" y="8" width="32" height="14"/>
+                                                            <rect key="frame" x="-0.5" y="8" width="31" height="14"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>

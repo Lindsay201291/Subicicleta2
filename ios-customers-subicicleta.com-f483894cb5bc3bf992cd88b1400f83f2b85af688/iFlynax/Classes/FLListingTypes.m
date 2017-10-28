@@ -96,7 +96,7 @@ static NSString * const kPositionKey = @"position";
 
 - (NSArray *)buildBrowseMenuSection {
 	NSArray *staticTitles = @[@{@"name": FLLocalizedString(@"menu_recently_added"),   @"icon": @"menu_recently_added"},
-							  @{@"name": FLLocalizedString(@"menu_search_around_me"), @"icon": @"menu_search_around_me"},
+							  /*@{@"name": FLLocalizedString(@"menu_search_around_me"), @"icon": @"menu_search_around_me"},*/
                               @{@"name": FLLocalizedString(@"menu_search"), @"icon": @"menu_search"}];
 	NSMutableArray *sectionRows = [NSMutableArray arrayWithArray:staticTitles];
     NSArray *lTypes = [self getList];
