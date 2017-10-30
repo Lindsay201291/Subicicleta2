@@ -243,7 +243,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
     cell.bottomSeparator = YES;
     
 	if (section == FLMenuSectionHome) {
-		cell.titleLabel.text = FLLocalizedString(@"menu_home");
+		cell.titleLabel.text = FLLocalizedString(@"menu_inicio");
         cell.bottomSeparator = NO;
 	}
 
@@ -255,16 +255,16 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
             [titleKeys addObject:username];
 
             if ([FLAccount canPostAds]) {
-                [titleKeys addObjectsFromArray:@[@"menu_add_listing", @"menu_my_listings"]];
+                [titleKeys addObjectsFromArray:@[@"menu_agregar_anuncio", @"menu_mis_anuncios"]];
             }
-            [titleKeys addObjectsFromArray:@[@"menu_my_messages", @"menu_favorites"]];
+            [titleKeys addObjectsFromArray:@[@"menu_mis_mensajes", @"menu_favoritos"]];
 		}
         else {
-            [titleKeys addObjectsFromArray:@[@"menu_login", @"menu_add_listing", @"menu_favorites"]];
+            [titleKeys addObjectsFromArray:@[@"menu_iniciar_sesion", @"menu_agregar_anuncio", @"menu_favoritos"]];
         }
 
 		cell.titleLabel.text = FLLocalizedString(titleKeys[indexPath.row]);
-		NSString *icon = (indexPath.row == 0) ? @"menu_login" : titleKeys[indexPath.row];
+		NSString *icon = (indexPath.row == 0) ? @"menu_iniciar_sesion" : titleKeys[indexPath.row];
 		cell.iconView.image = [UIImage imageNamed:icon];
 
         if (IS_LOGIN && indexPath.row == titleKeys.count - 2) { // my_messages
@@ -289,7 +289,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
             if ([sectionInfo[@"icon"] isEqualToString:@"menu_search_around_me"]) {
                 [self forceSelectTheItem:indexPath ifCacheHaveKey:kSessionStaticMapDidTapped];
             }
-            else if ([sectionInfo[@"icon"] isEqualToString:@"menu_search"]) {
+            else if ([sectionInfo[@"icon"] isEqualToString:@"menu_buscar"]) {
                 [self forceSelectTheItem:indexPath ifCacheHaveKey:kSessionSearchControllerIsActive];
             }
         }

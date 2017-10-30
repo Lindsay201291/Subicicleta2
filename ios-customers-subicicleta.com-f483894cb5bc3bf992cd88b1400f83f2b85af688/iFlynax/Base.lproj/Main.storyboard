@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="-31062" y="-18147"/>
         </scene>
-        <!--Settings-->
+        <!--Ajustes-->
         <scene sceneID="6mH-MS-Zjv">
             <objects>
                 <viewController storyboardIdentifier="settingsController" id="bzl-VS-JWB" customClass="FLSettingsView" sceneMemberID="viewController">
@@ -71,15 +71,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="32" id="hd2-Nb-RPS">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="32" id="hd2-Nb-RPS">
+                                                    <rect key="frame" x="15" y="5" width="41" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsC-Jo-7N3">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtítutlo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsC-Jo-7N3">
+                                                    <rect key="frame" x="15" y="25" width="52" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="T3Z-TV-1sD" firstAttribute="bottom" secondItem="cm6-9m-2hw" secondAttribute="top" id="hUe-J5-kEa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Ncy-G1-H9q">
+                    <navigationItem key="navigationItem" title="Ajustes" id="Ncy-G1-H9q">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="66e-sE-fmb">
                             <connections>
                                 <action selector="showSideMenu:" destination="bzl-VS-JWB" id="3MZ-3g-2iK"/>
@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="-33481" y="-20251"/>
         </scene>
-        <!--Terms & Conditions-->
+        <!--Términos y condiciones-->
         <scene sceneID="c6y-Cp-ZiU">
             <objects>
                 <viewController id="8Pu-0O-37c" customClass="FLPolicyVC" sceneMemberID="viewController">
@@ -192,7 +192,7 @@
                             <constraint firstItem="7dE-df-mJc" firstAttribute="top" secondItem="kp9-FD-fF8" secondAttribute="bottom" id="yBp-b5-WlN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="ixu-hT-Gq2"/>
+                    <navigationItem key="navigationItem" title="Términos y condiciones" id="ixu-hT-Gq2"/>
                     <connections>
                         <outlet property="agreeBtn" destination="aaH-vN-7lm" id="7eg-pv-MTs"/>
                         <outlet property="disagreeBtn" destination="CXl-YW-O1b" id="C88-t0-oDe"/>
@@ -203,7 +203,7 @@
             </objects>
             <point key="canvasLocation" x="-32657" y="-20251"/>
         </scene>
-        <!--Your Order-->
+        <!--Su pedido-->
         <scene sceneID="fc7-0E-bPo">
             <objects>
                 <viewController storyboardIdentifier="sid_paymentVC" id="2dp-9h-fmE" customClass="FLPaymentVC" sceneMemberID="viewController">
@@ -215,7 +215,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="400" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-G4-8eu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="título" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="400" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-G4-8eu">
                                 <rect key="frame" x="15" y="79" width="345" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,7 +227,7 @@
                                     <constraint firstAttribute="height" constant="44" id="ffy-ga-Cfg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Pay with In-App Purchase" backgroundImage="inapp_button_bg">
+                                <state key="normal" title="   Pague con la compra en la aplicación" backgroundImage="inapp_button_bg">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -247,8 +247,8 @@
                                     <action selector="paymentBtnDidTap:" destination="2dp-9h-fmE" eventType="touchUpInside" id="z1m-Cd-FXJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="price" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-rB-ToC">
-                                <rect key="frame" x="164" y="117" width="47" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="precio" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-rB-ToC">
+                                <rect key="frame" x="159" y="117" width="58" height="23"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="0.87828052043914795" green="0.38308614492416382" blue="0.10330940783023834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -270,7 +270,7 @@
                             <constraint firstItem="cBC-Ak-6ao" firstAttribute="trailing" secondItem="fKz-G4-8eu" secondAttribute="trailing" id="tts-U0-TmT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Order" id="unK-pj-0ha">
+                    <navigationItem key="navigationItem" title="Su pedido" id="unK-pj-0ha">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="pXF-2d-TLA">
                             <connections>
                                 <action selector="cancelBtnDidTap:" destination="2dp-9h-fmE" id="iAu-VT-7b1"/>
@@ -291,7 +291,7 @@
             </objects>
             <point key="canvasLocation" x="-32622" y="-18481"/>
         </scene>
-        <!--About App-->
+        <!--Acerca de la App-->
         <scene sceneID="qns-21-1ia">
             <objects>
                 <viewController storyboardIdentifier="aboutUsController" id="2Ml-6p-B74" customClass="FLAboutUsView" sceneMemberID="viewController">
@@ -346,7 +346,7 @@
                             <constraint firstItem="wdg-9W-NDA" firstAttribute="leading" secondItem="OEA-J0-IKR" secondAttribute="leading" constant="35" id="v5L-wo-0Ct"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About App" id="tB8-GS-wwX">
+                    <navigationItem key="navigationItem" title="Acerca de la App" id="tB8-GS-wwX">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="GhT-SS-twK">
                             <connections>
                                 <action selector="showSideMenu:" destination="2Ml-6p-B74" id="w1y-1S-uEk"/>
@@ -438,7 +438,7 @@
             </objects>
             <point key="canvasLocation" x="-38273" y="-15091"/>
         </scene>
-        <!--Select Plan-->
+        <!--Seleccionar Plan-->
         <scene sceneID="PiX-vh-oFq">
             <objects>
                 <viewController id="1ZJ-IC-bhD" customClass="FLListingSelectPlan" sceneMemberID="viewController">
@@ -468,13 +468,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="308" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Whatever Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-5b-cfm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Cualquier Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-5b-cfm">
                                                     <rect key="frame" x="23" y="16" width="167" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-eR-d8a">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratis" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-eR-d8a">
                                                     <rect key="frame" x="198" y="16" width="98" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="98" id="a7o-j3-e00"/>
@@ -483,7 +483,7 @@
                                                     <color key="textColor" red="0.68627450980000004" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Listing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9by-7b-qwC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listado Único" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9by-7b-qwC">
                                                     <rect key="frame" x="23" y="41" width="273" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -541,7 +541,7 @@
                                                         <outlet property="heightConstraint" destination="T5P-2b-8Mg" id="72u-Mo-mBK"/>
                                                     </connections>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usage Limit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-DA-1dJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Límite de Uso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-DA-1dJ">
                                                     <rect key="frame" x="23" y="125" width="273" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dp7-mg-tED"/>
@@ -609,7 +609,7 @@
                                     <constraint firstAttribute="height" constant="44" id="NYC-tv-yKT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Select a Plan" backgroundImage="button1">
+                                <state key="normal" title="Seleccione un Plan" backgroundImage="button1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -629,7 +629,7 @@
                             <constraint firstItem="aWD-hK-YFj" firstAttribute="leading" secondItem="XiM-oK-OC0" secondAttribute="leading" constant="15" id="x1x-gq-u11"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Plan" id="ahF-iP-t68">
+                    <navigationItem key="navigationItem" title="Seleccionar Plan" id="ahF-iP-t68">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="ChC-ia-4Wf">
                             <connections>
                                 <action selector="cancelButtonDidTap:" destination="1ZJ-IC-bhD" id="HgP-cP-5GT"/>
@@ -805,7 +805,7 @@
                                             <constraint firstAttribute="height" constant="44" id="eyP-pQ-LZ8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Log in with Facebook" backgroundImage="facebook_button_bg">
+                                        <state key="normal" title="Iniciar sesión con Facebook" backgroundImage="facebook_button_bg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -819,7 +819,7 @@
                                         <color key="textColor" red="0.44277316331863403" green="0.4427599310874939" blue="0.44276738166809082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-Lb-bye" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-Lb-bye" customClass="FLTextField">
                                         <rect key="frame" x="15" y="93" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="570" id="E6w-iC-vVF"/>
@@ -837,7 +837,7 @@
                                             <outlet property="delegate" destination="VEg-1x-sKX" id="TPy-7v-Lvd"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVe-QW-jTd" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVe-QW-jTd" customClass="FLTextField">
                                         <rect key="frame" x="15" y="153" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="AnD-kq-3qt"/>
@@ -862,7 +862,7 @@
                                             <constraint firstAttribute="height" constant="44" id="M3j-d3-XcB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Log in" backgroundImage="button1">
+                                        <state key="normal" title="Iniciar sesión" backgroundImage="button1">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -875,14 +875,14 @@
                                             <accessibilityTraits key="traits" link="YES" selected="YES" staticText="YES"/>
                                         </accessibility>
                                         <attributedString key="attributedText">
-                                            <fragment content="Forgot password? [">
+                                            <fragment content="¿Olvidó su contraseña? [">
                                                 <attributes>
                                                     <color key="NSColor" red="0.29258939623832703" green="0.29258066415786743" blue="0.2925855815410614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="14" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="Remind">
+                                            <fragment content="Recordar">
                                                 <attributes>
                                                     <color key="NSBackgroundColor" red="0.30883073806762695" green="0.71083563566207886" blue="0.29353109002113342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="NSColor" red="0.29258939623832703" green="0.29258066415786743" blue="0.2925855815410614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -907,7 +907,7 @@
                                         <rect key="frame" x="15" y="311" width="345" height="29"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Create an Account">
+                                                <fragment content="Crear una Cuenta">
                                                     <attributes>
                                                         <color key="NSColor" red="0.064409084618091583" green="0.36795699596405029" blue="0.71319818496704102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -956,7 +956,7 @@
                             <constraint firstItem="Ck4-7A-LUE" firstAttribute="leading" secondItem="1K2-Oy-TKl" secondAttribute="leading" id="idt-3a-yao"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="eoK-a3-yVU">
+                    <navigationItem key="navigationItem" title="Iniciar sesión" id="eoK-a3-yVU">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="Z97-nf-BXP">
                             <connections>
                                 <action selector="showSideMenu:" destination="VEg-1x-sKX" id="uAB-CE-xts"/>
@@ -998,7 +998,7 @@
             </objects>
             <point key="canvasLocation" x="-36025" y="-15091"/>
         </scene>
-        <!--Remind Password-->
+        <!--Recordar Contraseña-->
         <scene sceneID="Awc-WJ-u8G">
             <objects>
                 <viewController id="8O9-Vf-Sba" customClass="FLRemindPassword" sceneMemberID="viewController">
@@ -1027,7 +1027,7 @@
                                     <constraint firstAttribute="height" constant="44" id="e1T-Sd-XOm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit" backgroundImage="button1">
+                                <state key="normal" title="Enviar" backgroundImage="button1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -1046,8 +1046,8 @@
                             <constraint firstItem="yI9-fa-hqV" firstAttribute="top" secondItem="K45-cu-dfb" secondAttribute="bottom" constant="15" id="xOX-M2-fjk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Remind Password" id="dwI-Yn-wZc">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="nwy-nC-20B">
+                    <navigationItem key="navigationItem" title="Recordar Contraseña" id="dwI-Yn-wZc">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="nwy-nC-20B">
                             <connections>
                                 <action selector="dissmissViewController:" destination="8O9-Vf-Sba" id="Y1N-wF-fH9"/>
                             </connections>
@@ -1062,7 +1062,7 @@
             </objects>
             <point key="canvasLocation" x="-36025" y="-14331"/>
         </scene>
-        <!--My Profile-->
+        <!--Mi Perfil-->
         <scene sceneID="6Ah-Vu-s8t">
             <objects>
                 <viewController storyboardIdentifier="myProfileController" id="C4Y-J4-B9y" customClass="FLMyProfileView" sceneMemberID="viewController">
@@ -1097,7 +1097,7 @@
                                                 <constraint firstAttribute="width" constant="169" id="6dh-cn-Jdz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <state key="normal" title="Edit Profile" backgroundImage="button1">
+                                            <state key="normal" title="Editar Perfil" backgroundImage="button1">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -1105,7 +1105,7 @@
                                                 <action selector="editProfileBtnDidTap:" destination="C4Y-J4-B9y" eventType="touchUpInside" id="5ca-Wa-bro"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="455" translatesAutoresizingMaskIntoConstraints="NO" id="KWf-2s-Td0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="455" translatesAutoresizingMaskIntoConstraints="NO" id="KWf-2s-Td0">
                                             <rect key="frame" x="130" y="25" width="230" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="46" id="VdB-xQ-KvR"/>
@@ -1118,14 +1118,14 @@
                                             <color key="backgroundColor" red="0.42267489433288574" green="0.42266225814819336" blue="0.42266941070556641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" title="Edit">
+                                            <state key="normal" title="Editar">
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="editProfilePicture:" destination="C4Y-J4-B9y" eventType="touchUpInside" id="s86-fN-PeM"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-Wq-lyB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-Wq-lyB">
                                             <rect key="frame" x="130" y="47" width="230" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.24968674778938293" green="0.24967923760414124" blue="0.24968348443508148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1177,7 +1177,7 @@
                             <constraint firstItem="D5K-sW-XlE" firstAttribute="leading" secondItem="wZ3-uS-T8f" secondAttribute="leading" id="wuD-Pg-Ad6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="cEJ-8R-yID"/>
+                    <navigationItem key="navigationItem" title="Mi Perfil" id="cEJ-8R-yID"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="editProfileButton" destination="ZtX-UY-TY3" id="uQ3-CQ-Hvk"/>
@@ -1193,7 +1193,7 @@
             </objects>
             <point key="canvasLocation" x="-35228" y="-15096"/>
         </scene>
-        <!--Change Password-->
+        <!--Cambiar Contraseña-->
         <scene sceneID="yNb-sM-RJC">
             <objects>
                 <viewController storyboardIdentifier="myProfileChangePassword" id="wO9-Xz-lgF" customClass="FLChangePasswordView" sceneMemberID="viewController">
@@ -1224,7 +1224,7 @@
                                             <outlet property="delegate" destination="wO9-Xz-lgF" id="KKL-A4-bzS"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAL-XR-RYy" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nueva Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAL-XR-RYy" customClass="FLTextField">
                                         <rect key="frame" x="15" y="74" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fSd-e4-KXg"/>
@@ -1240,7 +1240,7 @@
                                             <outlet property="delegate" destination="wO9-Xz-lgF" id="eSK-IU-Gdw"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verify Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-pv-qrk" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verificar Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-pv-qrk" customClass="FLTextField">
                                         <rect key="frame" x="15" y="133" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jAc-od-ZCL"/>
@@ -1262,7 +1262,7 @@
                                             <constraint firstAttribute="height" constant="44" id="64i-8w-zaj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Save" backgroundImage="button1">
+                                        <state key="normal" title="Guardar" backgroundImage="button1">
                                             <color key="titleColor" red="0.93324239419999999" green="0.93324239419999999" blue="0.93324239419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1297,7 +1297,7 @@
                             <constraint firstItem="4ML-9H-5IJ" firstAttribute="leading" secondItem="Hy5-jt-1J3" secondAttribute="leading" id="sS0-8W-2FV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Change Password" id="EuW-ha-akZ"/>
+                    <navigationItem key="navigationItem" title="Cambiar Contraseña" id="EuW-ha-akZ"/>
                     <connections>
                         <outlet property="passwordCurrentField" destination="OmH-9A-UX9" id="FIm-VC-96x"/>
                         <outlet property="passwordNewField" destination="VAL-XR-RYy" id="yfu-rz-J2K"/>
