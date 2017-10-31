@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = FLLocalizedString(@"screen_myListings_view");
+    self.title = FLLocalizedString(@"screen_misAnuncios_vista");
 
     UINib *cellNib = [UINib nibWithNibName:kNibNameMyListingsViewCell bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:kStoryBoardMyListingsCellIdentifier];
@@ -35,7 +35,7 @@
     self.currentStack = 1;
     
     self.blankSlate.title   = FLLocalizedString(@"blankSlate_myListings_title");
-    self.blankSlate.message = FLLocalizedString(@"blankSlate_myListings_message");
+    self.blankSlate.message = FLLocalizedString(@"blankSlate_misAnuncios_mensaje");
     
     [self loadDataWithRefresh:YES];
 

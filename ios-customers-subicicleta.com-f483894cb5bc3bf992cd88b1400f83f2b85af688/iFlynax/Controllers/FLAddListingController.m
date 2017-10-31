@@ -137,7 +137,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     _sectionVideos   = NSNotFound;
 
     if (self.isEditMode) {
-        self.title = FLLocalizedString(@"loading");
+        self.title = FLLocalizedString(@"cargando");
         [self fetchListingFormData];
     }
     else {
@@ -165,7 +165,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 */
 
 - (void)buildSelectCategoryStep {
-    self.title = FLLocalizedString(@"seleccione_categoria");
+    self.title = FLLocalizedString(@"screen_seleccione_categoria");
 
     _formState = FLFormStateSelectCategory;
     _tableView.tableHeaderView = nil;
@@ -230,7 +230,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             _categoriesSection.headerHeight = 15;
 
             [self appendCategoryFieldWithCategories:categories completion:^{
-                [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
+                [_categoriesSection setFooterTitle:FLLocalizedString(@"screen_seleccione_categoria")];
 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if ([self.manager.sections indexOfObject:_categoriesSection] == NSNotFound) {
@@ -250,7 +250,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (UIButton *)selectCategoryBtn {
     if (_selectCategoryBtn == nil) {
         _selectCategoryBtn = [[UIButton alloc] initWithFrame:CGRectMake(15, 0, self.tableView.width-30, 44)];
-        [_selectCategoryBtn setTitle:FLLocalizedString(@"seleccione_categoria") forState:UIControlStateNormal];
+        [_selectCategoryBtn setTitle:FLLocalizedString(@"screen_seleccione_categoria") forState:UIControlStateNormal];
         [_selectCategoryBtn setBackgroundImage:[UIImage imageNamed:@"button1"] forState:UIControlStateNormal];
         [_selectCategoryBtn addTarget:self action:@selector(selectCategoryBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -326,7 +326,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
         [self buildFormTable];
     }
     else {
-        _categoryBox.planTitle = FLLocalizedString(@"loading");
+        _categoryBox.planTitle = FLLocalizedString(@"cargando");
         [self fetchListingFormData];
     }
 }
@@ -566,14 +566,14 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             _adForm.listingType = listingType;
             _adForm.category = nil;
 
-            [_listingTypeSection setFooterTitle:FLLocalizedString(@"loading")];
+            [_listingTypeSection setFooterTitle:FLLocalizedString(@"cargando")];
             [self.tableView reloadData];
 
             [self loadWithParams:@{@"cmd": @"categories",
                                    @"ltype_key": listingType.key,
                                    @"all": @(YES)}
                       completion:^{
-                          [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
+                          [_categoriesSection setFooterTitle:FLLocalizedString(@"screen_seleccione_categoria")];
 
                           dispatch_async(dispatch_get_main_queue(), ^{
                               [_listingTypeSection setFooterTitle:nil];
@@ -596,7 +596,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             [self removeAllItemsBelowItem:field];
 
             if (category.children) {
-                [_categoriesSection setFooterTitle:FLLocalizedString(@"loading")];
+                [_categoriesSection setFooterTitle:FLLocalizedString(@"cargando")];
                 _categoriesSection.footerHeight = 25;
 
                 [self loadWithParams:@{@"cmd": @"categories",
@@ -631,7 +631,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                     }
                 }
             } else if (_categoriesSection.items.count == 1) {
-                [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
+                [_categoriesSection setFooterTitle:FLLocalizedString(@"screen_seleccione_categoria")];
                 self.tableView.tableFooterView = nil;
                 _adForm.category = nil;
             }
@@ -744,7 +744,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     }
     else {
         self.tableView.tableFooterView = nil;
-        _categoriesSection.footerTitle = FLLocalizedString(@"seleccione_categoria");
+        _categoriesSection.footerTitle = FLLocalizedString(@"screen_seleccione_categoria");
     }
 
     if ([self sectionTypeOfField:item is:FLSectionTypeListingType]) {

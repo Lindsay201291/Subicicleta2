@@ -44,7 +44,7 @@
         [_plansManager.planButtons removeAllObjects];
     }
     else {
-        self.title = FLLocalizedString(@"loading");
+        self.title = FLLocalizedString(@"cargando");
         [FLPlansManager restoreToDefaults];
 
         _selectPlanBtn.enabled = NO;

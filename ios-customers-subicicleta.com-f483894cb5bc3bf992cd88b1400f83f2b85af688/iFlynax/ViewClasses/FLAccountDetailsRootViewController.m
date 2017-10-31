@@ -41,7 +41,7 @@
 }
 
 - (void)loadAccountDetails {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 
     [flynaxAPIClient getApiItem:kApiItemSellerDetails
                      parameters:@{@"aid": @(_sellerId)}

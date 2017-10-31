@@ -25,7 +25,7 @@
 "notification_new_message_by" = "A new message by {name}";
 
 /* Common */
-"loading" = "Loading...";
+"cargando" = "Cargando...";
 "processing" = "Processing...\nPlease wait.";
 "uploading" = "Uploading...";
 "logged_as" = "Logged in as %@";
@@ -59,16 +59,16 @@
 /* Screen's title's */
 "screen_subicicleta" = "Subicicleta";
 "screen_search" = "Search";
-"screen_nearby_ads" = "Nearby Ads";
+"screen_anuncios_cercanos" = "Anuncios Cercanos";
 "screen_detalles_anuncio" = "Detalles del Anuncio";
 "screen_informacion_vendedor" = "Información del Vendedor";
 "screen_anuncio_en_mapa" = "Ver Mapa";
 "screen_comments" = "Comments";
-"screen_favorite_ads_view" = "Favorites";
+"screen_favoritos_anuncios_vista" = "Favoritos";
 "screen_recently_view" = "Recently Added";
 "screen_login_form" = "Login";
 "screen_mi_perfil" = "Perfil";
-"screen_myListings_view" = "My Listings";
+"screen_misAnuncios_vista" = "Mis Anuncios";
 "screen_cambiar_contraseña" = "Contraseña";
 "screen_seleccione_categoria" = "Seleccione una Categoría";
 "screen_al_fillout_form" = "Fill Out Form";
@@ -83,7 +83,7 @@
 "screen_feedback_select_subject" = "Select Subject";
 "screen_detalles_cuenta" = "Detalles de la Cuenta";
 "screen_anuncios_vendedor" = "Anuncios del Vendedor";
-"screen_my_messages" = "My Messages";
+"screen_mis_mensajes" = "Mis Mensajes";
 "screen_listing_videos" = "Video";
 "screen_add_comment" = "Add Comment";
 "screen_ad_statistics" = "Stat";
@@ -94,8 +94,8 @@
 "screen_editar_perfil" = "Editar Perfil";
 
 /* Swipe menu */
-"menu_section_account" = "Account";
-"menu_section_browse" = "Browse";
+"menu_seccion_cuenta" = "Cuenta";
+"menu_seccion_ver" = "Ver";
 "menu_section_account_types" = "Account Types";
 "menu_section_more" = "More";
 "menu_inicio" = "Inicio";
@@ -114,7 +114,7 @@
 
 /* placeholders */
 "placeholder_search" = "Search";
-"placeholder_keyword_search" = "Keyword Search";
+"placeholder_frase_busqueda" = "Frase de Búsqueda";
 "placeholder_username" = "Username";
 "placeholder_email" = "E-mail";
 "placeholder_password" = "Password";
@@ -243,12 +243,12 @@
 
 /* blank slate */
 "blankSlate_home_title" = "There are no ads.";
-"blankSlate_conversations_title" = "No Messages";
-"blankSlate_conversations_message" = "Your conversations will be here when you share with friends.";
-"blankSlate_favorites_title" = "You have no Favorited Ads";
-"blankSlate_favorites_message" = "Add new favorites by tapping heart on any Ads.";
+"blankSlate_titulo_conversacion" = "No hay Mensajes";
+"blankSlate_mensaje_conversaciones" = "Verás tus mensajes aquí una vez que empieces a enviar mensajes a otros usuarios.";
+"blankSlate_titulos_favoritos" = "No se han añadido favoritos";
+"blankSlate_mensajes_favoritos" = "Puedes añadir anuncios a Favoritos tocando el icono del corazón.";
 "blankSlate_myListings_title" = "";
-"blankSlate_myListings_message" = "You haven't yet posted any ads.";
+"blankSlate_misAnuncios_mensaje" = "Aún no ha publicado ningún anuncio.";
 "blankSlate_recentlyAds_title" = "";
 "blankSlate_recentlyAds_message" = "There are no new listings added.";
 "blankSlate_sellerAds_title" = "";

@@ -15,7 +15,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.gaScreenName = FLLocalizedString(@"screen_myListings_view");
+	self.gaScreenName = FLLocalizedString(@"screen_misAnuncios_vista");
 }
 
 - (void)viewDidLoad {

@@ -100,7 +100,7 @@ static NSString * const kTimerUserInfoPositionKey = @"position";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    self.title = FLLocalizedString(@"screen_nearby_ads");
+    self.title = FLLocalizedString(@"screen_anuncios_cercanos");
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -218,7 +218,7 @@ static NSString * const kTimerUserInfoPositionKey = @"position";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	self.screenName = FLLocalizedString(@"screen_nearby_ads");
+	self.screenName = FLLocalizedString(@"screen_anuncios_cercanos");
 	[super viewDidAppear:animated];
 }
 

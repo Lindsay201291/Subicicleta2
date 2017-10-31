@@ -76,7 +76,7 @@ static NSString * const kAccountTypeNameKey = @"name";
     _section = [RETableViewSection section];
     [self.manager addSection:_section];
 
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
     [flynaxAPIClient getApiItem:kApiItemMyProfile
                      parameters:@{@"action" : kApiItemMyProfile_profileForm,
                                   @"id"     : [NSNumber numberWithInteger:[FLAccount userId]],

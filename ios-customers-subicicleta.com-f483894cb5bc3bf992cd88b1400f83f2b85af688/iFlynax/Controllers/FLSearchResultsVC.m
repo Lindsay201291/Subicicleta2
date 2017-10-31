@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"loading");
+    self.title = FLLocalizedString(@"cargando");
 
     self.apiCmd = kApiItemRequests_searchListings;
     self.apiParameters[@"f"] = self.formValues;

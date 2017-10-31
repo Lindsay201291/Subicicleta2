@@ -176,7 +176,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 - (void)loginWithFacebookProfile:(NSDictionary *)profile {
     BOOL deviceIsRegistered = [FLRemoteNotifications isRegisteredForRemoteNotifications];
 
-	[FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+	[FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 	[flynaxAPIClient postApiItem:kApiItemLogin
 					  parameters:@{@"action"    : kApiItemLogin_fb,
 								   @"email"     : profile[@"email"],
@@ -203,7 +203,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
     if ([_validatorManager validate]) {
         BOOL deviceIsRegistered = [FLRemoteNotifications isRegisteredForRemoteNotifications];
 
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
         [flynaxAPIClient postApiItem:kApiItemLogin
                           parameters:@{@"action"    : kApiItemLogin_default,
                                        @"username"  : _usernameField.text,

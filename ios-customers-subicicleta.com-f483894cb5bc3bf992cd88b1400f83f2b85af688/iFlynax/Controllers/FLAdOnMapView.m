@@ -60,7 +60,7 @@ static NSURL *_buildMapsUrlWithScheme(NSString *urlMask, NSDictionary *target) {
     marker.title = FLCleanString(_location[@"title"]);
 
     if ([marker.title isEmpty]) {
-        marker.title = FLLocalizedString(@"loading");
+        marker.title = FLLocalizedString(@"cargando");
 
         [[GMSGeocoder geocoder] reverseGeocodeCoordinate:camera.target completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error) {
             if (error == nil) {

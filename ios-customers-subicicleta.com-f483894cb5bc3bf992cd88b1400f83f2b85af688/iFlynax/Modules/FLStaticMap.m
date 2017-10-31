@@ -54,7 +54,7 @@
 								  }
 							  }];
 
-    _titleLabel.text = FLLocalizedString(@"screen_nearby_ads");
+    _titleLabel.text = FLLocalizedString(@"screen_anuncios_cercanos");
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

@@ -198,7 +198,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 }
 
 - (void)postFormToAPIWithData:(NSDictionary *)data {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 
     [flynaxAPIClient postApiItem:kApiItemRequests
                       parameters:@{@"cmd"      : kApiItemRequests_registration,

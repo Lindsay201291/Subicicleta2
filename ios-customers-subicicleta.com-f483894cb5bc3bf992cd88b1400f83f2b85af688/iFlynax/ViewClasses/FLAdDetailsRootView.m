@@ -42,7 +42,7 @@
 }
 
 - (void)loadListingDetails {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 
     self.tabsControl.alpha = 0;
     self.pageViewController.view.alpha = 0;

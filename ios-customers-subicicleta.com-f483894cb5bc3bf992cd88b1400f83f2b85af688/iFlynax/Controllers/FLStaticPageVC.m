@@ -19,7 +19,7 @@
 
     _webView.backgroundColor = FLHexColor(kColorBackgroundColor);
 
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
     [flynaxAPIClient getApiItem:kApiItemRequests
                      parameters:@{@"cmd": kApiItemRequests_staticPageContent,
                                   @"page": _pageKey}

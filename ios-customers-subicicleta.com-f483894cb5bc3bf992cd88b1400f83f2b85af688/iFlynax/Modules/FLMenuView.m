@@ -162,7 +162,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
         _accountTypesSection = [[FLAccountTypes sharedInstance] buildAccountTypesMenuSection];
 		[_tableview reloadData];
 	});
-    _keywordSearchHandler.searchBar.placeholder = FLLocalizedString(@"placeholder_keyword_search");
+    _keywordSearchHandler.searchBar.placeholder = FLLocalizedString(@"placeholder_frase_busqueda");
 }
 
 #pragma mark UITableView Delegate
@@ -188,9 +188,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 
 	switch (section) {
 		case FLMenuSectionAccountArea:
-			return FLLocalizedString(@"menu_section_account");
+			return FLLocalizedString(@"menu_seccion_cuenta");
 		case FLMenuSectionBrowse:
-			return FLLocalizedString(@"menu_section_browse");
+			return FLLocalizedString(@"menu_seccion_ver");
 		case FLMenuSectionAccountTypes:
 			return FLLocalizedString(@"menu_section_account_types");
         case FLMenuSectionMore:

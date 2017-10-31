@@ -134,7 +134,7 @@ static CGFloat    const kMarkerAnimDuration   = .1f;
 - (void)setLoading:(BOOL)loading {
     _loading = loading;
     _valueLabel.attributedText =  (loading
-                                   ? [self attributedStingForOption:FLLocalizedString(@"loading") withTitleStyle:YES andFormatted:NO]
+                                   ? [self attributedStingForOption:FLLocalizedString(@"cargando") withTitleStyle:YES andFormatted:NO]
                                    : [self attributedStingForOption:_title withTitleStyle:YES andFormatted:YES]);
 }
 

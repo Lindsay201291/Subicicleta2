@@ -30,7 +30,7 @@ static NSString * const kConversationsKey    = @"conversations";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"screen_my_messages");
+    self.title = FLLocalizedString(@"screen_mis_mensajes");
     self.view.backgroundColor = _tableView.backgroundColor = FLHexColor(kColorBackgroundColor);
 
     // append refresh control
@@ -40,8 +40,8 @@ static NSString * const kConversationsKey    = @"conversations";
     [_tableView addSubview:_refreshControl];
 
     [FLBlankSlate attachTo:self.tableView
-                 withTitle:FLLocalizedString(@"blankSlate_conversations_title")
-                   message:FLLocalizedString(@"blankSlate_conversations_message")];
+                 withTitle:FLLocalizedString(@"blankSlate_titulo_conversacion")
+                   message:FLLocalizedString(@"blankSlate_mensaje_conversaciones")];
 
     _entries = [@[] mutableCopy];
     [self.editButtonItem setTitle:FLLocalizedString(@"button_edit")];
@@ -82,7 +82,7 @@ static NSString * const kConversationsKey    = @"conversations";
 
 - (void)loadConversations {
     if (!_refreshControl.refreshing) {
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
     }
 
     [flynaxAPIClient getApiItem:kApiItemRequests

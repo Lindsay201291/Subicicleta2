@@ -45,7 +45,7 @@
 - (void)logoutButtonTapped {
 	CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:F(FLLocalizedString(@"logged_as"), [FLAccount fullName])];
 	[sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_cerrarsesion") block:^{
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 
 		[flynaxAPIClient postApiItem:kApiItemLogin
 						  parameters:@{@"action"    : @"logout",

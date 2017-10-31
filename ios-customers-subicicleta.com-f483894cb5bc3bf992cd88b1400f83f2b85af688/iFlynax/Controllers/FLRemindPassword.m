@@ -58,7 +58,7 @@
 - (void)submitForm {
     if ([_validatorManager validate]) {
         
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
         
         [flynaxAPIClient postApiItem:kApiItemRequests
                           parameters:@{@"cmd"  : kApiItemRequests_resetPassword,

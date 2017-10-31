@@ -84,7 +84,7 @@ static CGFloat const kInfiniteScrollHeight = 60.0f;
     if (refresh) {
         _currentStack = _initStack;
         if (!_refreshControl.isRefreshing) {
-            [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
+            [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
         }
     }
 

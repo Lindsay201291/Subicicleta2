@@ -14,15 +14,15 @@
     
     [super viewDidLoad];
     
-    self.title = FLLocalizedString(@"screen_favorite_ads_view");
+    self.title = FLLocalizedString(@"screen_favoritos_anuncios_vista");
     
     self.apiItem = kApiItemFavorites;
     
     self.initStack    = 1;
     self.currentStack = 1;
     
-    self.blankSlate.title = FLLocalizedString(@"blankSlate_favorites_title");
-    self.blankSlate.message = FLLocalizedString(@"blankSlate_favorites_message");
+    self.blankSlate.title = FLLocalizedString(@"blankSlate_titulos_favoritos");
+    self.blankSlate.message = FLLocalizedString(@"blankSlate_mensajes_favoritos");
     
     [self loadDataWithRefresh:YES];
 
