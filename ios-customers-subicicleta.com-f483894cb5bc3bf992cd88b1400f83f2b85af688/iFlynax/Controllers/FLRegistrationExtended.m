@@ -57,7 +57,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 
     self.title = FLLocalizedString(@"screen_registration");
     self.tableView.backgroundColor = FLHexColor(kColorBackgroundColor);
-    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancel");
+    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
 
     _formManager = [FLTableViewManager withTableView:self.tableView];
     _formManager.delegate = self;

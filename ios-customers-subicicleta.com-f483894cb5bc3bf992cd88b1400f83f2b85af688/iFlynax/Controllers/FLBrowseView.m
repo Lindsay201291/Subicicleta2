@@ -255,7 +255,7 @@ static NSString * const kBrowseCellIdentifier     = @"browseCellIdentifier";
             }
         }];
     }
-    [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancel")];
+    [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
     [sheet showInView:self.view];
 }
 

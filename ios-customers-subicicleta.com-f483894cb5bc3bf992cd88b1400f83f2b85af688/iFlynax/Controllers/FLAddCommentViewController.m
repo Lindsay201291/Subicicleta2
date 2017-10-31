@@ -73,7 +73,7 @@ static NSString * const kCharsLimitFontDangerColor  = @"FF0000";
         _authorTextField.text = [FLAccount fullName];
     }
 
-    [_cancelButton setTitle:FLLocalizedString(@"button_cancel")];
+    [_cancelButton setTitle:FLLocalizedString(@"button_cancelar")];
     [_addCommentButton setTitle:FLLocalizedString(@"button_add_comment") forState:UIControlStateNormal];
     _titleTextField.placeholder = FLLocalizedString(@"placeholder_title");
     

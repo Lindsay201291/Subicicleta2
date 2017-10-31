@@ -33,9 +33,9 @@ static NSString * const kAccountTypeNameKey = @"name";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"screen_edit_profile");
+    self.title = FLLocalizedString(@"screen_editar_perfil");
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
-	[self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancel")];
+	[self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancelar")];
     self.tableView.backgroundColor = self.view.backgroundColor;
 
     self.manager = [FLTableViewManager withTableView:self.tableView];
@@ -61,7 +61,7 @@ static NSString * const kAccountTypeNameKey = @"name";
         UITextField *emailField = [alert textFieldAtIndex:0];
         emailField.keyboardType = UIKeyboardTypeEmailAddress;
 
-        [alert addButtonWithTitle:FLLocalizedString(@"button_cancel") block:nil];
+        [alert addButtonWithTitle:FLLocalizedString(@"button_cancelar") block:nil];
         [alert addButtonWithTitle:FLLocalizedString(@"button_ok") block:^{
             [weakSelf updateProfileEmail:emailField.text];
         }];
@@ -69,8 +69,8 @@ static NSString * const kAccountTypeNameKey = @"name";
     };
     /* table header end */
 
-    [_cancelBtn setTitle:FLLocalizedString(@"button_cancel") forState:UIControlStateNormal];
-    [_submitBtn setTitle:FLLocalizedString(@"button_edit_profile") forState:UIControlStateNormal];
+    [_cancelBtn setTitle:FLLocalizedString(@"button_cancelar") forState:UIControlStateNormal];
+    [_submitBtn setTitle:FLLocalizedString(@"button_editar_perfil") forState:UIControlStateNormal];
     [self actionsButtonHidden:YES];
 
     _section = [RETableViewSection section];

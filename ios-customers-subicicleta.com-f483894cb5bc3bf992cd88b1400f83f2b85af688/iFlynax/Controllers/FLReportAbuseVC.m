@@ -32,7 +32,7 @@
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
 
         UIBarButtonItem *cancelButton;
-        cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportAbuse_button_cancel")
+        cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportAbuse_button_cancelar")
                                                       style:UIBarButtonItemStyleBordered
                                                      target:self
                                                      action:@selector(cancelButtonDidTap)];

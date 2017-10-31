@@ -57,20 +57,20 @@
 "settings_clear_cache_updated" = "System cache has been cleared.";
 
 /* Screen's title's */
-"screen_home" = "iFlynax";
+"screen_subicicleta" = "Subicicleta";
 "screen_search" = "Search";
 "screen_nearby_ads" = "Nearby Ads";
-"screen_listing_details" = "Details";
-"screen_seller_info" = "Seller Info";
-"screen_ad_on_map" = "Map";
+"screen_detalles_anuncio" = "Detalles del Anuncio";
+"screen_informacion_vendedor" = "Información del Vendedor";
+"screen_anuncio_en_mapa" = "Ver Mapa";
 "screen_comments" = "Comments";
 "screen_favorite_ads_view" = "Favorites";
 "screen_recently_view" = "Recently Added";
 "screen_login_form" = "Login";
-"screen_my_profile" = "Profile";
+"screen_mi_perfil" = "Perfil";
 "screen_myListings_view" = "My Listings";
-"screen_change_password" = "Password";
-"screen_al_select_category" = "Select a Category";
+"screen_cambiar_contraseña" = "Contraseña";
+"screen_seleccione_categoria" = "Seleccione una Categoría";
 "screen_al_fillout_form" = "Fill Out Form";
 "screen_legal_information" = "Legal Information";
 "screen_accounts_alphabetic_search" = "Alphabetic Search";
@@ -81,8 +81,8 @@
 "screen_aboutUs"  = "About Us";
 "screen_feedback" = "Feedback";
 "screen_feedback_select_subject" = "Select Subject";
-"screen_account_details" = "Account Details";
-"screen_seller_ads" = "Seller Ads";
+"screen_detalles_cuenta" = "Detalles de la Cuenta";
+"screen_anuncios_vendedor" = "Anuncios del Vendedor";
 "screen_my_messages" = "My Messages";
 "screen_listing_videos" = "Video";
 "screen_add_comment" = "Add Comment";
@@ -91,7 +91,7 @@
 "screen_select_plan" = "Available Plans";
 "screen_search_listings" = "Ads found: {number}";
 "screen_search_sellers" = "Search Results";
-"screen_edit_profile" = "Edit Profile";
+"screen_editar_perfil" = "Editar Perfil";
 
 /* Swipe menu */
 "menu_section_account" = "Account";
@@ -118,9 +118,9 @@
 "placeholder_username" = "Username";
 "placeholder_email" = "E-mail";
 "placeholder_password" = "Password";
-"placeholder_current_password" = "Current Password";
-"placeholder_new_password" = "New password";
-"placeholder_confirm_password" = "Confirm new password";
+"placeholder_contraseña_actual" = "Contraseña Actual";
+"placeholder_nueva_contraseña" = "Nueva Contraseña";
+"placeholder_confirmar_contraseña" = "Confirmar nueva contraseña";
 "placeholder_title" = "Title";
 "placeholder_author" = "Author";
 "placeholder_message" = "Message";
@@ -143,11 +143,11 @@
 "label_choose_photo" = "Choose a photo";
 
 /* buttons */
-"button_seller_ads_count" = "Other Listings (%d)";
+"button_anuncios_vendedor_cont" = "Otros Anuncios (%d)";
 "button_search_cancel" = "Cancel";
 "button_settings" = "Settings";
 "button_ok" = "Ok";
-"button_cancel" = "Cancel";
+"button_cancelar" = "Cancelar";
 "button_edit" = "Edit";
 "button_done" = "Done";
 "button_yes" = "Yes";
@@ -155,8 +155,8 @@
 "button_add" = "Add";
 "button_login" = "Log In";
 "button_facebook_login" = "Log in with Facebook";
-"button_logout" = "Log Out";
-"button_edit_profile" = "Edit Profile";
+"button_cerrarsesion" = "Cerrar Sesión";
+"button_editar_perfil" = "Editar Perfil";
 "button_nearby_ads_viewmode_0" = "Show Map";
 "button_nearby_ads_viewmode_1" = "Show List";
 "button_add_comment" = "Add Comment";
@@ -174,7 +174,7 @@
 "button_search" = "Search";
 "button_search_reset" = "Reset";
 "button_message_send" = "Send";
-"button_save_password" = "Save";
+"button_guardar_contraseña" = "Guardar";
 "button_select_plan" = "Select a Plan";
 "button_mail" = "Mail";
 "button_filter" = "Filter";

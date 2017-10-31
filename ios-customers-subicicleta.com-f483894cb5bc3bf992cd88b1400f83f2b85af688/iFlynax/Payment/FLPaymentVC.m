@@ -31,7 +31,7 @@
     [super viewDidLoad];
 
     self.title = FLLocalizedString(@"screen_purchase");
-    [_cancelBtn setTitle:FLLocalizedString(@"button_cancel")];
+    [_cancelBtn setTitle:FLLocalizedString(@"button_cancelar")];
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
     _orderTitleLabel.textColor = FLHexColor(@"666666");
     _orderPriceLabel.textColor = FLHexColor(@"b66b00");

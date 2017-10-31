@@ -167,7 +167,7 @@
         [confirmSheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_remove") block:^{
             [self removeListingById:listing.lId atIndexPath:cellIndexPath];
         }];
-        [confirmSheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancel")];
+        [confirmSheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
         [confirmSheet showFromRect:cell.accessoryButton.frame inView:cell.contentView animated:YES];
     }];
     /* remove listing end */

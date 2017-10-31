@@ -40,7 +40,7 @@
     self.addControlPos = FLMediaGalleryAddPosBelow;
     
     // action sheet init
-    [self actionCancelItemTitle:FLLocalizedString(@"button_cancel")];
+    [self actionCancelItemTitle:FLLocalizedString(@"button_cancelar")];
     [self actionAddItemWithTitle:FLLocalizedString(@"button_action_make_primary")];
     [self actionAddItemWithTitle:FLLocalizedString(@"button_action_edit_description")];
     [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_remove")];
@@ -172,7 +172,7 @@
         _alertViewDesc = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_edit_description")
                                                     message:nil
                                                    delegate:self
-                                          cancelButtonTitle:FLLocalizedString(@"button_cancel")
+                                          cancelButtonTitle:FLLocalizedString(@"button_cancelar")
                                           otherButtonTitles:_okTitle, nil];
         _alertViewDesc.alertViewStyle = UIAlertViewStylePlainTextInput;
         _alertDescField = [_alertViewDesc textFieldAtIndex:0];

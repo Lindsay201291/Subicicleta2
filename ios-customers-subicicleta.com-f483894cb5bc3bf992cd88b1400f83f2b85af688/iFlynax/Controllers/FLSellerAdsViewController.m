@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.title = FLLocalizedString(@"screen_seller_ads");
+    self.title = FLLocalizedString(@"screen_anuncios_vendedor");
 }
 
 - (void)viewDidLoad {

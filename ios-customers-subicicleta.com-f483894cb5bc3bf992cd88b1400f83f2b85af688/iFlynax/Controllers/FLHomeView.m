@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
     ? REFrostedViewControllerDirectionRight
     : REFrostedViewControllerDirectionLeft;
 
-	self.title = FLLocalizedString(@"screen_home");
+	self.title = FLLocalizedString(@"screen_subicicleta");
 	
     _batch   = [FLConfig displayListingsNumberPerPage];
     _entries = [NSMutableArray array];

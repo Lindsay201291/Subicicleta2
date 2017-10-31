@@ -17,7 +17,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.gaScreenName = FLLocalizedString(@"screen_my_profile");
+	self.gaScreenName = FLLocalizedString(@"screen_mi_perfil");
 }
 
 - (void)viewDidLoad {
@@ -30,7 +30,7 @@
                                                     kStoryBoardMyProfileChangePassword]];
 
 	// it's tmp implementation
-	UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_logout")
+	UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cerrarsesion")
 																	 style:UIBarButtonItemStyleBordered
 																	target:self action:@selector(logoutButtonTapped)];
 	[self.navigationItem setRightBarButtonItem:logoutButton animated:YES];
@@ -44,7 +44,7 @@
 
 - (void)logoutButtonTapped {
 	CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:F(FLLocalizedString(@"logged_as"), [FLAccount fullName])];
-	[sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_logout") block:^{
+	[sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_cerrarsesion") block:^{
         [FLProgressHUD showWithStatus:FLLocalizedString(@"loading")];
 
 		[flynaxAPIClient postApiItem:kApiItemLogin
@@ -64,7 +64,7 @@
 							  else [FLDebug showAdaptedError:error apiItem:kApiItemLogin];
 						  }];
 	}];
-	[sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancel")];
+	[sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
 	[sheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem];
 }
 

@@ -32,7 +32,7 @@
 
     self.title = FLLocalizedString(@"screen_remind_password");
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
-    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancel");
+    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
     
     _afterKeyboardDismiss = NO;
     

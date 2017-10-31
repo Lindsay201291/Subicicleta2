@@ -27,7 +27,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.gaScreenName = FLLocalizedString(@"screen_listing_details");
+	self.gaScreenName = FLLocalizedString(@"screen_detalles_anuncio");
 }
 
 - (void)viewDidLoad {
@@ -138,7 +138,7 @@
         }];
     }
 
-    [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancel")];
+    [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
     [sheet showFromBarButtonItem:button];
 }
 

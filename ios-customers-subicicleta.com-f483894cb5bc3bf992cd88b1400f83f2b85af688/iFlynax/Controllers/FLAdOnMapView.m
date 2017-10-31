@@ -31,7 +31,7 @@ static NSURL *_buildMapsUrlWithScheme(NSString *urlMask, NSDictionary *target) {
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.title = FLLocalizedString(@"screen_ad_on_map");
+    self.title = FLLocalizedString(@"screen_anuncio_en_mapa");
 }
 
 - (void)viewDidLoad {
@@ -120,7 +120,7 @@ static NSURL *_buildMapsUrlWithScheme(NSString *urlMask, NSDictionary *target) {
             }];
         }];
 
-        [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancel")];
+        [sheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
         [sheet showFromRect:marker.iconView.frame inView:marker.map animated:YES];
     }
     else {

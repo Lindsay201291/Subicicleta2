@@ -189,7 +189,7 @@ static NSString * const kConversationsKey    = @"conversations";
     if (!_flNavigationController) {
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
         
-        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancel")
+        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancelar")
                                                                          style:UIBarButtonItemStyleBordered
                                                                         target:self
                                                                         action:@selector(cancelButtonDidTap:)];

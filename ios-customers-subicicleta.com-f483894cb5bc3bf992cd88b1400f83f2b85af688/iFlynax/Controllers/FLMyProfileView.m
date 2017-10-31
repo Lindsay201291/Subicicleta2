@@ -36,7 +36,7 @@ static NSString * const cellReuseIdentifier = @"profileTableViewCell";
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.title = FLLocalizedString(@"screen_my_profile");
+	self.title = FLLocalizedString(@"screen_mi_perfil");
 }
 
 - (FLAssetsPickerController *)assetsPicker {
@@ -52,7 +52,7 @@ static NSString * const cellReuseIdentifier = @"profileTableViewCell";
 - (void)prepareUI {
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 
-	[_editProfileButton setTitle:FLLocalizedString(@"button_edit_profile") forState:UIControlStateNormal];
+	[_editProfileButton setTitle:FLLocalizedString(@"button_editar_perfil") forState:UIControlStateNormal];
 	[_editProfilePictureButton setTitle:FLLocalizedString(@"button_edit") forState:UIControlStateNormal];
     _thumbnail.backgroundColor = FLHexColor(@"eeeeee");
 	_thumbnail.layer.borderColor = [UIColor whiteColor].CGColor;

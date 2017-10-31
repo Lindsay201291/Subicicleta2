@@ -65,7 +65,7 @@ static NSString * const kLocationLngKey            = @"lng";
 		if (status == kCLAuthorizationStatusDenied) {
 			CCAlertView *alert = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_location_service_off")
 															message:FLLocalizedString(@"alert_message_location_service_off")];
-			[alert addButtonWithTitle:FLLocalizedString(@"button_cancel") block:nil];
+			[alert addButtonWithTitle:FLLocalizedString(@"button_cancelar") block:nil];
 			[alert addButtonWithTitle:FLLocalizedString(@"button_settings") block:^{
 				// Send the user to the Settings for this app
 				[[UIApplication sharedApplication] openURL:URLIFY(UIApplicationOpenSettingsURLString)];

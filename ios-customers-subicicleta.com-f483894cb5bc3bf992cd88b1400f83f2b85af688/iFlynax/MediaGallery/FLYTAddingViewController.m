@@ -55,7 +55,7 @@
     if (!_flNavigationController) {
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
         
-        _barCancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancel")
+        _barCancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancelar")
                                                                                  style:UIBarButtonItemStyleBordered
                                                                                 target:self
                                                                                 action:@selector(barCancelButtonDidTap:)];

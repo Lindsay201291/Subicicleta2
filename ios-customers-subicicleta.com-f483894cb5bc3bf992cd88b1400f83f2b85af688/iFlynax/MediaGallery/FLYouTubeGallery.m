@@ -29,7 +29,7 @@
     self.sectionInsets = UIEdgeInsetsMake(0, 0, 15, 0);
     
     // action sheet init
-    [self actionCancelItemTitle:FLLocalizedString(@"button_cancel")];
+    [self actionCancelItemTitle:FLLocalizedString(@"button_cancelar")];
     [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_remove")];
 }
 

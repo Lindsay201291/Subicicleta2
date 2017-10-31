@@ -53,7 +53,7 @@ static NSInteger const kTagSelectedMediaLabel = 80;
     selectedMedia.text = FLLocalizedString(@"label_choose_photo");
 	pickerTopView.layer.backgroundColor = [UIColor hexColor:@"2e393b"].CGColor;
 	pickerBottomView.layer.backgroundColor = [UIColor hexColor:@"2e393b"].CGColor;
-    [cancelButton setTitle:FLLocalizedString(@"button_cancel") forState:UIControlStateNormal];
+    [cancelButton setTitle:FLLocalizedString(@"button_cancelar") forState:UIControlStateNormal];
 
     if (IS_RTL && [doneButton respondsToSelector:@selector(setSemanticContentAttribute:)]) {
         [doneButton setSemanticContentAttribute:UISemanticContentAttributeForceLeftToRight];

@@ -45,7 +45,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.title = FLLocalizedString(@"screen_seller_info");
+	self.title = FLLocalizedString(@"screen_informacion_vendedor");
 }
 
 - (void)viewDidLoad {
@@ -88,7 +88,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
     int sellerAdsCount = FLTrueInt(_sellerInfo[@"lcount"]);
 
     if (sellerAdsCount) {
-        NSString *otherListingsTitle = F(FLLocalizedString(@"button_seller_ads_count"), sellerAdsCount);
+        NSString *otherListingsTitle = F(FLLocalizedString(@"button_anuncios_vendedor_cont"), sellerAdsCount);
         [_otherListingsButton setTitle:otherListingsTitle forState:UIControlStateNormal];
     }
     else {

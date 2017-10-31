@@ -27,7 +27,7 @@
     
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
     self.collectionView.backgroundColor = self.view.backgroundColor;
-    [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancel")];
+    [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancelar")];
 
     [FLBlankSlate attachTo:_collectionView withTitle:FLLocalizedString(@"no_plans_category")];
     _plansManager = [FLPlansManager sharedManager];

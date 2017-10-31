@@ -180,7 +180,7 @@ static NSString * const kApiPingRequestKey = @"ping";
         }];
     }
 
-    [sheet addCancelButtonWithTitle:NSLocalizedString(@"button_cancel", nil)];
+    [sheet addCancelButtonWithTitle:NSLocalizedString(@"button_cancelar", nil)];
     [sheet showFromRect:sender.frame inView:self.view animated:YES];
 }
 

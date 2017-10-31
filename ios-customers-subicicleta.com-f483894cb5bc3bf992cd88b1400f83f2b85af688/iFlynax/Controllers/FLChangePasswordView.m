@@ -30,7 +30,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.title = FLLocalizedString(@"screen_change_password");
+	self.title = FLLocalizedString(@"screen_cambiar_contraseña");
 }
 
 - (void)viewDidLoad {
@@ -38,10 +38,10 @@
 
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 
-	_passwordCurrentField.placeholder = FLLocalizedString(@"placeholder_current_password");
-	_passwordNewField.placeholder     = FLLocalizedString(@"placeholder_new_password");
-	_passwordVerifyField.placeholder  = FLLocalizedString(@"placeholder_confirm_password");
-    [_savePasswordBtn setTitle:FLLocalizedString(@"button_save_password") forState:UIControlStateNormal];
+	_passwordCurrentField.placeholder = FLLocalizedString(@"placeholder_contraseña_actual");
+	_passwordNewField.placeholder     = FLLocalizedString(@"placeholder_nueva_contraseña");
+	_passwordVerifyField.placeholder  = FLLocalizedString(@"placeholder_confirmar_contraseña");
+    [_savePasswordBtn setTitle:FLLocalizedString(@"button_guardar_contraseña") forState:UIControlStateNormal];
     
     // validation
     _validatorManager = [FLValidatorManager new];

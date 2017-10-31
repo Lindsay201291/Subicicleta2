@@ -67,7 +67,7 @@ static NSString * const kApiResultProfileKey = @"profile";
     
     self.title = self.screenName;
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
-    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancel");
+    self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
     
     _accountTypes = [FLAccountTypes getList];
     _inputsMutableCollection = [_inputsCollection mutableCopy];

@@ -165,7 +165,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 */
 
 - (void)buildSelectCategoryStep {
-    self.title = FLLocalizedString(@"select_category");
+    self.title = FLLocalizedString(@"seleccione_categoria");
 
     _formState = FLFormStateSelectCategory;
     _tableView.tableHeaderView = nil;
@@ -230,7 +230,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             _categoriesSection.headerHeight = 15;
 
             [self appendCategoryFieldWithCategories:categories completion:^{
-                [_categoriesSection setFooterTitle:FLLocalizedString(@"select_category")];
+                [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if ([self.manager.sections indexOfObject:_categoriesSection] == NSNotFound) {
@@ -250,7 +250,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (UIButton *)selectCategoryBtn {
     if (_selectCategoryBtn == nil) {
         _selectCategoryBtn = [[UIButton alloc] initWithFrame:CGRectMake(15, 0, self.tableView.width-30, 44)];
-        [_selectCategoryBtn setTitle:FLLocalizedString(@"select_category") forState:UIControlStateNormal];
+        [_selectCategoryBtn setTitle:FLLocalizedString(@"seleccione_categoria") forState:UIControlStateNormal];
         [_selectCategoryBtn setBackgroundImage:[UIImage imageNamed:@"button1"] forState:UIControlStateNormal];
         [_selectCategoryBtn addTarget:self action:@selector(selectCategoryBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -573,7 +573,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                    @"ltype_key": listingType.key,
                                    @"all": @(YES)}
                       completion:^{
-                          [_categoriesSection setFooterTitle:FLLocalizedString(@"select_category")];
+                          [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
 
                           dispatch_async(dispatch_get_main_queue(), ^{
                               [_listingTypeSection setFooterTitle:nil];
@@ -631,7 +631,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                     }
                 }
             } else if (_categoriesSection.items.count == 1) {
-                [_categoriesSection setFooterTitle:FLLocalizedString(@"select_category")];
+                [_categoriesSection setFooterTitle:FLLocalizedString(@"seleccione_categoria")];
                 self.tableView.tableFooterView = nil;
                 _adForm.category = nil;
             }
@@ -744,7 +744,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     }
     else {
         self.tableView.tableFooterView = nil;
-        _categoriesSection.footerTitle = FLLocalizedString(@"select_category");
+        _categoriesSection.footerTitle = FLLocalizedString(@"seleccione_categoria");
     }
 
     if ([self sectionTypeOfField:item is:FLSectionTypeListingType]) {
@@ -1240,7 +1240,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     if (!_flNavigationController) {
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
         
-        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancel")
+        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_cancelar")
                                                                          style:UIBarButtonItemStyleBordered
                                                                         target:self
                                                                         action:@selector(cancelButtonDidTap:)];

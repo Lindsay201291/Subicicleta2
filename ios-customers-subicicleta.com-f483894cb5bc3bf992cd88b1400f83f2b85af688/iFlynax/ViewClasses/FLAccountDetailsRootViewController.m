@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:FLLocalizedString(@"screen_account_details")];
+    [self setTitle:FLLocalizedString(@"screen_detalles_cuenta")];
 
     if (_sellerId) {
         [self loadAccountDetails];
@@ -31,7 +31,7 @@
     if (self.presentingViewController != nil) {
         self.navigationItem.leftBarButtonItem = ({
             UIBarButtonItem *button = [[UIBarButtonItem alloc]
-                                       initWithTitle:FLLocalizedString(@"button_cancel")
+                                       initWithTitle:FLLocalizedString(@"button_cancelar")
                                        style:UIBarButtonItemStyleBordered
                                        target:self
                                        action:@selector(dismissController)];

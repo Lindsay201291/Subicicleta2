@@ -120,7 +120,7 @@
         <scene sceneID="lbN-C7-wpg">
             <objects>
                 <navigationController storyboardIdentifier="sid_paymentNC" id="PYm-8T-Cf8" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="20x-nC-0KD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="20x-nC-0KD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -136,7 +136,7 @@
         <scene sceneID="UWd-gQ-hiX">
             <objects>
                 <navigationController storyboardIdentifier="sid_policyVC" id="H0x-Yf-Spz" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tLo-FC-max">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLo-FC-max">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -426,7 +426,7 @@
             <objects>
                 <navigationController storyboardIdentifier="addListingSelectPlan" id="CtM-4y-yyx" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uNw-aN-lzm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="i8n-CK-O2J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8n-CK-O2J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -650,7 +650,7 @@
             <objects>
                 <navigationController storyboardIdentifier="contentController" definesPresentationContext="YES" id="NMk-hw-eGf" customClass="FLMainNavigation" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="D4N-RD-Qyn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Y7r-53-XzT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y7r-53-XzT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -986,7 +986,7 @@
         <scene sceneID="XqA-8K-aJ2">
             <objects>
                 <navigationController storyboardIdentifier="remindPasswordVC" id="UwX-7b-7tv" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Dmt-Eo-EJ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dmt-Eo-EJ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1310,7 +1310,7 @@
             </objects>
             <point key="canvasLocation" x="-34335" y="-15091"/>
         </scene>
-        <!--Edit Profile-->
+        <!--Editar Perfil-->
         <scene sceneID="IFz-TY-TWd">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Xsv-tW-6jW" customClass="FLEditProfileView" sceneMemberID="viewController">
@@ -1332,7 +1332,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ake-e5-Ntl">
                                 <rect key="frame" x="130" y="544" width="230" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Edit Profile" backgroundImage="button1">
+                                <state key="normal" title="Editar Perfil" backgroundImage="button1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1348,7 +1348,7 @@
                                     <constraint firstAttribute="width" constant="200" id="rjB-Ye-4eD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Cancel" backgroundImage="button3">
+                                <state key="normal" title="Cancelar" backgroundImage="button3">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1377,8 +1377,8 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="CUC-0Y-Aos">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="UdI-Oj-fGI">
+                    <navigationItem key="navigationItem" title="Editar Perfil" id="CUC-0Y-Aos">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="UdI-Oj-fGI">
                             <connections>
                                 <action selector="cancelEditProfileButtonTapped:" destination="Xsv-tW-6jW" id="hbT-97-jdf"/>
                             </connections>
@@ -1399,7 +1399,7 @@
             <objects>
                 <navigationController storyboardIdentifier="registrationNC" id="vwb-3Q-MST" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ou7-KA-xdd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="POc-Sm-fyl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POc-Sm-fyl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1415,7 +1415,7 @@
         <scene sceneID="rjR-SZ-SBJ">
             <objects>
                 <navigationController storyboardIdentifier="registrationExtendedNC" id="748-3N-pDi" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r44-fZ-JsI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r44-fZ-JsI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1427,7 +1427,7 @@
             </objects>
             <point key="canvasLocation" x="-36767" y="-15091"/>
         </scene>
-        <!--Create an Account-->
+        <!--Crear una Cuenta-->
         <scene sceneID="E48-Zc-W4B">
             <objects>
                 <viewController storyboardIdentifier="registrationViewSid" automaticallyAdjustsScrollViewInsets="NO" id="hvt-LY-RJQ" customClass="FLRegistration" sceneMemberID="viewController">
@@ -1442,7 +1442,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AO-S4-oA8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLL-gg-qU9" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLL-gg-qU9" customClass="FLTextField">
                                         <rect key="frame" x="15" y="15" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="qTh-3u-xST"/>
@@ -1453,7 +1453,7 @@
                                             <outlet property="delegate" destination="hvt-LY-RJQ" id="Ykl-4y-SEH"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-6x-Yc2" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-6x-Yc2" customClass="FLTextField">
                                         <rect key="frame" x="15" y="74" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="LKm-Ff-Zv9"/>
@@ -1481,7 +1481,7 @@
                                             <constraint firstAttribute="height" constant="44" id="mX4-Uu-hu1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Submit" backgroundImage="button1">
+                                        <state key="normal" title="Enviar" backgroundImage="button1">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1525,8 +1525,8 @@
                             <constraint firstItem="8AO-S4-oA8" firstAttribute="bottom" secondItem="9zE-9k-UVw" secondAttribute="top" id="g0k-Ku-4GZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create an Account" id="e85-kI-908">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="cdb-pB-BZA">
+                    <navigationItem key="navigationItem" title="Crear una Cuenta" id="e85-kI-908">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="cdb-pB-BZA">
                             <connections>
                                 <action selector="dissmissViewController:" destination="hvt-LY-RJQ" id="iVQ-HT-bzy"/>
                             </connections>
@@ -1555,7 +1555,7 @@
             <objects>
                 <navigationController storyboardIdentifier="editProfileNC" id="mgJ-df-BnF" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HRT-6F-s2A"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p9b-BW-nrp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9b-BW-nrp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1567,7 +1567,7 @@
             </objects>
             <point key="canvasLocation" x="-35228" y="-14331"/>
         </scene>
-        <!--Search-->
+        <!--Buscar-->
         <scene sceneID="Ex0-zG-cVh">
             <objects>
                 <viewController storyboardIdentifier="searchController" automaticallyAdjustsScrollViewInsets="NO" id="6sy-D4-6v6" customClass="FLSearchView" sceneMemberID="viewController">
@@ -1624,7 +1624,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Search" id="IlA-6G-awp">
+                    <navigationItem key="navigationItem" title="Buscar" id="IlA-6G-awp">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="Jv3-1F-vTw">
                             <connections>
                                 <action selector="showSideMenu:" destination="6sy-D4-6v6" id="QEO-cj-JYt"/>
@@ -1680,7 +1680,7 @@
             </objects>
             <point key="canvasLocation" x="-33541" y="-14331"/>
         </scene>
-        <!--Home-->
+        <!--Subicicleta-->
         <scene sceneID="Jyc-ag-QVO">
             <objects>
                 <viewController storyboardIdentifier="homeController" automaticallyAdjustsScrollViewInsets="NO" id="nLU-bk-Cb9" customClass="FLHomeView" sceneMemberID="viewController">
@@ -1786,7 +1786,7 @@
                             <constraint firstItem="p9x-Bz-UYn" firstAttribute="leading" secondItem="aUq-xZ-4cd" secondAttribute="leading" id="l0f-Qi-bfX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="riP-F0-V3p">
+                    <navigationItem key="navigationItem" title="Subicicleta" id="riP-F0-V3p">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="5xf-h9-dcM">
                             <connections>
                                 <action selector="showSideMenu:" destination="nLU-bk-Cb9" id="Lkm-xk-Rae"/>
@@ -1895,7 +1895,7 @@
             </objects>
             <point key="canvasLocation" x="-32713" y="-15957"/>
         </scene>
-        <!--Nearby Ads-->
+        <!--Anuncios Cercanos-->
         <scene sceneID="uYb-2T-YwX">
             <objects>
                 <viewController storyboardIdentifier="nearbyAdsController" id="89C-jQ-XJI" customClass="FLNearbyAdsView" sceneMemberID="viewController">
@@ -1937,7 +1937,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="oEX-Dl-xrY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Reset" backgroundImage="button3">
+                                                <state key="normal" title="Reiniciar" backgroundImage="button3">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -1947,7 +1947,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="W4h-sC-VQf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Filter" backgroundImage="button1">
+                                                <state key="normal" title="Filtrar" backgroundImage="button1">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -2019,7 +2019,7 @@
                             <constraint firstItem="rQ1-Bm-Ell" firstAttribute="top" secondItem="Yng-dr-r9g" secondAttribute="bottom" id="ttL-9b-n4S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Nearby Ads" id="aGB-JE-nlB">
+                    <navigationItem key="navigationItem" title="Anuncios Cercanos" id="aGB-JE-nlB">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="Es5-l8-PWm">
                             <connections>
                                 <action selector="showSideMenu:" destination="89C-jQ-XJI" id="hkd-x8-b8e"/>
@@ -2048,7 +2048,7 @@
             </objects>
             <point key="canvasLocation" x="-31911" y="-15957"/>
         </scene>
-        <!--Recently Ads-->
+        <!--Anuncios Recientes-->
         <scene sceneID="iEG-mK-Rfc">
             <objects>
                 <viewController storyboardIdentifier="recentlyAdsController" id="tfs-1t-BqX" customClass="FLRecentlyView" sceneMemberID="viewController">
@@ -2078,7 +2078,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Recently Ads" id="jRp-k2-adk">
+                    <navigationItem key="navigationItem" title="Anuncios Recientes" id="jRp-k2-adk">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="FKn-F2-ALd">
                             <connections>
                                 <action selector="showSideMenu:" destination="tfs-1t-BqX" id="UEd-Xg-Hh9"/>
@@ -2093,7 +2093,7 @@
             </objects>
             <point key="canvasLocation" x="-31062" y="-15116"/>
         </scene>
-        <!--Favorites-->
+        <!--Favoritos-->
         <scene sceneID="PkI-3U-9CN">
             <objects>
                 <viewController storyboardIdentifier="favoriteAdsView" automaticallyAdjustsScrollViewInsets="NO" id="gWA-H6-YA1" customClass="FLFavoritesView" sceneMemberID="viewController">
@@ -2129,7 +2129,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Favorites" id="8DA-tx-r4F">
+                    <navigationItem key="navigationItem" title="Favoritos" id="8DA-tx-r4F">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="iv0-7G-y9W">
                             <connections>
                                 <action selector="showSideMenu:" destination="gWA-H6-YA1" id="Sd2-uT-5nQ"/>
@@ -2144,7 +2144,7 @@
             </objects>
             <point key="canvasLocation" x="-29572" y="-15977"/>
         </scene>
-        <!--Details-->
+        <!--Detalles-->
         <scene sceneID="gpz-Zl-16N">
             <objects>
                 <viewController storyboardIdentifier="adDetailsView" id="gG5-Ok-ZkH" customClass="FLDetailsView" sceneMemberID="viewController">
@@ -2163,7 +2163,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="B3X-w4-GlX" customClass="FLLabel">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="B3X-w4-GlX" customClass="FLLabel">
                                             <rect key="frame" x="15" y="8" width="345" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="sOH-H5-z2V"/>
@@ -2306,8 +2306,8 @@
                                                         <constraint firstAttribute="width" constant="85" id="gyn-en-wtI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-pR-2G6">
-                                                    <rect key="frame" x="97" y="130" width="182" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay comentarios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-pR-2G6">
+                                                    <rect key="frame" x="111" y="130" width="153" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2326,7 +2326,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-IJ-PlY">
                                             <rect key="frame" x="15" y="0.0" width="345" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <state key="normal" title="See More">
+                                            <state key="normal" title="Ver Más">
                                                 <color key="titleColor" red="0.0" green="0.31371555559563713" blue="0.66126104797979801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -2340,7 +2340,7 @@
                                                 <constraint firstAttribute="width" constant="160" id="Ug4-Qv-WZC"/>
                                             </constraints>
                                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                                            <state key="normal" title="Add Comment" backgroundImage="button1">
+                                            <state key="normal" title="Agregar Comentario" backgroundImage="button1">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -2370,7 +2370,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="95" translatesAutoresizingMaskIntoConstraints="NO" id="2A2-ci-9su" customClass="FLLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="95" translatesAutoresizingMaskIntoConstraints="NO" id="2A2-ci-9su" customClass="FLLabel">
                                                     <rect key="frame" x="15" y="7" width="100" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Lnf-10-JSi"/>
@@ -2379,7 +2379,7 @@
                                                     <color key="textColor" red="0.34850588440895081" green="0.3484954833984375" blue="0.34850138425827026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="481" translatesAutoresizingMaskIntoConstraints="NO" id="lV1-8v-5xk" customClass="FLAttributedLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Detalle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="481" translatesAutoresizingMaskIntoConstraints="NO" id="lV1-8v-5xk" customClass="FLAttributedLabel">
                                                     <rect key="frame" x="123" y="7" width="244" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2409,13 +2409,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="95" translatesAutoresizingMaskIntoConstraints="NO" id="sty-KL-BMt" customClass="FLLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="95" translatesAutoresizingMaskIntoConstraints="NO" id="sty-KL-BMt" customClass="FLLabel">
                                                     <rect key="frame" x="15" y="7" width="345" height="17"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.34850588440895081" green="0.3484954833984375" blue="0.34850138425827026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="481" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-nJ-Q2S" customClass="FLLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Detalle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="481" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-nJ-Q2S" customClass="FLLabel">
                                                     <rect key="frame" x="15" y="28" width="345" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2456,7 +2456,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Details" id="SoG-Iv-BZE"/>
-                    <navigationItem key="navigationItem" title="Details" id="lBV-Of-I5X"/>
+                    <navigationItem key="navigationItem" title="Detalles" id="lBV-Of-I5X"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="630"/>
                     <connections>
@@ -2471,7 +2471,7 @@
             </objects>
             <point key="canvasLocation" x="-29396" y="-20448"/>
         </scene>
-        <!--Add Comment-->
+        <!--Agregar Comentario-->
         <scene sceneID="OPN-97-kOq">
             <objects>
                 <viewController storyboardIdentifier="addCommentController" automaticallyAdjustsScrollViewInsets="NO" id="gWW-OQ-3as" customClass="FLAddCommentViewController" sceneMemberID="viewController">
@@ -2494,7 +2494,7 @@
                                             <constraint firstAttribute="height" constant="54" id="oZg-Zt-Hym"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPY-QZ-ANw" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Título" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPY-QZ-ANw" customClass="FLTextField">
                                         <rect key="frame" x="15" y="74" width="345" height="44"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -2511,7 +2511,7 @@
                                             <outlet property="delegate" destination="gWW-OQ-3as" id="3SA-HH-6Ix"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-w2-ghv" customClass="FLTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Autor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-w2-ghv" customClass="FLTextField">
                                         <rect key="frame" x="15" y="15" width="345" height="44"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -2534,7 +2534,7 @@
                                             <constraint firstAttribute="height" constant="44" id="CT0-r2-0Kf"/>
                                         </constraints>
                                         <size key="titleShadowOffset" width="0.0" height="1"/>
-                                        <state key="normal" title="Add Comment" backgroundImage="button1">
+                                        <state key="normal" title="Agregar comentario" backgroundImage="button1">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -2545,9 +2545,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-yM-auC">
-                                        <rect key="frame" x="15" y="330" width="120" height="17"/>
+                                        <rect key="frame" x="15" y="330" width="157" height="17"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="300 Characters left">
+                                            <fragment content="300 Caracteres restantes">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="14" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -2602,8 +2602,8 @@
                             <constraint firstItem="LXP-5m-kwc" firstAttribute="leading" secondItem="CKN-wf-1DF" secondAttribute="leading" id="lm2-fW-8t0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Comment" id="qmX-Ea-rxt">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iRd-Ph-6qz">
+                    <navigationItem key="navigationItem" title="Agregar Comentario" id="qmX-Ea-rxt">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="iRd-Ph-6qz">
                             <connections>
                                 <action selector="cancelButtonTaped:" destination="gWW-OQ-3as" id="JJB-F0-KQN"/>
                             </connections>
@@ -2628,7 +2628,7 @@
             </objects>
             <point key="canvasLocation" x="-28647" y="-20432"/>
         </scene>
-        <!--Comments-->
+        <!--Comentarios-->
         <scene sceneID="0fo-O5-yUH">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Nm1-sT-j0H" customClass="FLCommentsView" sceneMemberID="viewController">
@@ -2657,7 +2657,7 @@
                             <constraint firstItem="e6g-YT-iET" firstAttribute="leading" secondItem="P3J-lP-cei" secondAttribute="leading" id="j2H-dk-lYx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Comments" id="1o1-70-QQm">
+                    <navigationItem key="navigationItem" title="Comentarios" id="1o1-70-QQm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="12h-6Q-5TT">
                             <connections>
                                 <action selector="addCommentButtonTaped:" destination="Nm1-sT-j0H" id="s1j-1J-Rzb"/>
@@ -2672,7 +2672,7 @@
             </objects>
             <point key="canvasLocation" x="-29396" y="-19618"/>
         </scene>
-        <!--Seller Info-->
+        <!--Información del Vendedor-->
         <scene sceneID="c5F-VZ-dDl">
             <objects>
                 <viewController storyboardIdentifier="adSellerInfoView" extendedLayoutIncludesOpaqueBars="YES" id="5mb-V4-4ZT" customClass="FLSellerInfoView" sceneMemberID="viewController">
@@ -2699,8 +2699,8 @@
                                                 <constraint firstAttribute="width" constant="100" id="w7T-dj-qAS"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flynax Dealer Flynax Dealer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blr-Mi-iyC">
-                                            <rect key="frame" x="132" y="11" width="197" height="38.5"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negociante de Subicicleta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blr-Mi-iyC">
+                                            <rect key="frame" x="132" y="11" width="197" height="39"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -2713,7 +2713,7 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                                            <state key="normal" title="Seller's Other Ads (42)" backgroundImage="button1">
+                                            <state key="normal" title="Otros anuncios del vendedor (42)" backgroundImage="button1">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -2756,7 +2756,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="83" translatesAutoresizingMaskIntoConstraints="NO" id="5Ji-uf-Fyc" customClass="FLLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="83" translatesAutoresizingMaskIntoConstraints="NO" id="5Ji-uf-Fyc" customClass="FLLabel">
                                                     <rect key="frame" x="15" y="8" width="100" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="1jC-cD-T2z"/>
@@ -2765,7 +2765,7 @@
                                                     <color key="textColor" red="0.34850585460662842" green="0.34849545359611511" blue="0.34850135445594788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-q9-pjd" customClass="FLAttributedLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-q9-pjd" customClass="FLAttributedLabel">
                                                     <rect key="frame" x="132" y="8" width="235" height="17"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2799,7 +2799,7 @@
                                                     <rect key="frame" x="132" y="10" width="228" height="100"/>
                                                     <color key="backgroundColor" red="0.89324919869999997" green="0.89324919869999997" blue="0.89324919869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkl-yu-ie7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etiqueta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkl-yu-ie7">
                                                     <rect key="frame" x="15" y="52" width="100" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="7Cu-xX-1n7"/>
@@ -2840,7 +2840,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Seller Info" id="smr-3C-mo8"/>
-                    <navigationItem key="navigationItem" title="Seller Info" id="G0g-zr-nJj"/>
+                    <navigationItem key="navigationItem" title="Información del Vendedor" id="G0g-zr-nJj"/>
                     <connections>
                         <outlet property="contactOwnerBtn" destination="xx4-XT-us5" id="IeQ-ut-ViG"/>
                         <outlet property="fullName" destination="blr-Mi-iyC" id="OxS-QL-RIZ"/>
@@ -2853,7 +2853,7 @@
             </objects>
             <point key="canvasLocation" x="-29396" y="-18872"/>
         </scene>
-        <!--Ad on Map-->
+        <!--Anuncio en el Mapa-->
         <scene sceneID="iJh-C5-AEc">
             <objects>
                 <viewController storyboardIdentifier="adOnMapView" id="lyJ-k0-We5" customClass="FLAdOnMapView" sceneMemberID="viewController">
@@ -2867,7 +2867,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map_icon.png" id="XcZ-cl-Clk"/>
-                    <navigationItem key="navigationItem" title="Ad on Map" id="MEV-Lz-HQR"/>
+                    <navigationItem key="navigationItem" title="Anuncio en el Mapa" id="MEV-Lz-HQR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joM-SF-Mkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2938,7 +2938,7 @@
             </objects>
             <point key="canvasLocation" x="-29396" y="-17453"/>
         </scene>
-        <!--Browse-->
+        <!--Ver-->
         <scene sceneID="D6q-PH-hr2">
             <objects>
                 <viewController storyboardIdentifier="browseViewController" automaticallyAdjustsScrollViewInsets="NO" id="E1x-Sc-V90" customClass="FLBrowseView" sceneMemberID="viewController">
@@ -2971,7 +2971,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="Title">
+                                                        <fragment content="Título">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="16" name="HelveticaNeue"/>
@@ -3001,7 +3001,7 @@
                             <constraint firstItem="psM-PL-cvj" firstAttribute="top" secondItem="FD6-Qq-Vod" secondAttribute="bottom" id="l88-Rx-wF9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Browse" id="N24-jV-uyV">
+                    <navigationItem key="navigationItem" title="Ver" id="N24-jV-uyV">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="sUb-xl-T2s">
                             <connections>
                                 <action selector="showSideMenu:" destination="E1x-Sc-V90" id="Agt-AX-G6F"/>
@@ -3024,7 +3024,7 @@
             </objects>
             <point key="canvasLocation" x="-28741" y="-15977"/>
         </scene>
-        <!--My Messages-->
+        <!--Mis Mensajes-->
         <scene sceneID="s2g-r5-guC">
             <objects>
                 <viewController storyboardIdentifier="myMessagesViewController" id="BLt-1O-Er2" customClass="FLMyMessagesView" sceneMemberID="viewController">
@@ -3047,7 +3047,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administrator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="l6H-EF-aqq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administrador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="l6H-EF-aqq">
                                                     <rect key="frame" x="98" y="12" width="244" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="whQ-mb-dNt"/>
@@ -3056,7 +3056,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last message in the conversation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="501" translatesAutoresizingMaskIntoConstraints="NO" id="7Gl-CA-Agm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Último mensaje en la conversación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="501" translatesAutoresizingMaskIntoConstraints="NO" id="7Gl-CA-Agm">
                                                     <rect key="frame" x="98" y="37" width="244" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="VGq-Ae-LQk"/>
@@ -3065,7 +3065,7 @@
                                                     <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="133" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-K0-Hvi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etiqueta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="133" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-K0-Hvi">
                                                     <rect key="frame" x="98" y="62" width="244" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.49019607843137253" green="0.49411764705882355" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3140,7 +3140,7 @@
                             <constraint firstItem="1Ku-0Q-D2d" firstAttribute="top" secondItem="YZl-oY-ej2" secondAttribute="top" id="aMN-0x-4Pg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Messages" id="Nf2-gy-GEi">
+                    <navigationItem key="navigationItem" title="Mis Mensajes" id="Nf2-gy-GEi">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="tuN-92-L7Z">
                             <connections>
                                 <action selector="showSideMenu:" destination="BLt-1O-Er2" id="BY8-qQ-jqJ"/>
@@ -3263,7 +3263,7 @@
             </objects>
             <point key="canvasLocation" x="-34747" y="-15957"/>
         </scene>
-        <!--My Listings-->
+        <!--Mis Anuncios-->
         <scene sceneID="N1V-SD-ufg">
             <objects>
                 <viewController storyboardIdentifier="myListingsViewController" id="ATX-Ak-CHc" customClass="FLMyListingsView" sceneMemberID="viewController">
@@ -3293,7 +3293,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My Listings" id="fhQ-1z-Whv">
+                    <navigationItem key="navigationItem" title="Mis Anuncios" id="fhQ-1z-Whv">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="frA-yZ-wOJ">
                             <connections>
                                 <action selector="showSideMenu:" destination="ATX-Ak-CHc" id="lQE-aU-7eS"/>
@@ -3314,7 +3314,7 @@
             <objects>
                 <navigationController storyboardIdentifier="listingStatisticsNC" id="n74-fy-l1q" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Vep-Ui-cdH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MGc-dA-30j">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGc-dA-30j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3326,7 +3326,7 @@
             </objects>
             <point key="canvasLocation" x="-30312" y="-14333"/>
         </scene>
-        <!--Statistics-->
+        <!--Estadísticas-->
         <scene sceneID="j4d-7b-1un">
             <objects>
                 <viewController id="Oea-zx-oPX" customClass="FLAdStatistics" sceneMemberID="viewController">
@@ -3349,15 +3349,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDv-Jv-pan">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Título" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDv-Jv-pan">
                                                     <rect key="frame" x="15" y="10" width="91" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.34850588440895081" green="0.3484954833984375" blue="0.34850138425827026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rR2-8I-IL4">
-                                                    <rect key="frame" x="112" y="9" width="40" height="18"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detalle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rR2-8I-IL4">
+                                                    <rect key="frame" x="112" y="9" width="48" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3382,8 +3382,8 @@
                             <constraint firstItem="hYb-gN-bnl" firstAttribute="top" secondItem="qM1-1V-FKP" secondAttribute="top" id="yIp-MG-OIH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Statistics" id="5jw-IP-hTX">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="IT9-mB-onN">
+                    <navigationItem key="navigationItem" title="Estadísticas" id="5jw-IP-hTX">
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar" id="IT9-mB-onN">
                             <connections>
                                 <action selector="closeBtnDidTap:" destination="Oea-zx-oPX" id="ij9-Dc-V4u"/>
                             </connections>
@@ -3450,7 +3450,7 @@
             </objects>
             <point key="canvasLocation" x="-30312" y="-15977"/>
         </scene>
-        <!--Messaging-->
+        <!--Mensajería-->
         <scene sceneID="mR1-Nx-hws">
             <objects>
                 <viewController storyboardIdentifier="messagingController" id="O0s-ZL-2dO" customClass="FLMessaging" sceneMemberID="viewController">
@@ -3463,13 +3463,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Messaging" id="hns-aJ-klf"/>
+                    <navigationItem key="navigationItem" title="Mensajería" id="hns-aJ-klf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-yu-vnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-27995" y="-15022"/>
         </scene>
-        <!--Alphabetic Search-->
+        <!--Búsqueda Alfabética-->
         <scene sceneID="MbW-Vw-mo6">
             <objects>
                 <viewController storyboardIdentifier="accountTypeListViewController" automaticallyAdjustsScrollViewInsets="NO" id="kOG-Z2-FqE" customClass="FLAccountTypeListViewController" sceneMemberID="viewController">
@@ -3507,7 +3507,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" translatesAutoresizingMaskIntoConstraints="NO" id="GFU-WF-FP2">
-                                                            <rect key="frame" x="-0.5" y="8" width="31" height="14"/>
+                                                            <rect key="frame" x="-1" y="8" width="32" height="14"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -3551,7 +3551,7 @@
                             <constraint firstItem="Lnh-ge-HE3" firstAttribute="top" secondItem="m7P-He-xn5" secondAttribute="bottom" id="rCX-GI-iNt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Alphabetic Search" id="M8m-hJ-kBO">
+                    <navigationItem key="navigationItem" title="Búsqueda Alfabética" id="M8m-hJ-kBO">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="njy-x4-isN">
                             <connections>
                                 <action selector="showSideMenu:" destination="kOG-Z2-FqE" id="lvF-GC-W94"/>
@@ -3624,7 +3624,7 @@
             </objects>
             <point key="canvasLocation" x="-26630" y="-15977"/>
         </scene>
-        <!--Advanced Search-->
+        <!--Búsqueda Avanzada-->
         <scene sceneID="Puo-QA-s7P">
             <objects>
                 <viewController storyboardIdentifier="accountTypeSearchViewController" id="kTP-mI-tcP" customClass="FLAccountTypeSearchViewController" sceneMemberID="viewController">
@@ -3649,7 +3649,7 @@
                             <constraint firstItem="oBX-rD-1Jp" firstAttribute="leading" secondItem="qEA-1S-XUa" secondAttribute="leading" id="vJ9-J2-KZN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Advanced Search" id="YZG-78-ZTl">
+                    <navigationItem key="navigationItem" title="Búsqueda Avanzada" id="YZG-78-ZTl">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="h9z-0x-bcT">
                             <connections>
                                 <action selector="showSideMenu:" destination="kTP-mI-tcP" id="iDJ-WY-hwd"/>
@@ -3711,7 +3711,7 @@
             </objects>
             <point key="canvasLocation" x="-27127" y="-14118"/>
         </scene>
-        <!--Seller Ads-->
+        <!--Anuncios del Vendedor-->
         <scene sceneID="rlL-zg-2Oe">
             <objects>
                 <viewController storyboardIdentifier="sellerAdsViewController" id="fep-Ml-uOe" customClass="FLSellerAdsViewController" sceneMemberID="viewController">
@@ -3742,7 +3742,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Seller Ads" id="hjI-JH-6Xx"/>
+                    <navigationItem key="navigationItem" title="Anuncios del Vendedor" id="hjI-JH-6Xx"/>
                     <connections>
                         <outlet property="tableView" destination="qzM-sR-Fra" id="672-F2-OaC"/>
                     </connections>
@@ -3804,7 +3804,7 @@
             </objects>
             <point key="canvasLocation" x="-33541" y="-15957"/>
         </scene>
-        <!--Create an Account-->
+        <!--Crear una Cuenta-->
         <scene sceneID="lbp-6m-HN7">
             <objects>
                 <tableViewController storyboardIdentifier="sid_registrationExtendedVC" id="7TQ-e3-yX5" customClass="FLRegistrationExtended" sceneMemberID="viewController">
@@ -3816,7 +3816,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-KO-Qai" customClass="FLTextField">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-KO-Qai" customClass="FLTextField">
                                     <rect key="frame" x="15" y="15" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="az5-vG-u6o"/>
@@ -3834,7 +3834,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-nH-9Tg" customClass="FLTextField">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-nH-9Tg" customClass="FLTextField">
                                     <rect key="frame" x="15" y="133" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="x42-CB-K16"/>
@@ -3876,7 +3876,7 @@
                                         <constraint firstAttribute="height" constant="44" id="tja-3e-z7Y"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="Submit" backgroundImage="button1">
+                                    <state key="normal" title="Enviar" backgroundImage="button1">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -3896,8 +3896,8 @@
                             <outlet property="delegate" destination="7TQ-e3-yX5" id="4Pq-mx-MQB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Create an Account" id="EDl-iZ-vbH">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kDY-ER-209">
+                    <navigationItem key="navigationItem" title="Crear una Cuenta" id="EDl-iZ-vbH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="kDY-ER-209">
                             <connections>
                                 <action selector="cancelBtnDidTap:" destination="7TQ-e3-yX5" id="oWI-NW-QQw"/>
                             </connections>

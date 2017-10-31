@@ -68,7 +68,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.title = FLLocalizedString(@"screen_listing_details");
+	self.title = FLLocalizedString(@"screen_detalles_anuncio");
 }
 
 - (void)viewDidLoad {
