@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 
 @property (weak, nonatomic) FLHomeViewControllerView *view;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet FLStaticMap *nearbyAdsBanner;
+/*@property (weak, nonatomic) IBOutlet FLStaticMap *nearbyAdsBanner;*/
 @property (weak, nonatomic) IBOutlet UILabel *errorsDebugLabel;
 @property (assign, nonatomic) FLRefreshAdsState adsCurrentState;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.nearbyAdsBanner setHidden:(YES)]; //New change by Lindsay
+   /* [self.nearbyAdsBanner setHidden:(YES)]; */ //New change by Lindsay
 
     // switch to RTL if necessary
     self.frostedViewController.direction = IS_RTL
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
     _loadingImage = [UIImage imageNamed:@"loading45x45"];
     
     // update static map with current user location
-	[_nearbyAdsBanner updateUserLocationOnMap];
+	/*[_nearbyAdsBanner updateUserLocationOnMap];
 
     __typeof (&*self) __weak weakSelf = self;
     _nearbyAdsBanner.onTap = ^{
@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 
         [FLAppSession addItem:@1 forKey:kSessionStaticMapDidTapped];
         [weakSelf.frostedViewController setContentViewController:nc];
-    };
+    };*/
 
 	// append refresh control
 	_refreshControl = [[UIRefreshControl alloc] init];
