@@ -102,7 +102,7 @@ static NSString * const kPositionKey = @"position";
 #pragma mark - FLFieldModel
 
 - (FLFieldModel *)buildValuesAsSelectField {
-    FLFieldModel *model = [FLFieldModel fromDictionary:@{@"name"  : FLLocalizedString(@"dropdown_title_account_types"),
+    FLFieldModel *model = [FLFieldModel fromDictionary:@{@"name"  : FLLocalizedString(@"dropdown_titulo_tipos_cuenta"),
                                                          @"key"   : @"atype",
                                                          @"type"  : @"select",
                                                          @"values": [self getList]}];

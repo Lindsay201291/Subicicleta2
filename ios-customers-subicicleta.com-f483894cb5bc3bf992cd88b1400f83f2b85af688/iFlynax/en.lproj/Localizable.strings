@@ -76,7 +76,7 @@
 "screen_accounts_alphabetic_search" = "Alphabetic Search";
 "screen_accounts_advanced_search" = "Advanced Search";
 "screen_remind_password" = "Remind Password";
-"screen_registration" = "Registration";
+"screen_registro" = "Registro";
 "screen_settings" = "Settings";
 "screen_aboutUs"  = "About Us";
 "screen_feedback" = "Feedback";
@@ -117,7 +117,7 @@
 "placeholder_frase_busqueda" = "Frase de Búsqueda";
 "placeholder_username" = "Username";
 "placeholder_email" = "E-mail";
-"placeholder_password" = "Password";
+"placeholder_contraseña" = "Contraseña";
 "placeholder_contraseña_actual" = "Contraseña Actual";
 "placeholder_nueva_contraseña" = "Nueva Contraseña";
 "placeholder_confirmar_contraseña" = "Confirmar nueva contraseña";
@@ -162,6 +162,7 @@
 "button_add_comment" = "Add Comment";
 "button_loginForm_registration" = "Create a new account";
 "button_submit" = "Submit";
+"button_paso_siguiente" = "Paso siguiente";
 "button_see_more" = "See More";
 "button_alert_ok" = "OK, let's go!";
 "button_remove" = "Remove";
@@ -197,7 +198,7 @@
 "button_action_edit_description" = "Edit Description";
 
 /* dropdown titles */
-"dropdown_title_account_types" = "Account type";
+"dropdown_titulo_tipos_cuenta" = "Tipo de Cuenta";
 
 /* confirmations */
 "confirm_open_in_safary" = "Do you want to open the URL in Safari?";

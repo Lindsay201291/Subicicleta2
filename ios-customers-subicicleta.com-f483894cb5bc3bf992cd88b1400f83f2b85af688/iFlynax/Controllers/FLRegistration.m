@@ -59,7 +59,7 @@ static NSString * const kApiResultProfileKey = @"profile";
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.screenName = FLLocalizedString(@"screen_registration");
+    self.screenName = FLLocalizedString(@"screen_registro");
 }
 
 - (void)viewDidLoad {
@@ -78,14 +78,14 @@ static NSString * const kApiResultProfileKey = @"profile";
     // init form controls
     _userNameField.placeholder = FLLocalizedString(@"placeholder_username");
     _emailField.placeholder    = FLLocalizedString(@"placeholder_email");
-    _passwordField.placeholder = FLLocalizedString(@"placeholder_password");
+    _passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
     
-    _typeDropDown.title        = FLLocalizedString(@"dropdown_title_account_types");
+    _typeDropDown.title        = FLLocalizedString(@"dropdown_titulo_tipos_cuenta");
     for (NSDictionary *typeData in _accountTypes) {
         [_typeDropDown addOption:typeData[kAccountTypeNameKey] forKey:typeData[kAccountTypeKeyName]];
     }
     
-    [_submitButton setTitle:FLLocalizedString(@"button_submit") forState:UIControlStateNormal];
+    [_submitButton setTitle:FLLocalizedString(@"button_paso_siguiente") forState:UIControlStateNormal];
     
     // validation inits
     _validatorManager = [FLValidatorManager new];

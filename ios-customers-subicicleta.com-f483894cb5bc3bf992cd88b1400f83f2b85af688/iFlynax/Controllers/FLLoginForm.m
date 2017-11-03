@@ -66,7 +66,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
     [_loginButton setTitle:FLLocalizedString(@"button_login") forState:UIControlStateNormal];
 
 	_usernameField.placeholder = loginModePlaceholder;
-	_passwordField.placeholder = FLLocalizedString(@"placeholder_password");
+	_passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
 
     NSDictionary *_linkAttributes = @{NSForegroundColorAttributeName : FLHexColor(kColorThemeLinks),
                                       NSUnderlineStyleAttributeName  : @(NSUnderlineStyleSingle)};

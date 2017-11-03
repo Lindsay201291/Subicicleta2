@@ -55,7 +55,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"screen_registration");
+    self.title = FLLocalizedString(@"screen_registro");
     self.tableView.backgroundColor = FLHexColor(kColorBackgroundColor);
     self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
 
@@ -69,10 +69,10 @@ static CGFloat    const kInputFieldsHeight    = 44;
     self.showUserNameInput = [FLAccount loginModeIs:FLAccountLoginModeUsername];
 
     // init form controls
-    [_submitButton setTitle:FLLocalizedString(@"button_submit") forState:UIControlStateNormal];
-    _typeDropDown.title        = FLLocalizedString(@"dropdown_title_account_types");
+    [_submitButton setTitle:FLLocalizedString(@"button_paso_siguiente") forState:UIControlStateNormal];
+    _typeDropDown.title        = FLLocalizedString(@"dropdown_titulo_tipos_cuenta");
     _userNameField.placeholder = FLLocalizedString(@"placeholder_username");
-    _passwordField.placeholder = FLLocalizedString(@"placeholder_password");
+    _passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
     _emailField.placeholder    = FLLocalizedString(@"placeholder_email");
 
     for (NSDictionary *typeData in _accountTypes) {
