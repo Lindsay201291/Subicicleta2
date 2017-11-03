@@ -55,7 +55,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 
     // init form controls
-    NSString *loginModePlaceholder = FLLocalizedString(@"placeholder_username");
+    NSString *loginModePlaceholder = FLLocalizedString(@"placeholder_usuario");
     if ([FLAccount loginModeIs:FLAccountLoginModeEmail]) {
         _usernameField.keyboardType = UIKeyboardTypeEmailAddress;
         loginModePlaceholder = FLLocalizedString(@"placeholder_email");

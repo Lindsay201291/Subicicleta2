@@ -120,7 +120,7 @@
         <scene sceneID="lbN-C7-wpg">
             <objects>
                 <navigationController storyboardIdentifier="sid_paymentNC" id="PYm-8T-Cf8" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="20x-nC-0KD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="20x-nC-0KD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -136,7 +136,7 @@
         <scene sceneID="UWd-gQ-hiX">
             <objects>
                 <navigationController storyboardIdentifier="sid_policyVC" id="H0x-Yf-Spz" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLo-FC-max">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tLo-FC-max">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -426,7 +426,7 @@
             <objects>
                 <navigationController storyboardIdentifier="addListingSelectPlan" id="CtM-4y-yyx" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uNw-aN-lzm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8n-CK-O2J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="i8n-CK-O2J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -650,7 +650,7 @@
             <objects>
                 <navigationController storyboardIdentifier="contentController" definesPresentationContext="YES" id="NMk-hw-eGf" customClass="FLMainNavigation" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="D4N-RD-Qyn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y7r-53-XzT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Y7r-53-XzT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -986,7 +986,7 @@
         <scene sceneID="XqA-8K-aJ2">
             <objects>
                 <navigationController storyboardIdentifier="remindPasswordVC" id="UwX-7b-7tv" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dmt-Eo-EJ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Dmt-Eo-EJ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1399,7 +1399,7 @@
             <objects>
                 <navigationController storyboardIdentifier="registrationNC" id="vwb-3Q-MST" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ou7-KA-xdd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POc-Sm-fyl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="POc-Sm-fyl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1415,7 +1415,7 @@
         <scene sceneID="rjR-SZ-SBJ">
             <objects>
                 <navigationController storyboardIdentifier="registrationExtendedNC" id="748-3N-pDi" customClass="FLNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r44-fZ-JsI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r44-fZ-JsI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1453,19 +1453,8 @@
                                             <outlet property="delegate" destination="hvt-LY-RJQ" id="Ykl-4y-SEH"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-6x-Yc2" customClass="FLTextField">
-                                        <rect key="frame" x="15" y="74" width="345" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="LKm-Ff-Zv9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="hvt-LY-RJQ" id="9GQ-cX-OGS"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aza-t6-X9G" customClass="FLTextField">
-                                        <rect key="frame" x="15" y="133" width="345" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aza-t6-X9G" customClass="FLTextField">
+                                        <rect key="frame" x="15" y="75" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="6JK-qV-J4G"/>
                                         </constraints>
@@ -1475,8 +1464,26 @@
                                             <outlet property="delegate" destination="hvt-LY-RJQ" id="k24-hj-p70"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-Pc-skr">
-                                        <rect key="frame" x="15" y="251" width="345" height="44"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-QZ-VKO" customClass="FLDropDown">
+                                        <rect key="frame" x="15" y="202" width="345" height="44"/>
+                                        <color key="backgroundColor" red="0.79545190470000005" green="0.6305039107" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="a2Z-3c-Rcc"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-6x-Yc2" customClass="FLTextField">
+                                        <rect key="frame" x="15" y="136" width="345" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="LKm-Ff-Zv9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hvt-LY-RJQ" id="9GQ-cX-OGS"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-Pc-skr">
+                                        <rect key="frame" x="15" y="270" width="345" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="mX4-Uu-hu1"/>
                                         </constraints>
@@ -1488,13 +1495,6 @@
                                             <action selector="submitButtonDidTap:" destination="hvt-LY-RJQ" eventType="touchUpInside" id="LJ5-R6-9pR"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-QZ-VKO" customClass="FLDropDown">
-                                        <rect key="frame" x="15" y="192" width="345" height="44"/>
-                                        <color key="backgroundColor" red="0.79545190470000005" green="0.6305039107" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="a2Z-3c-Rcc"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Kwu-6x-Yc2" firstAttribute="top" secondItem="8AO-S4-oA8" secondAttribute="top" constant="74" id="03J-Oq-Ayd"/>
@@ -1548,14 +1548,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnB-Ei-OHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37482" y="-14331"/>
+            <point key="canvasLocation" x="-37482.400000000001" y="-14331.184407796103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZyN-Ct-aLm">
             <objects>
                 <navigationController storyboardIdentifier="editProfileNC" id="mgJ-df-BnF" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HRT-6F-s2A"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9b-BW-nrp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p9b-BW-nrp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2700,7 +2700,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negociante de Subicicleta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blr-Mi-iyC">
-                                            <rect key="frame" x="132" y="11" width="197" height="39"/>
+                                            <rect key="frame" x="132" y="11" width="197" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -3314,7 +3314,7 @@
             <objects>
                 <navigationController storyboardIdentifier="listingStatisticsNC" id="n74-fy-l1q" customClass="FLNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Vep-Ui-cdH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGc-dA-30j">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MGc-dA-30j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3507,7 +3507,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" translatesAutoresizingMaskIntoConstraints="NO" id="GFU-WF-FP2">
-                                                            <rect key="frame" x="-1" y="8" width="32" height="14"/>
+                                                            <rect key="frame" x="-0.5" y="8" width="31" height="14"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -3804,7 +3804,7 @@
             </objects>
             <point key="canvasLocation" x="-33541" y="-15957"/>
         </scene>
-        <!--Crear una Cuenta-->
+        <!--Registro-->
         <scene sceneID="lbp-6m-HN7">
             <objects>
                 <tableViewController storyboardIdentifier="sid_registrationExtendedVC" id="7TQ-e3-yX5" customClass="FLRegistrationExtended" sceneMemberID="viewController">
@@ -3843,8 +3843,8 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 </textField>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K01-XZ-5nc" customClass="FLDropDown">
-                                    <rect key="frame" x="15" y="192" width="345" height="44"/>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K01-XZ-5nc" customClass="FLDropDown">
+                                    <rect key="frame" x="15" y="199" width="345" height="44"/>
                                     <color key="backgroundColor" red="0.79545190470000005" green="0.6305039107" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="f4O-Gv-h2n"/>
@@ -3870,8 +3870,8 @@
                             <rect key="frame" x="0.0" y="251" width="375" height="59"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Z-F8-AnL">
-                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Z-F8-AnL">
+                                    <rect key="frame" x="15" y="7" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="tja-3e-z7Y"/>
                                     </constraints>
@@ -3896,7 +3896,7 @@
                             <outlet property="delegate" destination="7TQ-e3-yX5" id="4Pq-mx-MQB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Crear una Cuenta" id="EDl-iZ-vbH">
+                    <navigationItem key="navigationItem" title="Registro" id="EDl-iZ-vbH">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="kDY-ER-209">
                             <connections>
                                 <action selector="cancelBtnDidTap:" destination="7TQ-e3-yX5" id="oWI-NW-QQw"/>

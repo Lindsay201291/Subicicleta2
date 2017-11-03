@@ -71,7 +71,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
     // init form controls
     [_submitButton setTitle:FLLocalizedString(@"button_paso_siguiente") forState:UIControlStateNormal];
     _typeDropDown.title        = FLLocalizedString(@"dropdown_titulo_tipos_cuenta");
-    _userNameField.placeholder = FLLocalizedString(@"placeholder_username");
+    _userNameField.placeholder = FLLocalizedString(@"placeholder_usuario");
     _passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
     _emailField.placeholder    = FLLocalizedString(@"placeholder_email");
 
@@ -129,10 +129,10 @@ static CGFloat    const kInputFieldsHeight    = 44;
 }
 
 - (void)setShowUserNameInput:(BOOL)show {
-    _userNameField.enabled       = show;
-    _userNameField.hidden        = !show;
-    _emailTopConstraint.constant = show ? 74 : kPaddingBetweenFields;
-    _showUserNameInput           = show;
+   // _userNameField.enabled       = show;
+    /*_userNameField.hidden        = !show;*/
+   // _emailTopConstraint.constant = show ? 74 : kPaddingBetweenFields;
+   // _showUserNameInput           = show;
 }
 
 #pragma mark - Dynamic two-step form

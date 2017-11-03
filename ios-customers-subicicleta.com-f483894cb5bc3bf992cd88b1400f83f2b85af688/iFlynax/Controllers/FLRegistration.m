@@ -30,6 +30,7 @@ static NSString * const kApiResultProfileKey = @"profile";
 
 @property (weak, nonatomic) IBOutlet FLTextField *userNameField;
 @property (weak, nonatomic) IBOutlet FLTextField *passwordField;
+
 @property (weak, nonatomic) IBOutlet FLTextField *emailField;
 @property (weak, nonatomic) IBOutlet FLDropDown *typeDropDown;
 @property (weak, nonatomic) IBOutlet FLPersonalAddress *personalAddress;
@@ -76,7 +77,7 @@ static NSString * const kApiResultProfileKey = @"profile";
     self.showPersonalAddress = NO;
     
     // init form controls
-    _userNameField.placeholder = FLLocalizedString(@"placeholder_username");
+    _userNameField.placeholder = FLLocalizedString(@"placeholder_usuario");
     _emailField.placeholder    = FLLocalizedString(@"placeholder_email");
     _passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
     
@@ -161,7 +162,7 @@ static NSString * const kApiResultProfileKey = @"profile";
 
 - (void)setShowUserNameInput:(BOOL)show {
     _userNameField.enabled       = show;
-    _userNameField.hidden        = !show;
+    /*_userNameField.hidden        = !show;*/
     _emailTopConstraint.constant = show ? 74 : 15;
     _showUserNameInput           = show;
 }

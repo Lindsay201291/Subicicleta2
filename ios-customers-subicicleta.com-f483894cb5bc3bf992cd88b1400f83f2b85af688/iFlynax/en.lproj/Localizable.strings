@@ -115,8 +115,8 @@
 /* placeholders */
 "placeholder_search" = "Search";
 "placeholder_frase_busqueda" = "Frase de Búsqueda";
-"placeholder_username" = "Username";
-"placeholder_email" = "E-mail";
+"placeholder_usuario" = "Usuario y/o Alias";
+"placeholder_email" = "Email";
 "placeholder_contraseña" = "Contraseña";
 "placeholder_contraseña_actual" = "Contraseña Actual";
 "placeholder_nueva_contraseña" = "Nueva Contraseña";
