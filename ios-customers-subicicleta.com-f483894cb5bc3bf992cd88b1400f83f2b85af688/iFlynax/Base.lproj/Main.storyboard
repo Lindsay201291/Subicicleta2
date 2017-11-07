@@ -3826,7 +3826,7 @@
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36j-Pz-gzt" customClass="FLTextField">
-                                    <rect key="frame" x="15" y="81" width="345" height="44"/>
+                                    <rect key="frame" x="15" y="79" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="bw1-4p-KI2"/>
                                     </constraints>
@@ -3835,7 +3835,7 @@
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-nH-9Tg" customClass="FLTextField">
-                                    <rect key="frame" x="15" y="147" width="345" height="44"/>
+                                    <rect key="frame" x="15" y="133" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="x42-CB-K16"/>
                                     </constraints>
@@ -3843,8 +3843,8 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Verificar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-Hl-7RT" customClass="FLTextField">
-                                    <rect key="frame" x="15" y="215" width="345" height="44"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Verificar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-Hl-7RT" customClass="FLTextField">
+                                    <rect key="frame" x="15" y="192" width="345" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="DJ2-0g-5ae"/>
                                     </constraints>
@@ -3861,8 +3861,8 @@
                                 <constraint firstAttribute="trailing" secondItem="XTw-KO-Qai" secondAttribute="trailing" constant="15" id="XiZ-US-Ox2"/>
                                 <constraint firstItem="EAU-nH-9Tg" firstAttribute="leading" secondItem="36j-Pz-gzt" secondAttribute="leading" id="Zzl-5T-zSd"/>
                                 <constraint firstItem="36j-Pz-gzt" firstAttribute="leading" secondItem="XTw-KO-Qai" secondAttribute="leading" id="f5A-rM-I8W"/>
-                                <constraint firstItem="kTM-Hl-7RT" firstAttribute="top" secondItem="EAU-nH-9Tg" secondAttribute="bottom" constant="22" id="hav-Mt-LZW"/>
-                                <constraint firstItem="EAU-nH-9Tg" firstAttribute="top" secondItem="tkr-CJ-kz3" secondAttribute="top" constant="147" id="kbG-tk-Syc"/>
+                                <constraint firstItem="kTM-Hl-7RT" firstAttribute="top" secondItem="EAU-nH-9Tg" secondAttribute="bottom" constant="15" id="hav-Mt-LZW"/>
+                                <constraint firstItem="EAU-nH-9Tg" firstAttribute="top" secondItem="tkr-CJ-kz3" secondAttribute="top" constant="133" id="kbG-tk-Syc"/>
                                 <constraint firstItem="36j-Pz-gzt" firstAttribute="top" secondItem="tkr-CJ-kz3" secondAttribute="top" constant="74" id="o6p-HN-stC"/>
                                 <constraint firstItem="EAU-nH-9Tg" firstAttribute="trailing" secondItem="36j-Pz-gzt" secondAttribute="trailing" id="uMf-r6-Y9k"/>
                                 <constraint firstItem="kTM-Hl-7RT" firstAttribute="leading" secondItem="EAU-nH-9Tg" secondAttribute="leading" id="xek-Lv-rSz"/>
@@ -3872,8 +3872,15 @@
                             <rect key="frame" x="0.0" y="294" width="375" height="141"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K01-XZ-5nc" customClass="FLDropDown">
+                                    <rect key="frame" x="15" y="18" width="345" height="46"/>
+                                    <color key="backgroundColor" red="0.79545190470000005" green="0.6305039107" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="f4O-Gv-h2n"/>
+                                    </constraints>
+                                </view>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Z-F8-AnL">
-                                    <rect key="frame" x="15" y="100" width="345" height="41"/>
+                                    <rect key="frame" x="15" y="81" width="345" height="41"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="Enviar" backgroundImage="button1">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3882,19 +3889,12 @@
                                         <action selector="submitBtnTapped:" destination="7TQ-e3-yX5" eventType="touchUpInside" id="gQX-Qq-JZq"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K01-XZ-5nc" customClass="FLDropDown">
-                                    <rect key="frame" x="15" y="29" width="345" height="46"/>
-                                    <color key="backgroundColor" red="0.79545190470000005" green="0.6305039107" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="f4O-Gv-h2n"/>
-                                    </constraints>
-                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="K01-XZ-5nc" firstAttribute="trailing" secondItem="a6Z-F8-AnL" secondAttribute="trailing" id="0NZ-rh-5Yf"/>
-                                <constraint firstItem="a6Z-F8-AnL" firstAttribute="top" secondItem="sjT-dB-8ze" secondAttribute="top" constant="104" id="Bgx-Ub-4BX"/>
+                                <constraint firstItem="a6Z-F8-AnL" firstAttribute="top" secondItem="sjT-dB-8ze" secondAttribute="top" constant="80" id="Bgx-Ub-4BX"/>
                                 <constraint firstItem="K01-XZ-5nc" firstAttribute="leading" secondItem="a6Z-F8-AnL" secondAttribute="leading" id="Bzc-wL-D34"/>
-                                <constraint firstItem="K01-XZ-5nc" firstAttribute="top" secondItem="sjT-dB-8ze" secondAttribute="topMargin" constant="30" id="II3-KR-6Yc"/>
+                                <constraint firstItem="K01-XZ-5nc" firstAttribute="top" secondItem="sjT-dB-8ze" secondAttribute="topMargin" constant="10" id="II3-KR-6Yc"/>
                                 <constraint firstAttribute="trailing" secondItem="a6Z-F8-AnL" secondAttribute="trailing" constant="15" id="ip5-f6-x97"/>
                                 <constraint firstItem="a6Z-F8-AnL" firstAttribute="height" secondItem="sjT-dB-8ze" secondAttribute="height" constant="-90" id="uXi-8W-U5E"/>
                                 <constraint firstItem="a6Z-F8-AnL" firstAttribute="leading" secondItem="sjT-dB-8ze" secondAttribute="leading" constant="15" id="usY-N5-XYR"/>
