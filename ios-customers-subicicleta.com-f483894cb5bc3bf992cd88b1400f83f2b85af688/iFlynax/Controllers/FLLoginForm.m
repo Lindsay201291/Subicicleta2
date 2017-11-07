@@ -51,7 +51,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.title = FLLocalizedString(@"screen_login_form");
+	self.title = FLLocalizedString(@"screen_iniciar_sesion_form");
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 
     // init form controls
@@ -63,21 +63,21 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
     }
 
     [_fbLoginButton setTitle:FLLocalizedString(@"button_facebook_login") forState:UIControlStateNormal];
-    [_loginButton setTitle:FLLocalizedString(@"button_login") forState:UIControlStateNormal];
+    [_loginButton setTitle:FLLocalizedString(@"button_iniciar_sesion") forState:UIControlStateNormal];
 
 	_usernameField.placeholder = loginModePlaceholder;
 	_passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
 
     NSDictionary *_linkAttributes = @{NSForegroundColorAttributeName : FLHexColor(kColorThemeLinks),
                                       NSUnderlineStyleAttributeName  : @(NSUnderlineStyleSingle)};
-    NSAttributedString *_string = [[NSAttributedString alloc] initWithString:FLLocalizedString(@"button_loginForm_registration")
+    NSAttributedString *_string = [[NSAttributedString alloc] initWithString:FLLocalizedString(@"button_loginForm_registro")
                                                                   attributes:_linkAttributes];
     [_registrationBtn setAttributedTitle:_string forState:UIControlStateNormal];
 
     _orLabel.text = FLLocalizedString(@"label_or");
     fbAuthUse = [FLConfig boolWithKey:@"facebook_login"];
 
-	[self searchLinksAsPatternInString:FLLocalizedString(@"label_loginForm_reset_password")
+	[self searchLinksAsPatternInString:FLLocalizedString(@"label_loginForm_restablecer_contraseña")
 							  useBlock:^(NSRange range, NSString *resultString) {
 								  @try {
 									  _remindPasswordLabel.text = resultString;

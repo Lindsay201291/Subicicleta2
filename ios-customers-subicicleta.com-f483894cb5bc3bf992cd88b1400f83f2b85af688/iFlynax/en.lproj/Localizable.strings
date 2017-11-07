@@ -66,7 +66,7 @@
 "screen_comments" = "Comments";
 "screen_favoritos_anuncios_vista" = "Favoritos";
 "screen_recently_view" = "Recently Added";
-"screen_login_form" = "Login";
+"screen_iniciar_sesion_form" = "Iniciar Sesión";
 "screen_mi_perfil" = "Perfil";
 "screen_misAnuncios_vista" = "Mis Anuncios";
 "screen_cambiar_contraseña" = "Contraseña";
@@ -75,7 +75,7 @@
 "screen_legal_information" = "Legal Information";
 "screen_accounts_alphabetic_search" = "Alphabetic Search";
 "screen_accounts_advanced_search" = "Advanced Search";
-"screen_remind_password" = "Remind Password";
+"screen_restablecer_contraseña" = "Restablecer Contraseña";
 "screen_registro" = "Registro";
 "screen_settings" = "Settings";
 "screen_aboutUs"  = "About Us";
@@ -136,7 +136,7 @@
 
 /* labels */
 "label_or" = "Or";
-"label_loginForm_reset_password" = "Forgot password? [Reset here]";
+"label_loginForm_restablecer_contraseña" = "¿Olvidó su contraseña? [Restablecer aquí]";
 "label_email" = "E-Mail";
 "label_awating_approval" = "Awaiting Approval";
 "label_chars_limit_left" = "%d Characters left";
@@ -154,15 +154,15 @@
 "button_yes" = "Yes";
 "button_no" = "No";
 "button_add" = "Add";
-"button_login" = "Log In";
+"button_iniciar_sesion" = "Iniciar Sesión";
 "button_facebook_login" = "Log in with Facebook";
 "button_cerrarsesion" = "Cerrar Sesión";
 "button_editar_perfil" = "Editar Perfil";
 "button_nearby_ads_viewmode_0" = "Show Map";
 "button_nearby_ads_viewmode_1" = "Show List";
 "button_add_comment" = "Add Comment";
-"button_loginForm_registration" = "Create a new account";
-"button_submit" = "Submit";
+"button_loginForm_registro" = "Crear nueva cuenta";
+"button_enviar" = "Enviar";
 "button_paso_siguiente" = "Paso siguiente";
 "button_see_more" = "See More";
 "button_alert_ok" = "OK, let's go!";

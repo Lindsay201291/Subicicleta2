@@ -260,7 +260,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (UIButton *)submitButton {
     if (_submitButton == nil) {
         _submitButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 5, self.tableView.width-30, 50)];
-        [_submitButton setTitle:FLLocalizedString(@"button_submit") forState:UIControlStateNormal];
+        [_submitButton setTitle:FLLocalizedString(@"button_enviar") forState:UIControlStateNormal];
         [_submitButton setBackgroundImage:[UIImage imageNamed:@"button1"] forState:UIControlStateNormal];
         [_submitButton addTarget:self action:@selector(submitBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }

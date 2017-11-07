@@ -30,14 +30,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"screen_remind_password");
+    self.title = FLLocalizedString(@"screen_restablecer_contraseña");
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
     self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
     
     _afterKeyboardDismiss = NO;
     
     _emailTextField.placeholder = FLLocalizedString(@"placeholder_email");
-    [_submitButton setTitle:FLLocalizedString(@"button_submit") forState:UIControlStateNormal];
+    [_submitButton setTitle:FLLocalizedString(@"button_enviar") forState:UIControlStateNormal];
     
     // validation inits
     _validatorManager = [FLValidatorManager new];
