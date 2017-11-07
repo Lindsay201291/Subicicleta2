@@ -118,6 +118,7 @@
 "placeholder_usuario" = "Usuario y/o Alias";
 "placeholder_email" = "Email";
 "placeholder_contraseña" = "Contraseña";
+"placeholder_verificar_contraseña" = "Verificar contraseña";
 "placeholder_contraseña_actual" = "Contraseña Actual";
 "placeholder_nueva_contraseña" = "Nueva Contraseña";
 "placeholder_confirmar_contraseña" = "Confirmar nueva contraseña";

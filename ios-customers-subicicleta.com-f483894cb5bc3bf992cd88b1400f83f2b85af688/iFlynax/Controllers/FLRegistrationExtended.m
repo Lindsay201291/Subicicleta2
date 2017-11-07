@@ -37,8 +37,10 @@ static CGFloat    const kInputFieldsHeight    = 44;
 @property (weak, nonatomic) IBOutlet FLTextField *userNameField;
 @property (weak, nonatomic) IBOutlet FLTextField *emailField;
 @property (weak, nonatomic) IBOutlet FLTextField *passwordField;
+@property (weak, nonatomic) IBOutlet FLTextField *rePasswordField;
 @property (weak, nonatomic) IBOutlet FLDropDown  *typeDropDown;
 @property (weak, nonatomic) IBOutlet UIButton    *submitButton;
+
 
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *inputsCollection;
 @property (weak, nonatomic)   IBOutlet NSLayoutConstraint    *emailTopConstraint;
@@ -73,6 +75,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
     _typeDropDown.title        = FLLocalizedString(@"dropdown_titulo_tipos_cuenta");
     _userNameField.placeholder = FLLocalizedString(@"placeholder_usuario");
     _passwordField.placeholder = FLLocalizedString(@"placeholder_contraseña");
+    _rePasswordField.placeholder = FLLocalizedString(@"placeholder_verificar_contraseña");
     _emailField.placeholder    = FLLocalizedString(@"placeholder_email");
 
     for (NSDictionary *typeData in _accountTypes) {
@@ -93,6 +96,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_emailField    withValider:@[inputRequiredValider, inputEmailValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
+     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_rePasswordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_typeDropDown  withValider:@[dropDownRequiredValider]]];
 
     // accessory toolbar
