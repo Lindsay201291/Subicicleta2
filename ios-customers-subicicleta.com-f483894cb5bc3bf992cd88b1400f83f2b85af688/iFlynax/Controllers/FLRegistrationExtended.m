@@ -133,16 +133,17 @@ static CGFloat    const kInputFieldsHeight    = 44;
     }
 }
 
-//New
--(void)completar_registro:(int)datos_correctos{
-    if (datos_correctos == 1){
+//New method by Lindsay
+-(void)completar_registro
+{
+   
     UIViewController *siguiente_pantalla = [self.storyboard
                                             instantiateViewControllerWithIdentifier:@"registrationViewSid"];
     
-    [self presentViewController:siguiente_pantalla animated:YES completion:nil];}
+    [self presentViewController:siguiente_pantalla animated:YES completion:nil];
     
 }
-//New
+//New method by Lindsay
 
 
 - (void)setShowUserNameInput:(BOOL)show {
@@ -216,6 +217,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 
 - (void)postFormToAPIWithData:(NSDictionary *)data {
     
+    
     [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
     
     [flynaxAPIClient postApiItem:kApiItemRequests
@@ -247,11 +249,17 @@ static CGFloat    const kInputFieldsHeight    = 44;
                                   [FLProgressHUD dismiss];
                               }
                               else { [FLProgressHUD showErrorWithStatus:result[kApiResultErrorKey]];
+                                  
                                   }
                                  
                           }
                           else [FLDebug showAdaptedError:error apiItem:kApiItemRequests_addComment];
+                              
+                          
                       }];
+    
+       [self completar_registro]; //New by Lindsay
+    
     
     
 }
@@ -272,48 +280,22 @@ static CGFloat    const kInputFieldsHeight    = 44;
 #pragma mark - Navigation
 
 - (IBAction)submitBtnTapped:(UIButton *)sender {
-    //[self completar_registro]; //New
-    int datos_correctos = 0;
+    
     if ([_validatorManager validate]) { // validate first-step form
         if ([_formManager isValidForm] && _formManager.formAccepted) {  // validate two-step form
             [self postFormToAPIWithData:_formManager.formValues];
-            datos_correctos = 1;
-           // [self completar_registro]; //New
-            //New
-           /* UIViewController *siguiente_pantalla = [self.storyboard
-                                                    instantiateViewControllerWithIdentifier:@"registrationViewSid"];
-                                                    
-                                                    [self presentViewController:siguiente_pantalla animated:YES completion:nil];*/
-            //New
-           
-            
             
         }
         else if (!_formManager.formAccepted) {
-           // [self.navigationController dismissViewControllerAnimated:YES completion:^{//nil]; //new
-                [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];//}];
+                [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];
             
         }
-        else {
-           // [self.navigationController dismissViewControllerAnimated:YES completion:^{//nil]; //New
-                [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];//}];
+        else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
             
-        }//New
+        
     }
 
     [self.tableView reloadData];
-    [self completar_registro:datos_correctos]; //new
-   /* if (datos_correctos == 1){
-        [self completar_registro];
-        datos_correctos = 0;
-    } *///New
-    //New
-    /*UIViewController *siguiente_pantalla = [self.storyboard
-                                            instantiateViewControllerWithIdentifier:@"registrationViewSid"];
-    
-    [self presentViewController:siguiente_pantalla animated:YES completion:nil];*/
-    //New
-    
     
     
 }
