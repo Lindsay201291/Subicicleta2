@@ -283,6 +283,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 
 - (IBAction)registrationBtnDidTap:(UIButton *)sender {
     [self presentViewControllerWithIdentifier:kStoryBoardRegistrationExtendedNC];
+   //[self presentViewControllerWithIdentifier:kStoryBoardRegistrationNC]; //New by Lindsay
 }
 
 - (IBAction)showSideMenu:(UIBarButtonItem *)sender {

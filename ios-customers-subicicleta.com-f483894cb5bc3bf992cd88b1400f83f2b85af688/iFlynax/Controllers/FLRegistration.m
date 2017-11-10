@@ -147,10 +147,10 @@ static NSString * const kApiResultProfileKey = @"profile";
                                               [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationSimulateLogin object:nil];
                                           }
 
-                                          [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")
+                                         /* [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")
                                                                       message:FLLocalizedString(result[kApiResultMessageKey])
                                                                      delegate:nil cancelButtonTitle:nil
-                                                            otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
+                                                            otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];*/
                                       }];
                                   }
                                   else [FLProgressHUD showErrorWithStatus:result[kApiResultErrorKey]];
@@ -190,7 +190,14 @@ static NSString * const kApiResultProfileKey = @"profile";
 
 - (IBAction)submitButtonDidTap:(UIButton *)sender {
     [self submitForm];
+    //New
+    /*UIViewController *siguiente_pantalla = [self.storyboard
+                                            instantiateViewControllerWithIdentifier:@"sid_registrationExtendedVC"];
+    
+    [self presentViewController:siguiente_pantalla animated:YES completion:nil];*/
+    //New
 }
+
 
 - (IBAction)dissmissViewController:(UIBarButtonItem *)sender {
     _afterKeyboardDismiss = _keyboardHandler.isKeyboardOn;

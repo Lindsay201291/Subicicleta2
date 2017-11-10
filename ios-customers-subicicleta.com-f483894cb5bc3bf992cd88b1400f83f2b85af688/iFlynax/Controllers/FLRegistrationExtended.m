@@ -54,6 +54,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
 
 @implementation FLRegistrationExtended
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -132,6 +133,18 @@ static CGFloat    const kInputFieldsHeight    = 44;
     }
 }
 
+//New
+-(void)completar_registro:(int)datos_correctos{
+    if (datos_correctos == 1){
+    UIViewController *siguiente_pantalla = [self.storyboard
+                                            instantiateViewControllerWithIdentifier:@"registrationViewSid"];
+    
+    [self presentViewController:siguiente_pantalla animated:YES completion:nil];}
+    
+}
+//New
+
+
 - (void)setShowUserNameInput:(BOOL)show {
    // _userNameField.enabled       = show;
     /*_userNameField.hidden        = !show;*/
@@ -202,8 +215,9 @@ static CGFloat    const kInputFieldsHeight    = 44;
 }
 
 - (void)postFormToAPIWithData:(NSDictionary *)data {
+    
     [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
-
+    
     [flynaxAPIClient postApiItem:kApiItemRequests
                       parameters:@{@"cmd"      : kApiItemRequests_registration,
                                    @"username" : _userNameField.text,
@@ -215,25 +229,31 @@ static CGFloat    const kInputFieldsHeight    = 44;
                       completion:^(NSDictionary *result, NSError *error) {
                           if (error == nil && [result isKindOfClass:NSDictionary.class]) {
                               if (FLTrueBool(result[kApiResultSuccessKey])) {
-
-                                  [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                                 
+                                 // [self.navigationController dismissViewControllerAnimated:YES completion:^{
                                       // auto-login and move to my profile
                                       if (result[kApiResultLoggedKey] && result[kApiResultProfileKey]) {
                                           [[FLAccount loggedUser] saveSessionData:result];
                                           [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationSimulateLogin object:nil];
                                       }
+                                  
+                                  
 
-                                      [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")
+                                     /* [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")
                                                                   message:FLLocalizedString(result[kApiResultMessageKey])
                                                                  delegate:nil cancelButtonTitle:nil
-                                                        otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
-                                  }];
+                                                        otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];*/
+                                 // }];
                                   [FLProgressHUD dismiss];
                               }
-                              else [FLProgressHUD showErrorWithStatus:result[kApiResultErrorKey]];
+                              else { [FLProgressHUD showErrorWithStatus:result[kApiResultErrorKey]];
+                                  }
+                                 
                           }
                           else [FLDebug showAdaptedError:error apiItem:kApiItemRequests_addComment];
                       }];
+    
+    
 }
 
 #pragma mark - RETableViewManagerDelegate
@@ -252,17 +272,52 @@ static CGFloat    const kInputFieldsHeight    = 44;
 #pragma mark - Navigation
 
 - (IBAction)submitBtnTapped:(UIButton *)sender {
+    //[self completar_registro]; //New
+    int datos_correctos = 0;
     if ([_validatorManager validate]) { // validate first-step form
         if ([_formManager isValidForm] && _formManager.formAccepted) {  // validate two-step form
             [self postFormToAPIWithData:_formManager.formValues];
+            datos_correctos = 1;
+           // [self completar_registro]; //New
+            //New
+           /* UIViewController *siguiente_pantalla = [self.storyboard
+                                                    instantiateViewControllerWithIdentifier:@"registrationViewSid"];
+                                                    
+                                                    [self presentViewController:siguiente_pantalla animated:YES completion:nil];*/
+            //New
+           
+            
+            
         }
         else if (!_formManager.formAccepted) {
-            [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];
+           // [self.navigationController dismissViewControllerAnimated:YES completion:^{//nil]; //new
+                [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];//}];
+            
         }
-        else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
+        else {
+           // [self.navigationController dismissViewControllerAnimated:YES completion:^{//nil]; //New
+                [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];//}];
+            
+        }//New
     }
+
     [self.tableView reloadData];
+    [self completar_registro:datos_correctos]; //new
+   /* if (datos_correctos == 1){
+        [self completar_registro];
+        datos_correctos = 0;
+    } *///New
+    //New
+    /*UIViewController *siguiente_pantalla = [self.storyboard
+                                            instantiateViewControllerWithIdentifier:@"registrationViewSid"];
+    
+    [self presentViewController:siguiente_pantalla animated:YES completion:nil];*/
+    //New
+    
+    
+    
 }
+
 
 - (IBAction)cancelBtnDidTap:(UIBarButtonItem *)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];

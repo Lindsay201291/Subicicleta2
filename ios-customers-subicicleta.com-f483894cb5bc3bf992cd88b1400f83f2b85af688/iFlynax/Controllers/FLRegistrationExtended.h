@@ -10,4 +10,6 @@
 
 @interface FLRegistrationExtended : UITableViewController
 
+//- (void)next:(id)sender; //New code by Lindsay
+
 @end
