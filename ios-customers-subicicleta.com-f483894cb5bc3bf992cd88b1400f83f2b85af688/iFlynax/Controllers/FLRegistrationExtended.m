@@ -88,6 +88,10 @@ static CGFloat    const kInputFieldsHeight    = 44;
     FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_select_an_option")];
     FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_proper_email_address")];
     FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_weak")];
+    
+    //New
+    FLValiderEqualInput     *equalInputValider     = [FLValiderEqualInput     validerWithControl:_passwordField withHint:FLLocalizedString(@"alert_password_does_not_match")];
+    //New
 
     _validatorManager = [FLValidatorManager new];
 
@@ -97,8 +101,12 @@ static CGFloat    const kInputFieldsHeight    = 44;
 
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_emailField    withValider:@[inputRequiredValider, inputEmailValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
-     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_rePasswordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
+    [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_rePasswordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
+    //New
+    [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll: _rePasswordField  withValider:@[inputRequiredValider, equalInputValider]]];
+    //New
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_typeDropDown  withValider:@[dropDownRequiredValider]]];
+    
 
     // accessory toolbar
     if (!_showUserNameInput) {

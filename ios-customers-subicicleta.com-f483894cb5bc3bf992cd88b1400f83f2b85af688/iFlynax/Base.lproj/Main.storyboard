@@ -65,21 +65,21 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCellIdentifier" textLabel="hd2-Nb-RPS" detailTextLabel="xsC-Jo-7N3" style="IBUITableViewCellStyleSubtitle" id="pQm-E9-LaK" customClass="RETableViewCell">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pQm-E9-LaK" id="NJC-4n-geG">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="32" id="hd2-Nb-RPS">
-                                                    <rect key="frame" x="15" y="6" width="41" height="19.5"/>
+                                                    <rect key="frame" x="15" y="5" width="41" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtítutlo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsC-Jo-7N3">
-                                                    <rect key="frame" x="15" y="25.5" width="51.5" height="13.5"/>
+                                                    <rect key="frame" x="15" y="25" width="52" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -462,7 +462,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FLCollectionPlansCell" id="Uev-qc-P9S" userLabel="Cell" customClass="FLPlansCollectionViewCell">
-                                        <rect key="frame" x="33.5" y="15" width="308" height="200"/>
+                                        <rect key="frame" x="34" y="15" width="308" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="308" height="200"/>
@@ -1152,7 +1152,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileTableViewCell" rowHeight="96" id="0pc-xo-Fz4" customClass="FLProfileTableViewCell">
-                                        <rect key="frame" x="0.0" y="189.5" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="190" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pc-xo-Fz4" id="HYc-it-goE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -1710,7 +1710,7 @@
                                 </label>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionItemCell" id="jVy-Wg-Kba" customClass="FLAdsCollectionCell">
-                                        <rect key="frame" x="38.5" y="0.0" width="298" height="428"/>
+                                        <rect key="frame" x="39" y="0.0" width="298" height="428"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="298" height="428"/>
@@ -2293,7 +2293,7 @@
                                     </connections>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="z5W-u6-5mY">
-                                    <rect key="frame" x="0.0" y="320.5" width="375" height="237"/>
+                                    <rect key="frame" x="0.0" y="321" width="375" height="237"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-A9-eD4">
@@ -2364,7 +2364,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailsAdCellInline" rowHeight="31" id="DD7-qj-Fax" customClass="FLDetailsTableViewCell">
-                                        <rect key="frame" x="0.0" y="235.5" width="375" height="31"/>
+                                        <rect key="frame" x="0.0" y="236" width="375" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DD7-qj-Fax" id="KzT-ff-Spo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
@@ -2403,7 +2403,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailsAdCellInblock" rowHeight="53" id="VAz-5E-f9Y" customClass="FLDetailsTableViewCell">
-                                        <rect key="frame" x="0.0" y="266.5" width="375" height="53"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAz-5E-f9Y" id="ldE-Ic-dh7">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
@@ -2964,11 +2964,11 @@
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6dY-YS-a1q" id="m9c-pS-9Vz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NwQ-jE-2vR">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Título">
@@ -3343,7 +3343,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adStatisticsIdentifier" textLabel="tDv-Jv-pan" detailTextLabel="rR2-8I-IL4" rowHeight="35" style="IBUITableViewCellStyleValue2" id="Zzm-O0-Aqo">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="35"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zzm-O0-Aqo" id="L8J-Vu-w3A">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
