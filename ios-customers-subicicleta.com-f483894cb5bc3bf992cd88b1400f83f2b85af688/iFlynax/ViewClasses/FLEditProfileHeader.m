@@ -32,10 +32,4 @@
     return self;
 }
 
-- (IBAction)editMailBtnTapped:(UIButton *)sender {
-    if (self.onTapEditMail != nil) {
-        self.onTapEditMail(sender);
-    }
-}
-
 @end

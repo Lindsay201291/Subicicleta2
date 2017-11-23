@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -34,28 +33,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hj-ye-g1l" userLabel="EmailBox" customClass="FLView">
-                    <rect key="frame" x="15" y="51" width="290" height="88.5"/>
+                    <rect key="frame" x="15" y="51" width="290" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dealer@demoflynax.com" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-mZ-8Ka" userLabel="Breadcrumb">
-                            <rect key="frame" x="15" y="58" width="267" height="20.5"/>
+                            <rect key="frame" x="15" y="57" width="190" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC1-fY-Hca" userLabel="EditButton">
-                            <rect key="frame" x="257" y="8" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="egO-Yb-8po"/>
-                            </constraints>
-                            <state key="normal" backgroundImage="pencil30x30">
-                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="editMailBtnTapped:" destination="-1" eventType="touchUpInside" id="r0r-rx-Ush"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-FH-OZ1" userLabel="Title">
-                            <rect key="frame" x="15" y="9" width="234" height="24"/>
+                            <rect key="frame" x="15" y="9" width="46" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -64,15 +51,10 @@
                     <color key="backgroundColor" red="0.91898148150000003" green="0.91778434170000001" blue="0.91887904239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Qjv-mZ-8Ka" firstAttribute="top" secondItem="jvi-FH-OZ1" secondAttribute="bottom" constant="25" id="4j2-hX-iCR"/>
-                        <constraint firstItem="NC1-fY-Hca" firstAttribute="trailing" secondItem="Qjv-mZ-8Ka" secondAttribute="trailing" id="7dB-Nu-9os"/>
-                        <constraint firstItem="jvi-FH-OZ1" firstAttribute="bottom" secondItem="NC1-fY-Hca" secondAttribute="bottom" id="RdV-RF-sDU"/>
                         <constraint firstItem="Qjv-mZ-8Ka" firstAttribute="leading" secondItem="jvi-FH-OZ1" secondAttribute="leading" id="aN9-5V-exY"/>
-                        <constraint firstItem="NC1-fY-Hca" firstAttribute="leading" secondItem="jvi-FH-OZ1" secondAttribute="trailing" constant="8" symbolic="YES" id="css-fI-CNz"/>
                         <constraint firstAttribute="bottom" secondItem="Qjv-mZ-8Ka" secondAttribute="bottom" constant="10" id="lX7-Ef-kBs"/>
                         <constraint firstItem="jvi-FH-OZ1" firstAttribute="leading" secondItem="5hj-ye-g1l" secondAttribute="leading" constant="15" id="mrh-Jj-0Zs"/>
                         <constraint firstItem="jvi-FH-OZ1" firstAttribute="top" secondItem="5hj-ye-g1l" secondAttribute="top" constant="9" id="r19-CH-S8M"/>
-                        <constraint firstItem="NC1-fY-Hca" firstAttribute="top" secondItem="5hj-ye-g1l" secondAttribute="topMargin" id="vuZ-lu-XXZ"/>
-                        <constraint firstItem="NC1-fY-Hca" firstAttribute="trailing" secondItem="5hj-ye-g1l" secondAttribute="trailingMargin" id="wrl-E1-BWD"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="centerLine" value="YES"/>
@@ -94,7 +76,4 @@
             <point key="canvasLocation" x="257" y="305"/>
         </view>
     </objects>
-    <resources>
-        <image name="pencil30x30" width="25" height="25"/>
-    </resources>
 </document>
