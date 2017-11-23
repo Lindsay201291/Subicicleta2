@@ -32,7 +32,9 @@
     [super cellDidLoad];
 
     _formatter = [[NSDateFormatter alloc] init];
-    _formatter.dateFormat = FLConfigWithKey(@"forms_date_format");
+    //edit
+    //_formatter.dateFormat = FLConfigWithKey(@"forms_date_format");
+    _formatter.dateFormat = @"dd-MM-yyyy";
 
     _datePicker = [[UIDatePicker alloc] init];
     _datePicker.datePickerMode = UIDatePickerModeDate;

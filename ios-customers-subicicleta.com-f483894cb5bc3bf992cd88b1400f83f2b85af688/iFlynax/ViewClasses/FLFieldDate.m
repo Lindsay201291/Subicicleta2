@@ -37,14 +37,20 @@
         if (self.type == FLFieldDateTypePeriod &&
             [self.model.current isKindOfClass:NSDictionary.class])
         {
+            // edit
             self.valueFrom = FLCleanString(self.model.current[@"from"]);
+            self.valueFrom = [self stringToDate:self.valueFrom];
+            // edit
             self.valueTo   = FLCleanString(self.model.current[@"to"]);
+            self.valueTo   = [self stringToDate:self.valueTo];
         }
         else if (self.type == FLFieldDateTypeSingle &&
                  [self.model.current isKindOfClass:NSString.class] &&
                  [self.model.current length])
         {
+            // edit
             self.valueFrom = FLCleanString(self.model.current);
+            self.valueFrom = [self stringToDate:self.valueFrom];
         }
     }
 }
@@ -88,6 +94,17 @@
         }
     }
     return YES;
+}
+
+- (NSString *)stringToDate:(NSString *)date {
+    NSString *dateString = date;
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd"];
+    NSDate *dateAux = [format dateFromString:dateString];
+    [format setDateFormat:@"dd-MM-yyyy"];
+    NSString *finalDateStr = [format stringFromDate:dateAux];
+    
+    return finalDateStr;
 }
 
 @end

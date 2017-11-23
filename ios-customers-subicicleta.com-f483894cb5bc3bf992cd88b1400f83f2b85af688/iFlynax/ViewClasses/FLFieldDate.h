@@ -22,4 +22,5 @@ typedef NS_ENUM(NSUInteger, FLFieldDateType) {
 @property (assign, nonatomic) FLFieldDateType type;
 
 + (instancetype)fromModel:(FLFieldModel *)model;
+- (NSString *)stringToDate:(NSString *)date;
 @end
