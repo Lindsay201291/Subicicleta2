@@ -102,7 +102,7 @@ static NSString * const kAccountTypeNameKey = @"name";
                                      item = [FLFieldBool fromModel:field];
                                  }
                                  else if (field.type == FLFieldTypeDate) {
-                                     item = [FLFieldDate fromModel:field];
+                                     item = [FLFieldDate fromModel:field];                                     
                                  }
                                  else if (field.type == FLFieldTypeNumber) {
                                      item = [FLFieldNumber fromModel:field];
