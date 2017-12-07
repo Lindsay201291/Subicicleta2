@@ -79,6 +79,8 @@ static NSString *_urlEncode(id object) {
             _apiDestination = F(@"%@/plugins/iFlynaxConnect/%@", domain, kApiItemUrl);
         }
         else {
+            // Required "iFlynax Connect" plugin installed on your website.
+            static NSString * const kFlynaxAPIBaseURLString = @"https://www.subicicleta.com/plugins/iFlynaxConnect";
             _apiDestination = F(@"%@/%@", kFlynaxAPIBaseURLString, kApiItemUrl);
         }
     }

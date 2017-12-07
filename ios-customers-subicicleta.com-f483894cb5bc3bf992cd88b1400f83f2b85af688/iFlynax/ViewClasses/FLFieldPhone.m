@@ -49,7 +49,8 @@
 
 - (BOOL)isValid {
     if (self.model.required) {
-        if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber) {
+        //if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber) {
+        if ([_valueArea  isEqual: @""] || [_valueNumber  isEqual: @""]) {
             self.errorMessage = FLLocalizedString(@"valider_fillin_the_field");
             return NO;
         }

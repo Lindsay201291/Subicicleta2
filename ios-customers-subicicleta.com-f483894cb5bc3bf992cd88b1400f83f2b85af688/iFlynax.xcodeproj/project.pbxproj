@@ -64,6 +64,7 @@
 		BDF36D441BB9561400D7D2FC /* FLValidatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF36D431BB9561400D7D2FC /* FLValidatorManager.m */; };
 		BDF8FB7D1B6207A0003EB2DB /* FLExtendedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF8FB7C1B6207A0003EB2DB /* FLExtendedTableViewController.m */; };
 		BDF8FB801B620EAF003EB2DB /* FLAdsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF8FB7F1B620EAF003EB2DB /* FLAdsTableViewController.m */; };
+		CE5B366F1FCDC5A300D50DDF /* FLEditProfileRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B366E1FCDC5A300D50DDF /* FLEditProfileRegisterView.m */; };
 		F603C0E619FFBB31009BEE5E /* FLRecentlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = F603C0E519FFBB31009BEE5E /* FLRecentlyView.m */; };
 		F603C0E919FFBB75009BEE5E /* FLBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F603C0E819FFBB75009BEE5E /* FLBrowseView.m */; };
 		F60859D01CB7A67A00B945B4 /* FLMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F60859CF1CB7A67A00B945B4 /* FLMessage.m */; };
@@ -392,6 +393,8 @@
 		BDF8FB7C1B6207A0003EB2DB /* FLExtendedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FLExtendedTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BDF8FB7E1B620EAF003EB2DB /* FLAdsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAdsTableViewController.h; sourceTree = "<group>"; };
 		BDF8FB7F1B620EAF003EB2DB /* FLAdsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAdsTableViewController.m; sourceTree = "<group>"; };
+		CE5B366D1FCDC5A300D50DDF /* FLEditProfileRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEditProfileRegisterView.h; sourceTree = "<group>"; };
+		CE5B366E1FCDC5A300D50DDF /* FLEditProfileRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEditProfileRegisterView.m; sourceTree = "<group>"; };
 		EA75AD6DC74ECD8D5995EBD5 /* libPods-iFlynax.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iFlynax.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F603C0E419FFBB31009BEE5E /* FLRecentlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLRecentlyView.h; sourceTree = "<group>"; };
 		F603C0E519FFBB31009BEE5E /* FLRecentlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLRecentlyView.m; sourceTree = "<group>"; };
@@ -1583,6 +1586,8 @@
 				F6EA610B19A61EDF00F44CD8 /* FLSellerInfoView.h */,
 				F6EA610C19A61EDF00F44CD8 /* FLSellerInfoView.m */,
 				F640CFA619AF090A005476E2 /* FLAdOnMapView.h */,
+				CE5B366D1FCDC5A300D50DDF /* FLEditProfileRegisterView.h */,
+				CE5B366E1FCDC5A300D50DDF /* FLEditProfileRegisterView.m */,
 				F640CFA719AF090A005476E2 /* FLAdOnMapView.m */,
 				F6C649F219B43F0000F310EF /* FLCommentsView.h */,
 				F6C649F319B43F0000F310EF /* FLCommentsView.m */,
@@ -1986,11 +1991,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iFlynax/Pods-iFlynax-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/CTFeedback/CTFeedback.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/CTFeedback/CTFeedback.bundle,
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/FSImageViewer/FSImageViewer.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/RETableViewManager/RETableViewManager.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/RETableViewManager/RETableViewManager.bundle,
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetsPickerController.xib",
 				"${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetPickerController.bundle",
@@ -2056,6 +2061,7 @@
 				F6AB2F0E1E3B630D0098186A /* FLImageTitleView.m in Sources */,
 				BD9997481B5671CC0067E5DB /* FLPlanOptionsView.m in Sources */,
 				F682BFEB1A3814EC002167E4 /* FLMenuItemCell.m in Sources */,
+				CE5B366F1FCDC5A300D50DDF /* FLEditProfileRegisterView.m in Sources */,
 				BD5066B91BC2769200D3E0D2 /* FLRegexValider.m in Sources */,
 				F6CB6962190A80CD00FB3A60 /* FLMainNavigation.m in Sources */,
 				F6D12A181CB4CF0000D6C621 /* FLKeywordSearchCell.m in Sources */,

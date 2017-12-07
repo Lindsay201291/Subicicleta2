@@ -1,15 +1,15 @@
 //
-//  FLEditProfileView.m
+//  FLEditProfileRegisterView.m
 //  iFlynax
 //
-//  Created by Alex on 1/14/15.
-//  Copyright (c) 2015 Flynax. All rights reserved.
+//  Created by MAC on 11/28/17.
+//  Copyright © 2017 Flynax. All rights reserved.
 //
 
+#import "FLEditProfileRegisterView.h"
 #import "FLEditProfileHeader.h"
 #import "FLTableViewManager.h"
 #import "FLKeyboardHandler.h"
-#import "FLEditProfileView.h"
 #import "FLFieldModel.h"
 #import "FLBlankSlate.h"
 #import "CCAlertView.h"
@@ -17,7 +17,8 @@
 static NSString * const kAccountTypeKeyName = @"key";
 static NSString * const kAccountTypeNameKey = @"name";
 
-@interface FLEditProfileView () <RETableViewManagerDelegate> {
+
+@interface FLEditProfileRegisterView () <RETableViewManagerDelegate> {
     RETableViewSection *_section;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -28,39 +29,39 @@ static NSString * const kAccountTypeNameKey = @"name";
 @property (strong, nonatomic) FLEditProfileHeader *profileHeader;
 @end
 
-@implementation FLEditProfileView
+@implementation FLEditProfileRegisterView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.title = FLLocalizedString(@"screen_editar_perfil");
-	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
-	[self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancelar")];
+    self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
+    [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancelar")];
     self.tableView.backgroundColor = self.view.backgroundColor;
-
+    
     self.manager = [FLTableViewManager withTableView:self.tableView];
     self.manager.delegate = self;
     _keyboardHandler = [[FLKeyboardHandler alloc] initWithScroll:self.tableView];
-
+    
     /* table header */
     _profileHeader = [[FLEditProfileHeader alloc] init];
-    _profileHeader.usernameLabel.text = [FLAccount fullName];
-    _profileHeader.emailLabel.text = [FLAccount userInfo:kUserInfoMail];
+    _profileHeader.usernameLabel.text = self.regNick;
+    _profileHeader.emailLabel.text = self.regMail;
     self.tableView.tableHeaderView = _profileHeader;
-
+    
     __unsafe_unretained typeof(self) weakSelf = self;
     _profileHeader.onTapEditMail = ^(UIButton *button) {
         BOOL changeEmailConfirm = [FLConfig boolWithKey:@"account_edit_email_confirmation"];
-
+        
         NSString *alertMessage = FLLocalizedString(changeEmailConfirm
                                                    ? @"dialog_confirm_email_changing"
                                                    : @"dialog_email_changing");
         CCAlertView *alert = [[CCAlertView alloc] initWithTitle:nil message:alertMessage];
-
+        
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField *emailField = [alert textFieldAtIndex:0];
         emailField.keyboardType = UIKeyboardTypeEmailAddress;
-
+        
         [alert addButtonWithTitle:FLLocalizedString(@"button_cancelar") block:nil];
         [alert addButtonWithTitle:FLLocalizedString(@"button_ok") block:^{
             [weakSelf updateProfileEmail:emailField.text];
@@ -68,29 +69,31 @@ static NSString * const kAccountTypeNameKey = @"name";
         [alert show];
     };
     /* table header end */
-
+    
     [_cancelBtn setTitle:FLLocalizedString(@"button_cancelar") forState:UIControlStateNormal];
     [_submitBtn setTitle:FLLocalizedString(@"button_editar_perfil") forState:UIControlStateNormal];
     [self actionsButtonHidden:YES];
-
+    
     _section = [RETableViewSection section];
     [self.manager addSection:_section];
+    
     [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
-    [flynaxAPIClient getApiItem:kApiItemMyProfile
+    [flynaxAPIClient getApiItem:@"my_profile"
                      parameters:@{@"action" : kApiItemMyProfile_profileForm,
-                                  @"id"     : [NSNumber numberWithInteger:[FLAccount userId]],
-                                  @"type"   : [FLAccount userInfo:@"type"][@"key"]}
+                                  @"id"     : [NSNumber numberWithInteger:-1],
+                                  @"email"  : self.regMail,
+                                  @"type"   : self.regType}
 
                      completion:^(NSArray *response, NSError *error) {
                          if (error == nil && [response isKindOfClass:NSArray.class]) {
                              // account types
                              //[self appendAccountTypesSelectorToSection:_section];
-
+                             
                              // dynamic form
                              for (NSDictionary *fieldDict in response) {
                                  FLFieldModel *field = [FLFieldModel fromDictionary:fieldDict];
                                  RETableViewItem *item;
-
+                                 
                                  if (field.type == FLFieldTypeText) {
                                      item = [FLFieldText fromModel:field];
                                  }
@@ -101,7 +104,7 @@ static NSString * const kAccountTypeNameKey = @"name";
                                      item = [FLFieldBool fromModel:field];
                                  }
                                  else if (field.type == FLFieldTypeDate) {
-                                     item = [FLFieldDate fromModel:field];                                     
+                                     item = [FLFieldDate fromModel:field];
                                  }
                                  else if (field.type == FLFieldTypeNumber) {
                                      item = [FLFieldNumber fromModel:field];
@@ -132,7 +135,7 @@ static NSString * const kAccountTypeNameKey = @"name";
                                  }
                                  [_section addItem:item];
                              };
-
+                             
                              dispatch_async(dispatch_get_main_queue(), ^{
                                  [self actionsButtonHidden:NO];
                                  [_tableView reloadData];
@@ -146,7 +149,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     RETableViewSection *section = self.manager.sections[indexPath.section];
     RETableViewItem *item = section.items[indexPath.row];
-
+    
     if ([item isKindOfClass:FLFieldCheckbox.class]) {
         cell.backgroundColor = [UIColor clearColor];
         UIImage *accessoryImage = [UIImage imageNamed:@"select_icon"];
@@ -162,7 +165,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 
 - (void)actionsButtonHidden:(BOOL)hidden {
     CGFloat alpha = hidden ? 0.0 : 1.0;
-
+    
     [UIView animateWithDuration:.3f animations:^{
         if (hidden || _section.items.count > 0) {
             _cancelBtn.alpha = _submitBtn.alpha = alpha;
@@ -174,7 +177,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 - (void)updateProfileEmail:(NSString *)email {
     if (![email isEmpty] && [FLUtilities isValidEmail:email]) {
         [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
-
+        
         [flynaxAPIClient postApiItem:kApiItemMyProfile
                           parameters:@{@"action": kApiItemMyProfile_updateProfileEmail,
                                        @"email" : email}
@@ -200,10 +203,10 @@ static NSString * const kAccountTypeNameKey = @"name";
 
 - (IBAction)editProfileBtnDidTap:(UIButton *)sender {
     BOOL _validForm = self.manager.isValidForm;
-
+    
     if (_validForm && !self.manager.formAccepted) {
         [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:self.manager.fieldAcceptTitle]];
-
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [_tableView reloadData];
         });
@@ -216,19 +219,22 @@ static NSString * const kAccountTypeNameKey = @"name";
 }
 
 - (void)prepareprofileDataAndSendToAPI {
-
     NSDictionary *data = @{@"action": kApiItemMyProfile_updateProfile,
-                           @"f"     : self.manager.formValues};
-
+                           @"f"     : self.manager.formValues,
+                           @"type"  : self.regType,
+                           @"email" : self.regMail};
+    
     [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
-
+    
     [flynaxAPIClient postApiItem:kApiItemMyProfile
                       parameters:data
                       completion:^(NSDictionary *response, NSError *error) {
                           if (!error && [response isKindOfClass:NSDictionary.class]) {
                               if (FLTrueBool(response[@"success"])) {
                                   [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"profile_updated")];
-                                  [self dismissViewControllerAnimated:YES completion:self.completionBlock];
+                                  [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")message:@"profile_updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
+                                  UIViewController *siguiente_pantalla = [self.storyboard instantiateViewControllerWithIdentifier:@"loginFormController"];
+                                  [self presentViewController:siguiente_pantalla animated:YES completion:nil];
                               }
                               else [FLProgressHUD showErrorWithStatus:FLLocalizedString(response[@"error_message_key"])];
                           }
@@ -238,7 +244,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 
 - (IBAction)cancelEditProfileButtonTapped:(UIButton *)sender {
     [flynaxAPIClient cancelAllTasks];
-	[self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

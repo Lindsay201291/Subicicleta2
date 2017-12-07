@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 Flynax. All rights reserved.
 //
 
-// Required "iFlynax Connect" plugin installed on your website.
-static NSString * const kFlynaxAPIBaseURLString = @"https://www.subicicleta.com/plugins/iFlynaxConnect";
-
+	
 static NSString * const kFlynaxAPISynchCode  = @"7e576f277d633b2d5a28232540";
 static NSString * const kFlynaxAPIUserAgent  = @"subicicleta.com iOS App v3";
 static NSString * const kFirstReleaseAppDate = @"Aug 30, 2017";

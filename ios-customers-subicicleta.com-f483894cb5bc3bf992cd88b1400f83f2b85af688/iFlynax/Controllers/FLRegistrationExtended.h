@@ -8,7 +8,7 @@
 
 #import "FLViewController.h"
 
-@interface FLRegistrationExtended : UITableViewController
+@interface FLRegistrationExtended : UITableViewController 
 
 //- (void)next:(id)sender; //New code by Lindsay
 
