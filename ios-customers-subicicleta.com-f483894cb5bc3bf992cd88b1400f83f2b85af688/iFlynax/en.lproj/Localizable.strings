@@ -158,6 +158,7 @@
 "button_facebook_login" = "Log in with Facebook";
 "button_cerrarsesion" = "Cerrar Sesión";
 "button_editar_perfil" = "Editar Perfil";
+"button_finalizar_registro" = "Finalizar";
 "button_nearby_ads_viewmode_0" = "Show Map";
 "button_nearby_ads_viewmode_1" = "Show List";
 "button_add_comment" = "Add Comment";
@@ -282,6 +283,7 @@
 "dialog_confirm_email_changing" = "A confirmation link will be sent to your new email; please enter the new email and click OK.";
 "dialog_email_saved_as_tmp" = "The confirmation link has been sent to the new email; please check it to confirm the new email address.";
 "dialog_unable_save_data_on_server" = "Failed to save data on the server, please contact the Administrator.";
+"dialog_finish_register" = "Su cuenta ha sido creada con éxito, para activarla hemos enviado un enlace de activación a su email. Por favor busque en su bandeja de entrada. Recuerde revisar la bandeja de correos no deseados (SPAM). ¡Gracias!.";
 
 /* sheet */
 "sheet_drive_route_title" = "Select an App from the list to build the drive route";

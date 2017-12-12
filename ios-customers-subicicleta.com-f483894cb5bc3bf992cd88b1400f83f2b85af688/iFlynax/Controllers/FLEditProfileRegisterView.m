@@ -13,6 +13,7 @@
 #import "FLFieldModel.h"
 #import "FLBlankSlate.h"
 #import "CCAlertView.h"
+#import "FLLoginForm.h"
 
 static NSString * const kAccountTypeKeyName = @"key";
 static NSString * const kAccountTypeNameKey = @"name";
@@ -34,7 +35,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = FLLocalizedString(@"screen_editar_perfil");
+    self.title = FLLocalizedString(@"screen_registro");
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
     [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_cancelar")];
     self.tableView.backgroundColor = self.view.backgroundColor;
@@ -71,7 +72,7 @@ static NSString * const kAccountTypeNameKey = @"name";
     /* table header end */
     
     [_cancelBtn setTitle:FLLocalizedString(@"button_cancelar") forState:UIControlStateNormal];
-    [_submitBtn setTitle:FLLocalizedString(@"button_editar_perfil") forState:UIControlStateNormal];
+    [_submitBtn setTitle:FLLocalizedString(@"button_finalizar_registro") forState:UIControlStateNormal];
     [self actionsButtonHidden:YES];
     
     _section = [RETableViewSection section];
@@ -231,10 +232,16 @@ static NSString * const kAccountTypeNameKey = @"name";
                       completion:^(NSDictionary *response, NSError *error) {
                           if (!error && [response isKindOfClass:NSDictionary.class]) {
                               if (FLTrueBool(response[@"success"])) {
-                                  [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"profile_updated")];
-                                  [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")message:@"profile_updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
-                                  UIViewController *siguiente_pantalla = [self.storyboard instantiateViewControllerWithIdentifier:@"loginFormController"];
-                                  [self presentViewController:siguiente_pantalla animated:YES completion:nil];
+                                  
+                                  [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")message:FLLocalizedString(@"dialog_finish_register") delegate:nil cancelButtonTitle:nil otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
+
+                                  [FLProgressHUD dismiss];
+                                  
+                                  [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                                      UIViewController *vc = self.parentVC;
+                                      [vc.navigationController dismissViewControllerAnimated:YES completion:nil];
+                                  }];
+                                  
                               }
                               else [FLProgressHUD showErrorWithStatus:FLLocalizedString(response[@"error_message_key"])];
                           }

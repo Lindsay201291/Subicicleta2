@@ -14,5 +14,6 @@
 @property (nonatomic, assign) NSString * regType;
 @property (nonatomic, assign) NSString * regMail;
 @property (nonatomic, assign) NSString * regNick;
+@property (nonatomic, assign) UIViewController *parentVC;
 
 @end

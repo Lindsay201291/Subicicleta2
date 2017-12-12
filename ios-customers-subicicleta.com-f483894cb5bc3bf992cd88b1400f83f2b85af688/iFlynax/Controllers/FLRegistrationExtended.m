@@ -19,22 +19,20 @@
 static NSString * const kAccountTypeKeyName   = @"key";
 static NSString * const kAccountTypeNameKey   = @"name";
 static NSString * const kAccountTypeFields    = @"fields";
-
 static NSString * const kApiResultSuccessKey  = @"success";
 static NSString * const kApiResultMessageKey  = @"message_key";
 static NSString * const kApiResultErrorKey    = @"error";
 static NSString * const kApiResultLoggedKey   = @"logged";
 static NSString * const kApiResultProfileKey  = @"profile";
-
 static CGFloat    const kPaddingBetweenFields = 15;
 static CGFloat    const kInputFieldsHeight    = 44;
 
 @interface FLRegistrationExtended () <RETableViewManagerDelegate> {
     FLInputAccessoryToolbar *_accessoryToolbar;
     NSMutableArray *_inputsMutableCollection;
-    NSArray *_twoStepAccountFields;
     NSArray *_accountTypes;
 }
+
 @property (weak, nonatomic) IBOutlet UIView      *tableHeaderView;
 @property (weak, nonatomic) IBOutlet FLTextField *userNameField;
 @property (weak, nonatomic) IBOutlet FLTextField *emailField;
@@ -42,30 +40,26 @@ static CGFloat    const kInputFieldsHeight    = 44;
 @property (weak, nonatomic) IBOutlet FLTextField *rePasswordField;
 @property (weak, nonatomic) IBOutlet FLDropDown  *typeDropDown;
 @property (weak, nonatomic) IBOutlet UIButton    *submitButton;
-
-
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *inputsCollection;
 @property (weak, nonatomic)   IBOutlet NSLayoutConstraint    *emailTopConstraint;
-
 @property (strong, nonatomic) FLValidatorManager *validatorManager;
 @property (strong, nonatomic) FLTableViewManager *formManager;
 @property (strong, nonatomic) NSString           *accountTypeKey;
-
-
 @property (nonatomic) NSString *record_type;
 @property (nonatomic) NSString *record_mail;
 @property (nonatomic) NSString *record_nick;
-
-
 @property (nonatomic) BOOL showUserNameInput;
 @end
 
 @implementation FLRegistrationExtended
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    if (![self.emailField.text isEqual: @""]) {
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
+    
     self.title = FLLocalizedString(@"screen_registro");
     self.tableView.backgroundColor = FLHexColor(kColorBackgroundColor);
     self.navigationItem.leftBarButtonItem.title = FLLocalizedString(@"button_cancelar");
@@ -73,7 +67,6 @@ static CGFloat    const kInputFieldsHeight    = 44;
     _formManager = [FLTableViewManager withTableView:self.tableView];
     _formManager.delegate = self;
 
-    _twoStepAccountFields = @[];
     _accountTypes = [FLAccountTypes getList];
     _inputsMutableCollection = [_inputsCollection mutableCopy];
 
@@ -96,141 +89,40 @@ static CGFloat    const kInputFieldsHeight    = 44;
     FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_select_an_option")];
     FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_proper_email_address")];
     FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_weak")];
-    
-    //New
     FLValiderEqualInput *equalInputValider = [FLValiderEqualInput validerWithControl:_passwordField withHint:FLLocalizedString(@"alert_password_does_not_match")];
-    //New
     _validatorManager = [FLValidatorManager new];
 
-    if (_showUserNameInput) {
-        [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_userNameField withValider:@[inputRequiredValider]]];
-    }
-
+    [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_userNameField withValider:@[inputRequiredValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_emailField    withValider:@[inputRequiredValider, inputEmailValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_rePasswordField withValider:@[inputRequiredValider, passwordPolicyValider]]];
-    //New
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll: _rePasswordField  withValider:@[inputRequiredValider, equalInputValider]]];
-    //New
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_typeDropDown  withValider:@[dropDownRequiredValider]]];
     
-
     // accessory toolbar
     if (!_showUserNameInput) {
         [_inputsMutableCollection removeObject:_userNameField];
         _tableHeaderView.height -= (kInputFieldsHeight + kPaddingBetweenFields);
     }
     _accessoryToolbar = [FLInputAccessoryToolbar toolbarWithInputItems:_inputsMutableCollection];
-
-   /* if (kFeatureExtendedRegistration == YES) {
-        __unsafe_unretained typeof(self) weakSelf = self;
-        _accessoryToolbar.didDoneTapBlock = ^(id activeItem) {
-            if (activeItem == weakSelf.typeDropDown) {
-                if (weakSelf.typeDropDown.selected ) {
-                    if (weakSelf.typeDropDown.selectedOptionKey != weakSelf.accountTypeKey) {
-                        weakSelf.accountTypeKey = weakSelf.typeDropDown.selectedOptionKey;
-                        NSArray *accountTypeFields = [FLAccountTypes withKey:weakSelf.accountTypeKey][kAccountTypeFields];
-
-                        if (accountTypeFields && accountTypeFields.count) {
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                _twoStepAccountFields = accountTypeFields;
-                                [weakSelf buildTwoStepForm];
-                            });
-                        } else {
-                            [weakSelf clearTwoStepForm];
-                        }
-                    }
-                } else {
-                    [weakSelf clearTwoStepForm];
-                }
-            }
-        };
-    }*/
 }
-
-//New method by Lindsay
--(void)completar_registro
-{
-    FLEditProfileRegisterView *siguiente_pantalla = [self.storyboard                                                     instantiateViewControllerWithIdentifier:@"pruebaPerfil"];
-
-    siguiente_pantalla.regType= _record_type;
-    siguiente_pantalla.regMail= _record_mail;
-    siguiente_pantalla.regNick= _record_nick;
-    
-    [self presentViewController:siguiente_pantalla animated:YES completion:nil];
-    
-}
-//New method by Lindsay
-
-
-//- (void)setShowUserNameInput:(BOOL)show {
-   // _userNameField.enabled       = show;
-    /*_userNameField.hidden        = !show;*/
-   // _emailTopConstraint.constant = show ? 74 : kPaddingBetweenFields;
-   // _showUserNameInput           = show;
-//}
 
 #pragma mark - Dynamic two-step form
 
-/*- (void)clearTwoStepForm {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_formManager removeAllSections];
-        [self.tableView reloadData];
-    });
-}*/
+- (void)completar_registro
+{
+    [self performSegueWithIdentifier:@"editProfileRegisterSegue" sender:self];
+}
 
-/*- (void)buildTwoStepForm {
-    RETableViewSection *formSection = [RETableViewSection section];
-
-    [_formManager removeAllSections];
-    [_formManager addSection:formSection];
-
-    for (NSDictionary *fieldDict in _twoStepAccountFields) {
-        FLFieldModel *field = [FLFieldModel fromDictionary:fieldDict];
-        RETableViewItem *item = nil;
-
-        if (field.type == FLFieldTypeText) {
-            item = [FLFieldText fromModel:field];
-        }
-        else if (field.type == FLFieldTypeSelect) {
-            item = [FLFieldSelect fromModel:field tableView:self.tableView];
-        }
-        else if (field.type == FLFieldTypeBool) {
-            item = [FLFieldBool fromModel:field];
-        }
-        else if (field.type == FLFieldTypeDate) {
-            item = [FLFieldDate fromModel:field];
-        }
-        else if (field.type == FLFieldTypeNumber) {
-            item = [FLFieldNumber fromModel:field];
-        }
-        else if (field.type == FLFieldTypeTextarea) {
-            item = [FLFieldTextArea fromModel:field];
-        }
-        else if (field.type == FLFieldTypeMixed
-                 || field.type == FLFieldTypePrice)
-        {
-            item = [FLFieldMixed fromModel:field];
-        }
-        else if (field.type == FLFieldTypeRadio) {
-            item = [FLFieldRadio fromModel:field tableView:self.tableView];
-        }
-        else if (field.type == FLFieldTypePhone) {
-            item = [FLFieldPhone fromModel:field];
-        }
-        else if (field.type == FLFieldTypeAccept) {
-            item = [FLFieldAccept fromModel:field parentVC:self];
-        }
-        else if (field.type == FLFieldTypeCheckbox) {
-            item = [FLFieldCheckbox fromModel:field parentVC:self];
-        }
-
-        if (item != nil) {
-            [formSection addItem:item];
-        }
-    }
-    [self.tableView reloadData];
-}*/
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    FLEditProfileRegisterView* controller =
+    (FLEditProfileRegisterView*)[[segue destinationViewController] topViewController];
+    [controller setRegType:_record_type];
+    [controller setRegMail:_record_mail];
+    [controller setRegNick:_record_nick];
+    [controller setParentVC:self];
+}
 
 - (void)postFormToAPIWithData:(NSDictionary *)data {
   
@@ -247,65 +139,14 @@ static CGFloat    const kInputFieldsHeight    = 44;
                       completion:^(NSDictionary *result, NSError *error) {
                           if (error == nil && [result isKindOfClass:NSDictionary.class]) {
                               if (FLTrueBool(result[kApiResultSuccessKey])) {
-                                 
-                                 // [self.navigationController dismissViewControllerAnimated:YES completion:^{
-                                      // auto-login and move to my profile
-                               /*       if (result[kApiResultLoggedKey] && result[kApiResultProfileKey]) {
-                                          [[FLAccount loggedUser] saveSessionData:result];
-                                          [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationSimulateLogin object:nil];
-                                          [self completar_registro];
-                                      }*/
-                                  
-                                  
-                                  
-                                  
-                               /*   [flynaxAPIClient postApiItem:kApiItemLogin
-                                                    parameters:@{@"action"    : kApiItemLogin_default,
-                                                                 @"username"  : _userNameField.text,
-                                                                 @"password"  : _passwordField.text,
-                                                                 }
-                                   
-                                                    completion:^(id result, NSError *error) {
-                                                        if (error == nil) {
-                                                            if (![result isKindOfClass:NSDictionary.class]) {
-                                                                [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"unknown_error")];
-                                                                return;
-                                                            }
-                                                            
-                                                            if (result[@"error"] != nil) {
-                                                                [FLProgressHUD showErrorWithStatus:FLCleanString(result[@"error"])];
-                                                            }
-                                                            else if (result[@"logged"] != nil && [result[@"logged"] boolValue]) {
-                                                                [[FLAccount loggedUser] saveSessionData:result];
-                                                                [self completar_registro];
-                                                            }
-                                                        }
-                                                        else [FLDebug showAdaptedError:error apiItem:kApiItemLogin];
-                                                    }];*/
-                                  [self completar_registro];
-                                  
-
-                                     /* [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")
-                                                                  message:FLLocalizedString(result[kApiResultMessageKey])
-                                                                 delegate:nil cancelButtonTitle:nil
-                                                        otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];*/
-                                 // }];
                                   [FLProgressHUD dismiss];
+                                  [self completar_registro];
                               }
                               else { [FLProgressHUD showErrorWithStatus:result[kApiResultErrorKey]];
-                                  
-                                  }
-                                 
+                              }
                           }
                           else [FLDebug showAdaptedError:error apiItem:kApiItemRequests_addComment];
-                              
-                          
                       }];
-    
-    //   [self completar_registro]; //New by Lindsay
-    
-    
-    
 }
 
 #pragma mark - RETableViewManagerDelegate
@@ -328,17 +169,16 @@ static CGFloat    const kInputFieldsHeight    = 44;
     self.record_mail= _emailField.text;
     self.record_nick= _userNameField.text;
     
-    if ([_validatorManager validate]) { // validate first-step form
-        if ([_formManager isValidForm] && _formManager.formAccepted) {  // validate two-step form
+    if ([_validatorManager validate]) {
+        if ([_formManager isValidForm] && _formManager.formAccepted) {
             [self postFormToAPIWithData:_formManager.formValues];
         }
         else if (!_formManager.formAccepted) {
-                [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];
+            [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];
         }
         else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
     }
 }
-
 
 - (IBAction)cancelBtnDidTap:(UIBarButtonItem *)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
