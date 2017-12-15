@@ -25,7 +25,7 @@ static NSString * const kItemTitle      = @"value";
     self.title = FLLocalizedString(@"screen_ad_statistics");
     self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
     _tableView.backgroundColor = self.view.backgroundColor;
-    [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_done")];
+    [self.navigationItem.leftBarButtonItem setTitle:FLLocalizedString(@"button_hecho")];
 
     _entries = [@[] mutableCopy];
 

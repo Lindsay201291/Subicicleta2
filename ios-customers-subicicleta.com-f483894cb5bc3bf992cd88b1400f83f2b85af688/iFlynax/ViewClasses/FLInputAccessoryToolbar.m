@@ -38,7 +38,7 @@
 
         _prevButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:101 target:self action:@selector(prevButtonTaped)];
         _nextButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:102 target:self action:@selector(nextButtonTaped)];
-        _doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_done") style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonTaped)];
+        _doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_hecho") style:UIBarButtonItemStyleBordered target:self action:@selector(doneButtonTaped)];
         [_doneButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateNormal];
 
         UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];

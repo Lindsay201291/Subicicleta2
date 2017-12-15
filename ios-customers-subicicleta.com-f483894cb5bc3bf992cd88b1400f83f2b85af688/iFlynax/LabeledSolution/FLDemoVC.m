@@ -77,7 +77,7 @@ static NSString * const kApiPingRequestKey = @"ping";
 }
 
 - (void)dryRunConnectionToAPI:(NSString *)domain {
-    [FLProgressHUD showWithStatus:NSLocalizedString(@"processing", nil)];
+    [FLProgressHUD showWithStatus:NSLocalizedString(@"procesando", nil)];
 
     flynaxAPIClient *apiClient = [flynaxAPIClient sharedInstance];
     NSString *websiteUrl = F(@"%@/plugins/iFlynaxConnect/%@", domain, kApiItemUrl);

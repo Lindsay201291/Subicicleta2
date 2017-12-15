@@ -99,7 +99,7 @@
 
         [FLStoreKit buyProduct:product completionHandler:^(BOOL success, NSString *receipt) {
             if (success) {
-                [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+                [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
                 _orderInfo.gateway = @"apple";
                 [self validateReceipt:receipt];
             }

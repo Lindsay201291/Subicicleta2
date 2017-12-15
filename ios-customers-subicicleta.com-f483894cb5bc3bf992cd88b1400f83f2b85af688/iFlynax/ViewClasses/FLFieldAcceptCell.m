@@ -44,7 +44,7 @@ static NSString * const kLinkSearchPattern = @"\\[(.*)\\]";
 
 - (NSAttributedString *)attributedCheckboxTitleTextWitColor:(UIColor *)color {
     NSAttributedString *title =
-    [[NSAttributedString alloc] initWithString:FLLocalizedString(@"button_accept_agreement_checkbox")
+    [[NSAttributedString alloc] initWithString:FLLocalizedString(@"button_aceptar_agreement_checkbox")
                                     attributes:@{NSForegroundColorAttributeName:color}];
     return title;
 }

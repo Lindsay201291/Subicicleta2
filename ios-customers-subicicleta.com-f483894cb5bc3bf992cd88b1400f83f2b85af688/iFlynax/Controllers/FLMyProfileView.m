@@ -53,7 +53,7 @@ static NSString * const cellReuseIdentifier = @"profileTableViewCell";
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 
 	[_editProfileButton setTitle:FLLocalizedString(@"button_editar_perfil") forState:UIControlStateNormal];
-	[_editProfilePictureButton setTitle:FLLocalizedString(@"button_edit") forState:UIControlStateNormal];
+	[_editProfilePictureButton setTitle:FLLocalizedString(@"button_editar") forState:UIControlStateNormal];
     _thumbnail.backgroundColor = FLHexColor(@"eeeeee");
 	_thumbnail.layer.borderColor = [UIColor whiteColor].CGColor;
 	_thumbnail.layer.borderWidth = 2.0f;
@@ -207,7 +207,7 @@ static NSString * const cellReuseIdentifier = @"profileTableViewCell";
         parameters:@{@"action": kApiItemMyProfile_uploadImage}
         progress:^(NSProgress *uploadProgress) {
              float progress = ((float) uploadProgress.completedUnitCount / (float) uploadProgress.totalUnitCount); // 0.0 - 1.0
-             [FLProgressHUD showProgress:progress status:FLLocalizedString(@"processing")];
+             [FLProgressHUD showProgress:progress status:FLLocalizedString(@"procesando")];
         }
         completion:^(NSDictionary *response, NSError *error) {
             if (error == nil && [response isKindOfClass:NSDictionary.class]) {

@@ -44,13 +44,13 @@ static NSString * const kConversationsKey    = @"conversations";
                    message:FLLocalizedString(@"blankSlate_mensaje_conversaciones")];
 
     _entries = [@[] mutableCopy];
-    [self.editButtonItem setTitle:FLLocalizedString(@"button_edit")];
+    [self.editButtonItem setTitle:FLLocalizedString(@"button_editar")];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
 
-    [self.editButtonItem setTitle:FLLocalizedString(editing ? @"button_done" : @"button_edit")];
+    [self.editButtonItem setTitle:FLLocalizedString(editing ? @"button_hecho" : @"button_editar")];
     [_tableView setEditing:editing animated:animated];
 }
 

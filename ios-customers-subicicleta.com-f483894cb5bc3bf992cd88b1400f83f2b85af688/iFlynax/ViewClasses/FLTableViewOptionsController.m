@@ -23,7 +23,7 @@
     if (!_flNavigationController) {
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
 
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_done")
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_hecho")
                                                                        style:UIBarButtonItemStyleBordered
                                                                       target:self
                                                                       action:@selector(doneButtonDidTap:)];

@@ -1107,7 +1107,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     else if (!self.manager.formAccepted) {
         [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:self.manager.fieldAcceptTitle]];
     }
-    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
+    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_campos_requeridos")];
 }
 
 - (NSDictionary *)listingDataToSend {
@@ -1148,7 +1148,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)prepareListingDataAndSendToAPI {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
 
     [flynaxAPIClient postApiItem:kApiItemRequests
                       parameters:[self listingDataToSend]

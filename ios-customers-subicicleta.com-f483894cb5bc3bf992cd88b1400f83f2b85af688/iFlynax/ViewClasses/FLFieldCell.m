@@ -41,7 +41,7 @@
 
     UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *fieldPlaceholderWrapper = [[UIBarButtonItem alloc] initWithCustomView:self.fieldPlaceholder];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_done")
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"button_hecho")
                                                                    style:UIBarButtonItemStyleBordered
                                                                   target:self.actionBar
                                                                   action:@selector(handleActionBarDone:)];

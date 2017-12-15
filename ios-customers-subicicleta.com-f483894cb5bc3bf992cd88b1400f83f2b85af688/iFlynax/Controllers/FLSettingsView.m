@@ -225,7 +225,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
         [items removeLastObject];
 
         UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc]
-                                    initWithTitle:FLLocalizedString(@"button_done")
+                                    initWithTitle:FLLocalizedString(@"button_hecho")
                                     style:UIBarButtonItemStylePlain
                                     target:doneItem.target
                                     action:doneItem.action];
@@ -277,7 +277,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
 }
 
 - (void)reloadSystemAppCache {
-    [SVProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+    [SVProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSURLCache sharedURLCache] removeAllCachedResponses];

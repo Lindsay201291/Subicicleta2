@@ -77,7 +77,7 @@
             float progress = ((float) uploadProgress.completedUnitCount / (float) uploadProgress.totalUnitCount);
 
             if (progress >= 1.0f) {
-                [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+                [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
             }
             else {
                 NSString *message = [self uploadinMessageAtIndex:index+1];

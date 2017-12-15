@@ -177,7 +177,7 @@ static NSString * const kAccountTypeNameKey = @"name";
 
 - (void)updateProfileEmail:(NSString *)email {
     if (![email isEmpty] && [FLUtilities isValidEmail:email]) {
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
         
         [flynaxAPIClient postApiItem:kApiItemMyProfile
                           parameters:@{@"action": kApiItemMyProfile_updateProfileEmail,
@@ -214,7 +214,7 @@ static NSString * const kAccountTypeNameKey = @"name";
     }
     else if (!_validForm) {
         [_tableView reloadData];
-        [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
+        [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_campos_requeridos")];
     }
     else [self prepareprofileDataAndSendToAPI];
 }
@@ -225,7 +225,7 @@ static NSString * const kAccountTypeNameKey = @"name";
                            @"type"  : self.regType,
                            @"email" : self.regMail};
     
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
     
     [flynaxAPIClient postApiItem:kApiItemMyProfile
                       parameters:data
@@ -233,9 +233,11 @@ static NSString * const kAccountTypeNameKey = @"name";
                           if (!error && [response isKindOfClass:NSDictionary.class]) {
                               if (FLTrueBool(response[@"success"])) {
                                   
-                                  [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_congratulations")message:FLLocalizedString(@"dialog_finish_register") delegate:nil cancelButtonTitle:nil otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
+                                  [[[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_felicitaciones")message:FLLocalizedString(@"dialog_finish_register") delegate:nil cancelButtonTitle:nil otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil] show];
 
                                   [FLProgressHUD dismiss];
+                                  
+                                  //[self dismissViewControllerAnimated:YES completion:nil];
                                   
                                   [self.navigationController dismissViewControllerAnimated:YES completion:^{
                                       UIViewController *vc = self.parentVC;

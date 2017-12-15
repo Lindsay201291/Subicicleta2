@@ -60,7 +60,7 @@
         [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"reportAbuse_empty_message_error")];
     }
     else {
-        [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+        [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
 
         [flynaxAPIClient
          postApiItem:kApiItemRequests

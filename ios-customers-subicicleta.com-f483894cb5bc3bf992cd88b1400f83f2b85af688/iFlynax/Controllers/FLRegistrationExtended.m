@@ -176,7 +176,7 @@ static CGFloat    const kInputFieldsHeight    = 44;
         else if (!_formManager.formAccepted) {
             [FLProgressHUD showErrorWithStatus:[FLFieldAccept agreeFieldRequiredMessage:_formManager.fieldAcceptTitle]];
         }
-        else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_required_fields")];
+        else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"fill_campos_requeridos")];
     }
 }
 

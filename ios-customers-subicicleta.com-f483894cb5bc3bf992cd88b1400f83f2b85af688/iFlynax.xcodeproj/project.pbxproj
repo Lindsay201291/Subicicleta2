@@ -1843,6 +1843,7 @@
 						TestTargetID = F656757F18F41815003392FF;
 					};
 					F656757F18F41815003392FF = {
+						DevelopmentTeam = D3F836KACN;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 0;
@@ -2483,7 +2484,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D3F836KACN;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iFlynax/iFlynax-Prefix.pch";
@@ -2528,7 +2529,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D3F836KACN;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iFlynax/iFlynax-Prefix.pch";

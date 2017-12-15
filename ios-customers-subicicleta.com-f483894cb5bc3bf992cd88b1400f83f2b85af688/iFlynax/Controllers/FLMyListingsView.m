@@ -178,7 +178,7 @@
 }
 
 - (void)getPlanDetailsForListing:(FLMyAdShortDetailsModel *)listing andProcessToPaymentVC:(BOOL)makePayment {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
 
     [flynaxAPIClient getApiItem:kApiItemRequests
                      parameters:@{@"cmd"    : kApiItemRequests_getPlans,
@@ -276,7 +276,7 @@
 
                 /* upgrade free or existing package plan */
                 else {
-                    [FLProgressHUD showWithStatus:FLLocalizedString(@"processing")];
+                    [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
                     NSString *appearance = (listingPlan.planMode == FLPlanModeFeatured) ? @"featured" : @"standard";
 
                     [flynaxAPIClient postApiItem:kApiItemRequests

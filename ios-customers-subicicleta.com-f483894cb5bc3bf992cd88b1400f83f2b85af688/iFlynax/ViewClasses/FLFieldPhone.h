@@ -14,10 +14,10 @@
 @property (nonatomic, assign) NSInteger areaLength;
 @property (nonatomic, assign) NSInteger numberLength;
 
-@property (nonatomic, assign) NSString *valueCode;
-@property (nonatomic, assign) NSString *valueArea;
-@property (nonatomic, assign) NSString *valueNumber;
-@property (nonatomic, assign) NSString *valueExt;
+@property (nonatomic, copy) NSString *valueCode;//Maikoll (nonatomic, assign)
+@property (nonatomic, copy) NSString *valueArea;//Maikoll (nonatomic, assign)
+@property (nonatomic, copy) NSString *valueNumber;//Maikoll (nonatomic, assign)
+@property (nonatomic, copy) NSString *valueExt;//Maikoll (nonatomic, assign)
 
 @property (nonatomic, copy)   NSString  *phoneString;
 

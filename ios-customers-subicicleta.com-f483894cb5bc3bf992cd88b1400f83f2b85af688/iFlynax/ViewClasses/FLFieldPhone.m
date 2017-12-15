@@ -50,10 +50,18 @@
 - (BOOL)isValid {
     if (self.model.required) {
         //if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber) {
-        if ([_valueArea  isEqual: @""] || [_valueNumber  isEqual: @""]) {
+        if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber || [_valueArea isEqual: @""] || [_valueNumber isEqual: @""]) {
             self.errorMessage = FLLocalizedString(@"valider_fillin_the_field");
             return NO;
         }
+
+        /*NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+        
+        if ([_valueArea rangeOfCharacterFromSet:notDigits].location != NSNotFound || [_valueNumber  rangeOfCharacterFromSet:notDigits].location != NSNotFound)
+        {
+            self.errorMessage = @"Campo numérico";
+            return NO;
+        }*/
     }
     return YES;
 }
