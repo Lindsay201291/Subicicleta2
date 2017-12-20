@@ -363,12 +363,28 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 
             // ADD LISTINGS
             else if (indexPath.row == 1) {
-                if ([FLAccount canPostAds]) {
+            // Descomentar para funcionamiento normal del menu Publica Aqui
+                /*if ([FLAccount canPostAds]) {
                     controllerIdentifier = kStoryBoardAAFillOutFormView;
                     presentationVC       = YES;
                 }
                 else
-                    controllerIdentifier = kStoryBoardMyMessagesView;
+                    controllerIdentifier = kStoryBoardMyMessagesView;*/
+                
+                UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
+                    message:nil
+                    delegate:self
+                    cancelButtonTitle:nil
+                    otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil];
+                UITextView *textView = [UITextView new];
+                [textView setText:FLLocalizedString(@"dialog_en_construccion")];
+                [textView setEditable:NO];
+                [textView setBackgroundColor:[UIColor clearColor]];
+                [textView setTextAlignment:NSTextAlignmentCenter];
+                [textView setDataDetectorTypes:UIDataDetectorTypeAll];
+                [viewAlert addSubview: textView];
+                [viewAlert setValue: textView forKey:@"accessoryView"];
+                [viewAlert show];
             }
 
             //MY LISTINGS
@@ -391,7 +407,23 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 
                 // Post ad
                 if (indexPath.row == 1) {
-                    [FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];
+                    // Descomentar para funcionamiento normal del menu Publica Aqui
+                    /*[FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];*/
+                    
+                    UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
+                        message:nil
+                        delegate:self
+                        cancelButtonTitle:nil
+                        otherButtonTitles:FLLocalizedString(@"button_alert_ok"), nil];
+                    UITextView *textView = [UITextView new];
+                    [textView setText:FLLocalizedString(@"dialog_en_construccion")];
+                    [textView setEditable:NO];
+                    [textView setBackgroundColor:[UIColor clearColor]];
+                    [textView setTextAlignment:NSTextAlignmentCenter];
+                    [textView setDataDetectorTypes:UIDataDetectorTypeAll];
+                    [viewAlert addSubview: textView];
+                    [viewAlert setValue: textView forKey:@"accessoryView"];
+                    [viewAlert show];
                 }
             }
 		}

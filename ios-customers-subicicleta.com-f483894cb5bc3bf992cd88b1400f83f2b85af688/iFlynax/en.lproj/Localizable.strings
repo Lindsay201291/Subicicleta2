@@ -221,6 +221,7 @@
 "alert_incorrect_auth" = "Please make sure you entered correct login details.";
 "alert_facebook_user_cancelled_login" = "User cancelled login";
 "alert_title_felicitaciones" = "Felicitaciones!";
+"alert_en_construccion" = "Sección en Construcción!";
 "alert_registration_complete_auto_login" = "You have logged in to the account area automatically; now you can add listings and use other features through the app.";
 "alert_title_edit_description" = "Edit Description";
 "alert_no_plan_selected" = "Please select a plan.";
@@ -287,6 +288,7 @@
 "dialog_email_saved_as_tmp" = "The confirmation link has been sent to the new email; please check it to confirm the new email address.";
 "dialog_unable_save_data_on_server" = "Failed to save data on the server, please contact the Administrator.";
 "dialog_finish_register" = "Su cuenta ha sido creada con éxito, para activarla hemos enviado un enlace de activación a su email. \nPor favor busque en su bandeja de entrada. Recuerde revisar la bandeja de correos no deseados (SPAM). \n¡Gracias!.";
+"dialog_en_construccion" = "Para publicar debe hacerlo directamente \npor el sitio web: \nwww.subicicleta.com";
 
 /* sheet */
 "sheet_drive_route_title" = "Select an App from the list to build the drive route";
