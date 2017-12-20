@@ -99,7 +99,7 @@ static NSString * const kCharsLimitFontDangerColor  = @"FF0000";
     
     // validation
     _validatorManager = [FLValidatorManager new];
-    FLValiderRequired *requiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
+    FLValiderRequired *requiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
     
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_authorTextField withValider:@[requiredValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_titleTextField  withValider:@[requiredValider]]];

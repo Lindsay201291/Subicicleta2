@@ -90,10 +90,10 @@ static NSString * const kApiResultProfileKey = @"profile";
     
     // validation inits
     _validatorManager = [FLValidatorManager new];
-    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
-    FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_select_an_option")];
-    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_proper_email_address")];
-    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_weak")];
+    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
+    FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_seleccione_una_opcion")];
+    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_apropiado_email_address")];
+    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_debil")];
 
     if (_showUserNameInput) {
         [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_userNameField withValider:@[inputRequiredValider]]];

@@ -42,8 +42,8 @@
     // validation inits
     _validatorManager = [FLValidatorManager new];
     
-    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
-    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_proper_email_address")];
+    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
+    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_apropiado_email_address")];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_emailTextField withValider:@[inputRequiredValider, inputEmailValider]]];
     
     // accessory toolbar

@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"screen_search");
+    self.title = FLLocalizedString(@"screen_buscar");
 
     for (NSDictionary *ltypeDict in [FLListingTypes getList]) {
         FLListingTypeModel *ltypeModel = [FLListingTypeModel fromDictionary:ltypeDict];

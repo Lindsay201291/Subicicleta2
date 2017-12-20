@@ -41,7 +41,7 @@
 
 - (BOOL)isValid {
     if (self.model.required && [self.value isEmpty]) {
-        self.errorMessage = FLLocalizedString(@"valider_fillin_the_field");
+        self.errorMessage = FLLocalizedString(@"valider_completar_el_campo");
         return NO;
     }
     return YES;

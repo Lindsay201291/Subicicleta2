@@ -197,7 +197,7 @@ static NSString * const kAccountTypeNameKey = @"name";
                               else [FLDebug showAdaptedError:error apiItem:kApiItemMyProfile_updateProfileEmail];
                           }];
     }
-    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"valider_proper_email_address")];
+    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"valider_apropiado_email_address")];
 }
 
 #pragma mark - Navigation

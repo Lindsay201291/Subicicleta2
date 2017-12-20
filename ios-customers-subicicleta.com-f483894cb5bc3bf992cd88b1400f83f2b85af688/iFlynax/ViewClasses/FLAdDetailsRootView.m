@@ -110,27 +110,27 @@
     CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:nil];
 
     if ([FLAccount loggedUser].userId != FLTrueInteger(_tabSellerInfo.sellerInfo[@"id"])) {
-        [sheet addButtonWithTitle:FLLocalizedString(@"ad_details_sheetActions_contactSeller") block:^{
+        [sheet addButtonWithTitle:FLLocalizedString(@"ad_details_sheetActions_contactar_vendedor") block:^{
             if (IS_LOGIN) {
                 FLMessaging *messaging = [_tabSellerInfo prepareContactOwnerMessaging];
                 [self.navigationController pushViewController:messaging animated:YES];
             }
-            else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"messaging_must_logged_in")];
+            else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"mensajeria_must_logged_in")];
         }];
     }
 
-    [sheet addButtonWithTitle:FLLocalizedString(@"ad_details_sheetActions_share") block:^{
+    [sheet addButtonWithTitle:FLLocalizedString(@"ad_details_sheetActions_compartir") block:^{
         [_tabAdDetails sheetActionsShareAdDidTap:button];
     }];
 
     BOOL adIsFavorite = [[FLFavorites sharedInstance] isFavoriteWithId:_tabAdDetails.shortInfo.lId];
-    NSString *favCurrentTitleKey = F(@"ad_details_sheetActions_%@", adIsFavorite ? @"removeFromFavorites" : @"addToFavorites");
+    NSString *favCurrentTitleKey = F(@"ad_details_sheetActions_%@", adIsFavorite ? @"remover_favorito" : @"anadir_favorito");
     [sheet addButtonWithTitle:FLLocalizedString(favCurrentTitleKey) block:^{
         [_tabAdDetails.detailsTableView.headerView.favoriteAdsButton dofakeTapAction];
     }];
 
     if ([FLConfig boolWithKey:@"reportBrokenListing_plugin"]) {
-        [sheet addDestructiveButtonWithTitle:FLLocalizedString(@"reportAbuse_sheet_item") block:^{
+        [sheet addDestructiveButtonWithTitle:FLLocalizedString(@"reportar_abuso_sheet_item") block:^{
             FLReportAbuseVC *reportAbuseVC = [[FLReportAbuseVC alloc] initWithNibName:@"FLReportAbuseVC" bundle:nil];
             reportAbuseVC.lId = _tabAdDetails.shortInfo.lId;
             FLNavigationController *reportAbuseNC = reportAbuseVC.flNavigationController;

@@ -20,7 +20,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.screenName = FLLocalizedString(@"screen_aboutUs");
+    self.screenName = FLLocalizedString(@"screen_acerca_app");
 }
 
 - (void)viewDidLoad {

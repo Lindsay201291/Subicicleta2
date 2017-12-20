@@ -15,7 +15,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-	self.gaScreenName = FLLocalizedString(@"screen_recently_view");
+	self.gaScreenName = FLLocalizedString(@"screen_recien_agregado");
 }
 
 - (void)viewDidLoad {

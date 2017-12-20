@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, FLDropDownField) {
                           : self.item.placeholderTo);
     } else {
         if (self.item.model.searchMode) {
-            dropDown.title = FLLocalizedStringReplace(@"placeholder_any_field",
+            dropDown.title = FLLocalizedStringReplace(@"placeholder_cualquier_campo",
                                                       @"{field}",
                                                       self.item.placeholder);
         } else {

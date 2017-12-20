@@ -82,7 +82,7 @@
     
     // validation inits
     //_validatorManager = [FLValidatorManager new];
-    //FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
+    //FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
     _ytIdValider = [FLYTVideoIdValider validerWithHint:FLLocalizedString(@"valider_yt_valid_url_or_id")];
     _ytIdValider.autoHinted = NO;
     

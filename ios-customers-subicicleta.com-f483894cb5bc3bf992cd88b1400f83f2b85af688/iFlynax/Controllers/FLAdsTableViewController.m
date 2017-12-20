@@ -21,7 +21,7 @@
     self.initStack    = 1;
     self.currentStack = 1;
     
-    self.targetItemName = FLLocalizedString(@"inf_scroll_target_ads");
+    self.targetItemName = FLLocalizedString(@"inf_scroll_target_anuncio");
 }
 
 - (void)handleSucceedRequest:(id)results {

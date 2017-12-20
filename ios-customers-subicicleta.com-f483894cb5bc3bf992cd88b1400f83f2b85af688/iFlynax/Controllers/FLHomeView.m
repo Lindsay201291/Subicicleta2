@@ -248,7 +248,7 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
     [_footerISControlView defineMessagesWithTotal:_total
                                 withCurrentAmount:_entries.count
                                         withBatch:_batch
-                                       withTarget:FLLocalizedString(@"inf_scroll_target_ads")];
+                                       withTarget:FLLocalizedString(@"inf_scroll_target_anuncio")];
     
     if (_isTFooterEnabled && _footerISControlView.infiniteScroll) {
         [self refreshFeaturedAds:YES];

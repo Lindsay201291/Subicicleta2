@@ -95,7 +95,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
     
     // validation
     _validatorManager = [FLValidatorManager new];
-    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
+    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
     
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_usernameField withValider:@[inputRequiredValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordField withValider:@[inputRequiredValider]]];
@@ -231,7 +231,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 		[FLProgressHUD showErrorWithStatus:FLCleanString(result[@"error"])];
 	}
 	else if (result[@"logged"] != nil && [result[@"logged"] boolValue]) {
-		[FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"alert_login_success")];
+		[FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"alert_login_exitoso")];
         [[FLAccount loggedUser] saveSessionData:result];
 
         // register device for remote Notifications if necessary

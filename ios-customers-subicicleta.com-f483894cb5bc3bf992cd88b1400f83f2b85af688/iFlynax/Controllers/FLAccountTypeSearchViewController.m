@@ -28,7 +28,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.title = FLLocalizedString(@"screen_accounts_advanced_search");
+    self.title = FLLocalizedString(@"screen_accounts_busqueda_avanzada");
     self.view.backgroundColor      = FLHexColor(kColorBackgroundColor);
     self.tableView.backgroundColor = self.view.backgroundColor;
 }
@@ -188,7 +188,7 @@
     [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardAccountTypeListViewController];
     searchAgentsVC.filterFormData = self.manager.formValues;
     searchAgentsVC.typeModel      = self.typeModel;
-    searchAgentsVC.title          = FLLocalizedString(@"screen_search_sellers");
+    searchAgentsVC.title          = FLLocalizedString(@"screen_buscar_vendedor");
     searchAgentsVC.navigationItem.leftBarButtonItem = nil;
 
     [self.navigationController pushViewController:searchAgentsVC animated:YES];

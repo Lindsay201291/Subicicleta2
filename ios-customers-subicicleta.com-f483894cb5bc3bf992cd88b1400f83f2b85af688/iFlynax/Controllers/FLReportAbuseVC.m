@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = FLLocalizedString(@"reportAbuse_sheet_item");
+    self.title = FLLocalizedString(@"reportar_abuso_sheet_item");
 }
 
 - (FLNavigationController *)flNavigationController {
@@ -32,14 +32,14 @@
         _flNavigationController = [[FLNavigationController alloc] initWithRootViewController:self];
 
         UIBarButtonItem *cancelButton;
-        cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportAbuse_button_cancelar")
+        cancelButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportar_abuso_button_cancel")
                                                       style:UIBarButtonItemStyleBordered
                                                      target:self
                                                      action:@selector(cancelButtonDidTap)];
         self.navigationItem.leftBarButtonItem = cancelButton;
 
         UIBarButtonItem *reportButton;
-        reportButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportAbuse_button_report")
+        reportButton = [[UIBarButtonItem alloc] initWithTitle:FLLocalizedString(@"reportar_abuso_button_report")
                                                         style:UIBarButtonItemStyleBordered
                                                        target:self
                                                        action:@selector(sendButtonDidTap)];
@@ -57,7 +57,7 @@
 
 - (void)sendButtonDidTap {
     if ([_reportReasonTextView.text isEmpty]) {
-        [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"reportAbuse_empty_message_error")];
+        [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"reportar_abuso_empty_message_error")];
     }
     else {
         [FLProgressHUD showWithStatus:FLLocalizedString(@"procesando")];
@@ -72,10 +72,10 @@
             if (error == nil) {
                 if (FLTrueBool(response[@"success"])) {
                     [self dismissViewControllerAnimated:YES completion:^{
-                        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"reportAbuse_successfully_sent")];
+                        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"reportar_abuso_successfully_sent")];
                     }];
                 }
-                else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"reportAbuse_failed_to_send")];
+                else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"reportar_abuso_failed_to_send")];
             }
             else [FLDebug showAdaptedError:error apiItem:kApiItemRequests_reportAbuse];
         }];

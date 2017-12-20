@@ -46,9 +46,9 @@
     // validation
     _validatorManager = [FLValidatorManager new];
     
-    FLValiderRequired       *inputRequiredValider  = [FLValiderRequired       validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
-    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_weak")];
-    FLValiderEqualInput     *equalInputValider     = [FLValiderEqualInput     validerWithControl:_passwordNewField withHint:FLLocalizedString(@"alert_password_does_not_match")];
+    FLValiderRequired       *inputRequiredValider  = [FLValiderRequired       validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
+    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_debil")];
+    FLValiderEqualInput     *equalInputValider     = [FLValiderEqualInput     validerWithControl:_passwordNewField withHint:FLLocalizedString(@"alert_password_no_coincide")];
     
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordCurrentField withValider:@[inputRequiredValider]]];
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_passwordNewField     withValider:@[inputRequiredValider, passwordPolicyValider]]];

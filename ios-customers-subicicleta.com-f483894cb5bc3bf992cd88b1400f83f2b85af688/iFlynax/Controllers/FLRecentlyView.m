@@ -17,7 +17,7 @@ static NSString * const kRecentlyAdsHeaderIdentifier = @"detailsHeaderIdentifier
     
     [super viewDidLoad];
     
-    self.title = FLLocalizedString(@"screen_recently_view");
+    self.title = FLLocalizedString(@"screen_recien_agregado");
     
     self.apiItem = kApiItemRecentlyAds;
     

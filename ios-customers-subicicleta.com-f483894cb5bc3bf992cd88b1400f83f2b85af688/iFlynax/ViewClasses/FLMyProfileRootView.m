@@ -43,7 +43,7 @@
 #pragma mark - Navigation
 
 - (void)logoutButtonTapped {
-	CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:F(FLLocalizedString(@"logged_as"), [FLAccount fullName])];
+	CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:F(FLLocalizedString(@"conectado_como"), [FLAccount fullName])];
 	[sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_cerrarsesion") block:^{
         [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
 

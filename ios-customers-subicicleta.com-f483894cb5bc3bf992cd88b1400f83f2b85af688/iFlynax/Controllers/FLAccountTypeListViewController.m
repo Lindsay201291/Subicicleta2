@@ -32,7 +32,7 @@ static NSString * const barCellRID = @"indexBarSingleCell";
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.title = FLLocalizedString(@"screen_accounts_alphabetic_search");
+    self.title = FLLocalizedString(@"screen_accounts_busqueda_alfabetica");
 }
 
 - (void)viewDidLoad {

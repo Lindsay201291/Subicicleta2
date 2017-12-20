@@ -51,8 +51,8 @@
     });
     /* trick for clearView END */
 
-    [_searchBtn setTitle:FLLocalizedString(@"button_search") forState:UIControlStateNormal];
-    [_resetBtn setTitle:FLLocalizedString(@"button_search_reset") forState:UIControlStateNormal];
+    [_searchBtn setTitle:FLLocalizedString(@"button_buscar") forState:UIControlStateNormal];
+    [_resetBtn setTitle:FLLocalizedString(@"button_limpiar") forState:UIControlStateNormal];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

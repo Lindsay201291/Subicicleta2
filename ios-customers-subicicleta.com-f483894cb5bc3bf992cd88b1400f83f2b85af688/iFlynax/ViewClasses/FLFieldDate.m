@@ -89,7 +89,7 @@
         if ((self.type == FLFieldDateTypeSingle && [_valueFrom isEmpty]) ||
             (self.type == FLFieldDateTypePeriod && ([_valueFrom isEmpty] || [_valueTo isEmpty])))
         {
-            self.errorMessage = FLLocalizedString(@"valider_fillin_the_field");
+            self.errorMessage = FLLocalizedString(@"valider_completar_el_campo");
             return NO;
         }
     }

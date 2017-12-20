@@ -127,7 +127,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
         FLMessaging *messaging = [self prepareContactOwnerMessaging];
         [self.navigationController pushViewController:messaging animated:YES];
     }
-    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"messaging_must_logged_in")];
+    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"mensajeria_must_logged_in")];
 }
 
 - (IBAction)displayAnotherOwnerAds:(UIButton *)sender {

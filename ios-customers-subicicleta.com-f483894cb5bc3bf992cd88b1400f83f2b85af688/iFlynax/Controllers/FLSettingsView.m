@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
 }
 
 - (void)buildSettingsTableView {
-    self.title = FLLocalizedString(@"screen_settings");
+    self.title = FLLocalizedString(@"screen_opciones");
 
     // custom datastore
     _entries = @[

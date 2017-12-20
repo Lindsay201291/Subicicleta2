@@ -85,11 +85,11 @@ static CGFloat    const kInputFieldsHeight    = 44;
     }
 
     // validation inits
-    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_fillin_the_field")];
-    FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_select_an_option")];
-    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_proper_email_address")];
-    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_weak")];
-    FLValiderEqualInput *equalInputValider = [FLValiderEqualInput validerWithControl:_passwordField withHint:FLLocalizedString(@"alert_password_does_not_match")];
+    FLValiderRequired *inputRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_completar_el_campo")];
+    FLValiderRequired *dropDownRequiredValider = [FLValiderRequired validerWithHint:FLLocalizedString(@"valider_seleccione_una_opcion")];
+    FLValiderEmail *inputEmailValider = [FLValiderEmail validerWithHint:FLLocalizedString(@"valider_apropiado_email_address")];
+    FLValiderPasswordPolicy *passwordPolicyValider = [FLValiderPasswordPolicy validerWithHint:FLLocalizedString(@"valider_password_debil")];
+    FLValiderEqualInput *equalInputValider = [FLValiderEqualInput validerWithControl:_passwordField withHint:FLLocalizedString(@"alert_password_no_coincide")];
     _validatorManager = [FLValidatorManager new];
 
     [_validatorManager addValidator:[FLInputControlValidator validerWithInputControll:_userNameField withValider:@[inputRequiredValider]]];

@@ -177,7 +177,7 @@ typedef void (^FLMFCompletionHandler)(NSArray *options);
 
 - (BOOL)isValid {
     if (self.model.required && self.valueFrom == nil) {
-        self.errorMessage = FLLocalizedString(@"valider_select_an_option");
+        self.errorMessage = FLLocalizedString(@"valider_seleccione_una_opcion");
         return NO;
     }
     return YES;

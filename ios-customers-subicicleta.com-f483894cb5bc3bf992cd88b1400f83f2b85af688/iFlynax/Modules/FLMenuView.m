@@ -192,9 +192,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 		case FLMenuSectionBrowse:
 			return FLLocalizedString(@"menu_seccion_ver");
 		case FLMenuSectionAccountTypes:
-			return FLLocalizedString(@"menu_section_account_types");
+			return FLLocalizedString(@"menu_section_vendedores");
         case FLMenuSectionMore:
-            return FLLocalizedString(@"menu_section_more");
+            return FLLocalizedString(@"menu_section_mas");
 	}
 	return nil;
 }
@@ -323,15 +323,15 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
         NSString *menuImageName;
 
         if (indexPath.row == 0) {
-            cell.titleLabel.text = FLLocalizedString(@"menu_settings");
+            cell.titleLabel.text = FLLocalizedString(@"menu_opciones");
             menuImageName = @"menu_settings";
         }
         else if (indexPath.row == 1) {
-            cell.titleLabel.text = FLLocalizedString(@"menu_about_app");
+            cell.titleLabel.text = FLLocalizedString(@"menu_acerca_app");
             menuImageName = @"menu_about_app";
         }
         else if (indexPath.row == 2) {
-            cell.titleLabel.text = FLLocalizedString(@"menu_feedback");
+            cell.titleLabel.text = FLLocalizedString(@"menu_enviar_feedback");
             menuImageName = @"menu_feedback";
             cell.bottomSeparator = NO;
         }
@@ -415,11 +415,13 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 				contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardRecentlyAdsRootView];
 			}
 		}
-		else if (indexPath.row == 1) {
+        /*  Menu reducido sin busqueda de anuncios cercanos: para ampliar menu, descomentar hasta linea 423 y comentar linea 424... */
+		/*else if (indexPath.row == 1) {
 			contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardNearbyAdsView];
-		}
+		}*/
         /* Search */
-        else if (indexPath.row == 2) {
+        //else if (indexPath.row == 2) {
+        else if (indexPath.row == 1) {
             static NSDictionary *_forms;
             _forms = [[NSUserDefaults standardUserDefaults] objectForKey:kCacheSearchFormsKey];
 
