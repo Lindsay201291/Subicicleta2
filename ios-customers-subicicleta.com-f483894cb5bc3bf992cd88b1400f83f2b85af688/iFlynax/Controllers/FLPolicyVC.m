@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [_agreeBtn setTitle:FLLocalizedString(@"button_agree")];
-    [_disagreeBtn setTitle:FLLocalizedString(@"button_disagree")];
+    [_agreeBtn setTitle:FLLocalizedString(@"button_de_acuerdo")];
+    [_disagreeBtn setTitle:FLLocalizedString(@"button_disentir")];
 }
 
 - (IBAction)buttonDidTap:(UIBarButtonItem *)sender {

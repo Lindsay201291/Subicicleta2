@@ -47,6 +47,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     CGFloat _footerHeight;
     NSMutableArray *_commentModels;
 }
+@property (weak, nonatomic) IBOutlet UITextView *terminosTextView;
 
 @property (weak, nonatomic) IBOutlet UIView *noCommentsView;
 @property (weak, nonatomic) IBOutlet UILabel *noCommentsLabel;
@@ -149,6 +150,17 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 
     // init block types
     _blockTypes = [kBlockFieldTypes componentsSeparatedByString:@","];
+    
+    // Terminos y condiciones
+    /*NSMutableAttributedString * str = [[NSMutableAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso."];
+    [str addAttribute: NSLinkAttributeName value: @"https://www.subicicleta.com/terminosuso.html" range: NSMakeRange(72, 29)];*/
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] init];
+    [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según "]];
+    [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Términos y Condiciones de Uso"                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),                                                                                          NSForegroundColorAttributeName: [UIColor redColor],                                                                                                                                                                        NSLinkAttributeName: @"https://www.subicicleta.com/terminosuso.html"                                                                                                                                                                                                     }]];
+    [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"."]];
+
+    self.terminosTextView.attributedText = str;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -363,10 +375,10 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 
 - (void)attributedLabel:(FLAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
     BOOL isEmailLink = [url.scheme isEqualToString:@"mailto"];
-    NSString *alertTitleKey = isEmailLink ? @"confirm_send_email" : @"confirm_open_in_safary";
+    NSString *alertTitleKey = isEmailLink ? @"confirm_enviar_email" : @"confirm_abrir_safary";
 
     CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(alertTitleKey) message:url.relativeString];
-    [alertView addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+    [alertView addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
         [[UIApplication sharedApplication] openURL:url];
     }];
     [alertView addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];
@@ -374,8 +386,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 }
 
 - (void)attributedLabel:(FLAttributedLabel *)label didSelectLinkWithPhoneNumber:(NSString *)phoneNumber {
-    CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"confirm_call_number") message:label.userInfo[kItemValueKey]];
-    [alertView addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+    CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"confirm_llamar_numero") message:label.userInfo[kItemValueKey]];
+    [alertView addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
         [[UIApplication sharedApplication] openURL:URLIFY(F(@"tel://%@", phoneNumber))];
     }];
     [alertView addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];

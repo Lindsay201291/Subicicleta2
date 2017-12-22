@@ -57,13 +57,13 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
     _entries = @[
                  // section 1
                  FLLocalizedString(@"settings_language"),
-                 FLLocalizedString(@"settings_content_preload_type"),
+                 FLLocalizedString(@"settings_content_tipo_precarga"),
                  // section 2
-                 FLLocalizedString(@"settings_privacy_policy"),
-                 FLLocalizedString(@"settings_terms_of_use"),
-                 FLLocalizedString(@"settings_legal_information"),
+                 FLLocalizedString(@"settings_politica_de_privacidad"),
+                 FLLocalizedString(@"settings_terminos_de_uso"),
+                 FLLocalizedString(@"settings_informacion_legal"),
                  // section 3
-                 FLLocalizedString(@"settings_clear_cache"),
+                 FLLocalizedString(@"settings_borrar_cache"),
                  // demo section
                  FLLocalizedString(@"settings_connect_to_another_website_title"),];
 
@@ -160,7 +160,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
     
     RETableViewItem *row5 = [[RETableViewItem alloc] initWithTitle:_entries[FLSettingsRowClearCache]];
     row5.style = UITableViewCellStyleSubtitle;
-    row5.detailLabelText = FLLocalizedString(@"settings_clear_cache_subtitle");
+    row5.detailLabelText = FLLocalizedString(@"settings_borrar_cache_subtitle");
     row5.cellHeight = 50;
     [section3 addItem:row5];
 
@@ -253,9 +253,9 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
         }
     }
     else if (indexPath.section == 2 && indexPath.row == 0) {
-        CCAlertView *alert = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"settings_clear_cache")
-                                                        message:FLLocalizedString(@"settings_clear_cache_subtitle")];
-        [alert addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+        CCAlertView *alert = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"settings_borrar_cache")
+                                                        message:FLLocalizedString(@"settings_borrar_cache_subtitle")];
+        [alert addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
             [self reloadSystemAppCache];
         }];
         [alert addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];
@@ -266,7 +266,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
     else if (indexPath.section == 3 && indexPath.row == 0) {
         CCAlertView *alert = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"settings_connect_to_another_website_title")
                                                         message:FLLocalizedString(@"settings_connect_to_another_website_subtitle")];
-        [alert addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+        [alert addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
             FLDemoVC *demoVC = [[FLDemoVC alloc] initWithNibName:@"FLDemoVC" bundle:nil];
             self.frostedViewController.contentViewController = demoVC;
         }];
@@ -282,7 +282,7 @@ typedef NS_ENUM(NSInteger, FLSettingsRow) {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSURLCache sharedURLCache] removeAllCachedResponses];
         [FLCache refreshAppCache];
-        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"settings_clear_cache_updated")];
+        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"settings_borrar_cache_updated")];
         [_tableView reloadData];
     });
 }

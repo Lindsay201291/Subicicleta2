@@ -963,7 +963,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (void)displayConfirmWithTitle:(NSString *)titleKey message:(NSString *)mesageKey confirmBlock:(dispatch_block_t)confirmBlock {
     CCAlertView *alert = [[CCAlertView alloc] initWithTitle:FLLocalizedString(titleKey)
                                                     message:FLLocalizedString(mesageKey)];
-    [alert addButtonWithTitle:FLLocalizedString(@"button_yes") block:confirmBlock];
+    [alert addButtonWithTitle:FLLocalizedString(@"button_si") block:confirmBlock];
     [alert addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];
     [alert show];
 }

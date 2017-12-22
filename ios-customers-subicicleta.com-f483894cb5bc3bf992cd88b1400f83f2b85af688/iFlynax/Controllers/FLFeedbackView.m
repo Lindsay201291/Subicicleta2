@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     self.title = FLLocalizedString(@"screen_feedback");
-    self.selectSubjectScreenTitle = FLLocalizedString(@"screen_feedback_select_subject");    
+    self.selectSubjectScreenTitle = FLLocalizedString(@"screen_feedback_seleccione_asunto");    
 
     self.navigationItem.leftBarButtonItem = ({
         UIBarButtonItem *button;
@@ -38,7 +38,7 @@
                                                  action:@selector(displaySwipeMenu)];
         button;
     });
-    [self.navigationItem.rightBarButtonItem setTitle:FLLocalizedString(@"button_mail")];
+    [self.navigationItem.rightBarButtonItem setTitle:FLLocalizedString(@"button_correo")];
 }
 
 // @override
@@ -51,9 +51,9 @@
 // @override
 - (NSArray *)defaultLocalizedTopics {
     return @[FLLocalizedString(@"feedback_feedback"),
-             FLLocalizedString(@"feedback_feature_request"),
-             FLLocalizedString(@"feedback_contact_us"),
-             FLLocalizedString(@"feedback_bug_report")];
+             FLLocalizedString(@"feedback_solicitar_funcion"),
+             FLLocalizedString(@"feedback_contactenos"),
+             FLLocalizedString(@"feedback_reportar_error")];
 }
 // @override
 - (NSArray *)toRecipients {
@@ -73,7 +73,7 @@
 }
 // @override
 - (NSString *)topicCellTitle {
-    return FLLocalizedString(@"feedback_subject");
+    return FLLocalizedString(@"feedback_asunto");
 }
 
 #pragma mark - Navigation
@@ -91,7 +91,7 @@
 - (void)feedbackViewController:(CTFeedbackViewController *)controller didFinishWithMailComposeResult:(MFMailComposeResult)result
                          error:(NSError *)error {
     if (!error) {
-        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"feedback_completed")];
+        [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"feedback_completado")];
     }
     else [FLDebug showAdaptedError:error apiItem:@"sendFeedback"];
 }

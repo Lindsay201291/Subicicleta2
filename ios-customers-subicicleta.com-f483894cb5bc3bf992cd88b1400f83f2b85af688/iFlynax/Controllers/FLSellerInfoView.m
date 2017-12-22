@@ -218,10 +218,10 @@ static NSString *_cellTitle(NSDictionary *entry) {
 
 - (void)attributedLabel:(FLAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
     BOOL isEmailLink = [url.scheme isEqualToString:@"mailto"];
-    NSString *alertTitleKey = isEmailLink ? @"confirm_send_email" : @"confirm_open_in_safary";
+    NSString *alertTitleKey = isEmailLink ? @"confirm_enviar_email" : @"confirm_abrir_safary";
     
     CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(alertTitleKey) message:url.relativeString];
-    [alertView addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+    [alertView addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
         [[UIApplication sharedApplication] openURL:url];
     }];
     [alertView addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];
@@ -229,8 +229,8 @@ static NSString *_cellTitle(NSDictionary *entry) {
 }
 
 - (void)attributedLabel:(FLAttributedLabel *)label didSelectLinkWithPhoneNumber:(NSString *)phoneNumber {
-	CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"confirm_call_number") message:label.userInfo[kItemValueKey]];
-	[alertView addButtonWithTitle:FLLocalizedString(@"button_yes") block:^{
+	CCAlertView *alertView = [[CCAlertView alloc] initWithTitle:FLLocalizedString(@"confirm_llamar_numero") message:label.userInfo[kItemValueKey]];
+	[alertView addButtonWithTitle:FLLocalizedString(@"button_si") block:^{
 		[[UIApplication sharedApplication] openURL:URLIFY(F(@"tel://%@", phoneNumber))];
 	}];
 	[alertView addButtonWithTitle:FLLocalizedString(@"button_no") block:nil];

@@ -77,7 +77,7 @@
 
     _ytUrlOrIdField.placeholder = FLLocalizedString(@"placeholder_yt_url_or_id");
     _ytUrlOrIdField.text = @"";
-    [_addButton setTitle:FLLocalizedString(@"button_add") forState:UIControlStateNormal];
+    [_addButton setTitle:FLLocalizedString(@"button_agregar") forState:UIControlStateNormal];
     _ytPlayerView.delegate = self;
     
     // validation inits

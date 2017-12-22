@@ -370,7 +370,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 }
                 else
                     controllerIdentifier = kStoryBoardMyMessagesView;*/
-                
+                //borrar
                 UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
                     message:nil
                     delegate:self
@@ -385,6 +385,8 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 [viewAlert addSubview: textView];
                 [viewAlert setValue: textView forKey:@"accessoryView"];
                 [viewAlert show];
+                controllerIdentifier = kStoryBoardMyProfileRootView;
+                //borrar
             }
 
             //MY LISTINGS
@@ -409,7 +411,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 if (indexPath.row == 1) {
                     // Descomentar para funcionamiento normal del menu Publica Aqui
                     /*[FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];*/
-                    
+                    //borrar
                     UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
                         message:nil
                         delegate:self
@@ -424,6 +426,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                     [viewAlert addSubview: textView];
                     [viewAlert setValue: textView forKey:@"accessoryView"];
                     [viewAlert show];
+                    //borrar
                 }
             }
 		}

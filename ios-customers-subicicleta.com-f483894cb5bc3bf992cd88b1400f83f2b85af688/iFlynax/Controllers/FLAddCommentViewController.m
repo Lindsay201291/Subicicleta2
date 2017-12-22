@@ -186,7 +186,7 @@ static NSString * const kCharsLimitFontDangerColor  = @"FF0000";
 
 - (void)defineCharsLimitLabelText:(int)limit {
     
-    NSString *string = F(FLLocalizedString(@"label_chars_limit_left"), limit);
+    NSString *string = F(FLLocalizedString(@"label_caracteres_restantes"), limit);
     NSRange    range = [string rangeOfString:F(@"%d", limit)];
     
     UIColor *mainColor = FLHexColor(kCharsLimitFontColor);

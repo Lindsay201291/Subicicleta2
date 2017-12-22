@@ -22,8 +22,8 @@
     self.apiCmd = kApiItemRequests_searchListings;
     self.apiParameters[@"f"] = self.formValues;
 
-    self.blankSlate.title = FLLocalizedString(@"blankSlate_searchResults_title");
-    self.blankSlate.message = FLLocalizedString(@"blankSlate_searchResults_message");
+    self.blankSlate.title = FLLocalizedString(@"blankSlate_searchResults_titulo");
+    self.blankSlate.message = FLLocalizedString(@"blankSlate_searchResults_mensaje");
 
     [self loadDataWithRefresh:YES];
 }
@@ -32,7 +32,7 @@
     self.itemsTotal = [results[@"calc"] intValue];
     [self.entries addObjectsFromArray:results[@"listings"]];
 
-    self.title = FLLocalizedStringReplace(@"screen_search_listings",
+    self.title = FLLocalizedStringReplace(@"screen_search_anuncios_encontrados",
                                           @"{number}",
                                           FLTrueString(results[@"calc"]));
 }

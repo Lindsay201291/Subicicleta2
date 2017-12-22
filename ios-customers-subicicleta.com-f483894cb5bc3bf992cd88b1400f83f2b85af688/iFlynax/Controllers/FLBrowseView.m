@@ -32,7 +32,7 @@ static NSString * const kBrowseCellIdentifier     = @"browseCellIdentifier";
     [super viewDidLoad];
 
     self.blankSlate.title   = FLLocalizedString(@"blankSlate_browse_title");
-    self.blankSlate.message = FLLocalizedString(@"blankSlate_browse_message");
+    self.blankSlate.message = FLLocalizedString(@"blankSlate_browse_mensaje");
 
     [self categoryOrAds];
     [self loadDataWithRefresh:YES];

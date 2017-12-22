@@ -48,7 +48,7 @@ static NSInteger const kCodeLimit = 4;
     _areaField.inputAccessoryView   = self.actionBar;
 
     _numberField.text               = self.item.valueNumber ? F(@"%@", self.item.valueNumber) : @"";
-    _numberField.placeholder        = FLLocalizedString(@"placeholder_fieldPhone_number");
+    _numberField.placeholder        = FLLocalizedString(@"placeholder_fieldPhone_numero");
     _numberField.inputAccessoryView = self.actionBar;
 
     // it's a for future purpose

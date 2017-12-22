@@ -106,7 +106,7 @@ static NSString * const barCellRID = @"indexBarSingleCell";
     
     if (!accounts.count) {
         if (_advancedSearch) {
-            self.blankSlate.message = FLLocalizedString(@"blankSlate_there_no_accounts_found");
+            self.blankSlate.message = FLLocalizedString(@"blankSlate_cuentas_no_encontradas");
         }
         else {
             self.blankSlate.message = F(FLLocalizedString(@"blankSlate_accountTypeChar_message"), [self.filterChar uppercaseString]);

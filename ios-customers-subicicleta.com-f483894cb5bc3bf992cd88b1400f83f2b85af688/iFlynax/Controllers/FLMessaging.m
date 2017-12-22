@@ -43,8 +43,8 @@ static NSString * const kResponseKeyMessages       = @"messages";
         self.messageInputView.mediaButton.hidden = YES;
         [self.messageInputView.sendButton setBackgroundImage:[UIImage imageNamed:@"button1"] forState:UIControlStateNormal];
         [self.messageInputView.sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.messageInputView.sendButton setTitle:FLLocalizedString(@"button_message_send") forState:UIControlStateNormal];
-        self.messageInputView.textView.placeholderText = FLLocalizedString(@"placeholder_type_message");
+        [self.messageInputView.sendButton setTitle:FLLocalizedString(@"button_message_enviar") forState:UIControlStateNormal];
+        self.messageInputView.textView.placeholderText = FLLocalizedString(@"placeholder_escribe_mensaje");
 
         CGRect inputFrame = self.messageInputView.textView.frame;
         CGFloat xDiff = inputFrame.origin.x - 30;

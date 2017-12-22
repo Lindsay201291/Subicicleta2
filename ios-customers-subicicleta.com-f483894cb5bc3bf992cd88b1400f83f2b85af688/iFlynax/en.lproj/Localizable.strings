@@ -33,6 +33,7 @@
 "seller_ads_count" = "%d Ad(s)";
 "aboutApp_version" = "Version %@";
 "aboutApp_description" = "Description of this App";
+/*"aboutApp_descripcion" = "Aquí compradores y vendedores se encuentran directamente.\n\nComprar y vender es fácil y rápido. Descarga la mejor aplicación enfocada a la publicación de avisos clasificados para la compra y venta de artículos nuevos y usados relacionados exclusivamente al ciclismo, encontrarás: bicicletas, accesorios, repuestos, ropa, y más.\n¡Vende sin intermediarios!\nQueremos unir a las personas y por eso siempre podrás contactar directamente con el vendedor del producto que desees comprar.\nCaracterísticas:\n- Filtros para búsqueda por categoría, marca, ubicación, nuevo o usado, precio, y otros.\n-Búsqueda por coincidencia de palabras. Sugerencias de búsqueda mientras escribes.\n- Vista detallada de la publicación, incluye la galería de imágenes (con posibilidad de hacer zoom), información del producto y también del vendedor.\n- Marca tus artículos favoritos, para no perder de vista lo que te interesa. Puedes enviarlos a tus amigos por e-mail, WhatsApp; compártelos en Facebook y Twitter.\n- Contacto directo con el vendedor.\n\n¡Si públicas, lo vendes!";*/
 "selected_count" = "%d selected";
 "progress_adding" = "Adding...";
 "free" = "Free";
@@ -46,15 +47,15 @@
 
 /* Settings */
 "settings_language" = "Language";
-"settings_content_preload_type" = "Preloading type";
+"settings_content_tipo_precarga" = "Tipo de precarga";
 "settings_content_preload_type_button" = "Button";
 "settings_content_preload_type_scroll" = "Scroll";
-"settings_privacy_policy" = "Privacy Policy";
-"settings_terms_of_use" = "Terms Of Use";
-"settings_legal_information" = "Legal Information";
-"settings_clear_cache" = "Clear Cache";
-"settings_clear_cache_subtitle" = "Clear cache stored in the App";
-"settings_clear_cache_updated" = "System cache has been cleared.";
+"settings_politica_de_privacidad" = "Política de Privacidad";
+"settings_terminos_de_uso" = "Términos de Uso";
+"settings_informacion_legal" = "Información Legal";
+"settings_borrar_cache" = "Borrar Caché";
+"settings_borrar_cache_subtitle" = "Borrar el caché almacenado en la aplicación";
+"settings_borrar_cache_updated" = "La memoria caché del sistema ha sido borrada.";
 
 /* Screen's title's */
 "screen_subicicleta" = "Subicicleta";
@@ -80,7 +81,7 @@
 "screen_opciones" = "Opciones";
 "screen_acerca_app"  = "Acerca App";
 "screen_feedback" = "Feedback";
-"screen_feedback_select_subject" = "Select Subject";
+"screen_feedback_seleccione_asunto" = "Seleccione Asunto";
 "screen_detalles_cuenta" = "Detalles de la Cuenta";
 "screen_anuncios_vendedor" = "Anuncios del Vendedor";
 "screen_mis_mensajes" = "Mis Mensajes";
@@ -89,7 +90,7 @@
 "screen_ad_statistics" = "Stat";
 "screen_purchase" = "Your Order";
 "screen_select_plan" = "Available Plans";
-"screen_search_listings" = "Ads found: {number}";
+"screen_search_anuncios_encontrados" = "Anuncios encontrados: {number}";
 "screen_buscar_vendedor" = "Resultados Búsqueda";
 "screen_editar_perfil" = "Editar Perfil";
 
@@ -131,8 +132,8 @@
 "placeholder_yt_url_or_id" = "Enter a YouTube video URL or ID";
 "placeholder_fieldPhone_code" = "Code";
 "placeholder_fieldPhone_area" = "Area";
-"placeholder_fieldPhone_number" = "Number";
-"placeholder_type_message" = "Type message...";
+"placeholder_fieldPhone_numero" = "Número";
+"placeholder_escribe_mensaje" = "Escribe el mensaje...";
 "placeholder_from" = "From";
 "placeholder_to" = "To";
 "placeholder_cualquier_campo" = "Cualquiera {field}";
@@ -142,9 +143,9 @@
 "label_loginForm_restablecer_contraseña" = "¿Olvidó su contraseña? [Restablecer aquí]";
 "label_email" = "E-Mail";
 "label_awating_approval" = "Awaiting Approval";
-"label_chars_limit_left" = "%d Characters left";
+"label_caracteres_restantes" = "%d Caracteres restantes";
 "label_primary" = "Primary";
-"label_choose_photo" = "Choose a photo";
+"label_elegir_foto" = "Elige una foto";
 
 /* buttons */
 "button_anuncios_vendedor_cont" = "Otros Anuncios (%d)";
@@ -154,9 +155,9 @@
 "button_cancelar" = "Cancelar";
 "button_editar" = "Editar";
 "button_hecho" = "Hecho";
-"button_yes" = "Yes";
+"button_si" = "Si";
 "button_no" = "No";
-"button_add" = "Add";
+"button_agregar" = "Agregar";
 "button_iniciar_sesion" = "Iniciar Sesión";
 "button_facebook_login" = "Log in with Facebook";
 "button_cerrarsesion" = "Cerrar Sesión";
@@ -175,14 +176,14 @@
 "button_accept_agreement_button" = "Terms of Use";
 "button_pay_now" = "Pay Now";
 "button_pay_later" = "Pay Later";
-"button_agree" = "Agree";
-"button_disagree" = "Disagree";
+"button_de_acuerdo" = "De acuerdo";
+"button_disentir" = "Disentir";
 "button_buscar" = "Buscar";
 "button_limpiar" = "Limpiar";
-"button_message_send" = "Send";
+"button_message_enviar" = "Enviar";
 "button_guardar_contraseña" = "Guardar";
 "button_select_plan" = "Select a Plan";
-"button_mail" = "Mail";
+"button_correo" = "Correo";
 "button_filter" = "Filter";
 
 // my ads
@@ -206,9 +207,9 @@
 "dropdown_titulo_tipos_cuenta" = "Tipo de Cuenta";
 
 /* confirmations */
-"confirm_open_in_safary" = "Do you want to open the URL in Safari?";
-"confirm_call_number" = "Do you want to call to the number?";
-"confirm_send_email" = "Do you want to send an email?";
+"confirm_abrir_safary" = "¿Quieres abrir la URL en Safari?";
+"confirm_llamar_numero" = "¿Quieres llamar al número?";
+"confirm_enviar_email" = "¿Quieres enviar un email?";
 
 /* alerts */
 "alert_account_type_not_allow_to_submit_ads" = "Your account type doesn't allow you to post ads, please contact the Administrator";
@@ -238,10 +239,10 @@
 "valider_incorrect_url" = "Please enter a valid URL";
 
 /* infinity scroll control */
-"inf_scroll_load" = "Load";
-"inf_scroll_loading" = "Loading";
-"inf_scroll_next" = "next";
-"inf_scroll_last" = "last";
+"inf_scroll_carga" = "Carga";
+"inf_scroll_cargando" = "Cargando";
+"inf_scroll_siguiente" = "siguiente";
+"inf_scroll_ultimo" = "último";
 
 /* infinity scroll targets */
 "inf_scroll_target_anuncio" = "Anuncio";
@@ -263,15 +264,15 @@
 "blankSlate_messages_title" = "title";
 "blankSlate_messages_message" = "message";
 "blankSlate_browse_title" = "";
-"blankSlate_browse_message" = "There are no ads in the category.";
+"blankSlate_browse_mensaje" = "No hay anuncios en la categoría.";
 "blankSlate_accountType_title" = "";
 "blankSlate_accountType_message" = "No accounts by the type were found.";
 "blankSlate_accountTypeChar_title" = "";
 "blankSlate_accountTypeChar_message" = "No accounts were found by \"%@\" query.";
-"blankSlate_there_no_accounts_found" = "No accounts were found, please try different search criteria.";
+"blankSlate_cuentas_no_encontradas" = "No se encontraron resultados, por favor prueba un diferente criterio de búsqueda.";
 "blankSlate_no_comments" = "There are no comments";
-"blankSlate_searchResults_title" = "No ads were found";
-"blankSlate_searchResults_message" = "Please try different search criteria";
+"blankSlate_searchResults_titulo" = "No se encontraron anuncios";
+"blankSlate_searchResults_mensaje" = "Por favor prueba un diferente criterio de búsqueda";
 "blankSlate_editProfile_title" = "";
 "blankSlate_editProfile_message" = "There are no fields specific to your account type.";
 "blankSlate_nearbyAds_title" = "";
@@ -331,13 +332,13 @@
 
 /* feedback */
 "feedback_topic" = "Topic";
-"feedback_subject" = "Subject";
+"feedback_asunto" = "Asunto";
 "feedback_message" = "Message";
 "feedback_feedback" = "Feedback";
-"feedback_bug_report" = "Bug Report";
-"feedback_feature_request" = "Request for a feature";
-"feedback_contact_us" = "Contact Us";
-"feedback_completed" = "Thanks! Your request has been sent; our managers will get back to you soon.";
+"feedback_reportar_error" = "Reportar error";
+"feedback_solicitar_funcion" = "Solicitud de una función";
+"feedback_contactenos" = "Contáctenos";
+"feedback_completado" = "¡Gracias! Tu solicitud ha sido enviada; nuestros gerentes le responderán pronto.";
 
 "inAppPurchase_invalid_product_identifier" = "Invalid product identifier, please contact the Administrator";
 

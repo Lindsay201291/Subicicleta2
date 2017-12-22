@@ -50,7 +50,7 @@ static NSInteger const kTagSelectedMediaLabel = 80;
     UIButton *cancelButton = (UIButton *)[self.view viewWithTag:kTagButtonClose];
     UIButton *doneButton = (UIButton *)[self.view viewWithTag:kTagButtonDone];
 
-    selectedMedia.text = FLLocalizedString(@"label_choose_photo");
+    selectedMedia.text = FLLocalizedString(@"label_elegir_foto");
 	pickerTopView.layer.backgroundColor = [UIColor hexColor:@"2e393b"].CGColor;
 	pickerBottomView.layer.backgroundColor = [UIColor hexColor:@"2e393b"].CGColor;
     [cancelButton setTitle:FLLocalizedString(@"button_cancelar") forState:UIControlStateNormal];

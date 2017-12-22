@@ -86,8 +86,8 @@ static NSString * const viewNidName = @"FLInfiniteScrollControl";
 
 - (void)defineMessagesWithStackType:(FLLoadingStackType)type withLoadAmount:(NSInteger)amount withTargetName:(NSString *)target {
     NSString *messageTail  = F(@"%@ %ld %@", [self stringFromType:type], (long)amount, target);
-    self.autoLoadMessage   = F(@"%@ %@",FLLocalizedString(@"inf_scroll_loading"), messageTail);
-    self.manualLoadMessage = F(@"%@ %@",FLLocalizedString(@"inf_scroll_load"), messageTail);
+    self.autoLoadMessage   = F(@"%@ %@",FLLocalizedString(@"inf_scroll_cargando"), messageTail);
+    self.manualLoadMessage = F(@"%@ %@",FLLocalizedString(@"inf_scroll_carga"), messageTail);
 }
 
 - (void)defineMessagesWithTotal:(NSInteger)total withCurrentAmount:(NSInteger)amount withBatch:(NSInteger)batch withTarget:(NSString *)target {
@@ -106,9 +106,9 @@ static NSString * const viewNidName = @"FLInfiniteScrollControl";
 - (NSString *)stringFromType:(FLLoadingStackType)type {
     switch (type) {
         case FLLoadingStackTypeLast:
-            return FLLocalizedString(@"inf_scroll_last");
+            return FLLocalizedString(@"inf_scroll_ultimo");
         case FLLoadingStackTypeNext:
-            return FLLocalizedString(@"inf_scroll_next");
+            return FLLocalizedString(@"inf_scroll_siguiente");
     }
     return nil;
 }
