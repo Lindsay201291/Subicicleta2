@@ -34,7 +34,7 @@ static NSInteger  const kKeywordSearchMinSymbols      = 3;
         self.searchResultsTableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
 
         UIBarButtonItem *cancelButton = [UIBarButtonItem appearanceWhenContainedIn:UISearchBar.class, nil];
-        [cancelButton setTitle:FLLocalizedString(@"button_search_cancel")];
+        [cancelButton setTitle:FLLocalizedString(@"button_search_cancelar")];
 
         UINib *ksCellNib = [UINib nibWithNibName:kNibNameKeywordSearchCell bundle:nil];
         [self.searchResultsTableView registerNib:ksCellNib forCellReuseIdentifier:kKeywordSearchCellIdentifier];
@@ -89,7 +89,7 @@ static NSInteger  const kKeywordSearchMinSymbols      = 3;
                                        _total   = FLTrueInt(results[@"calc"]);
 
                                        if (!_total) {
-                                           [self updateSearchResultsLabelText:FLLocalizedString(@"keyword_search_no_results")];
+                                           [self updateSearchResultsLabelText:FLLocalizedString(@"keyword_search_sin_resultados")];
                                        }
                                        else [self updateSearchResultsLabelText:nil];
                                    }

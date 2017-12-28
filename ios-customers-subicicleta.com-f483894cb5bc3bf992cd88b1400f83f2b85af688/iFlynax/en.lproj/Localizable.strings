@@ -39,8 +39,8 @@
 "free" = "Free";
 "facebook_display_name" = "iFlynax";
 "mensajeria_must_logged_in" = "Tu debes tener una cuenta y estar logueado para la mensajería.";
-"keyword_search_no_results" = "No Results";
-"sort_listings_by" = "Sort ads by";
+"keyword_search_sin_resultados" = "Sin resultados";
+"ordenar_listings_por" = "Ordenar anuncios por";
 "ad_section_comments" = "Comments";
 "listing_category" = "Category";
 "listing_sub_category" = "Subcategory";
@@ -131,7 +131,7 @@
 "placeholder_message" = "Message";
 "placeholder_yt_url_or_id" = "Enter a YouTube video URL or ID";
 "placeholder_fieldPhone_code" = "Code";
-"placeholder_fieldPhone_area" = "Area";
+"placeholder_fieldPhone_area" = "Área";
 "placeholder_fieldPhone_numero" = "Número";
 "placeholder_escribe_mensaje" = "Escribe el mensaje...";
 "placeholder_from" = "From";
@@ -149,7 +149,7 @@
 
 /* buttons */
 "button_anuncios_vendedor_cont" = "Otros Anuncios (%d)";
-"button_search_cancel" = "Cancel";
+"button_search_cancelar" = "Cancelar";
 "button_settings" = "Settings";
 "button_ok" = "Ok";
 "button_cancelar" = "Cancelar";
@@ -234,7 +234,7 @@
 "valider_completar_el_campo" = "Complete el campo";
 "valider_seleccione_una_opcion" = "Seleccione una opción";
 "valider_apropiado_email_address" = "Por favor ingrese un email adecuado";
-"valider_password_debil" = "La contraseña debe tener entre 5 y 20 caracteres y contener al menos un dígito.";
+"valider_password_debil" = "La contraseña debe tener entre 5 y 20 caracteres y al menos una letra y un dígito.";
 "valider_yt_valid_url_or_id" = "Please enter a proper YouTube video URL or ID";
 "valider_incorrect_url" = "Please enter a valid URL";
 

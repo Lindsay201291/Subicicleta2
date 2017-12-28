@@ -49,20 +49,28 @@
 
 - (BOOL)isValid {
     if (self.model.required) {
-        //if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber) {
-        if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber || [_valueArea isEqual: @""] || [_valueNumber isEqual: @""]) {
+        //Validar not null
+        if ((self.codeField && !_valueCode) || !_valueArea || !_valueNumber || [_valueArea isEmpty] || [_valueNumber isEmpty]) {
             self.errorMessage = FLLocalizedString(@"valider_completar_el_campo");
             return NO;
         }
-
-        /*NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-        
-        if ([_valueArea rangeOfCharacterFromSet:notDigits].location != NSNotFound || [_valueNumber  rangeOfCharacterFromSet:notDigits].location != NSNotFound)
+    }
+    if (![_valueArea isEmpty] || ![_valueNumber isEmpty]) {
+        //Validar numérico
+        NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+        if ([_valueArea rangeOfCharacterFromSet:notDigits].location != NSNotFound || [_valueNumber rangeOfCharacterFromSet:notDigits].location != NSNotFound)
         {
             self.errorMessage = @"Campo numérico";
             return NO;
-        }*/
+        }
+        //Validar área y número
+        if ([_valueArea length] < 4 || [_valueNumber length] < 7)
+        {
+            self.errorMessage = @"Área o Número inválidos";
+            return NO;
+        }
     }
+    
     return YES;
 }
 

@@ -236,7 +236,7 @@ static NSString * const kBrowseCellIdentifier     = @"browseCellIdentifier";
 }
 
 - (void)displaySortingUI {
-    CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:FLLocalizedString(@"sort_listings_by")];
+    CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:FLLocalizedString(@"ordenar_listings_por")];
     for (NSDictionary *field in _sortingFields) {
         NSString *_title = field[@"title"];
         NSDictionary *_sortingField = [self sortFieldWithKey:field[@"skey"] type:field[@"stype"]];

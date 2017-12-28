@@ -10,6 +10,7 @@
 #import "FLTextField.h"
 
 static NSInteger const kCodeLimit = 4;
+static NSInteger const kNumberLimit = 7;
 
 @interface FLFieldPhoneCell () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet FLTextField *codeField;
@@ -65,11 +66,13 @@ static NSInteger const kCodeLimit = 4;
         [self highlightInput:_codeField highlighted:highlighted];
     }
 
-    if ([_areaField.text isEmpty]) {
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+
+    if ([_areaField.text isEmpty] || [_areaField.text length] < kCodeLimit || [_areaField.text rangeOfCharacterFromSet:notDigits].location != NSNotFound) {
         [self highlightInput:_areaField highlighted:highlighted];
     }
 
-    if ([_numberField.text isEmpty]) {
+    if ([_numberField.text isEmpty] || [_numberField.text length] < kNumberLimit || [_numberField.text rangeOfCharacterFromSet:notDigits].location != NSNotFound) {
         [self highlightInput:_numberField highlighted:highlighted];
     }
 
