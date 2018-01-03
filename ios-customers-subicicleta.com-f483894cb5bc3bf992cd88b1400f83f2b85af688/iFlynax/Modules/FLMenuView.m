@@ -274,6 +274,8 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
         }
 		else if (indexPath.row == titleKeys.count - 1) { // favorites
             cell.bottomSeparator = NO;
+            if ([FLFavorites itemsCount])
+                [cell setBadgeInteger:[FLFavorites itemsCount]];
 		}
 	}
 
@@ -285,7 +287,17 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
             NSDictionary *sectionInfo = _browseSection[indexPath.row];
             rowImageName = sectionInfo[@"icon"];
             rowTitle = sectionInfo[@"name"];
-
+            
+            if ([rowTitle isEqualToString:FLLocalizedString(@"menu_agregado_recientemente")]) {
+                //[cell setBadgeInteger:100];
+                //Jump line
+                [cell.titleLabel setNumberOfLines:0];
+                CGSize labelSize = [cell.titleLabel.text
+                    sizeWithAttributes:@{NSFontAttributeName:cell.titleLabel.font}];
+                cell.titleLabel.frame = CGRectMake(
+                    cell.titleLabel.frame.origin.x, cell.titleLabel.frame.origin.y,
+                    cell.titleLabel.frame.size.width, labelSize.height);
+            }
             if ([sectionInfo[@"icon"] isEqualToString:@"menu_search_around_me"]) {
                 [self forceSelectTheItem:indexPath ifCacheHaveKey:kSessionStaticMapDidTapped];
             }
@@ -370,8 +382,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 }
                 else
                     controllerIdentifier = kStoryBoardMyMessagesView;*/
+                
                 //borrar
-                UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
+                /*UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
                     message:nil
                     delegate:self
                     cancelButtonTitle:nil
@@ -385,6 +398,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 [viewAlert addSubview: textView];
                 [viewAlert setValue: textView forKey:@"accessoryView"];
                 [viewAlert show];
+                controllerIdentifier = kStoryBoardMyProfileRootView;*/
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];
                 controllerIdentifier = kStoryBoardMyProfileRootView;
                 //borrar
             }
@@ -411,8 +427,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 if (indexPath.row == 1) {
                     // Descomentar para funcionamiento normal del menu Publica Aqui
                     /*[FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];*/
+                    
                     //borrar
-                    UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
+                    /*UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
                         message:nil
                         delegate:self
                         cancelButtonTitle:nil
@@ -425,7 +442,10 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                     [textView setDataDetectorTypes:UIDataDetectorTypeAll];
                     [viewAlert addSubview: textView];
                     [viewAlert setValue: textView forKey:@"accessoryView"];
-                    [viewAlert show];
+                    [viewAlert show];*/
+                    
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];
+                    
                     //borrar
                 }
             }
