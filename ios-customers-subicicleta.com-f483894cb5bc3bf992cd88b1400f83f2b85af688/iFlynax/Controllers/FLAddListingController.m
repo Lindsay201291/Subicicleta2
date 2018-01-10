@@ -165,7 +165,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 */
 
 - (void)buildSelectCategoryStep {
-    self.title = FLLocalizedString(@"screen_seleccione_categoria");
+    self.title = FLLocalizedString(@"screen_seleccione_categoria_title");
 
     _formState = FLFormStateSelectCategory;
     _tableView.tableHeaderView = nil;
@@ -202,7 +202,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             _listingTypeSection.headerHeight = 15;
             [self.manager addSection:_listingTypeSection];
 
-            _categoriesSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_category")];
+            _categoriesSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_categoria")];
             _categoriesSection.headerHeight = 25;
 
             FLFieldSelect *field = [FLFieldSelect withTitle:FLLocalizedString(@"listing_type") options:listingTypes];
@@ -226,7 +226,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             // get categories for the listing type
             NSArray *categories = [FLCache objectWithKey:kCacheCategoriesOneLevel][_adForm.listingType.key];
 
-            _categoriesSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_category")];
+            _categoriesSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_categoria")];
             _categoriesSection.headerHeight = 15;
 
             [self appendCategoryFieldWithCategories:categories completion:^{
@@ -250,7 +250,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (UIButton *)selectCategoryBtn {
     if (_selectCategoryBtn == nil) {
         _selectCategoryBtn = [[UIButton alloc] initWithFrame:CGRectMake(15, 0, self.tableView.width-30, 44)];
-        [_selectCategoryBtn setTitle:FLLocalizedString(@"screen_seleccione_categoria") forState:UIControlStateNormal];
+        [_selectCategoryBtn setTitle:FLLocalizedString(@"screen_seleccione_categoria_btn") forState:UIControlStateNormal];
         [_selectCategoryBtn setBackgroundImage:[UIImage imageNamed:@"button1"] forState:UIControlStateNormal];
         [_selectCategoryBtn addTarget:self action:@selector(selectCategoryBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -467,7 +467,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)buildFormTable {
-    self.title = self.editMode ? self.listing.title : FLLocalizedString(@"screen_al_fillout_form");
+    self.title = self.editMode ? self.listing.title : FLLocalizedString(@"screen_al_fillout_formulario");
     _categoryBox.planTitle = _adForm.plan ? _adForm.plan.title : FLLocalizedString(@"select_plan");
     _categoryBox.editCategoryBtnActive = !self.editMode;
     _categoryBox.planBtnActive = YES;
@@ -697,7 +697,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
         [values addObject:categoryModel];
     }
 
-    NSString *fieldTitleKey = _categoriesSection.items.count > 0 ? @"listing_sub_category" : @"listing_category";
+    NSString *fieldTitleKey = _categoriesSection.items.count > 0 ? @"listing_sub_category" : @"listing_categoria";
     FLFieldSelect *field = [FLFieldSelect withTitle:FLLocalizedString(fieldTitleKey) options:values];
 
     // for edit mode only
@@ -883,7 +883,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 
 - (void)categoryBox:(FLCategoryBox *)box buttonTapped:(FLCategoryBoxBtn)button {
     if (button == FLCategoryBoxBtnEdit) {
-        [self displayConfirmWithTitle:@"dialog_confirm_action" message:@"dialog_change_category_notice" confirmBlock:^{
+        [self displayConfirmWithTitle:@"dialog_confirmar_action" message:@"dialog_change_category_notice" confirmBlock:^{
 
             /* save fillout state */
             [_savedHeaders removeAllObjects];
@@ -1251,7 +1251,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 
 - (void)cancelButtonDidTap:(UIButton *)button {
     if (_adForm.listingType != nil && _adForm.category != nil && _adForm.fields.count) {
-        [self displayConfirmWithTitle:@"dialog_title_warning" message:@"dialog_discard_listing" confirmBlock:^{
+        [self displayConfirmWithTitle:@"dialog_title_warning" message:@"dialog_descartar_listing" confirmBlock:^{
             [FLPlansManager restoreToDefaults];
             [_adForm resetForm];
             [self dismissVC];

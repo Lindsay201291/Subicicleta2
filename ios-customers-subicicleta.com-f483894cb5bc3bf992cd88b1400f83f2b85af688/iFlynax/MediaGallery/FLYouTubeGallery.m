@@ -30,7 +30,7 @@
     
     // action sheet init
     [self actionCancelItemTitle:FLLocalizedString(@"button_cancelar")];
-    [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_remove")];
+    [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_eliminar")];
 }
 
 - (void)nibsOrClassesCollectionViewRegistration {

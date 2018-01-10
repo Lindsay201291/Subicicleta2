@@ -127,7 +127,7 @@
 }
 
 - (NSString *)uploadinMessageAtIndex:(NSInteger)index {
-    return F(FLLocalizedString(@"dialog_saving_picture"), (int)index, (int)_itemsToUpload.count);
+    return F(FLLocalizedString(@"dialog_saving_imagenes"), (int)index, (int)_itemsToUpload.count);
 }
 
 - (UIImage *)cropImageIfNecessary:(UIImage *)image {

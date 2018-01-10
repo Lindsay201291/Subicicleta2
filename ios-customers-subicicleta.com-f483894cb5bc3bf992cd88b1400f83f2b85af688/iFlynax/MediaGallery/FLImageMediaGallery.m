@@ -41,9 +41,9 @@
     
     // action sheet init
     [self actionCancelItemTitle:FLLocalizedString(@"button_cancelar")];
-    [self actionAddItemWithTitle:FLLocalizedString(@"button_action_make_primary")];
-    [self actionAddItemWithTitle:FLLocalizedString(@"button_action_edit_description")];
-    [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_remove")];
+    [self actionAddItemWithTitle:FLLocalizedString(@"button_action_make_primaria")];
+    [self actionAddItemWithTitle:FLLocalizedString(@"button_action_edit_descripcion")];
+    [self actionAddDestructiveItemWithTitle:FLLocalizedString(@"button_eliminar")];
     
     _okTitle = FLLocalizedString(@"button_ok");
 }
@@ -169,7 +169,7 @@
 
 - (UIAlertView *)alertViewDesc {
     if (!_alertViewDesc) {
-        _alertViewDesc = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_edit_description")
+        _alertViewDesc = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_title_editar_descripcion")
                                                     message:nil
                                                    delegate:self
                                           cancelButtonTitle:FLLocalizedString(@"button_cancelar")

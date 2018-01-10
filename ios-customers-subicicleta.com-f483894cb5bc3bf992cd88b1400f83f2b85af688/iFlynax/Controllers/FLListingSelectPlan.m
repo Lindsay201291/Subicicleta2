@@ -35,7 +35,7 @@
     [_selectPlanBtn setTitle:FLLocalizedString(@"button_select_plan") forState:UIControlStateNormal];
 
     if (!_upgradeMode) {
-        self.title = FLLocalizedString(@"screen_select_plan");
+        self.title = FLLocalizedString(@"screen_seleccionar_plan");
 
         _selectPlanBtn.enabled = (_plansManager.selectedPlan != nil);
         _entries = _plansManager.plans;
@@ -92,7 +92,7 @@
     _entries = response;
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.title = FLLocalizedString(@"screen_select_plan");
+        self.title = FLLocalizedString(@"screen_seleccionar_plan");
         [_collectionView reloadData];
         [self fadeInCollectionView];
         _selectPlanBtn.hidden = !response.count;

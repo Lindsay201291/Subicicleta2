@@ -36,13 +36,13 @@
 /*"aboutApp_descripcion" = "Aquí compradores y vendedores se encuentran directamente.\n\nComprar y vender es fácil y rápido. Descarga la mejor aplicación enfocada a la publicación de avisos clasificados para la compra y venta de artículos nuevos y usados relacionados exclusivamente al ciclismo, encontrarás: bicicletas, accesorios, repuestos, ropa, y más.\n¡Vende sin intermediarios!\nQueremos unir a las personas y por eso siempre podrás contactar directamente con el vendedor del producto que desees comprar.\nCaracterísticas:\n- Filtros para búsqueda por categoría, marca, ubicación, nuevo o usado, precio, y otros.\n-Búsqueda por coincidencia de palabras. Sugerencias de búsqueda mientras escribes.\n- Vista detallada de la publicación, incluye la galería de imágenes (con posibilidad de hacer zoom), información del producto y también del vendedor.\n- Marca tus artículos favoritos, para no perder de vista lo que te interesa. Puedes enviarlos a tus amigos por e-mail, WhatsApp; compártelos en Facebook y Twitter.\n- Contacto directo con el vendedor.\n\n¡Si públicas, lo vendes!";*/
 "selected_count" = "%d selected";
 "progress_adding" = "Adding...";
-"free" = "Free";
+"gratis" = "Gratis";
 "facebook_display_name" = "iFlynax";
 "mensajeria_must_logged_in" = "Tu debes tener una cuenta y estar logueado para la mensajería.";
 "keyword_search_sin_resultados" = "Sin resultados";
 "ordenar_listings_por" = "Ordenar anuncios por";
 "ad_section_comments" = "Comments";
-"listing_category" = "Category";
+"listing_categoria" = "Categoría";
 "listing_sub_category" = "Subcategory";
 
 /* Settings */
@@ -72,7 +72,9 @@
 "screen_misAnuncios_vista" = "Mis Anuncios";
 "screen_cambiar_contraseña" = "Contraseña";
 "screen_seleccione_categoria" = "Seleccione una Categoría";
-"screen_al_fillout_form" = "Fill Out Form";
+"screen_seleccione_categoria_title" = "Publica Aquí";
+"screen_seleccione_categoria_btn" = "Continuar";
+"screen_al_fillout_formulario" = "Publica Aquí";
 "screen_legal_information" = "Legal Information";
 "screen_accounts_busqueda_alfabetica" = "Búsqueda Alfabética";
 "screen_accounts_busqueda_avanzada" = "Búsqueda Avanzada";
@@ -89,7 +91,7 @@
 "screen_add_comment" = "Add Comment";
 "screen_ad_statistics" = "Stat";
 "screen_purchase" = "Your Order";
-"screen_select_plan" = "Available Plans";
+"screen_seleccionar_plan" = "Planes Disponibles";
 "screen_search_anuncios_encontrados" = "Anuncios encontrados: {number}";
 "screen_buscar_vendedor" = "Resultados Búsqueda";
 "screen_editar_perfil" = "Editar Perfil";
@@ -129,7 +131,7 @@
 "placeholder_title" = "Title";
 "placeholder_author" = "Author";
 "placeholder_message" = "Message";
-"placeholder_yt_url_or_id" = "Enter a YouTube video URL or ID";
+"placeholder_yt_url_o_id" = "Ingrese el URL a YouTube";
 "placeholder_fieldPhone_code" = "Code";
 "placeholder_fieldPhone_area" = "Área";
 "placeholder_fieldPhone_numero" = "Número";
@@ -144,7 +146,7 @@
 "label_email" = "E-Mail";
 "label_awating_approval" = "Awaiting Approval";
 "label_caracteres_restantes" = "%d Caracteres restantes";
-"label_primary" = "Primary";
+"label_principal" = "Principal";
 "label_elegir_foto" = "Elige una foto";
 
 /* buttons */
@@ -171,7 +173,7 @@
 "button_paso_siguiente" = "Paso siguiente";
 "button_see_more" = "See More";
 "button_alert_ok" = "OK, let's go!";
-"button_remove" = "Remove";
+"button_eliminar" = "Eliminar";
 "button_aceptar_agreement_checkbox" = "Yo acepto";
 "button_accept_agreement_button" = "Terms of Use";
 "button_pay_now" = "Pay Now";
@@ -187,10 +189,10 @@
 "button_filter" = "Filter";
 
 // my ads
-"button_myads_edit" = "Edit";
-"button_myads_view_statistics" = "View Stats";
+"button_myads_editar" = "Editar";
+"button_myads_view_estadisticas" = "Ver estadísticas";
 "button_myads_upgrade_to_featured" = "Upgrade to Featured";
-"button_myads_upgrade_renew" = "Upgrade/Renew Plan";
+"button_myads_upgrade_renovar" = "Paquete de actualización / renovación";
 "button_myads_make_payment" = "Make a Payment";
 "button_myads_continue_posting" = "Continue Posting";
 
@@ -200,8 +202,8 @@
 "button_gallery_next" = "Next";
 
 // actions
-"button_action_make_primary" = "Make Primary";
-"button_action_edit_description" = "Edit Description";
+"button_action_make_primaria" = "Hacer principal";
+"button_action_edit_descripcion" = "Editar Descripción";
 
 /* dropdown titles */
 "dropdown_titulo_tipos_cuenta" = "Tipo de Cuenta";
@@ -224,7 +226,7 @@
 "alert_title_felicitaciones" = "Felicitaciones!";
 "alert_en_construccion" = "Sección en Construcción!";
 "alert_registration_complete_auto_login" = "You have logged in to the account area automatically; now you can add listings and use other features through the app.";
-"alert_title_edit_description" = "Edit Description";
+"alert_title_editar_descripcion" = "Editar Descripción";
 "alert_no_plan_selected" = "Please select a plan.";
 "alert_search_forms_arent_configured" = "Search forms aren't configured, please contact the Administrator.";
 "alert_accept_agreement_required" = "Accept the 'Agreement Field' is required.";
@@ -280,10 +282,10 @@
 
 /* dialogs */
 "dialog_title_warning" = "Warning";
-"dialog_confirm_action" = "Please make sure you're ready to proceed";
+"dialog_confirmar_action" = "Asegúrese de estar listo para continuar";
 "dialog_change_category_notice" = "You may lose the data entered if you change a category, are you sure you want to proceed?";
-"dialog_discard_listing" = "You'll lose the data entered if you click the Cancel button, are you sure you want to proceed?";
-"dialog_confirm_listing_removal" = "The ad will be removed irretrievably, are you sure you want to proceed?";
+"dialog_descartar_listing" = "Se pierden los datos introducidos si hace clic en el botón Cancelar, ¿está seguro de que desea continuar?";
+"dialog_confirm_listing_remover" = "El anuncio se eliminará irremediablemente, ¿está seguro de que desea continuar?";
 "dialog_email_changing" = "Enter the new email and click OK.";
 "dialog_confirm_email_changing" = "A confirmation link will be sent to your new email; please enter the new email and click OK.";
 "dialog_email_saved_as_tmp" = "The confirmation link has been sent to the new email; please check it to confirm the new email address.";
@@ -300,8 +302,8 @@
 
 /* YouTube */
 "yt_controller_title" = "YouTube Video Add";
-"yt_preview" = "YouTube preview";
-"yt_preview_loading" = "Loading preview...";
+"yt_vista_previa" = "YouTube vista previa";
+"yt_preview_carga" = "Cargando vista previa...";
 "yt_video_is_available" = "The video is available";
 "yt_video_is_not_avilable" = "The video is not available";
 "yt_video_is_not_found" = "The video is not found";
@@ -316,9 +318,9 @@
 "add_listing_save_data_fail" = "Failed to save the ad, please contact the Administrator.";
 "edit_listing_save_data_fail" = "Failed to edit the ad, please contact the Administrator.";
 "remove_listing_fail" = "Failed to remove the ad, please contact the Administrator.";
-"dialog_saving_picture" = "Saving pics: %d of %d\nPlease wait.";
-"dialog_listing_removed" = "The ad has been successfully removed.";
-"dialog_deleting" = "Removing...\nPlease wait";
+"dialog_saving_imagenes" = "Guardando imágenes: %d de %d\nPor favor espere.";
+"dialog_listing_eliminado" = "El anuncio ha sido eliminado con éxito.";
+"dialog_borrando" = "Eliminando...\nPor favor espere";
 "plans_synchronization" = "Synchronization...";
 "no_plans_category" = "Unfortunately, there are no plans connected to the category; please select another category or contact the Administrator.";
 "order_pay_by_paypal" = "Pay with PayPal";

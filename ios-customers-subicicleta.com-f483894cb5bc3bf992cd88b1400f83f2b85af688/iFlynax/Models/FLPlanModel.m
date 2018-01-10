@@ -114,7 +114,7 @@
         _localizedPrice = FLLocalizedString(@"available_package");
     }
     else if (_price == 0) {
-        _localizedPrice = FLLocalizedString(@"free");
+        _localizedPrice = FLLocalizedString(@"gratis");
     }
     else if ([self paymentIsRequired]) {
         NSNumberFormatter *formatter = [self priceFormatter];

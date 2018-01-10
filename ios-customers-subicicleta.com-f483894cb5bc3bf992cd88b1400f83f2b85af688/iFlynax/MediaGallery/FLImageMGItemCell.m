@@ -35,7 +35,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    _primaryLabel.text = FLLocalizedString(@"label_primary");
+    _primaryLabel.text = FLLocalizedString(@"label_principal");
     self.bottomView.transform = _hideDownTransform;
 }
 

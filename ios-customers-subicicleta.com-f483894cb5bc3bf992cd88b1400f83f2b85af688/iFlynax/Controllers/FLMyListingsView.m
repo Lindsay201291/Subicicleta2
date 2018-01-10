@@ -110,7 +110,7 @@
     CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:nil];
 
     /* edit listing || continue posting */
-    NSString *editBtnTitleKey = @"button_myads_edit";
+    NSString *editBtnTitleKey = @"button_myads_editar";
     if (listing.status == FLListingStatusIncomplete) {
         if (![listing.formLastStep isEqualToString:kFormLastStepCheckout]) {
             editBtnTitleKey = @"button_myads_continue_posting";
@@ -127,7 +127,7 @@
 
     if (listing.status == FLListingStatusActive) {
         /* statistics */
-        [sheet addButtonWithTitle:FLLocalizedString(@"button_myads_view_statistics") block:^{
+        [sheet addButtonWithTitle:FLLocalizedString(@"button_myads_view_estadisticas") block:^{
             FLNavigationController *adStatisticsNC = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardListingStatisticsNC];
             ((FLAdStatistics *)adStatisticsNC.visibleViewController).listing = listing;
             
@@ -162,9 +162,9 @@
     /* remove listing */
     FLMyListingsCell *cell = notification.object;
     
-    [sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_remove") block:^{
-        CCActionSheet *confirmSheet = [[CCActionSheet alloc] initWithTitle:FLLocalizedString(@"dialog_confirm_listing_removal")];
-        [confirmSheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_remove") block:^{
+    [sheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_eliminar") block:^{
+        CCActionSheet *confirmSheet = [[CCActionSheet alloc] initWithTitle:FLLocalizedString(@"dialog_confirm_listing_remover")];
+        [confirmSheet addDestructiveButtonWithTitle:FLLocalizedString(@"button_eliminar") block:^{
             [self removeListingById:listing.lId atIndexPath:cellIndexPath];
         }];
         [confirmSheet addCancelButtonWithTitle:FLLocalizedString(@"button_cancelar")];
@@ -236,7 +236,7 @@
 }
 
 - (void)addUpgradeRenewButtonIntoSheet:(CCActionSheet *)sheet listing:(FLMyAdShortDetailsModel *)listing featured:(BOOL)featured {
-    NSString *sheetBtnTitleKey = featured ? @"button_myads_upgrade_to_featured" : @"button_myads_upgrade_renew";
+    NSString *sheetBtnTitleKey = featured ? @"button_myads_upgrade_to_featured" : @"button_myads_upgrade_renovar";
 
     [sheet addButtonWithTitle:FLLocalizedString(sheetBtnTitleKey) block:^{
         FLNavigationController *selectPlanNC = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardAASelectPlanView];
@@ -317,14 +317,14 @@
 }
 
 - (void)removeListingById:(NSInteger)listingId atIndexPath:(NSIndexPath *)indexPath {
-    [FLProgressHUD showWithStatus:FLLocalizedString(@"dialog_deleting")];
+    [FLProgressHUD showWithStatus:FLLocalizedString(@"dialog_borrando")];
 
     [flynaxAPIClient postApiItem:kApiItemRequests
                       parameters:@{@"cmd": kApiItemRequests_removeListing,
                                    @"lid": @(listingId)}
                       completion:^(NSDictionary *response, NSError *error) {
                           if (!error && [response isKindOfClass:NSDictionary.class] && FLTrueBool(response[@"success"])) {
-                              [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"dialog_listing_removed")];
+                              [FLProgressHUD showSuccessWithStatus:FLLocalizedString(@"dialog_listing_eliminado")];
 
                               // remove cell from table
                               [self.entries removeObjectAtIndex:indexPath.row];

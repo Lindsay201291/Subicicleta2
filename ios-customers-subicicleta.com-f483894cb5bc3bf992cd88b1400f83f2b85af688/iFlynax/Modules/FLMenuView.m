@@ -217,7 +217,9 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 		case FLMenuSectionHome:
 			return 1;
 		case FLMenuSectionAccountArea:
+            //descomentar para habilitar menu-item
             return IS_LOGIN ? ([FLAccount canPostAds] ? 5 : 3) : 3;
+            //return IS_LOGIN ? ([FLAccount canPostAds] ? 4 : 2) : 2;
 		case FLMenuSectionBrowse:
 			return _browseSection.count;
 		case FLMenuSectionAccountTypes:
@@ -255,12 +257,16 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
             [titleKeys addObject:username];
 
             if ([FLAccount canPostAds]) {
+                //descomentar para habilitar menu-item
                 [titleKeys addObjectsFromArray:@[@"menu_agregar_anuncio", @"menu_mis_anuncios"]];
+                //[titleKeys addObjectsFromArray:@[@"menu_mis_anuncios"]];
             }
             [titleKeys addObjectsFromArray:@[@"menu_mis_mensajes", @"menu_favoritos"]];
 		}
         else {
+            //descomentar para habilitar menu-item
             [titleKeys addObjectsFromArray:@[@"menu_iniciar_sesion", @"menu_agregar_anuncio", @"menu_favoritos"]];
+            //[titleKeys addObjectsFromArray:@[@"menu_iniciar_sesion", @"menu_favoritos"]];
         }
 
 		cell.titleLabel.text = FLLocalizedString(titleKeys[indexPath.row]);
@@ -374,14 +380,16 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 				controllerIdentifier = kStoryBoardMyProfileRootView;
 
             // ADD LISTINGS
+            //descomentar para el desfase de menu-items
             else if (indexPath.row == 1) {
+            //else if (indexPath.row == 999) {
             // Descomentar para funcionamiento normal del menu Publica Aqui
-                /*if ([FLAccount canPostAds]) {
+                if ([FLAccount canPostAds]) {
                     controllerIdentifier = kStoryBoardAAFillOutFormView;
                     presentationVC       = YES;
                 }
                 else
-                    controllerIdentifier = kStoryBoardMyMessagesView;*/
+                    controllerIdentifier = kStoryBoardMyMessagesView;
                 
                 //borrar
                 /*UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
@@ -400,13 +408,15 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                 [viewAlert show];
                 controllerIdentifier = kStoryBoardMyProfileRootView;*/
                 
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];
-                controllerIdentifier = kStoryBoardMyProfileRootView;
+     /*           [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];
+                controllerIdentifier = kStoryBoardMyProfileRootView;*/
                 //borrar
             }
 
             //MY LISTINGS
+            //descomentar para el desfase de menu-items
             else if (indexPath.row == 2) {
+            //else if (indexPath.row == 1) {
                 if ([FLListingTypes typesCount] == 1)
                     controllerIdentifier = kStoryBoardMyListingsView;
                 else
@@ -414,19 +424,25 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
             }
 
             // MY MESSAGES
+            //descomentar para el desfase de menu-items
             else if (indexPath.row == 3)
+            //else if (indexPath.row == 2)
                 controllerIdentifier = kStoryBoardMyMessagesView;
 		}
 		else {
 
             // AUTH SCREEN
+            //descomentar para post add after login at indexPath
             if (indexPath.row == 0 || indexPath.row == 1) {
+            //if (indexPath.row == 0) {
 				controllerIdentifier = kStoryBoardLoginFormView;
 
                 // Post ad
+                //descomentar para post add after login at indexPath
                 if (indexPath.row == 1) {
+                //if (indexPath.row == 999) {
                     // Descomentar para funcionamiento normal del menu Publica Aqui
-                    /*[FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];*/
+                    [FLAppSession addItem:@(YES) forKey:kSessionPostAdScreenAfterLogin];
                     
                     //borrar
                     /*UIAlertView *viewAlert = [[UIAlertView alloc] initWithTitle:FLLocalizedString(@"alert_en_construccion")
@@ -444,7 +460,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
                     [viewAlert setValue: textView forKey:@"accessoryView"];
                     [viewAlert show];*/
                     
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];
+         /*           [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.subicicleta.com"]];*/
                     
                     //borrar
                 }
@@ -470,7 +486,7 @@ typedef NS_ENUM(NSInteger, FLMenuSection) {
 				contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardRecentlyAdsRootView];
 			}
 		}
-        /*  Menu reducido sin busqueda de anuncios cercanos: para ampliar menu, descomentar hasta linea 423 y comentar linea 424... */
+        /*  Menu reducido sin busqueda de anuncios cercanos*/
 		/*else if (indexPath.row == 1) {
 			contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardNearbyAdsView];
 		}*/

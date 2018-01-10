@@ -34,7 +34,7 @@ static NSString * const kArrowRight = @"❮";
 
         self.planBox.centerLine = NO;
         self.planBtnActive      = NO;
-        self.titleLabel.text    = FLLocalizedString(@"listing_category");
+        self.titleLabel.text    = FLLocalizedString(@"listing_categoria");
         self.planTitle          = FLLocalizedString(@"select_plan");
         self.breadcrumbs        = [NSMutableArray array];
 

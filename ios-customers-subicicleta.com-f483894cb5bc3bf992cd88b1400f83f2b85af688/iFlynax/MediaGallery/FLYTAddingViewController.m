@@ -75,7 +75,7 @@
     
     _statusLabel.textColor = FLHexColor(kColorPlaceholderFont);
 
-    _ytUrlOrIdField.placeholder = FLLocalizedString(@"placeholder_yt_url_or_id");
+    _ytUrlOrIdField.placeholder = FLLocalizedString(@"placeholder_yt_url_o_id");
     _ytUrlOrIdField.text = @"";
     [_addButton setTitle:FLLocalizedString(@"button_agregar") forState:UIControlStateNormal];
     _ytPlayerView.delegate = self;
@@ -113,11 +113,11 @@
 }
 
 - (void)showPreviewMessage {
-    [self showMessage:FLLocalizedString(@"yt_preview") withLoading:NO];
+    [self showMessage:FLLocalizedString(@"yt_vista_previa") withLoading:NO];
 }
 
 - (void)showLoadingMessage {
-    [self showMessage:FLLocalizedString(@"yt_preview_loading") withLoading:YES];
+    [self showMessage:FLLocalizedString(@"yt_preview_carga") withLoading:YES];
 }
 
 - (void)showMessage:(NSString *)message withLoading:(BOOL)loading {
@@ -174,7 +174,7 @@
 #pragma mark - Actions
 
 - (void)textFieldDidChange:(NSNotification *)notification {
-    [self showMessage:FLLocalizedString(@"yt_preview") withLoading:NO];
+    [self showMessage:FLLocalizedString(@"yt_vista_previa") withLoading:NO];
     if (_ytFieldValidator.isValid) {
         if (![_activeYouTubeModel.youTubeId isEqualToString:_ytIdValider.extractedVideoId]) {
             [self showLoadingMessage];
