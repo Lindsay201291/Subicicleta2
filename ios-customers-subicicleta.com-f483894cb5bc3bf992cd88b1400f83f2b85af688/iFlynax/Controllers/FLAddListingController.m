@@ -791,6 +791,8 @@ typedef NS_ENUM(NSInteger, FLFormState) {
         cell.accessoryView = [[UIImageView alloc] initWithImage:accessoryImage];
         ((FLFieldCheckbox *)item).rowCell = cell;
     }
+    
+    _categoriesSection.footerHeight = 25;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

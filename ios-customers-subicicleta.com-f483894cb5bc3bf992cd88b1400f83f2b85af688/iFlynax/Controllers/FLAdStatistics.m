@@ -75,7 +75,7 @@ static NSString * const kItemTitle      = @"value";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
-
+    cell.textLabel.textAlignment= UITextAlignmentLeft;
 	cell.textLabel.text       = FLCleanString(_entries[indexPath.row][kItemTitle]);
     cell.detailTextLabel.text = FLCleanString(_entries[indexPath.row][kItemValue]);
     cell.backgroundColor      = [UIColor clearColor];
