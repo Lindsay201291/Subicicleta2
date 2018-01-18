@@ -492,9 +492,18 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             if (sectionDict[@"fields"] != nil) {
                 for (NSDictionary *fieldDict in sectionDict[@"fields"]) {
                     FLFieldModel *field = [FLFieldModel fromDictionary:fieldDict];
+                    
                     RETableViewItem *item;
                     
                     if (field.type == FLFieldTypeText) {
+                        if ([field.key isEqual: @"title"]) {
+                            for (FLFieldSelect *categoria in _categoriesSection.items) {
+                                if ([categoria.value isKindOfClass:FLCategoryModel.class]) {
+                                    NSString *name = ((FLCategoryModel *)categoria.value).name;
+                                    field.current= name;
+                                }
+                            }
+                        }
                         item = [FLFieldText fromModel:field];
                     }
                     else if (field.type == FLFieldTypeSelect) {
@@ -1102,6 +1111,9 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 - (void)submitBtnTapped {
     if (!_adForm.plan) {
         [self alertNoPlanSelected];
+    }
+    else if (self.photoGallery.itemsLeft == _adForm.plan.imagesMax) {
+        [FLProgressHUD showErrorWithStatus:@"Debe ingresar al menos una fotografía para continuar."];
     }
     else if ([self.manager isValidForm] && self.manager.formAccepted) {
         [self prepareListingDataAndSendToAPI];

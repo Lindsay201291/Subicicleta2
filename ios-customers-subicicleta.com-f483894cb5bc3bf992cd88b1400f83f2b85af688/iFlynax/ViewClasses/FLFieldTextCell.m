@@ -27,11 +27,13 @@
 
 - (void)cellWillAppear {
     self.fieldPlaceholder.text = self.item.placeholder;
-
     _textField.keyboardType = self.item.keyboardType;
     _textField.placeholder  = self.item.placeholder;
     _textField.text         = self.item.value;
-
+    
+    if ([self.fieldPlaceholder.text isEqual: @"Título"])
+        _textField.enabled= NO;
+    
     // errors trigger
     [self highlightAsFieldWithError:(self.item.errorMessage != nil)];
 

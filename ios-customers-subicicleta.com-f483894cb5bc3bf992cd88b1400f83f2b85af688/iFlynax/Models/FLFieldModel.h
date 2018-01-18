@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, FLFieldType) {
 
 @property (assign, nonatomic, readonly) FLFieldType type;
 
-@property (strong, nonatomic, readonly) id current;
+@property (strong, nonatomic) id current; //readonly
 @property (strong, nonatomic, readonly) id data;
 @property (strong, nonatomic, readonly) id values;
 @property (strong, nonatomic, readonly) id defaultValue;
