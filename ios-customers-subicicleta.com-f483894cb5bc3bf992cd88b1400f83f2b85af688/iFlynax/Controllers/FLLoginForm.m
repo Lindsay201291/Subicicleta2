@@ -201,7 +201,12 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 
 - (void)submitForm {
     if ([_validatorManager validate]) {
-        BOOL deviceIsRegistered = [FLRemoteNotifications isRegisteredForRemoteNotifications];
+        
+        /*[[NSURLCache sharedURLCache] removeAllCachedResponses];
+        [[FLAccount loggedUser] resetSessionData];
+        [FLCache refreshAppCache];*/
+        
+        BOOL deviceIsRegistered = FALSE;
 
         [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
         [flynaxAPIClient postApiItem:kApiItemLogin
@@ -283,7 +288,7 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 
 - (IBAction)registrationBtnDidTap:(UIButton *)sender {
     [self presentViewControllerWithIdentifier:kStoryBoardRegistrationExtendedNC];
-   //[self presentViewControllerWithIdentifier:kStoryBoardRegistrationNC]; //New by Lindsay
+    //[self presentViewControllerWithIdentifier:kStoryBoardRegistrationNC];
 }
 
 - (IBAction)showSideMenu:(UIBarButtonItem *)sender {

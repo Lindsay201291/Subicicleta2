@@ -203,6 +203,10 @@ static NSString * const kAccountTypeNameKey = @"name";
 #pragma mark - Navigation
 
 - (IBAction)editProfileBtnDidTap:(UIButton *)sender {
+    
+    id value= [FLAccount fullName];
+    id value1= [FLAccount loggedUser];
+    
     BOOL _validForm = self.manager.isValidForm;
     
     if (_validForm && !self.manager.formAccepted) {
