@@ -201,12 +201,8 @@ typedef void (^searchLinksResultBlock)(NSRange range, NSString *resultString);
 
 - (void)submitForm {
     if ([_validatorManager validate]) {
-        
-        /*[[NSURLCache sharedURLCache] removeAllCachedResponses];
-        [[FLAccount loggedUser] resetSessionData];
-        [FLCache refreshAppCache];*/
-        
-        BOOL deviceIsRegistered = FALSE;
+ 
+        BOOL deviceIsRegistered = [FLRemoteNotifications isRegisteredForRemoteNotifications];
 
         [FLProgressHUD showWithStatus:FLLocalizedString(@"cargando")];
         [flynaxAPIClient postApiItem:kApiItemLogin
