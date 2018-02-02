@@ -35,9 +35,10 @@ static NSString * const kItemConditionKey = @"condition";
 static NSString * const kPhotoUrlKey  = @"photo";
 static NSString * const kPhotoNameKey = @"desc";
 
-static NSString * const kDetailsHeaderIdentifier         = @"detailsHeaderIdentifier";
-static NSString * const kDetailsAdCellInlineIdentifier   = @"detailsAdCellInline";
-static NSString * const kDetailsAdCellInblockIdentifier  = @"detailsAdCellInblock";
+static NSString * const kDetailsHeaderIdentifier           = @"detailsHeaderIdentifier";
+static NSString * const kDetailsAdCellInlineIdentifier     = @"detailsAdCellInline";
+static NSString * const kDetailsAdCellInblockIdentifier    = @"detailsAdCellInblock";
+static NSString * const kDetailsTermsCellInBlockIdentifier = @"detailsTermsCellInBlock";
 
 static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 
@@ -47,12 +48,12 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     CGFloat _footerHeight;
     NSMutableArray *_commentModels;
 }
-@property (weak, nonatomic) IBOutlet UITextView *terminosTextView;
 
 @property (weak, nonatomic) IBOutlet UIView *noCommentsView;
 @property (weak, nonatomic) IBOutlet UILabel *noCommentsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addCommentButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreCommentsButton;
+@property (weak, nonatomic) IBOutlet UITextView *terminosTextView;
 
 @property (nonatomic) int commentsOnPage;
 
@@ -151,7 +152,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     // init block types
     _blockTypes = [kBlockFieldTypes componentsSeparatedByString:@","];
     
-    // Terminos y condiciones
+    // Terminos y condiciones: Header
     /*NSMutableAttributedString * str = [[NSMutableAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso."];
     [str addAttribute: NSLinkAttributeName value: @"https://www.subicicleta.com/terminosuso.html" range: NSMakeRange(72, 29)];*/
     
@@ -159,8 +160,18 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según "]];
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Términos y Condiciones de Uso"                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),                                                                                          NSForegroundColorAttributeName: [UIColor redColor],                                                                                                                                                                        NSLinkAttributeName: @"https://www.subicicleta.com/terminosuso.html"                                                                                                                                                                                                     }]];
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"."]];
-
+    
     self.terminosTextView.attributedText = str;
+    self.terminosTextView.textAlignment = NSTextAlignmentJustified;
+    
+    // Terminos y condiciones: Footer
+    
+    // <dev>
+    NSArray *dataTermsRows;
+    dataTermsRows = [NSArray arrayWithObjects: @"Default", nil];
+    NSDictionary *dataTerms = @{@"title" : @"Términos y Condiciones de Uso", @"rows" : dataTermsRows };
+    [_entries addObject:dataTerms];
+    // </dev>
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -212,11 +223,12 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == _entries.count-1) // dev
+        return 1;
     return [_entries[section][kRowsKey] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     if ([self isIndexPathForCommentCell:indexPath]) {
         FLCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:kStoryBoardCommentCellIdentifier];
         [self prepareCommentCell:cell atIndexPath:indexPath];
@@ -233,16 +245,28 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 }
 
 - (void)prepareDetailCell:(FLDetailsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *itemInfo = _entries[indexPath.section][kRowsKey][indexPath.row];
-    cell.titleLabel.text = [NSString stringWithFormat:@"%@:", FLCleanString(itemInfo[kItemTitleKey])];
-    cell.detailLabel.text = FLCleanString(itemInfo[kItemValueKey]);
+    if (indexPath.section == _entries.count-1) { // <dev>
+        NSMutableAttributedString *str = [[NSMutableAttributedString alloc] init];
+        [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Inversiones Galaicos Online C.A. no asume ninguna responsabilidad por la información y precio colocado en este anuncio, ya que ha sido suministrada en su totalidad por el usuario registrado (Vendedor). Igualmente, subicicleta.com no vende este artículo y no participa en ninguna negociación, venta o perfeccionamiento de operaciones. Por tanto, solo se limita a la publicación del anuncio. Ver "]];
+        [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Términos y Condiciones de Uso"                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),                                                                                          NSForegroundColorAttributeName: [UIColor redColor],                                                                                                                                                                        NSLinkAttributeName: @"https://www.subicicleta.com/terminosuso.html"                                                                                                                                                                                                     }]];
+        [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"."]];
+        
+        cell.termsLabel.attributedText = str;
+        cell.backgroundColor = [UIColor clearColor];
+        cell.termsLabel.textAlignment = NSTextAlignmentJustified;
+    } // </dev>
+    else {
+        NSDictionary *itemInfo = _entries[indexPath.section][kRowsKey][indexPath.row];
+        cell.titleLabel.text = [NSString stringWithFormat:@"%@:", FLCleanString(itemInfo[kItemTitleKey])];
+        cell.detailLabel.text = FLCleanString(itemInfo[kItemValueKey]);
 
-    if (itemInfo[kItemConditionKey] != nil && [cell.detailLabel isKindOfClass:FLAttributedLabel.class]) {
-        cell.condition = itemInfo[kItemConditionKey];
-        cell.detailLabel.userInfo = itemInfo;
-        cell.detailLabel.delegate = self;
+        if (itemInfo[kItemConditionKey] != nil && [cell.detailLabel isKindOfClass:FLAttributedLabel.class]) {
+            cell.condition = itemInfo[kItemConditionKey];
+            cell.detailLabel.userInfo = itemInfo;
+            cell.detailLabel.delegate = self;
+        }
+        cell.backgroundColor = [UIColor clearColor];
     }
-    cell.backgroundColor = [UIColor clearColor];
 }
 
 - (void)prepareCommentCell:(FLCommentCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -251,6 +275,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 }
 
 - (NSString *)properReusableIdForIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == _entries.count-1) // dev
+        return kDetailsTermsCellInBlockIdentifier;
     
     NSString *type = _entries[indexPath.section][kRowsKey][indexPath.row][kItemTypeKey];
     if ([_blockTypes containsObject:type]) {
@@ -314,14 +340,30 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     
     static FLDetailsTableViewCell *inlineCell = nil;
     static FLDetailsTableViewCell *blockCell = nil;
+    static FLDetailsTableViewCell *termCell = nil; // dev
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         inlineCell  = [self.detailsTableView dequeueReusableCellWithIdentifier:kDetailsAdCellInlineIdentifier];
         blockCell   = [self.detailsTableView dequeueReusableCellWithIdentifier:kDetailsAdCellInblockIdentifier];
+        termCell    = [self.detailsTableView dequeueReusableCellWithIdentifier:kDetailsTermsCellInBlockIdentifier]; // dev
     });
     
-    FLDetailsTableViewCell *cell = [self properReusableIdForIndexPath:indexPath] == kDetailsAdCellInlineIdentifier ? inlineCell : blockCell;
+    //FLDetailsTableViewCell *cell = [self properReusableIdForIndexPath:indexPath] == kDetailsAdCellInlineIdentifier ? inlineCell : blockCell;
+    
+    // <dev>
+    FLDetailsTableViewCell *cell;
+    NSString *typeCell= [self properReusableIdForIndexPath:indexPath];
+    if (typeCell == kDetailsAdCellInlineIdentifier) {
+        cell= inlineCell;
+    }
+    else if (typeCell == kDetailsAdCellInlineIdentifier) {
+        cell= blockCell;
+    }
+    else {
+        cell= termCell;
+    }
+    // </dev>
     
     [self prepareDetailCell:cell atIndexPath:indexPath];
     
@@ -329,6 +371,11 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
+    
+    if (indexPath.section == _entries.count-1) { // <dev>
+        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        return size.height + 115.0f;
+    }  // </dev>
     
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height + 1.0f;

@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet FLLabel *titleLabel;
 @property (weak, nonatomic) IBOutlet FLAttributedLabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UITextView *termsLabel;
 @property (assign, nonatomic) NSString *condition;
 @end
 
