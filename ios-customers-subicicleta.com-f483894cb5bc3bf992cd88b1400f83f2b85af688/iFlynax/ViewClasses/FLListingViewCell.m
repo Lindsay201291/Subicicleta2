@@ -92,7 +92,8 @@ static NSString * const kListingPhotoNotExists    = @"listing_photo_not_exists";
 
 - (void)setAdPrice:(NSString *)adPrice {
     _adPrice = adPrice;
-    _adPriceLabel.text = _adPrice;
+    //_adPriceLabel.text = _adPrice;
+    _adPriceLabel.text = [FLUtilities priceFormat:_adPrice]; // dev
 }
 
 - (void)setPhotosCount:(NSInteger)photosCount {

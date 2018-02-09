@@ -132,7 +132,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 
     // modify header view
     self.detailsTableView.headerView.titleLabel.text = _shortInfo.title;
-    self.detailsTableView.headerView.priceLabel.text = _shortInfo.price;
+    //self.detailsTableView.headerView.priceLabel.text = _shortInfo.price;
+    self.detailsTableView.headerView.priceLabel.text = [FLUtilities priceFormat:_shortInfo.price]; // dev
 
     // update favorite button
 	self.detailsTableView.headerView.favoriteAdsButton.adId = _shortInfo.lId;
@@ -162,7 +163,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"."]];
     
     self.terminosTextView.attributedText = str;
-    self.terminosTextView.textAlignment = NSTextAlignmentJustified;
+    //self.terminosTextView.textAlignment = NSTextAlignmentJustified; //Justified text
     
     // Terminos y condiciones: Footer
     

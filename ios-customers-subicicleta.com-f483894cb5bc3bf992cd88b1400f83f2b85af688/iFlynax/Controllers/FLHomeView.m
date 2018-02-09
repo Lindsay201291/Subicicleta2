@@ -204,9 +204,10 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 	FLAdsCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kStoryBoardHomeCollectionItemCell
 																		  forIndexPath:indexPath];
     FLAdShortDetailsModel *listing = [FLAdShortDetailsModel fromDictionary:_entries[indexPath.row]];
-
+    
 	cell.adTitle.text = listing.title;
-	cell.adPrice.text = listing.price;
+	//cell.adPrice.text = listing.price;
+    cell.adPrice.text = [FLUtilities priceFormat:listing.price]; // dev
     cell.adThumbnail.contentMode = UIViewContentModeCenter;
     cell.layer.borderWidth = 0;
 

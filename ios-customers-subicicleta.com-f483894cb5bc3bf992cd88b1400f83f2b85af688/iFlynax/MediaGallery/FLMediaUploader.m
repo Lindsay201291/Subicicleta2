@@ -131,7 +131,7 @@
 }
 
 - (UIImage *)cropImageIfNecessary:(UIImage *)image {
-    return [image imageScaledToFitSize:CGSizeMake(900, 600)];
+    return [image imageScaledToFitSize:CGSizeMake(180, 120)]; // 900,600
 }
 
 - (UIImage *)fullResolutionImageForAsset:(ALAsset *)asset{

@@ -93,6 +93,30 @@ static BOOL stringOrValue(id obj) {
     return locale;
 }
 
++ (NSString *)priceFormat:(NSString *)price {
+    NSArray *lines = [price componentsSeparatedByString: @" "];
+    if (lines.count > 1) {
+        NSString *lineOne = lines[1];
+        NSArray *frag = [lineOne componentsSeparatedByString: @"."];
+        if ([frag count] > 1) {
+            NSString *fragOne = [frag lastObject];
+            if ([fragOne length] == 0) {
+                NSRange lastDot = [price rangeOfString:@"." options:NSBackwardsSearch];
+                if (lastDot.location != NSNotFound)
+                    return [price stringByReplacingCharactersInRange:lastDot
+                                                       withString: @""];
+            }
+            else if ([fragOne length] < 3) {
+                NSRange lastDot = [price rangeOfString:@"." options:NSBackwardsSearch];
+                if (lastDot.location != NSNotFound)
+                    return [price stringByReplacingCharactersInRange:lastDot
+                                                          withString: @","];
+            }
+        }
+    }
+    return price;
+}
+
 + (BOOL)isValidUrl:(NSString *)urlString {
     NSString *format = @"SELF MATCHES '((?:http|https)://)?([\\w\\d\\-_]+\\.)?[\\w\\d\\-_]+\\.\\w{2,5}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?'";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:format];

@@ -2461,12 +2461,12 @@
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailsTermsCellInBlock" rowHeight="50" id="DVk-sb-Ama" customClass="FLDetailsTableViewCell">
                                         <rect key="frame" x="0.0" y="383.5" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DVk-sb-Ama" id="eCc-4j-QKy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView opaque="NO" userInteractionEnabled="NO" contentMode="left" scrollEnabled="NO" editable="NO" text="El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="cxe-1K-1hl">
+                                                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="cxe-1K-1hl">
                                                     <rect key="frame" x="10" y="0.0" width="355" height="49.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

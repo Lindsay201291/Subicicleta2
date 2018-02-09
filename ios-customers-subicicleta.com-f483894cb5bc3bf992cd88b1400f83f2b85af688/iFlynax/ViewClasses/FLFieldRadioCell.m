@@ -43,6 +43,15 @@ static CGFloat    const kBtnHeight = 28;
 
             NSString *title = FLCleanString(entry[kEntryName]);
             FLRadioButton *radioBtn = [[FLRadioButton alloc] initWithFrame:CGRectZero buttonTitle:title];
+            // <dev>
+/*            if ([self.item.caption isEqualToString:@"Condición"])
+                radioBtn.enabled= FALSE;*/
+            
+            /*if ([title isEqualToString:@"Usado"])
+                [radioBtn setSelected:YES];
+            if ([title isEqualToString:@"Nuevo"])
+                [radioBtn setSelected:NO];*/
+            // </dev>
             radioBtn.titleLabel.text = title;
             radioBtn.userInfo = FLCleanString(entry[kEntryKey]);
             radioBtn.iconSquare = self.item.checkBoxMode;
@@ -52,7 +61,7 @@ static CGFloat    const kBtnHeight = 28;
                 radioBtn.multipleSelectionEnabled = YES;
             }
 
-            // from current calue
+            // from current value
             if (self.item.value && self.item.value == radioBtn.userInfo && radioBtn.selected == NO) {
                 radioBtn.selected = YES;
             }

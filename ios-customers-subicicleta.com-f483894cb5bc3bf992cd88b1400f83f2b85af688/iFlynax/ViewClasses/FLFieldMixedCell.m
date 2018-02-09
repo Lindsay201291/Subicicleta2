@@ -24,7 +24,8 @@
 @dynamic item;
 
 - (void)setupNumberField:(FLTextField *)field {
-    field.keyboardType = UIKeyboardTypeNumberPad;
+    //field.keyboardType = UIKeyboardTypeNumberPad;
+    field.keyboardType = UIKeyboardTypeDecimalPad;
     field.inputAccessoryView = self.actionBar;
 
     [field addTarget:self action:@selector(textFieldDidChange:)
@@ -102,12 +103,32 @@
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidChange:(FLTextField *)textField {
+    // Validar 0 previo al Punto
+    if (textField.text.length == 1 && [textField.text isEqualToString:@"."])
+        textField.text= @"0.";
+    // Validar 0 a la izquierda
+    if (textField.text.length == 1 && [textField.text isEqualToString:@"0"])
+        textField.text= @"";
+    // Validar unico Punto
+    NSInteger times = [[textField.text componentsSeparatedByString:@"."] count]-1;
+    if (times > 1)
+        textField.text= [textField.text substringToIndex:[textField.text length] - 1];
+    // Validar precio sin punto al final
+    //NSString *checkDot = [textField.text substringFromIndex: [textField.text length] - 1];
+    
     if (textField == _textFieldFrom) {
-        self.item.valueFrom = textField.text;
-    } else {
-        self.item.valueTo = textField.text;
+        //if ([checkDot isEqualToString:@"."])
+            //self.item.valueFrom = [textField.text substringToIndex:[textField.text length] - 1];
+        //else
+            self.item.valueFrom = textField.text;
     }
-
+    else {
+        //if ([checkDot isEqualToString:@"."])
+            //self.item.valueTo = [textField.text substringToIndex:[textField.text length] - 1];
+        //else
+            self.item.valueTo = textField.text;
+    }
+    
     if (self.item.errorMessage) {
         [self highlightAsFieldWithError:NO];
     }

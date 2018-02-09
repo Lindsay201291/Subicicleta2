@@ -27,7 +27,8 @@
 + (NSString *)FLTrueString:(id)obj;
 
 + (NSLocale *)localeByCurrencyCode:(NSString *)currency;
-
++ (NSString *)priceFormat:(NSString *)price;
+    
 + (BOOL)isValidUrl:(NSString *)urlString;
 + (BOOL)isValidEmail:(NSString *)emailString;
 @end

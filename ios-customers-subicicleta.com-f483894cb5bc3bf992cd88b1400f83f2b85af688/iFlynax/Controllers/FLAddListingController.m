@@ -83,6 +83,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 @property (strong, nonatomic) FLCategoryBox      *categoryBox;
 @property (strong, nonatomic) FLListingFormModel *adForm;
 @property (strong, nonatomic) FLPlansManager     *plansManager;
+@property (strong, nonatomic) FLFieldRadio *radioItem;
 @property (strong, nonatomic) UIButton *selectCategoryBtn;
 @property (strong, nonatomic) UIButton *submitButton;
 
@@ -151,6 +152,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     [button addTarget:self action:@selector(langSelectorBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     */
+
 }
 
 - (void)dealloc {
@@ -504,9 +506,17 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                 }
                             }
                         }
+                        /*else if ([field.key isEqual: @"especifique"]) {
+                            id value1= self.manager.formValues;
+                            [_tableView reloadData];
+                        }*/
                         item = [FLFieldText fromModel:field];
                     }
                     else if (field.type == FLFieldTypeSelect) {
+                        /*if ([field.key isEqual: @"marca"]) {
+                            id value1= self.manager.formValues;
+                            [_tableView reloadData];
+                        }*/
                         item = [FLFieldSelect fromModel:field tableView:_tableView];
                     }
                     else if (field.type == FLFieldTypeBool) {
@@ -527,6 +537,11 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                         item = [FLFieldMixed fromModel:field];
                     }
                     else if (field.type == FLFieldTypeRadio) {
+                        // <dev>
+                        /*if ([field.key isEqual: @"condition"]) {
+                            id value= field;
+                        }*/
+                        // </dev>
                         item = [FLFieldRadio fromModel:field tableView:_tableView];
                     }
                     else if (field.type == FLFieldTypePhone) {
@@ -923,6 +938,22 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                     self.categoryBox.planTitle      = _adForm.plan.title;
 
                     [self updateMediaSectionsBasedOnPlan:listingPlan];
+                    
+                    // <dev>
+                  /*  id value= _tableView;
+                    NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+                    NSArray<UITableViewCell *> *subviews = [_tableView visibleCells];
+                    _radioItem= (FLFieldRadio *)[subviews objectAtIndex:1];*/
+                    
+                    //id value1= self.manager.formValues;
+                    //[self.manager.formValues setValue:@"2" forKey:@"condition"];
+                 //   [_tableView reloadData];
+                  /*  NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+                    FLFieldText *celda = (FLFieldText *) [_tableView cellForRowAtIndexPath:tempIndexPath];*/
+                    
+                    
+                   // [_tableView reloadData];
+                    // </dev>
 
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];

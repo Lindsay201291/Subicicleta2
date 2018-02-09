@@ -31,8 +31,11 @@
     _textField.placeholder  = self.item.placeholder;
     _textField.text         = self.item.value;
     
+    // <dev>
+    _textField.enabled= YES;
     if ([self.fieldPlaceholder.text isEqual: @"Título"])
         _textField.enabled= NO;
+    // </dev>
     
     // errors trigger
     [self highlightAsFieldWithError:(self.item.errorMessage != nil)];
