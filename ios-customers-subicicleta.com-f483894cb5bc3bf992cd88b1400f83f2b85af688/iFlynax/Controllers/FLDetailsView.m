@@ -358,7 +358,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     if (typeCell == kDetailsAdCellInlineIdentifier) {
         cell= inlineCell;
     }
-    else if (typeCell == kDetailsAdCellInlineIdentifier) {
+    else if (typeCell == kDetailsAdCellInblockIdentifier) {
         cell= blockCell;
     }
     else {

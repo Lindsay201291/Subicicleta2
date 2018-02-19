@@ -25,7 +25,7 @@
 
 - (void)setupNumberField:(FLTextField *)field {
     //field.keyboardType = UIKeyboardTypeNumberPad;
-    field.keyboardType = UIKeyboardTypeDecimalPad;
+    field.keyboardType = UIKeyboardTypeDecimalPad; // dev
     field.inputAccessoryView = self.actionBar;
 
     [field addTarget:self action:@selector(textFieldDidChange:)
@@ -103,6 +103,13 @@
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidChange:(FLTextField *)textField {
+    // Convertir , a .
+    if (textField.text.length > 0) {
+        NSString *checkDot = [textField.text substringFromIndex: [textField.text length]-1];
+        if ([checkDot isEqualToString:@","]) {
+            textField.text = [[textField.text substringToIndex:[textField.text length]-1] stringByAppendingString:@"."];
+        }
+    }
     // Validar 0 previo al Punto
     if (textField.text.length == 1 && [textField.text isEqualToString:@"."])
         textField.text= @"0.";

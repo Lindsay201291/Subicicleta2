@@ -50,6 +50,17 @@ typedef void (^FLMFCompletionHandler)(NSArray *options);
             }
         };
     }
+    
+    // <dev>
+    if ([self.placeholder isEqualToString:@"Marca"] || [self.placeholder isEqualToString:@"Marca."]) {
+        self.actionBarDoneButtonTapHandler = ^(FLFieldSelect *item) {
+            //if (item.valueChanged) {
+                [item loadNextMultiFieldLevelIfNecessary];
+            //}
+        };
+    }
+    // </dev>
+    
     [self manageDefaultValue:NO];
 }
 
@@ -70,8 +81,7 @@ typedef void (^FLMFCompletionHandler)(NSArray *options);
         self.tableView = tableView;
         self.userData  = data;
         self.twoFields = (model.searchMode
-                          && [model.key isEqualToString:FLConfigWithKey(@"year_build_key")]);
-
+                          && [model.key isEqualToString:FLConfigWithKey(@"year_build_key")]);        
         [self setup];
     }
     return self;

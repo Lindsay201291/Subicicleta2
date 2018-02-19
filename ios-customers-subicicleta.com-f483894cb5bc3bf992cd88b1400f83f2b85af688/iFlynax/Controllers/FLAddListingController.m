@@ -83,7 +83,6 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 @property (strong, nonatomic) FLCategoryBox      *categoryBox;
 @property (strong, nonatomic) FLListingFormModel *adForm;
 @property (strong, nonatomic) FLPlansManager     *plansManager;
-@property (strong, nonatomic) FLFieldRadio *radioItem;
 @property (strong, nonatomic) UIButton *selectCategoryBtn;
 @property (strong, nonatomic) UIButton *submitButton;
 
@@ -513,9 +512,8 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                         item = [FLFieldText fromModel:field];
                     }
                     else if (field.type == FLFieldTypeSelect) {
-                        /*if ([field.key isEqual: @"marca"]) {
-                            id value1= self.manager.formValues;
-                            [_tableView reloadData];
+                       /* if ([field.key isEqual: @"marca"]) {
+                            code here
                         }*/
                         item = [FLFieldSelect fromModel:field tableView:_tableView];
                     }
@@ -940,19 +938,26 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                     [self updateMediaSectionsBasedOnPlan:listingPlan];
                     
                     // <dev>
-                  /*  id value= _tableView;
-                    NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
-                    NSArray<UITableViewCell *> *subviews = [_tableView visibleCells];
-                    _radioItem= (FLFieldRadio *)[subviews objectAtIndex:1];*/
                     
-                    //id value1= self.manager.formValues;
-                    //[self.manager.formValues setValue:@"2" forKey:@"condition"];
-                 //   [_tableView reloadData];
-                  /*  NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+                   /* NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:3 inSection:0];
                     FLFieldText *celda = (FLFieldText *) [_tableView cellForRowAtIndexPath:tempIndexPath];*/
                     
-                    
-                   // [_tableView reloadData];
+                    //for (RETableViewSection *section in self.manager.sections) {
+                        //for (FLTableViewItem *item in section.items) {
+                            /*if ([item isKindOfClass:FLFieldAccept.class]) {
+                                _formAccepted = [(FLFieldAccept *)item isAccepted];
+                                _fieldAcceptTitle = item.model.name;
+                            }
+                            else if ([item respondsToSelector:@selector(isValid)]) {
+                                if (![item isValid] && resultValid) {
+                                    resultValid = NO;
+                                }
+                            }*/
+                            
+                            //id value= item;
+                        //}
+                    //}
+
                     // </dev>
 
                     dispatch_async(dispatch_get_main_queue(), ^{

@@ -8,6 +8,7 @@
 
 #import "FLFieldTextCell.h"
 #import "FLListingFormModel.h"
+#import "FLFieldSelect.h"
 
 //static CGFloat const kFlagPaddingRight = 8;
 
@@ -30,12 +31,30 @@
     _textField.keyboardType = self.item.keyboardType;
     _textField.placeholder  = self.item.placeholder;
     _textField.text         = self.item.value;
-    
+
     // <dev>
     _textField.enabled= YES;
     if ([self.fieldPlaceholder.text isEqual: @"Título"])
         _textField.enabled= NO;
-    // </dev>
+    // -----
+    if ([self.fieldPlaceholder.text isEqual: @"Especifique"]) {
+        _textField.enabled= NO;
+        for (FLFieldSelect *cell in self.section.items) {
+            if ([cell isKindOfClass:FLFieldSelect.class]) {
+                if (cell.valueFrom) {
+                    if ([cell.valueFrom[@"name"] isEqualToString:@"(Otra)"]) {
+                        _textField.enabled= YES;
+                        break;
+                    }
+                    else {
+                        _textField.text= cell.valueFrom[@"name"];
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    //</dev>
     
     // errors trigger
     [self highlightAsFieldWithError:(self.item.errorMessage != nil)];
