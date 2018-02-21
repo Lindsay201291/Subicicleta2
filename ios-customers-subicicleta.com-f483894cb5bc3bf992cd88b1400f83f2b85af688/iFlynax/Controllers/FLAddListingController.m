@@ -505,16 +505,9 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                 }
                             }
                         }
-                        /*else if ([field.key isEqual: @"especifique"]) {
-                            id value1= self.manager.formValues;
-                            [_tableView reloadData];
-                        }*/
                         item = [FLFieldText fromModel:field];
                     }
                     else if (field.type == FLFieldTypeSelect) {
-                       /* if ([field.key isEqual: @"marca"]) {
-                            code here
-                        }*/
                         item = [FLFieldSelect fromModel:field tableView:_tableView];
                     }
                     else if (field.type == FLFieldTypeBool) {
@@ -535,11 +528,6 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                         item = [FLFieldMixed fromModel:field];
                     }
                     else if (field.type == FLFieldTypeRadio) {
-                        // <dev>
-                        /*if ([field.key isEqual: @"condition"]) {
-                            id value= field;
-                        }*/
-                        // </dev>
                         item = [FLFieldRadio fromModel:field tableView:_tableView];
                     }
                     else if (field.type == FLFieldTypePhone) {

@@ -38,7 +38,8 @@
         self.title = FLLocalizedString(@"screen_seleccionar_plan");
 
         _selectPlanBtn.enabled = (_plansManager.selectedPlan != nil);
-        [_plansManager.plans removeLastObject]; // Comentar para mostrar los planes
+        if ([_plansManager.plans count] > 1) // Comentar para mostrar los planes
+            [_plansManager.plans removeLastObject]; // Comentar para mostrar los planes
         _entries = _plansManager.plans;
 
         // flush prevs button's

@@ -34,15 +34,15 @@
 
     // <dev>
     _textField.enabled= YES;
-    if ([self.fieldPlaceholder.text isEqual: @"Título"])
+    if ([self.item.model.key isEqual: @"title"])
         _textField.enabled= NO;
     // -----
-    if ([self.fieldPlaceholder.text isEqual: @"Especifique"]) {
+    if ([self.item.model.key isEqual: @"especifique"]) {
         _textField.enabled= NO;
         for (FLFieldSelect *cell in self.section.items) {
             if ([cell isKindOfClass:FLFieldSelect.class]) {
                 if (cell.valueFrom) {
-                    if ([cell.valueFrom[@"name"] isEqualToString:@"(Otra)"]) {
+                    if([cell.valueFrom[@"name"] caseInsensitiveCompare:@"(otra)"] == NSOrderedSame) {
                         _textField.enabled= YES;
                         break;
                     }

@@ -52,11 +52,10 @@ typedef void (^FLMFCompletionHandler)(NSArray *options);
     }
     
     // <dev>
-    if ([self.placeholder isEqualToString:@"Marca"] || [self.placeholder isEqualToString:@"Marca."]) {
+    //if ([self.model.key isEqualToString:@"marca"]) {
+    if ([self.model.key rangeOfString:@"marca"].location != NSNotFound) {
         self.actionBarDoneButtonTapHandler = ^(FLFieldSelect *item) {
-            //if (item.valueChanged) {
-                [item loadNextMultiFieldLevelIfNecessary];
-            //}
+            [item loadNextMultiFieldLevelIfNecessary];
         };
     }
     // </dev>
