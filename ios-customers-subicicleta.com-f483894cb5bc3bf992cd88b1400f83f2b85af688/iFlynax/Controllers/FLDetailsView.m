@@ -54,6 +54,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 @property (weak, nonatomic) IBOutlet UIButton *addCommentButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreCommentsButton;
 @property (weak, nonatomic) IBOutlet UITextView *terminosTextView;
+@property (weak, nonatomic) IBOutlet UILabel *VistasLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PublicadoLabel;
 
 @property (nonatomic) int commentsOnPage;
 
@@ -134,6 +136,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     self.detailsTableView.headerView.titleLabel.text = _shortInfo.title;
     //self.detailsTableView.headerView.priceLabel.text = _shortInfo.price;
     self.detailsTableView.headerView.priceLabel.text = [FLUtilities priceFormat:_shortInfo.price]; // dev
+    self.VistasLabel.text= [@"Veces visto: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)_shortInfo.vistas]]; // dev
+    self.PublicadoLabel.text= [@"Publicado el: " stringByAppendingString:[FLUtilities dateFormat:_shortInfo.publicado withOrigin:@"MM.dd.yyyy" andDest:@"dd.MM.yyyy"]]; // dev
 
     // update favorite button
 	self.detailsTableView.headerView.favoriteAdsButton.adId = _shortInfo.lId;

@@ -20,11 +20,13 @@
         _lId         = [[data objectForKey:@"id"] integerValue];
         _sellerId    = [[data objectForKey:@"sellerId"] integerValue];
         _photosCount = [[data objectForKey:@"photos_count"] integerValue];
-
         _title       = FLCleanString([data objectForKey:@"title"]);
         _subTitle    = FLCleanString([data objectForKey:@"middle_field"]);
         _price       = FLCleanString([data objectForKey:@"price"]);
 
+        _vistas = [[data objectForKey:@"vistas"] integerValue]; // dev
+        _publicado= FLCleanString([data objectForKey:@"publicado"]); // dev
+        
         NSString *_thumbnailStringUrl = (data[@"thumbnail"] != nil
                                          ? [data objectForKey:@"thumbnail"]
                                          : [data objectForKey:@"photo"]);

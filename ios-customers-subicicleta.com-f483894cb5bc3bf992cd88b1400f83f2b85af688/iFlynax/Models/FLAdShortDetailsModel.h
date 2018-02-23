@@ -21,6 +21,9 @@
 @property (strong, nonatomic, readonly) NSURL *thumbnail;
 @property (assign, nonatomic, readonly) BOOL featured;
 
+@property (assign, nonatomic, readonly) NSInteger vistas; // dev
+@property (strong, nonatomic, readonly) NSString *publicado; // dev
+
 + (instancetype)fromDictionary:(NSDictionary *)data;
 - (instancetype)initFromDictionary:(NSDictionary *)data;
 @end

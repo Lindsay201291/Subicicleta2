@@ -87,7 +87,7 @@ static BOOL const kFeatureExtendedRegistration = NO;
 /* UI */
 static CGFloat    const kStatusBarHeight           = 20.0f;
 static NSString * const kColorThemeGlobal          = @"f2cf15";
-static NSString * const kColorThemePrice           = @"f2cf15";
+static NSString * const kColorThemePrice           = @"eaae0d"; // @"f2cf15";
 static NSString * const kColorThemeHomePrice       = @"f2cf15";
 static NSString * const kColorThemeLinks           = @"006ec2";
 

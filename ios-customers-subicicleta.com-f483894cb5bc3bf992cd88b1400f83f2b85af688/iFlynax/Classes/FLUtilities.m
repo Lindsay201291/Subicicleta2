@@ -93,7 +93,7 @@ static BOOL stringOrValue(id obj) {
     return locale;
 }
 
-+ (NSString *)priceFormat:(NSString *)price {
++ (NSString *)priceFormat:(NSString *)price { // dev
     NSArray *lines = [price componentsSeparatedByString: @" "];
     if (lines.count > 1) {
         NSString *lineOne = lines[1];
@@ -115,6 +115,19 @@ static BOOL stringOrValue(id obj) {
         }
     }
     return price;
+}
+
++ (NSString *)dateFormat:(NSString *)date withOrigin:(NSString *) origin andDest:(NSString *) dest { // dev
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:origin];
+    NSDate *tempDate = [dateFormatter dateFromString:date];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:dest];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+    
+    return [formatter stringFromDate:tempDate];
 }
 
 + (BOOL)isValidUrl:(NSString *)urlString {
