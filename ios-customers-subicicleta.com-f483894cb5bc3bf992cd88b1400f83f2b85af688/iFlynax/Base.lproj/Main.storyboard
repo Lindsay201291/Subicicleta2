@@ -2334,7 +2334,7 @@
                                     </connections>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="z5W-u6-5mY">
-                                    <rect key="frame" x="0.0" y="469.5" width="375" height="237"/>
+                                    <rect key="frame" x="0.0" y="569.5" width="375" height="237"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-A9-eD4">
@@ -2380,6 +2380,7 @@
                                                 <constraint firstAttribute="height" constant="44" id="2Hq-ZA-PuN"/>
                                                 <constraint firstAttribute="width" constant="160" id="Ug4-Qv-WZC"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <size key="titleShadowOffset" width="0.0" height="1"/>
                                             <state key="normal" title="Agregar Comentario" backgroundImage="button1">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2479,25 +2480,46 @@
                                             <outlet property="titleLabel" destination="sty-KL-BMt" id="fyf-Dw-0bc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailsTermsCellInBlock" rowHeight="50" id="DVk-sb-Ama" customClass="FLDetailsTableViewCell">
-                                        <rect key="frame" x="0.0" y="418.5" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailsTermsCellInBlock" rowHeight="150" id="DVk-sb-Ama" customClass="FLDetailsTableViewCell">
+                                        <rect key="frame" x="0.0" y="418.5" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DVk-sb-Ama" id="eCc-4j-QKy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="cxe-1K-1hl">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="49.5"/>
+                                                <textView opaque="NO" userInteractionEnabled="NO" contentMode="left" scrollEnabled="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="cxe-1K-1hl">
+                                                    <rect key="frame" x="10" y="75" width="355" height="67"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso. El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
+                                                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iJ-W9-pP3" userLabel="Contact Button">
+                                                    <rect key="frame" x="107" y="21" width="160" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="J28-LE-r2K"/>
+                                                        <constraint firstAttribute="height" constant="44" id="LRY-TJ-z1h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <size key="titleShadowOffset" width="0.0" height="1"/>
+                                                    <state key="normal" title="Preguntale al Vendedor" backgroundImage="button1">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="contactButtonTapped:" destination="gG5-Ok-ZkH" eventType="touchUpInside" id="z37-JI-Zbd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="5iJ-W9-pP3" firstAttribute="centerX" secondItem="cxe-1K-1hl" secondAttribute="centerX" id="4B6-wH-xAx"/>
+                                                <constraint firstItem="cxe-1K-1hl" firstAttribute="top" secondItem="5iJ-W9-pP3" secondAttribute="bottom" constant="10" id="GXU-Fn-B53"/>
                                                 <constraint firstAttribute="trailing" secondItem="cxe-1K-1hl" secondAttribute="trailing" constant="10" id="GnF-6T-POe"/>
-                                                <constraint firstItem="cxe-1K-1hl" firstAttribute="top" secondItem="eCc-4j-QKy" secondAttribute="top" id="J5H-OM-DnV"/>
                                                 <constraint firstItem="cxe-1K-1hl" firstAttribute="leading" secondItem="eCc-4j-QKy" secondAttribute="leading" constant="10" id="QHj-Vq-En3"/>
+                                                <constraint firstItem="5iJ-W9-pP3" firstAttribute="top" secondItem="eCc-4j-QKy" secondAttribute="topMargin" constant="10" id="RCn-bM-y8x"/>
+                                                <constraint firstItem="cxe-1K-1hl" firstAttribute="top" secondItem="eCc-4j-QKy" secondAttribute="top" priority="750" constant="10" id="T30-rc-XdM"/>
+                                                <constraint firstAttribute="bottom" secondItem="cxe-1K-1hl" secondAttribute="bottom" constant="8" id="dzm-Ca-JfY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

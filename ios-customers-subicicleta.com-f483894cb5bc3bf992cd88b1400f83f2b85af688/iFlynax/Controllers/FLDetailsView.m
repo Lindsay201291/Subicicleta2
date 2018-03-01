@@ -20,6 +20,9 @@
 #import "FLCommentModel.h"
 #import "FLCommentsView.h"
 #import "CCAlertView.h"
+#import "FLAccount.h" // dev
+#import "FLMessaging.h" // dev
+#import "FLSellerInfoView.h" // dev
 
 static NSString * const kSectionTitleKey  = @"title";
 static NSString * const kSectionsKey      = @"sections";
@@ -62,6 +65,7 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 @property (nonatomic) BOOL showComments;
 @property (nonatomic) BOOL showMoreComments;
 @property (nonatomic) BOOL showAddCommentButton;
+@property (strong, nonatomic) FLSellerInfoView *sellerInfo; // dev
 
 @end
 
@@ -157,26 +161,30 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     // init block types
     _blockTypes = [kBlockFieldTypes componentsSeparatedByString:@","];
     
-    // Terminos y condiciones: Header
-    /*NSMutableAttributedString * str = [[NSMutableAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según Términos y Condiciones de Uso."];
-    [str addAttribute: NSLinkAttributeName value: @"https://www.subicicleta.com/terminosuso.html" range: NSMakeRange(72, 29)];*/
-    
+    // dev: Terminos y condiciones: Header
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] init];
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"El precio publicado es de exclusiva responsabilidad del vendedor, según "]];
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Términos y Condiciones de Uso"                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),                                                                                          NSForegroundColorAttributeName: [UIColor redColor],                                                                                                                                                                        NSLinkAttributeName: @"https://www.subicicleta.com/terminosuso.html"                                                                                                                                                                                                     }]];
     [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"."]];
     
     self.terminosTextView.attributedText = str;
-    //self.terminosTextView.textAlignment = NSTextAlignmentJustified; //Justified text
     
-    // Terminos y condiciones: Footer
-    
-    // <dev>
+    // dev: Terminos y condiciones: Footer
     NSArray *dataTermsRows;
     dataTermsRows = [NSArray arrayWithObjects: @"Default", nil];
-    NSDictionary *dataTerms = @{@"title" : @"Términos y Condiciones de Uso", @"rows" : dataTermsRows };
+    NSDictionary *dataTerms = @{@"title" : [NSNull null], @"rows" : dataTermsRows };
     [_entries addObject:dataTerms];
-    // </dev>
+    
+    // dev: Get Seller Info
+    [flynaxAPIClient getApiItem:kApiItemAdDetails
+                     parameters:@{@"lid": @(_shortInfo.lId)}
+                     completion:^(NSDictionary *results, NSError *error) {
+        if (error == nil && [results isKindOfClass:NSDictionary.class]) {
+            _sellerInfo = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardAdSellerInfoView];
+            _sellerInfo.sellerInfo = results[@"sellerInfo"];
+        }
+        else [FLDebug showAdaptedError:error apiItem:kApiItemAdDetails];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -239,7 +247,6 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
         [self prepareCommentCell:cell atIndexPath:indexPath];
         return cell;
     }
-
     FLDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self properReusableIdForIndexPath:indexPath]];
     [self prepareDetailCell:cell atIndexPath:indexPath];
     return cell;
@@ -250,7 +257,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
 }
 
 - (void)prepareDetailCell:(FLDetailsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == _entries.count-1) { // <dev>
+    // <dev>
+    if (indexPath.section == _entries.count-1) {
         NSMutableAttributedString *str = [[NSMutableAttributedString alloc] init];
         [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Inversiones Galaicos Online C.A. no asume ninguna responsabilidad por la información y precio colocado en este anuncio, ya que ha sido suministrada en su totalidad por el usuario registrado (Vendedor). Igualmente, subicicleta.com no vende este artículo y no participa en ninguna negociación, venta o perfeccionamiento de operaciones. Por tanto, solo se limita a la publicación del anuncio. Ver "]];
         [str appendAttributedString:[[NSAttributedString alloc] initWithString:@"Términos y Condiciones de Uso"                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),                                                                                          NSForegroundColorAttributeName: [UIColor redColor],                                                                                                                                                                        NSLinkAttributeName: @"https://www.subicicleta.com/terminosuso.html"                                                                                                                                                                                                     }]];
@@ -259,7 +267,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
         cell.termsLabel.attributedText = str;
         cell.backgroundColor = [UIColor clearColor];
         cell.termsLabel.textAlignment = NSTextAlignmentJustified;
-    } // </dev>
+    }
+    // </dev>
     else {
         NSDictionary *itemInfo = _entries[indexPath.section][kRowsKey][indexPath.row];
         cell.titleLabel.text = [NSString stringWithFormat:@"%@:", FLCleanString(itemInfo[kItemTitleKey])];
@@ -377,10 +386,14 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
     
-    if (indexPath.section == _entries.count-1) { // <dev>
-        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-        return size.height + 115.0f;
-    }  // </dev>
+    // <dev>
+    if (indexPath.section == _entries.count-1) {
+        CGSize size = [cell.contentView size];
+        if ([FLAccount loggedUser].userId == _shortInfo.sellerId)
+            size.height-= 45.0f;
+        return size.height * 1.3f;
+    }
+    // </dev>
     
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height + 1.0f;
@@ -390,7 +403,13 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     if (_animateInsertedCell && indexPath.section == _detailsTableView.numberOfSections - 1 && indexPath.row == 0) {
         [cell blink];
         _animateInsertedCell = NO;
-   }
+    }
+
+    // Remove contactButton in own ads
+    if ([FLAccount loggedUser].userId == _shortInfo.sellerId) {
+        UIButton *contactButton = (UIButton *)[self.view viewWithTag:100];
+        [contactButton removeFromSuperview];
+    }
 }
 
 #pragma mark - FLListingPhotosDelegate
@@ -475,6 +494,14 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
         CGPoint bottomOffset = CGPointMake(0, topOffset);
         [self.detailsTableView setContentOffset:bottomOffset animated:YES];
     }
+}
+
+- (IBAction)contactButtonTapped:(id)sender {
+    if (IS_LOGIN) {
+        FLMessaging *messaging = [_sellerInfo prepareContactOwnerMessaging];
+        [self.navigationController pushViewController:messaging animated:YES];
+    }
+    else [FLProgressHUD showErrorWithStatus:FLLocalizedString(@"mensajeria_must_logged_in")];
 }
 
 - (void)sheetActionsShareAdDidTap:(id)sender {
