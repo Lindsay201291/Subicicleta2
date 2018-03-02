@@ -38,6 +38,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
 @property (weak, nonatomic) IBOutlet UIButton *otherListingsButton;
 @property (nonatomic, strong) NSArray *sellerFields;
 @property (weak, nonatomic) IBOutlet UIButton *contactOwnerBtn;
+
 @end
 
 @implementation FLSellerInfoView
@@ -50,7 +51,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // modify UI colors
 	self.view.backgroundColor = FLHexColor(kColorBackgroundColor);
 	_tableView.backgroundColor = self.view.backgroundColor;
@@ -67,6 +68,12 @@ static NSString *_cellTitle(NSDictionary *entry) {
     // prevent to send messages to myself.
     if (IS_LOGIN && [FLAccount loggedUser].userId == FLTrueInteger(_sellerInfo[@"id"])) {
         _contactOwnerBtn.hidden = YES;
+    }
+
+    // hide buttons
+    if (_hideButtons) {
+        _otherListingsButton.hidden= YES;
+        _contactOwnerBtn.hidden= YES;
     }
 }
 

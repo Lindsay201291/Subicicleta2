@@ -12,6 +12,7 @@
 
 @interface FLSellerInfoView : FLViewController
 @property (nonatomic, strong) NSDictionary *sellerInfo;
+@property (nonatomic, assign) BOOL hideButtons;
 
 - (FLMessaging *)prepareContactOwnerMessaging;
 @end

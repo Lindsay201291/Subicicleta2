@@ -9,6 +9,7 @@
 #import "FLMyMessagesView.h"
 #import "FLMessaging.h"
 #import "FLMessage.h"
+#import "FLSellerInfoView.h" // dev
 
 static NSString * const kResponseKeyRecipientPhoto = @"recipientPhoto";
 static NSString * const kResponseKeyMessages       = @"messages";
@@ -18,6 +19,7 @@ static NSString * const kResponseKeyMessages       = @"messages";
     BOOL _websiteVisitor;
 }
 @property (strong, nonatomic) NSMutableArray *dataSource;
+@property (strong, nonatomic) FLSellerInfoView *sellerInfo; // dev
 @end
 
 @implementation FLMessaging
@@ -63,6 +65,18 @@ static NSString * const kResponseKeyMessages       = @"messages";
         self.messageInputView.sendButton.frame = sendBtnFrame;
     }
     [self loadMessages];
+    
+    // dev: Get Seller Info
+    [flynaxAPIClient getApiItem:kApiItemSellerDetails
+                     parameters:@{@"aid": [_recipient stringValue]}
+                     completion:^(NSDictionary *results, NSError *error) {
+                         if (error == nil && [results isKindOfClass:NSDictionary.class]) {
+                             _sellerInfo = [self.storyboard instantiateViewControllerWithIdentifier:kStoryBoardAdSellerInfoView];
+                             _sellerInfo.sellerInfo = results[@"sellerInfo"];
+                             _sellerInfo.hideButtons = YES;
+                         }
+                         else [FLDebug showAdaptedError:error apiItem:kApiItemSellerDetails];
+                     }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -158,10 +172,20 @@ static NSString * const kResponseKeyMessages       = @"messages";
         cell.userImageView.layer.cornerRadius = 0;
 
         cell.userImage = self.partnerImage;
+        // <dev>
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(partnerProfileTap)];
+        singleTap.numberOfTapsRequired = 1;
+        [cell.userImageView setUserInteractionEnabled:YES];
+        [cell.userImageView addGestureRecognizer:singleTap];
+        // </dev>
     }
     else {
         cell.userImageView = nil;
     }
+}
+
+-(void)partnerProfileTap { // dev
+    [self.navigationController pushViewController:_sellerInfo animated:YES];
 }
 
 - (CGSize)userImageSize {
