@@ -56,20 +56,6 @@
                               placeholderImage:[UIImage imageNamed:@"loading30x30"]
                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                            cell.thumbnail.image = [image imageCroppedToFitSize:cell.thumbnail.size];
-// Marca de agua
-/*NSURL * url = [NSURL URLWithString:@"http://www.asesoresi.com/imagenes/vendido.png"];
-NSData * data = [NSData dataWithContentsOfURL:url];
-UIImage * imageMask = [UIImage imageWithData:data];
-                                       
-double width = image.size.width;
-double height = image.size.height;
-
-UIGraphicsBeginImageContext(CGSizeMake(width, height));
-[image drawInRect:CGRectMake(0.0, 0.0, width, height)];
-[imageMask drawInRect:CGRectMake(0.0, 0.0, width*0.5, height*0.5)]; // Mask al 50%
-UIImage *imageWithMask = UIGraphicsGetImageFromCurrentImageContext();
-UIGraphicsEndImageContext();*/
-// Marca de agua
                                        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                            [self setNoImageForCell:cell];
                                        }];

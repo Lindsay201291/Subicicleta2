@@ -70,7 +70,7 @@ static NSString *_cellTitle(NSDictionary *entry) {
         _contactOwnerBtn.hidden = YES;
     }
 
-    // hide buttons
+    // hide buttons by dev
     if (_hideButtons) {
         _otherListingsButton.hidden= YES;
         _contactOwnerBtn.hidden= YES;

@@ -53,6 +53,7 @@ typedef NS_ENUM(NSInteger, FLDropDownField) {
 
     dropDown.inputAccessoryView = self.actionBar;
     dropDown.enabled = self.item.options.count >= 1;
+    if (self.item.disableDropDown) dropDown.enabled= false; // <dev>
 
     if ([self.item.options isKindOfClass:NSArray.class]
         && [self.item.options count])

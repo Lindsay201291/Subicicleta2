@@ -19,6 +19,7 @@ static NSString * const kFieldListingTypeKey = @"ltype_key";
 @property (strong, nonatomic) id valueTo;
 @property (strong, nonatomic) id value;
 @property (nonatomic, getter=isLoadingOptions) BOOL loadingOptions;
+@property (strong, nonatomic) id disableDropDown; // <dev>
 
 + (instancetype)fromModel:(FLFieldModel *)model tableView:(UITableView *)tableView userData:(NSDictionary *)data;
 + (instancetype)fromModel:(FLFieldModel *)model tableView:(UITableView *)tableView;

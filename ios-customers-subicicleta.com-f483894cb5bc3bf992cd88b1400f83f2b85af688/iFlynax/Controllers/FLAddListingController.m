@@ -86,6 +86,8 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 @property (strong, nonatomic) UIButton *selectCategoryBtn;
 @property (strong, nonatomic) UIButton *submitButton;
 
+@property (strong, nonatomic) RETableViewSection *listingStatusSection; // dev
+@property (strong, nonatomic) FLFieldSelect *fieldStatus; // dev
 @property (strong, nonatomic) RETableViewSection *listingTypeSection;
 @property (strong, nonatomic) RETableViewSection *categoriesSection;
 @property (strong, nonatomic) RETableViewSection *formFieldsSection;
@@ -151,7 +153,6 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     [button addTarget:self action:@selector(langSelectorBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     */
-
 }
 
 - (void)dealloc {
@@ -172,8 +173,10 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     _tableView.tableHeaderView = nil;
     _tableView.tableFooterView = nil;
     [_manager removeAllSections];
+    _sectionPictures = NSNotFound; // dev
+    _sectionVideos = NSNotFound; // dev
     
-    if (_savedSections.count) {
+    if (_savedSections.count) { // <here> Aqui se cargan los combo-box y se valida el disable de Tipo
         for (RETableViewSection *section in _savedSections) {
             [_manager addSection:section];
         }
@@ -304,7 +307,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 // processed to fillout form
-- (void)selectCategoryBtnTapped {
+- (void)selectCategoryBtnTapped { // <here> save sections ??? boton continuar
     [self updateCategoryBox];
 
     // save sections for future purpose
@@ -365,8 +368,10 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                              if (self.editMode) {
                                  _adForm.categoriesIDs = [self formValidResponse:response withKey:kResponseKeyCategoriesIDs];
                                  _adForm.listingType   = [FLListingTypes withKeyAsModel:response[kResponseKeyListingType]];
-                                 _adForm.category      = [FLCategoryModel fromDictionary:response[kResponseKeyCategory]];
-                                 _adForm.savedCategory = _adForm.category;
+                                 if (!_adForm.category) { // dev - only conditional if
+                                     _adForm.category      = [FLCategoryModel fromDictionary:response[kResponseKeyCategory]];
+                                     _adForm.savedCategory = _adForm.category;
+                                 } // dev - only conditional if
                                  _adForm.plan          = [FLPlanModel fromDictionary:response[kResponseKeyPlan]];
 
                                  _plansManager.selectedPlan = _adForm.plan;
@@ -374,9 +379,88 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                  /* for first step */
                                  static NSDictionary *_categories;
                                  _categories = response[kResponseKeyCategories];
-                                 //[self buildCategoriesForEditMode:_categories];
+                                 //[self buildCategoriesForEditMode:_categories]; // <here> codigo sospechoso
                                  [self updateCategoryBox];
                                  /* for first step END */
+                       
+                                 // ********** <dev>
+                                 [_savedSections removeAllObjects];
+                                 
+                                 // Categoria
+                                 _listingTypeSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_type")];
+                                 _listingTypeSection.headerHeight = 15;
+                                 
+                                 NSArray *accountAbilities = FLUserInfo(kUserInfoAbilitiesKey);
+                                 NSMutableArray *listingTypes = [NSMutableArray array];
+                                 __block FLListingTypeModel *selectedListingTypeModel;
+                                 
+                                 [accountAbilities enumerateObjectsUsingBlock:^(NSString *type, NSUInteger idx, BOOL *stop) {
+                                     FLListingTypeModel *listingType = [FLListingTypes withKeyAsModel:type];
+                                     if (listingType != nil) {
+                                         [listingTypes addObject:listingType];
+                                         
+                                         if (_adForm.listingType && [_adForm.listingType.key isEqualToString:listingType.key]) {
+                                             selectedListingTypeModel = listingType;
+                                         }
+                                     }
+                                 }];
+                                 
+                                 FLFieldSelect *fieldType = [FLFieldSelect withTitle:FLLocalizedString(@"listing_type") options:listingTypes];
+                                 
+                                 fieldType.disableDropDown= @"YES"; // <dev>
+                                 
+                                 if (selectedListingTypeModel) {
+                                     fieldType.valueFrom = selectedListingTypeModel;
+                                 }
+                                 
+                                 [_listingTypeSection addItem:fieldType];
+                                 
+                                 if (_listingTypeSection) {
+                                     [_savedSections addObject:_listingTypeSection];
+                                 }
+                                 
+                                 // Sub-categoria
+                                 NSArray *categories = [FLCache objectWithKey:kCacheCategoriesOneLevel][_adForm.listingType.key];
+                                 
+                                 _categoriesSection = [RETableViewSection sectionWithHeaderTitle:FLLocalizedString(@"listing_categoria")];
+                                 _categoriesSection.headerHeight = 25;
+
+                                 NSMutableArray *values = [NSMutableArray array];
+                                 FLCategoryModel *selectedCategoryModel = nil;
+                                 
+                                 if (_adForm.listingType) {
+                                     NSString *sortingKey = _adForm.listingType.categoriesSortBy;
+                                     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:sortingKey ascending:YES];
+                                     categories = [categories sortedArrayUsingDescriptors:@[descriptor]];
+                                 }
+                                 
+                                 for (NSDictionary *category in categories) {
+                                     FLCategoryModel *categoryModel = [FLCategoryModel fromDictionary:category];
+                                     
+                                     if ([_adForm.categoriesIDs containsObject:@(categoryModel.cId)]) {
+                                         selectedCategoryModel = categoryModel;
+                                     }
+                                     [values addObject:categoryModel];
+                                 }
+                                 
+                                 NSString *fieldTitleKey = _categoriesSection.items.count > 0 ? @"listing_sub_category" : @"listing_categoria";
+                                 FLFieldSelect *fieldCat = [FLFieldSelect withTitle:FLLocalizedString(fieldTitleKey) options:values];
+                                 
+                                 if (selectedCategoryModel) {
+                                     fieldCat.valueFrom = selectedCategoryModel;
+                                 }
+                                 
+                                 [_categoriesSection addItem:fieldCat];
+
+                                 fieldCat.actionBarDoneButtonTapHandler = ^void(FLFieldSelect *item) {
+                                     [self actionBarDoneButtonTapHandler:item];
+                                 };
+                                 
+                                 if (_categoriesSection) {
+                                     [_savedSections addObject:_categoriesSection];
+                                 }
+                                 
+                                 // ********** </dev>
 
                                  /* append media data */
                                  if (_adForm.listingType.photo) {
@@ -388,6 +472,9 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                  }
                                  /* append media data END */
                              }
+                             else { // <dev>
+                                 _adForm.savedCategory = _adForm.category;
+                             } // </dev>
 
                              if (_adForm.fields.count) {
                                  if (_plansManager.plans.count) {
@@ -422,7 +509,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                      }];
 }
 
-- (void)buildCategoriesForEditMode:(NSDictionary *)sections {
+- (void)buildCategoriesForEditMode:(NSDictionary *)sections { // <here>
     if (sections.count) {
         [self buildSelectCategoryStep];
         [self setFormState:FLFormStateFillOut];
@@ -468,14 +555,44 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)buildFormTable {
-    self.title = self.editMode ? self.listing.title : FLLocalizedString(@"screen_al_fillout_formulario");
+    
+    
+    //self.title = self.editMode ? self.listing.title : FLLocalizedString(@"screen_al_fillout_formulario"); // origin
+    self.title = self.editMode ? _adForm.category.name : FLLocalizedString(@"screen_al_fillout_formulario"); // dev
     _categoryBox.planTitle = _adForm.plan ? _adForm.plan.title : FLLocalizedString(@"select_plan");
-    _categoryBox.editCategoryBtnActive = !self.editMode;
+    //_categoryBox.editCategoryBtnActive = !self.editMode;
+    _categoryBox.editCategoryBtnActive = YES; // dev
     _categoryBox.planBtnActive = YES;
 
     [self.manager removeAllSections];
     _formState = FLFormStateFillOut;
 //    _langSelectorBtn.hidden = NO;
+    
+    // <dev>
+/*    if (self.editMode) {
+        _listingStatusSection = [RETableViewSection sectionWithHeaderTitle:@"Estado del anuncio"];
+        _listingStatusSection.headerHeight = 32;
+        
+        [self.manager addSection:_listingStatusSection];
+
+        NSMutableArray *listStatus = [NSMutableArray array];
+        [listStatus addObject:@"Visible"];
+        [listStatus addObject:@"Invisible"];
+        [listStatus addObject:@"Vendido"];
+        NSString *titleStatus = @"Estado";
+        
+        _fieldStatus = [FLFieldSelect withTitle:titleStatus options:listStatus];
+        _fieldStatus.valueFrom = @"Visible"; // Default
+        //_fieldStatus.valueFrom = @"Invisible";
+        //_fieldStatus.valueFrom = @"Vendido";
+
+        _fieldStatus.actionBarDoneButtonTapHandler = ^void(FLFieldSelect *item) {
+            //[self actionBarDoneButtonTapHandler:item]; // Definir Done Action!
+        };
+
+        [_listingStatusSection addItem:_fieldStatus];
+    }*/
+    // </dev>
 
     if (_savedFormSections.count) {
         _headers = [NSMutableArray arrayWithArray:_savedHeaders];
@@ -492,58 +609,61 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 
             if (sectionDict[@"fields"] != nil) {
                 for (NSDictionary *fieldDict in sectionDict[@"fields"]) {
-                    FLFieldModel *field = [FLFieldModel fromDictionary:fieldDict];
-                    
-                    RETableViewItem *item;
-                    
-                    if (field.type == FLFieldTypeText) {
-                        if ([field.key isEqual: @"title"]) {
-                            for (FLFieldSelect *categoria in _categoriesSection.items) {
-                                if ([categoria.value isKindOfClass:FLCategoryModel.class]) {
-                                    NSString *name = ((FLCategoryModel *)categoria.value).name;
-                                    field.current= name;
-                                }
+                    if (fieldDict != (id)[NSNull null]) { // </dev> only condition to controll nill elements
+                        FLFieldModel *field = [FLFieldModel fromDictionary:fieldDict];
+                        
+                        RETableViewItem *item;
+                        
+                        if (field.type == FLFieldTypeText) {
+                            if ([field.key isEqual: @"title"]) {
+                                /*for (FLFieldSelect *categoria in _categoriesSection.items) {
+                                    if ([categoria.value isKindOfClass:FLCategoryModel.class]) {
+                                        NSString *name = ((FLCategoryModel *)categoria.value).name;
+                                        field.current= name;
+                                    }
+                                }*/
+                                field.current= _adForm.category.name; // <dev>
                             }
+                            item = [FLFieldText fromModel:field];
                         }
-                        item = [FLFieldText fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeSelect) {
-                        item = [FLFieldSelect fromModel:field tableView:_tableView];
-                    }
-                    else if (field.type == FLFieldTypeBool) {
-                        item = [FLFieldBool fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeDate) {
-                        item = [FLFieldDate fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeNumber) {
-                        item = [FLFieldNumber fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeTextarea) {
-                        item = [FLFieldTextArea fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeMixed ||
-                             field.type == FLFieldTypePrice)
-                    {
-                        item = [FLFieldMixed fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeRadio) {
-                        item = [FLFieldRadio fromModel:field tableView:_tableView];
-                    }
-                    else if (field.type == FLFieldTypePhone) {
-                        item = [FLFieldPhone fromModel:field];
-                    }
-                    else if (field.type == FLFieldTypeAccept) {
-                        item = [FLFieldAccept fromModel:field parentVC:self];
-                    }
-                    else if (field.type == FLFieldTypeCheckbox) {
-                        item = [FLFieldCheckbox fromModel:field parentVC:self];
-                    }
-                    else {
-                        // skip another field types. (like: image,file)
-                        continue;
-                    }
-                    [section addItem:item];
+                        else if (field.type == FLFieldTypeSelect) {
+                            item = [FLFieldSelect fromModel:field tableView:_tableView];
+                        }
+                        else if (field.type == FLFieldTypeBool) {
+                            item = [FLFieldBool fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeDate) {
+                            item = [FLFieldDate fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeNumber) {
+                            item = [FLFieldNumber fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeTextarea) {
+                            item = [FLFieldTextArea fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeMixed ||
+                                 field.type == FLFieldTypePrice)
+                        {
+                            item = [FLFieldMixed fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeRadio) {
+                            item = [FLFieldRadio fromModel:field tableView:_tableView];
+                        }
+                        else if (field.type == FLFieldTypePhone) {
+                            item = [FLFieldPhone fromModel:field];
+                        }
+                        else if (field.type == FLFieldTypeAccept) {
+                            item = [FLFieldAccept fromModel:field parentVC:self];
+                        }
+                        else if (field.type == FLFieldTypeCheckbox) {
+                            item = [FLFieldCheckbox fromModel:field parentVC:self];
+                        }
+                        else {
+                            // skip another field types. (like: image,file)
+                            continue;
+                        }
+                        [section addItem:item];
+                    } // </dev> only condition
                 }
             }
         }
@@ -569,7 +689,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)actionBarDoneButtonTapHandler:(FLFieldSelect *)field {
-    if ([field.value isKindOfClass:FLListingTypeModel.class]) {
+    if ([field.value isKindOfClass:FLListingTypeModel.class]) { //<here> boton hecho para seleccionar categorias
         FLListingTypeModel *listingType = (FLListingTypeModel *)field.value;
 
         if (_adForm.listingType == nil || field.valueChanged) {
@@ -597,7 +717,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             [self removeAllItemsBelowItem:field];
         }
     }
-    else if ([field.value isKindOfClass:FLCategoryModel.class]) {
+    else if ([field.value isKindOfClass:FLCategoryModel.class]) { //<here> boton hecho para seleccionar sub-categorias
         FLCategoryModel *category = (FLCategoryModel *)field.value;
 
         if (_adForm.category == nil || field.valueChanged) {
@@ -657,8 +777,25 @@ typedef NS_ENUM(NSInteger, FLFormState) {
         [_savedHeaders removeAllObjects];
 
         _plansManager.plans  = [NSMutableArray array];
+        _plansManager.selectedPlan  = nil; // dev
+        _adForm.plan = nil; // dev
         _adForm.fields       = @[];
+        _sectionPictures = NSNotFound; // dev
+        _sectionVideos = NSNotFound; // dev
     }
+    else if (_editMode) { // <dev>
+        _adForm.savedCategory = _adForm.category;
+        
+        [_savedFormSections removeAllObjects];
+        [_savedHeaders removeAllObjects];
+        
+        _plansManager.plans  = [NSMutableArray array];
+        _plansManager.selectedPlan  = nil; // dev
+        _adForm.plan = nil; // dev
+        _adForm.fields       = @[];
+        _sectionPictures = NSNotFound; // dev
+        _sectionVideos = NSNotFound; // dev
+    } // </dev>
 }
 
 #pragma mark - flynaxAPIClient
@@ -924,29 +1061,6 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                     self.categoryBox.planTitle      = _adForm.plan.title;
 
                     [self updateMediaSectionsBasedOnPlan:listingPlan];
-                    
-                    // <dev>
-                    
-                   /* NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:3 inSection:0];
-                    FLFieldText *celda = (FLFieldText *) [_tableView cellForRowAtIndexPath:tempIndexPath];*/
-                    
-                    //for (RETableViewSection *section in self.manager.sections) {
-                        //for (FLTableViewItem *item in section.items) {
-                            /*if ([item isKindOfClass:FLFieldAccept.class]) {
-                                _formAccepted = [(FLFieldAccept *)item isAccepted];
-                                _fieldAcceptTitle = item.model.name;
-                            }
-                            else if ([item respondsToSelector:@selector(isValid)]) {
-                                if (![item isValid] && resultValid) {
-                                    resultValid = NO;
-                                }
-                            }*/
-                            
-                            //id value= item;
-                        //}
-                    //}
-
-                    // </dev>
 
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];

@@ -126,8 +126,31 @@ static NSString * const kListingPhotoNotExists    = @"listing_photo_not_exists";
                                     placeholderImage:_placeholderImage
                                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                                  if (image) {
-                                                     self.adThumbnail.image =
-                                                     [image imageCroppedToFitSize:self.adThumbnail.frame.size];
+                                                     //self.adThumbnail.image = [image imageCroppedToFitSize:self.adThumbnail.frame.size]; // original
+                                                     
+                                                     // <dev>
+                                                     if ([info[@"sub_status"] isEqualToString:@"Vendido"]) {
+                                                          NSURL * url = [NSURL URLWithString:@"http://www.asesoresi.com/imagenes/vendido.png"];
+                                                          //NSURL * url = [NSURL URLWithString:@"https://www.subicicleta.com/plugins/listing_status/sold.png"];
+                                                          
+                                                          NSData * data = [NSData dataWithContentsOfURL:url];
+                                                          UIImage * imageMask = [UIImage imageWithData:data];
+                                                          
+                                                          double width = image.size.width;
+                                                          double height = image.size.height;
+                                                          
+                                                          UIGraphicsBeginImageContext(CGSizeMake(width, height));
+                                                          [image drawInRect:CGRectMake(0.0, 0.0, width, height)];
+                                                          [imageMask drawInRect:CGRectMake(0.0, 0.0, width, height)];
+                                                          UIImage *imageWithMask = UIGraphicsGetImageFromCurrentImageContext();
+                                                          UIGraphicsEndImageContext();
+                                                          
+                                                          self.adThumbnail.image = [imageWithMask imageCroppedToFitSize:self.adThumbnail.frame.size];
+                                                     }
+                                                     else {
+                                                          self.adThumbnail.image = [image imageCroppedToFitSize:self.adThumbnail.frame.size];
+                                                     }
+                                                     // <dev>
                                                  }
                                                  else [self setNoThumbnailImage];
                                              }

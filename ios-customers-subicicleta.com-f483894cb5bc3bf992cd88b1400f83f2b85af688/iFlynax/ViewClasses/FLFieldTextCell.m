@@ -31,6 +31,8 @@
     _textField.keyboardType = self.item.keyboardType;
     _textField.placeholder  = self.item.placeholder;
     _textField.text         = self.item.value;
+    
+    if (self.item.customText) _textField.text= self.item.customText; // <dev>
 
     // <dev>
     _textField.enabled= YES;

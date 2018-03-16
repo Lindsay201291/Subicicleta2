@@ -15,5 +15,7 @@
 @property (copy, nonatomic) void (^textFieldDidChange)(id item);
 @property (copy, nonatomic) void (^textFieldDidEndEditing)(id item);
 
+@property (strong, nonatomic, readonly) id customText; // <dev>
+
 + (instancetype)fromModel:(FLFieldModel *)model;
 @end

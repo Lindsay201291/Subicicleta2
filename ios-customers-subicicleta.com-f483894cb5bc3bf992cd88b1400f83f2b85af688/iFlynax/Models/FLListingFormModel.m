@@ -39,6 +39,9 @@
 
     _listingType     = nil;
     _plan            = nil;
+    
+    _category        = nil; // new
+    _savedCategory   = nil; // new
 
     _langCode        = [FLLang langCode];
 }
