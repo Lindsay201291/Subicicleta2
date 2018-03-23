@@ -29,6 +29,7 @@
 + (NSLocale *)localeByCurrencyCode:(NSString *)currency;
 + (NSString *)priceFormat:(NSString *)price; // dev
 + (NSString *)dateFormat:(NSString *)date withOrigin:(NSString *) origin andDest:(NSString *) dest; // dev
++ (NSString *)statusFormat:(NSString *)status; // dev
     
 + (BOOL)isValidUrl:(NSString *)urlString;
 + (BOOL)isValidEmail:(NSString *)emailString;

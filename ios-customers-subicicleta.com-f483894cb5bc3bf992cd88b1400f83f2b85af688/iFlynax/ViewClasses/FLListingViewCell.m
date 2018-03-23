@@ -130,8 +130,7 @@ static NSString * const kListingPhotoNotExists    = @"listing_photo_not_exists";
                                                      
                                                      // <dev>
                                                      if ([info[@"sub_status"] isEqualToString:@"Vendido"]) {
-                                                          NSURL * url = [NSURL URLWithString:@"http://www.asesoresi.com/imagenes/vendido.png"];
-                                                          //NSURL * url = [NSURL URLWithString:@"https://www.subicicleta.com/plugins/listing_status/sold.png"];
+                                                          NSURL * url = [NSURL URLWithString:@"https://www.subicicleta.com/plugins/listing_status/ios_sold_watermark.png"];
                                                           
                                                           NSData * data = [NSData dataWithContentsOfURL:url];
                                                           UIImage * imageMask = [UIImage imageWithData:data];

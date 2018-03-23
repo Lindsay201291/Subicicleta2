@@ -130,6 +130,20 @@ static BOOL stringOrValue(id obj) {
     return [formatter stringFromDate:tempDate];
 }
 
++ (NSString *)statusFormat:(NSString *)status { // dev
+     if ([status isEqualToString:@"Visible(default)"]) {
+        return @"visible";
+     }
+     else if ([status isEqualToString:@"Invisible"]) {
+        return @"invisible";
+     }
+     else if ([status isEqualToString:@"Vendido"]) {
+        return @"sold";
+     }
+    
+    return @"";
+}
+
 + (BOOL)isValidUrl:(NSString *)urlString {
     NSString *format = @"SELF MATCHES '((?:http|https)://)?([\\w\\d\\-_]+\\.)?[\\w\\d\\-_]+\\.\\w{2,5}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?'";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:format];

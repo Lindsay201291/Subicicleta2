@@ -50,6 +50,7 @@
                     }
                     else {
                         _textField.text= cell.valueFrom[@"name"];
+                        self.item.value = cell.valueFrom[@"name"];
                         break;
                     }
                 }

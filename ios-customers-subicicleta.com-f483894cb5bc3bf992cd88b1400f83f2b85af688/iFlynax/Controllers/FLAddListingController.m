@@ -88,6 +88,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 
 @property (strong, nonatomic) RETableViewSection *listingStatusSection; // dev
 @property (strong, nonatomic) FLFieldSelect *fieldStatus; // dev
+@property (strong, nonatomic) NSString *selectedStatus; // dev
 @property (strong, nonatomic) RETableViewSection *listingTypeSection;
 @property (strong, nonatomic) RETableViewSection *categoriesSection;
 @property (strong, nonatomic) RETableViewSection *formFieldsSection;
@@ -173,10 +174,10 @@ typedef NS_ENUM(NSInteger, FLFormState) {
     _tableView.tableHeaderView = nil;
     _tableView.tableFooterView = nil;
     [_manager removeAllSections];
-    _sectionPictures = NSNotFound; // dev
-    _sectionVideos = NSNotFound; // dev
+    _sectionPictures = NSNotFound; // <dev>
+    _sectionVideos = NSNotFound; // <dev>
     
-    if (_savedSections.count) { // <here> Aqui se cargan los combo-box y se valida el disable de Tipo
+    if (_savedSections.count) { // <dev> Aqui se cargan los combo-box y se valida el disable de Tipo
         for (RETableViewSection *section in _savedSections) {
             [_manager addSection:section];
         }
@@ -307,7 +308,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 // processed to fillout form
-- (void)selectCategoryBtnTapped { // <here> save sections ??? boton continuar
+- (void)selectCategoryBtnTapped {
     [self updateCategoryBox];
 
     // save sections for future purpose
@@ -379,7 +380,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                  /* for first step */
                                  static NSDictionary *_categories;
                                  _categories = response[kResponseKeyCategories];
-                                 //[self buildCategoriesForEditMode:_categories]; // <here> codigo sospechoso
+                                 //[self buildCategoriesForEditMode:_categories];
                                  [self updateCategoryBox];
                                  /* for first step END */
                        
@@ -407,7 +408,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                                  
                                  FLFieldSelect *fieldType = [FLFieldSelect withTitle:FLLocalizedString(@"listing_type") options:listingTypes];
                                  
-                                 fieldType.disableDropDown= @"YES"; // <dev>
+                                 fieldType.disableDropDown= @"YES";
                                  
                                  if (selectedListingTypeModel) {
                                      fieldType.valueFrom = selectedListingTypeModel;
@@ -509,7 +510,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
                      }];
 }
 
-- (void)buildCategoriesForEditMode:(NSDictionary *)sections { // <here>
+- (void)buildCategoriesForEditMode:(NSDictionary *)sections {
     if (sections.count) {
         [self buildSelectCategoryStep];
         [self setFormState:FLFormStateFillOut];
@@ -555,43 +556,43 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)buildFormTable {
-    
-    
     //self.title = self.editMode ? self.listing.title : FLLocalizedString(@"screen_al_fillout_formulario"); // origin
-    self.title = self.editMode ? _adForm.category.name : FLLocalizedString(@"screen_al_fillout_formulario"); // dev
+    self.title = self.editMode ? _adForm.category.name : FLLocalizedString(@"screen_al_fillout_formulario"); // <dev>
     _categoryBox.planTitle = _adForm.plan ? _adForm.plan.title : FLLocalizedString(@"select_plan");
-    //_categoryBox.editCategoryBtnActive = !self.editMode;
-    _categoryBox.editCategoryBtnActive = YES; // dev
+    //_categoryBox.editCategoryBtnActive = !self.editMode; // origin
+    _categoryBox.editCategoryBtnActive = YES; // <dev>
     _categoryBox.planBtnActive = YES;
 
     [self.manager removeAllSections];
     _formState = FLFormStateFillOut;
-//    _langSelectorBtn.hidden = NO;
+    //_langSelectorBtn.hidden = NO;
     
     // <dev>
-/*    if (self.editMode) {
+    if (self.editMode) {
+        [_headers addObject:FLCleanString(@"Estado del anuncio")];
+        
         _listingStatusSection = [RETableViewSection sectionWithHeaderTitle:@"Estado del anuncio"];
         _listingStatusSection.headerHeight = 32;
         
         [self.manager addSection:_listingStatusSection];
 
         NSMutableArray *listStatus = [NSMutableArray array];
-        [listStatus addObject:@"Visible"];
+        [listStatus addObject:@"Visible(default)"];
         [listStatus addObject:@"Invisible"];
         [listStatus addObject:@"Vendido"];
         NSString *titleStatus = @"Estado";
         
-        _fieldStatus = [FLFieldSelect withTitle:titleStatus options:listStatus];
-        _fieldStatus.valueFrom = @"Visible"; // Default
-        //_fieldStatus.valueFrom = @"Invisible";
-        //_fieldStatus.valueFrom = @"Vendido";
+        _fieldStatus = [FLFieldSelect withTitle:titleStatus options:listStatus];        
+        
+        _selectedStatus= self.listing.subStatusString;
+        _fieldStatus.valueFrom= self.listing.subStatusString;
 
         _fieldStatus.actionBarDoneButtonTapHandler = ^void(FLFieldSelect *item) {
-            //[self actionBarDoneButtonTapHandler:item]; // Definir Done Action!
+            _selectedStatus= item.value;
         };
 
         [_listingStatusSection addItem:_fieldStatus];
-    }*/
+    }
     // </dev>
 
     if (_savedFormSections.count) {
@@ -689,7 +690,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 }
 
 - (void)actionBarDoneButtonTapHandler:(FLFieldSelect *)field {
-    if ([field.value isKindOfClass:FLListingTypeModel.class]) { //<here> boton hecho para seleccionar categorias
+    if ([field.value isKindOfClass:FLListingTypeModel.class]) {
         FLListingTypeModel *listingType = (FLListingTypeModel *)field.value;
 
         if (_adForm.listingType == nil || field.valueChanged) {
@@ -717,7 +718,7 @@ typedef NS_ENUM(NSInteger, FLFormState) {
             [self removeAllItemsBelowItem:field];
         }
     }
-    else if ([field.value isKindOfClass:FLCategoryModel.class]) { //<here> boton hecho para seleccionar sub-categorias
+    else if ([field.value isKindOfClass:FLCategoryModel.class]) {
         FLCategoryModel *category = (FLCategoryModel *)field.value;
 
         if (_adForm.category == nil || field.valueChanged) {
@@ -1264,10 +1265,10 @@ typedef NS_ENUM(NSInteger, FLFormState) {
 
 - (NSDictionary *)listingDataToSend {
     NSString *_cmdRequest = _listing != nil ? kApiItemRequests_editListing : kApiItemRequests_addListing;
-
     NSMutableDictionary *data = [@{@"cmd"      : _cmdRequest,
                                    @"ltype"    : _adForm.listingType.key,
                                    @"category" : @(_adForm.category.cId),
+                                   @"estado"   : [FLUtilities statusFormat:_selectedStatus], // <dev>
                                    @"plan"     : @(_adForm.plan.pId),
                                    @"f"        : self.manager.formValues} mutableCopy];
 

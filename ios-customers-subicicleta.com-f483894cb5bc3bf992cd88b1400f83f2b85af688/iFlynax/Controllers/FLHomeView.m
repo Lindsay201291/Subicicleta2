@@ -221,6 +221,34 @@ typedef NS_ENUM(NSInteger, FLRefreshAdsState) {
 											 if (image) {
 												 cell.adThumbnail.image = image;
                                                  cell.adThumbnail.contentMode = UIViewContentModeScaleAspectFill;
+                                                 
+                                                 // <dev>
+                                                 /*if ([info[@"sub_status"] isEqualToString:@"Vendido"]) {
+                                                     NSURL * url = [NSURL URLWithString:@"http://www.asesoresi.com/imagenes/vendido.png"];
+                                                     //NSURL * url = [NSURL URLWithString:@"https://www.subicicleta.com/plugins/listing_status/sold.png"];
+                                                     
+                                                     NSData * data = [NSData dataWithContentsOfURL:url];
+                                                     UIImage * imageMask = [UIImage imageWithData:data];
+                                                     
+                                                     double width = image.size.width;
+                                                     double height = image.size.height;
+                                                     
+                                                     UIGraphicsBeginImageContext(CGSizeMake(width, height));
+                                                     [image drawInRect:CGRectMake(0.0, 0.0, width, height)];
+                                                     [imageMask drawInRect:CGRectMake(0.0, 0.0, width, height)];
+                                                     UIImage *imageWithMask = UIGraphicsGetImageFromCurrentImageContext();
+                                                     UIGraphicsEndImageContext();
+                                                     
+                                                     cell.adThumbnail.image = image;
+                                                     cell.adThumbnail.contentMode = UIViewContentModeScaleAspectFill;
+                                                     cell.adThumbnail.image = [imageWithMask imageCroppedToFitSize:cell.adThumbnail.frame.size];
+                                                 }
+                                                 else {
+                                                     cell.adThumbnail.image = image;
+                                                     cell.adThumbnail.contentMode = UIViewContentModeScaleAspectFill;
+                                                     cell.adThumbnail.image = [image imageCroppedToFitSize:cell.adThumbnail.frame.size];
+                                                 }*/
+                                                 // <dev>
 											 }
 										 } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                              [self setNoImageForCell:cell];
