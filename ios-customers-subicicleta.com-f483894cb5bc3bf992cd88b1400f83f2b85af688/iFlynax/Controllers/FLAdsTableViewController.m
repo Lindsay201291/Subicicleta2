@@ -27,7 +27,6 @@
 - (void)handleSucceedRequest:(id)results {
     NSArray *listings = results[@"listings"];
     self.itemsTotal = [results[@"calc"] intValue];
-    
     [self.entries addObjectsFromArray:listings];
 }
 
