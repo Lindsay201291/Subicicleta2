@@ -141,7 +141,8 @@ static NSString * const kBlockFieldTypes = @"textarea,checkbox";
     //self.detailsTableView.headerView.priceLabel.text = _shortInfo.price;
     self.detailsTableView.headerView.priceLabel.text = [FLUtilities priceFormat:_shortInfo.price]; // dev
     self.VistasLabel.text= [@"Veces visto: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)_shortInfo.vistas]]; // dev
-    self.PublicadoLabel.text= [@"Publicado el: " stringByAppendingString:[FLUtilities dateFormat:_shortInfo.publicado withOrigin:@"MM.dd.yyyy" andDest:@"dd.MM.yyyy"]]; // dev
+    //self.PublicadoLabel.text= [@"Publicado el: " stringByAppendingString:[FLUtilities dateFormat:_shortInfo.publicado withOrigin:@"MM.dd.yyyy" andDest:@"dd.MM.yyyy"]]; // dev
+    self.PublicadoLabel.text= [@"Publicado el: " stringByAppendingString:_shortInfo.publicado]; // dev
 
     // update favorite button
 	self.detailsTableView.headerView.favoriteAdsButton.adId = _shortInfo.lId;
